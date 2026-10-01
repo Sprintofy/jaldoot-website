@@ -1,0 +1,2125 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="About Krushi Nature Water Care Pvt. Ltd. - ISO 9001:2008 certified manufacturer of Jaldoot Water Conditioner, De-Scalar and Catalytic Technology products."
+    />
+    <title>
+      About Us | JALDOOT Water Conditioner | Krushi Nature Water Care Pvt. Ltd.
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "jd-blue": "#0066B3",
+              "jd-deep": "#134FA1",
+              "jd-sky": "#00ADEE",
+              "jd-green": "#4DB74A",
+              "jd-gray": "#6D6E6F",
+              "jd-dark": "#0A1628",
+            },
+            fontFamily: {
+              heading: ["Poppins", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      /* ===== PRELOADER ===== */
+      #preloader {
+        transition:
+          opacity 0.6s ease,
+          visibility 0.6s ease;
+      }
+      #preloader.hide {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      /* ===== SCROLL ANIMATIONS ===== */
+      [data-animate] {
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      [data-animate="fade-up"] {
+        transform: translateY(50px);
+      }
+      [data-animate="fade-down"] {
+        transform: translateY(-50px);
+      }
+      [data-animate="fade-left"] {
+        transform: translateX(50px);
+      }
+      [data-animate="fade-right"] {
+        transform: translateX(-50px);
+      }
+      [data-animate="zoom-in"] {
+        transform: scale(0.85);
+      }
+      [data-animate="flip-up"] {
+        transform: perspective(2500px) rotateX(30deg);
+      }
+      [data-animate].visible {
+        opacity: 1;
+        transform: translate(0, 0) scale(1) perspective(2500px) rotateX(0deg);
+      }
+
+      /* ===== GRADIENT TEXT ===== */
+      .gradient-text-blue {
+        background: linear-gradient(135deg, #00adee, #0066b3);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .gradient-text-green {
+        background: linear-gradient(135deg, #4db74a, #00adee);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .gradient-text-white {
+        background: linear-gradient(135deg, #ffffff 0%, #00adee 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* ===== CARD HOVER ===== */
+      .card-hover {
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .card-hover:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 60px rgba(0, 102, 179, 0.15);
+      }
+      .card-hover::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #0066b3, #00adee, #4db74a);
+        border-radius: 12px 12px 0 0;
+        transform: scaleX(0);
+        transition: transform 0.4s ease;
+      }
+      .card-hover:hover::before {
+        transform: scaleX(1);
+      }
+
+      /* ===== ICON FLOAT ===== */
+      .icon-float {
+        transition: all 0.4s ease;
+      }
+      .card-hover:hover .icon-float {
+        transform: translateY(-5px) scale(1.1);
+      }
+
+      /* ===== SHINE EFFECT ===== */
+      .shine-effect {
+        position: relative;
+        overflow: hidden;
+      }
+      .shine-effect::after {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          to right,
+          transparent 0%,
+          rgba(255, 255, 255, 0.05) 50%,
+          transparent 100%
+        );
+        transform: rotate(30deg);
+        transition: all 0.6s ease;
+        opacity: 0;
+      }
+      .shine-effect:hover::after {
+        opacity: 1;
+        transform: rotate(30deg) translateX(100%);
+      }
+
+      /* ===== FLOAT ANIMATIONS ===== */
+      .float-y {
+        animation: floatY 3s ease-in-out infinite;
+      }
+      .float-y-delay {
+        animation: floatY 3s ease-in-out infinite 1s;
+      }
+      .float-y-delay-2 {
+        animation: floatY 3s ease-in-out infinite 2s;
+      }
+      @keyframes floatY {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+
+      /* ===== ROTATE SLOW ===== */
+      .rotate-slow {
+        animation: rotateSlow 20s linear infinite;
+      }
+      @keyframes rotateSlow {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      /* ===== PULSE GLOW ===== */
+      .pulse-glow {
+        animation: pulseGlow 2s ease-in-out infinite;
+      }
+      @keyframes pulseGlow {
+        0%,
+        100% {
+          box-shadow: 0 0 20px rgba(0, 173, 238, 0.3);
+        }
+        50% {
+          box-shadow:
+            0 0 60px rgba(0, 173, 238, 0.6),
+            0 0 100px rgba(0, 173, 238, 0.2);
+        }
+      }
+
+      /* ===== WATER DROP MORPH ===== */
+      .water-drop-morph {
+        animation: morphDrop 8s ease-in-out infinite;
+      }
+      @keyframes morphDrop {
+        0%,
+        100% {
+          border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        25% {
+          border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        }
+        50% {
+          border-radius: 50% 60% 30% 60% / 30% 50% 70% 60%;
+        }
+        75% {
+          border-radius: 60% 30% 60% 40% / 70% 50% 40% 60%;
+        }
+      }
+
+      /* ===== HERO PARTICLES ===== */
+      .hero-particle {
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+        animation: particleFloat linear infinite;
+      }
+      @keyframes particleFloat {
+        0% {
+          transform: translateY(100%) rotate(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 0.6;
+        }
+        100% {
+          transform: translateY(-100vh) rotate(720deg);
+          opacity: 0;
+        }
+      }
+
+      /* ===== RIPPLE ===== */
+      .hero-ripple {
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 173, 238, 0.3);
+        animation: rippleExpand 4s ease-out infinite;
+      }
+      @keyframes rippleExpand {
+        0% {
+          width: 0;
+          height: 0;
+          opacity: 0.8;
+        }
+        100% {
+          width: 400px;
+          height: 400px;
+          opacity: 0;
+        }
+      }
+
+      /* ===== PAGE HERO BANNER (about.png) =====
+         The frame is locked to the picture's own 1920x819 ratio, so the whole
+         image is always visible - nothing is cropped off the top, left or
+         right on any screen size. It only ever gets shorter. */
+      .hero-banner {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        aspect-ratio: 1920 / 819;
+        margin-top: 80px; /* sit below the fixed navbar */
+        overflow: hidden;
+        background: #0a1628;
+      }
+      .hero-banner-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        user-select: none;
+        -webkit-user-drag: none;
+      }
+      @media (max-width: 768px) {
+        .hero-banner-img {
+          object-fit: contain;
+        }
+      }
+
+      /* The hero breadcrumb is styled once in css/styles.css
+         (.hero-crumb / .hero-breadcrumb) so it renders identically on every
+         inner page. Do not override it here. */
+
+      /* ===== BOUNCE SLOW ===== */
+      .bounce-slow {
+        animation: bounceSlow 2s ease-in-out infinite;
+      }
+      @keyframes bounceSlow {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-6px);
+        }
+      }
+
+      /* ===== TIMELINE ===== */
+      .timeline-line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(180deg, #00adee, #0066b3, #4db74a, #134fa1);
+        transform: translateX(-50%);
+      }
+      @media (max-width: 768px) {
+        .timeline-line {
+          left: 20px;
+        }
+      }
+
+      /* ===== COUNTER ANIMATION ===== */
+      .counter-box {
+        position: relative;
+        overflow: hidden;
+      }
+      .counter-box::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #00adee, #4db74a);
+        transform: scaleX(0);
+        transition: transform 0.6s ease;
+      }
+      .counter-box:hover::after {
+        transform: scaleX(1);
+      }
+
+      /* ===== MOBILE MENU ===== */
+      #mobileMenu {
+        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      /* ===== WAVE DIVIDER ===== */
+      .wave-divider svg {
+        display: block;
+      }
+
+      /* ===== STANDALONE CHECK BADGES =====
+         The skill-set list marks each point with .check-icon. css/styles.css
+         only scopes .check-icon under .feature-check, so the badge needs its
+         own rule here to render at full size. */
+      .check-icon {
+        flex-shrink: 0;
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #4db74a, #3da83a);
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2px;
+      }
+
+      /* ===== SKILL SET + SPECIFICATIONS (merged block) =====
+         One section, two aligned columns: skill-set on the left, spec
+         table on the right, and a shared "Effective on" strip below.
+         Padding and gaps are deliberately tighter than the standalone
+         sections these two replaced. */
+      .ss-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.3rem 0.9rem;
+        border-radius: 999px;
+        font-size: 0.8125rem;
+        font-family: var(--font-heading);
+        font-weight: 600;
+        margin-bottom: 0.85rem;
+      }
+      .ss-badge-blue {
+        background: rgba(0, 102, 179, 0.1);
+        color: var(--primary-blue);
+      }
+      .ss-badge-green {
+        background: rgba(61, 168, 58, 0.1);
+        color: var(--accent-green, #3da83a);
+      }
+
+      .ss-title {
+        font-family: var(--font-heading);
+        font-weight: 700;
+        line-height: 1.15;
+        color: var(--deep-blue);
+        font-size: clamp(1.5rem, 1.15rem + 1.4vw, 2rem);
+        margin-bottom: 1.35rem;
+      }
+
+      .ss-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.7rem 1.75rem;
+        /* fills the column so both columns end level; harmless when the
+           grid stacks on small screens and the height is auto */
+        flex: 1 1 auto;
+        align-content: space-between;
+      }
+      @media (min-width: 640px) {
+        .ss-list {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .ss-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.6rem;
+        font-size: 0.875rem;
+        line-height: 1.5;
+      }
+
+      /* Tighter rows than the shared .spec-table so both columns finish
+         at a similar height. */
+      .ss-table thead th {
+        padding: 0.7rem 1.1rem;
+        font-size: 0.8125rem;
+      }
+      .ss-table tbody td,
+      .ss-table tbody th {
+        padding: 0.55rem 1.1rem;
+        font-size: 0.8125rem;
+      }
+
+      .ss-chip {
+        display: inline-block;
+        padding: 0.3rem 0.75rem;
+        border-radius: 999px;
+        background: #fff;
+        border: 1px solid rgba(0, 102, 179, 0.2);
+        color: var(--primary-blue);
+        font-size: 0.75rem;
+        font-weight: 600;
+        font-family: var(--font-heading);
+      }
+
+      .ss-foot {
+        font-size: 0.6875rem;
+        line-height: 1.6;
+        color: rgba(107, 114, 128, 0.85);
+        margin-top: 0.9rem;
+      }
+    </style>
+  </head>
+
+  <body class="font-body text-jd-gray bg-white overflow-x-hidden">
+    <!-- ===== PRELOADER ===== -->
+    <div
+      id="preloader"
+      class="fixed inset-0 z-[9999] bg-gradient-to-br from-jd-dark via-jd-deep to-jd-blue flex items-center justify-center"
+    >
+      <div class="text-center">
+        <div class="relative w-24 h-24 mx-auto mb-6">
+          <div
+            class="absolute inset-0 border-4 border-jd-sky/20 rounded-full"
+          ></div>
+          <div
+            class="absolute inset-0 border-4 border-transparent border-t-jd-sky rounded-full animate-spin"
+          ></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <svg
+              width="36"
+              height="36"
+              viewBox="0 0 40 40"
+              class="animate-pulse"
+            >
+              <path
+                d="M20 4 C20 4 8 18 8 26 C8 33 13 38 20 38 C27 38 32 33 32 26 C32 18 20 4 20 4Z"
+                fill="#00ADEE"
+                opacity="0.8"
+              />
+              <path
+                d="M20 12 C20 12 14 22 14 27 C14 31 17 34 20 34 C23 34 26 31 26 27 C26 22 20 12 20 12Z"
+                fill="white"
+                opacity="0.3"
+              />
+            </svg>
+          </div>
+        </div>
+        <h2
+          class="text-2xl font-heading font-bold text-white tracking-widest mb-1"
+        >
+          JALDOOT
+        </h2>
+        <p
+          class="text-jd-sky/60 text-xs font-heading tracking-[0.3em] uppercase"
+        >
+          Water Conditioner
+        </p>
+      </div>
+    </div>
+
+    <!-- ===== NAVBAR (Same as Home Page) ===== -->
+    <nav
+      id="navbar"
+      class="navbar fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <a
+            href="index.html"
+            class="nav-brand flex items-center shrink-0 group"
+            aria-label="JALDOOT Water Conditioner - home"
+          >
+            <img
+              src="assets/logo.png"
+              alt="JALDOOT Water Conditioner"
+              class="h-12 sm:h-14 w-auto object-contain mix-blend-multiply"
+              width="761"
+              height="356"
+            />
+          </a>
+
+          <!-- Desktop Nav -->
+          <div class="nav-menu hidden lg:flex items-center gap-1">
+            <a
+              href="index.html"
+              class="nav-link font-heading transition-all duration-300"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="nav-link active font-heading transition-all duration-300"
+              >About</a
+            >
+            <a
+              href="products.html"
+              class="nav-link font-heading transition-all duration-300"
+              >Products</a
+            >
+            <a
+              href="contact.html"
+              class="nav-link font-heading transition-all duration-300"
+              >Contact</a
+            >
+            <a
+              href="contact.html"
+              class="nav-cta ml-4 px-6 py-2.5 bg-gradient-to-r from-jd-deep via-jd-blue to-jd-sky text-white font-heading transition-all duration-300"
+            >
+              <i class="fas fa-paper-plane mr-2 text-xs"></i>Get Quote
+            </a>
+          </div>
+
+          <!-- Mobile Hamburger -->
+          <button
+            class="lg:hidden hamburger flex flex-col gap-1.5 p-2 relative z-[60]"
+            id="hamburger"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <span
+              class="hamburger-line block w-6 h-0.5 bg-jd-deep rounded transition-all duration-300"
+            ></span>
+            <span
+              class="hamburger-line block w-6 h-0.5 bg-jd-deep rounded transition-all duration-300"
+            ></span>
+            <span
+              class="hamburger-line block w-4 h-0.5 bg-jd-deep rounded transition-all duration-300"
+            ></span>
+          </button>
+        </div>
+      </div>
+
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenuBackdrop" class="mobile-menu-backdrop" aria-hidden="true"></div>
+
+    <div
+      class="mobile-menu fixed inset-y-0 right-0 w-80 max-w-[85vw] shadow-2xl lg:hidden"
+      id="mobileMenu"
+    >
+        <button
+          type="button"
+          class="mobile-menu-close absolute top-5 right-5"
+          id="mobileMenuClose"
+          aria-label="Close menu"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+      <div class="p-6 pt-24 flex flex-col gap-2">
+        <a
+          href="index.html"
+          class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
+        >
+          <i class="fas fa-home w-5"></i> Home
+        </a>
+        <a
+          href="about.html"
+          class="mobile-nav-link active flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
+        >
+          <i class="fas fa-building w-5"></i> About
+        </a>
+        <a
+          href="products.html"
+          class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
+        >
+          <i class="fas fa-box-open w-5"></i> Products
+        </a>
+        <a
+          href="contact.html"
+          class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
+        >
+          <i class="fas fa-envelope w-5"></i> Contact
+        </a>
+        <hr class="my-3 border-gray-200" />
+        <a
+          href="contact.html"
+          class="nav-cta flex items-center justify-center gap-2 py-3 px-6 bg-gradient-to-r from-jd-deep via-jd-blue to-jd-sky text-white font-heading"
+        >
+          <i class="fas fa-paper-plane"></i> Get Quote
+        </a>
+        <div class="mt-6 p-4 bg-gray-50 rounded-xl">
+          <p class="font-heading font-semibold text-jd-deep text-sm mb-2">
+            <i class="fas fa-phone-alt text-jd-sky mr-2"></i>Call Us
+          </p>
+          <a href="tel:9822209656" class="text-jd-blue font-semibold"
+            >98222 09656</a
+          >
+          <p class="text-jd-gray text-xs mt-1">Mon–Sat, 9 AM – 7 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGE HERO WITH ANIMATIONS ===== -->
+    <section
+      class="relative min-h-[60vh] lg:min-h-[70vh] flex flex-col items-center overflow-hidden bg-gradient-to-br from-jd-dark via-jd-deep to-jd-blue"
+    >
+      <!-- Page Hero Banner: assets/about.png, shown complete (never cropped) -->
+      <div class="hero-banner">
+        <img
+          src="assets/about.png"
+          alt="Krushi Nature Water Care - Jaldoot water conditioning technology"
+          class="hero-banner-img"
+          width="1920"
+          height="819"
+          fetchpriority="high"
+        />
+      </div>
+
+      <!-- Particles -->
+      <div
+        id="heroParticles"
+        class="absolute inset-0 pointer-events-none overflow-hidden z-[1]"
+      ></div>
+
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 z-[1] opacity-[0.03]">
+        <div
+          class="absolute inset-0"
+          style="
+            background-image:
+              radial-gradient(circle at 25% 25%, white 1px, transparent 1px),
+              radial-gradient(circle at 75% 75%, white 1px, transparent 1px);
+            background-size: 50px 50px;
+          "
+        ></div>
+      </div>
+
+      <!-- Decorative Blobs -->
+      <div class="absolute inset-0 z-[1] opacity-10">
+        <div
+          class="absolute top-20 left-10 w-72 h-72 bg-jd-sky rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-10 right-20 w-96 h-96 bg-white rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute top-1/2 left-1/2 w-64 h-64 bg-jd-green rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"
+        ></div>
+      </div>
+
+      <!-- Ripples -->
+      <div
+        class="hero-ripple z-[1]"
+        style="bottom: 20%; left: 10%; animation-delay: 0s"
+      ></div>
+      <div
+        class="hero-ripple z-[1]"
+        style="top: 30%; right: 15%; animation-delay: 2s"
+      ></div>
+
+      <!-- Content: the banner above is the hero. The visible heading, badge and
+           intro copy were removed as duplicates, so the <h1> is kept
+           screen-reader only to preserve one accessible h1 on the page. -->
+      <div class="hero-crumb">
+        <h1 class="sr-only">About Our Company</h1>
+
+        <!-- Breadcrumb: dead-centre of the hero image, black text.
+             No data-animate here on purpose: hero content must never depend on a
+             scroll-reveal to become visible. -->
+        <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html" class="font-heading">
+            <i class="fas fa-home mr-1"></i> Home
+          </a>
+          <i class="fas fa-chevron-right hero-crumb-sep"></i>
+          <span class="hero-crumb-current font-heading">About</span>
+        </nav>
+      </div>
+
+      <!-- Wave Bottom -->
+      <div class="absolute bottom-0 left-0 right-0 z-10 wave-divider">
+        <svg
+          viewBox="0 0 1440 100"
+          fill="none"
+          preserveAspectRatio="none"
+          class="w-full h-16 sm:h-20 lg:h-24"
+        >
+          <path
+            d="M0,50 C360,100 720,0 1080,50 C1260,75 1380,60 1440,50 L1440,100 L0,100 Z"
+            fill="white"
+            opacity="0.1"
+          />
+          <path
+            d="M0,60 C300,20 600,90 900,40 C1200,0 1350,70 1440,60 L1440,100 L0,100 Z"
+            fill="white"
+            opacity="0.15"
+          />
+          <path
+            d="M0,75 C360,100 720,60 1080,80 C1260,90 1380,70 1440,75 L1440,100 L0,100 Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===== COMPANY INTRODUCTION ===== -->
+    <section class="py-20 lg:py-28 bg-white relative overflow-hidden">
+      <div
+        class="absolute top-0 right-0 w-96 h-96 bg-jd-sky/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-80 h-80 bg-jd-green/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div data-animate="fade-right">
+            <span
+              class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold mb-6"
+            >
+              <i class="fas fa-info-circle"></i> Company Introduction
+            </span>
+            <h2
+              class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep mb-6 leading-tight"
+            >
+              Krushi Nature Water Care
+              <span class="gradient-text-green">Pvt. Ltd.</span>
+            </h2>
+            <div class="space-y-5 text-jd-gray leading-relaxed font-body">
+              <p>
+                Krushi Nature Water Care Pvt. Ltd. is an
+                <strong class="text-jd-deep">ISO 9001:2008 certified</strong>
+                company engaged in the manufacturing and supply of advanced
+                water conditioning solutions. The company specializes in
+                <strong class="text-jd-deep"
+                  >Magnetic, Electro Magnetic, Electronic, Pulse, Water
+                  Conditioner/Softener, De-Scalar and Catalytic
+                  Technology</strong
+                >
+                products.
+              </p>
+              <p>
+                The company's flagship product,
+                <strong class="text-jd-blue">Jaldoot Water Conditioner</strong>,
+                represents the culmination of advanced research in water
+                treatment technology. It combines
+                <strong class="text-jd-deep"
+                  >Ultrasonic, Magnetic Static, Pulsing Power and Catalytic
+                  Technology</strong
+                >
+                in a single microprocessor-controlled system.
+              </p>
+              <p>
+                Jaldoot technology transforms hard water problems into lasting
+                solutions — converting hardness-causing minerals into harmless
+                2–4 micron crystals without using chemicals, salt, or requiring
+                ongoing maintenance.
+              </p>
+            </div>
+
+            <!-- Key Points -->
+            <div class="grid grid-cols-2 gap-4 mt-8">
+              <div class="flex items-center gap-3 p-3 bg-jd-sky/5 rounded-xl">
+                <div
+                  class="w-8 h-8 bg-jd-sky/20 rounded-lg flex items-center justify-center"
+                >
+                  <i class="fas fa-check text-jd-sky text-sm"></i>
+                </div>
+                <span class="text-sm font-heading font-semibold text-jd-deep"
+                  >No Chemicals</span
+                >
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-jd-green/5 rounded-xl">
+                <div
+                  class="w-8 h-8 bg-jd-green/20 rounded-lg flex items-center justify-center"
+                >
+                  <i class="fas fa-check text-jd-green text-sm"></i>
+                </div>
+                <span class="text-sm font-heading font-semibold text-jd-deep"
+                  >Zero Maintenance</span
+                >
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-jd-blue/5 rounded-xl">
+                <div
+                  class="w-8 h-8 bg-jd-blue/20 rounded-lg flex items-center justify-center"
+                >
+                  <i class="fas fa-check text-jd-blue text-sm"></i>
+                </div>
+                <span class="text-sm font-heading font-semibold text-jd-deep"
+                  >ISO Certified</span
+                >
+              </div>
+              <div
+                class="flex items-center gap-3 p-3 bg-purple-500/5 rounded-xl"
+              >
+                <div
+                  class="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center"
+                >
+                  <i class="fas fa-check text-purple-500 text-sm"></i>
+                </div>
+                <span class="text-sm font-heading font-semibold text-jd-deep"
+                  >4-in-1 Technology</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="relative" data-animate="fade-left">
+            <!-- Company image: sized by height so the intrinsic 934x1684 ratio is
+                 preserved and nothing is ever cropped. The desktop heights track
+                 the height of the copy column on the left (688px from 1280 up,
+                 800px in the 1024-1279 band where that column is narrower). -->
+            <img
+              src="assets/aboutimg.png"
+              alt="Jaldoot water conditioning technology"
+              class="block w-auto h-[560px] sm:h-[640px] lg:h-[800px] xl:h-[688px] mx-auto rounded-3xl border border-jd-sky/10 shadow-xl shadow-jd-sky/10"
+              width="934"
+              height="1684"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILL SET + SPECIFICATIONS ===== -->
+    <section
+      id="specifications"
+      class="ss-section py-14 lg:py-20 bg-white relative overflow-hidden"
+    >
+      <div
+        class="absolute top-0 right-0 w-96 h-96 bg-jd-sky/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-80 h-80 bg-jd-green/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"
+      ></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-12 gap-8 lg:gap-10">
+          <!-- ---------- skill set ---------- -->
+          <div class="lg:col-span-5 flex flex-col" data-animate="fade-right">
+            <span
+              class="ss-badge ss-badge-blue"
+              ><i class="fas fa-screwdriver-wrench"></i> Our skill-set
+              includes</span
+            >
+            <h2 class="ss-title">
+              Built to be <span class="gradient-text-blue">forgotten</span>
+            </h2>
+            <ul class="ss-list">
+              <li class="ss-item">
+                <span class="check-icon">
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </span>
+                <span>Easy to install &mdash; no special skills needed.</span>
+              </li>
+              <li class="ss-item">
+                <span class="check-icon">
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </span>
+                <span>No maintenance &mdash; set it &amp; forget it.</span>
+              </li>
+              <li class="ss-item">
+                <span class="check-icon">
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </span>
+                <span>Longer life and low consumption.</span>
+              </li>
+              <li class="ss-item">
+                <span class="check-icon">
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </span>
+                <span>No moving parts.</span>
+              </li>
+              <li class="ss-item">
+                <span class="check-icon">
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </span>
+                <span>No backwashing.</span>
+              </li>
+              <li class="ss-item">
+                <span class="check-icon">
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </span>
+                <span>Easy installation, no replacement required.</span>
+              </li>
+              <li class="ss-item">
+                <span class="check-icon">
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </span>
+                <span>Movable product &mdash; take it with you when you want.</span>
+              </li>
+              <li class="ss-item">
+                <span class="check-icon">
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </span>
+                <span>Maintenance-free, eco-friendly solution against scale
+                  problems.</span>
+              </li>
+              <li class="ss-item">
+                <span class="check-icon">
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </span>
+                <span>No chemicals, no salts &amp; additives.</span>
+              </li>
+              <li class="ss-item">
+                <span class="check-icon">
+                  <svg
+                    class="w-3 h-3 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="3"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </span>
+                <span>Our product models represent on varied work.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- ---------- technical specifications ---------- -->
+          <div class="lg:col-span-7 flex flex-col" data-animate="fade-left">
+            <span class="ss-badge ss-badge-green"
+              ><i class="fas fa-table-list"></i> Technical specifications</span
+            >
+            <h2 class="ss-title">
+              Jaldoot Water Conditioner
+              <span class="gradient-text-green">Specs</span>
+            </h2>
+            <div class="overflow-x-auto card-hover relative rounded-2xl">
+              <table class="spec-table ss-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Parameter</th>
+                    <th scope="col">Specification</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Supply voltage</th>
+                    <td>110&ndash;240 V, 50/60 Hz</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Power consumption</th>
+                    <td>5 Watt to 25 Watt</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Application voltage</th>
+                    <td>12 V DC</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Coil cable</th>
+                    <td>1 mm&sup2; / 20 AWG, blue maximum</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Coil temperature</th>
+                    <td>176 &deg;F (80 &deg;C)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Capable of driving</th>
+                    <td>2 coils, double layer</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Maximum enclosure temperature</th>
+                    <td>149 &deg;F (60 &deg;C)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Minimum enclosure temperature</th>
+                    <td>14 &deg;F (10 &deg;C)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ---------- effective on + CTA ---------- -->
+        <div
+          class="mt-8 rounded-2xl border border-jd-sky/20 bg-jd-sky/5 p-5 sm:p-6 flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-8"
+          data-animate="fade-up"
+        >
+          <div class="lg:w-56 lg:shrink-0">
+            <h3
+              class="font-heading font-bold text-jd-deep flex items-center gap-2 leading-snug"
+            >
+              <i class="fas fa-wrench text-jd-blue"></i> Effective on
+            </h3>
+          </div>
+          <div class="flex-1">
+            <div class="flex flex-wrap gap-2">
+              <span class="ss-chip">CPVC</span>
+              <span class="ss-chip">RPVC</span>
+              <span class="ss-chip">UPVC</span>
+              <span class="ss-chip">HDPE</span>
+              <span class="ss-chip">Copper</span>
+              <span class="ss-chip">Brass</span>
+              <span class="ss-chip">SS 304</span>
+              <span class="ss-chip">SS 316</span>
+            </div>
+            <p class="ss-foot mt-3">
+              The brochure lists &ldquo;HOPE COPPER&rdquo; in this list; read as the
+              pipe materials HDPE and copper. Pipe diameters from 1&Prime; up to
+              20&Prime; or 6&Prime; are supported depending on the model &mdash;
+              ask our team about the model suited to your line.
+            </p>
+          </div>
+          <div class="lg:w-60 lg:shrink-0">
+            <a
+              href="contact.html"
+              class="inline-flex items-center justify-center gap-2 w-full px-6 py-2.5 bg-jd-blue text-white rounded-full text-sm font-heading font-semibold hover:bg-jd-deep transition-all duration-300"
+            >
+              Ask our team
+              <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TECHNOLOGY SECTION ===== -->
+    <section
+      class="py-20 lg:py-28 bg-gradient-to-b from-jd-sky/5 via-white to-white relative overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-animate="fade-up">
+          <span
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-green/10 text-jd-green text-sm font-heading font-semibold mb-4"
+          >
+            <i class="fas fa-cogs"></i> Our Technology
+          </span>
+          <h2
+            class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep mb-6"
+          >
+            Jaldoot <span class="gradient-text-blue">Technology</span>
+          </h2>
+          <p class="text-lg text-jd-gray font-body">
+            Four powerful technologies combined in one microprocessor-controlled
+            system for comprehensive water conditioning.
+          </p>
+        </div>
+
+        <!-- Technology cards. Each card is a 45/55 two-column split with no gap:
+             the image column is 45% and the copy column 55% (swapped on even
+             cards so the layout alternates), both stretched to the same row
+             height. The row height is driven purely by the copy, and the image
+             fills its column with object-fit: cover, so there is never dead
+             space and the cards never grow taller than the text needs. The image
+             is always first in the DOM, so mobile stacks image-above-content on
+             every card without any order overrides. Card images, in order:
+             assets/ultrasonic.png, assets/magnetic.png, assets/pulsing.png,
+             assets/catalatic.png -->
+        <div class="grid gap-6 lg:gap-8">
+          <!-- 01 Ultrasonic: image left, content right -->
+          <div
+            class="card-hover group relative bg-white rounded-3xl overflow-hidden border border-jd-sky/10 shadow-sm hover:shadow-xl hover:shadow-jd-sky/10 transition-all duration-300"
+            data-animate="fade-up"
+            data-delay="0"
+          >
+            <div class="grid md:grid-cols-[45%_55%] items-stretch">
+              <div
+                class="relative w-full h-full min-h-[240px] md:min-h-0 overflow-hidden"
+              >
+                <img
+                  src="assets/ultrasonic.png"
+                  alt="Ultrasonic wave technology"
+                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div
+                  class="pointer-events-none absolute inset-0 bg-gradient-to-t from-jd-deep/40 via-jd-deep/5 to-transparent"
+                ></div>
+              </div>
+              <div class="relative p-8 sm:p-10 flex flex-col">
+                <span
+                  class="absolute top-7 right-8 font-heading text-xs font-semibold tracking-[0.35em] text-jd-sky/50"
+                  >01</span
+                >
+                <div class="flex items-center gap-4 pr-24">
+                  <div
+                    class="w-12 h-12 rounded-xl bg-gradient-to-br from-jd-sky to-jd-blue flex items-center justify-center shadow-md shadow-jd-sky/25 shrink-0"
+                  >
+                    <i class="fas fa-broadcast-tower text-white"></i>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-xl sm:text-2xl font-heading font-bold text-jd-deep leading-tight"
+                    >
+                      Ultrasonic
+                    </h3>
+                    <p class="text-sm text-jd-gray font-heading">
+                      High-frequency wave technology
+                    </p>
+                  </div>
+                </div>
+                <p class="mt-5 text-jd-gray leading-[1.6] font-body">
+                  Ultrasonic waves break down hard water mineral bonds at a
+                  molecular level. This first line of treatment initiates the
+                  conversion process, disrupting calcium and magnesium compound
+                  structures to begin transformation into harmless particles.
+                </p>
+                <div
+                  class="mt-6 pt-5 border-t border-jd-sky/10 flex items-center gap-2 text-jd-blue font-heading font-semibold uppercase tracking-wider text-xs"
+                >
+                  <i class="fas fa-wave-square"></i> Stage 1 Treatment
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02 Magnetic Static: content left, image right -->
+          <div
+            class="card-hover group relative bg-white rounded-3xl overflow-hidden border border-jd-sky/10 shadow-sm hover:shadow-xl hover:shadow-jd-sky/10 transition-all duration-300"
+            data-animate="fade-up"
+            data-delay="150"
+          >
+            <div class="grid md:grid-cols-[55%_45%] items-stretch">
+              <div class="relative p-8 sm:p-10 flex flex-col order-2 md:order-none">
+                <span
+                  class="absolute top-7 right-8 font-heading text-xs font-semibold tracking-[0.35em] text-jd-sky/50"
+                  >02</span
+                >
+                <div class="flex items-center gap-4 pr-24">
+                  <div
+                    class="w-12 h-12 rounded-xl bg-gradient-to-br from-jd-blue to-jd-deep flex items-center justify-center shadow-md shadow-jd-blue/25 shrink-0"
+                  >
+                    <i class="fas fa-magnet text-white"></i>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-xl sm:text-2xl font-heading font-bold text-jd-deep leading-tight"
+                    >
+                      Magnetic Static
+                    </h3>
+                    <p class="text-sm text-jd-gray font-heading">
+                      Permanent magnetic field
+                    </p>
+                  </div>
+                </div>
+                <p class="mt-5 text-jd-gray leading-[1.6] font-body">
+                  A permanent magnetic field alters the crystalline structure of
+                  calcium carbonate from its hard, scale-forming calcite form into a
+                  softer aragonite form that does not adhere to pipe surfaces and
+                  equipment.
+                </p>
+                <div
+                  class="mt-6 pt-5 border-t border-jd-sky/10 flex items-center gap-2 text-jd-blue font-heading font-semibold uppercase tracking-wider text-xs"
+                >
+                  <i class="fas fa-magnet"></i> Stage 2 Treatment
+                </div>
+              </div>
+              <div
+                class="relative w-full h-full min-h-[240px] md:min-h-0 overflow-hidden order-1 md:order-none"
+              >
+                <img
+                  src="assets/magnetic.png"
+                  alt="Permanent magnetic field technology"
+                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div
+                  class="pointer-events-none absolute inset-0 bg-gradient-to-t from-jd-deep/40 via-jd-deep/5 to-transparent"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03 Pulsing Power: image left, content right -->
+          <div
+            class="card-hover group relative bg-white rounded-3xl overflow-hidden border border-jd-sky/10 shadow-sm hover:shadow-xl hover:shadow-jd-sky/10 transition-all duration-300"
+            data-animate="fade-up"
+            data-delay="300"
+          >
+            <div class="grid md:grid-cols-[45%_55%] items-stretch">
+              <div
+                class="relative w-full h-full min-h-[240px] md:min-h-0 overflow-hidden"
+              >
+                <img
+                  src="assets/pulsing.png"
+                  alt="Pulsing power coil technology"
+                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div
+                  class="pointer-events-none absolute inset-0 bg-gradient-to-t from-jd-deep/40 via-jd-deep/5 to-transparent"
+                ></div>
+              </div>
+              <div class="relative p-8 sm:p-10 flex flex-col">
+                <span
+                  class="absolute top-7 right-8 font-heading text-xs font-semibold tracking-[0.35em] text-jd-sky/50"
+                  >03</span
+                >
+                <div class="flex items-center gap-4 pr-24">
+                  <div
+                    class="w-12 h-12 rounded-xl bg-gradient-to-br from-jd-green to-jd-blue flex items-center justify-center shadow-md shadow-jd-green/25 shrink-0"
+                  >
+                    <i class="fas fa-bolt text-white"></i>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-xl sm:text-2xl font-heading font-bold text-jd-deep leading-tight"
+                    >
+                      Pulsing Power
+                    </h3>
+                    <p class="text-sm text-jd-gray font-heading">
+                      Variable frequency signals
+                    </p>
+                  </div>
+                </div>
+                <p class="mt-5 text-jd-gray leading-[1.6] font-body">
+                  The microprocessor generates variable-frequency electronic pulses
+                  through coil cables. These signals create an oscillating
+                  electromagnetic field preventing mineral crystallization and scale
+                  formation throughout the pipe system.
+                </p>
+                <div
+                  class="mt-6 pt-5 border-t border-jd-sky/10 flex items-center gap-2 text-jd-blue font-heading font-semibold uppercase tracking-wider text-xs"
+                >
+                  <i class="fas fa-bolt"></i> Stage 3 Treatment
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 04 Catalytic: content left, image right -->
+          <div
+            class="card-hover group relative bg-white rounded-3xl overflow-hidden border border-jd-sky/10 shadow-sm hover:shadow-xl hover:shadow-jd-sky/10 transition-all duration-300"
+            data-animate="fade-up"
+            data-delay="450"
+          >
+            <div class="grid md:grid-cols-[55%_45%] items-stretch">
+              <div class="relative p-8 sm:p-10 flex flex-col order-2 md:order-none">
+                <span
+                  class="absolute top-7 right-8 font-heading text-xs font-semibold tracking-[0.35em] text-jd-sky/50"
+                  >04</span
+                >
+                <div class="flex items-center gap-4 pr-24">
+                  <div
+                    class="w-12 h-12 rounded-xl bg-gradient-to-br from-jd-deep to-jd-sky flex items-center justify-center shadow-md shadow-jd-deep/25 shrink-0"
+                  >
+                    <i class="fas fa-atom text-white"></i>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-xl sm:text-2xl font-heading font-bold text-jd-deep leading-tight"
+                    >
+                      Catalytic Technology
+                    </h3>
+                    <p class="text-sm text-jd-gray font-heading">
+                      Crystal conversion process
+                    </p>
+                  </div>
+                </div>
+                <p class="mt-5 text-jd-gray leading-[1.6] font-body">
+                  Catalytic conversion transforms remaining hardness minerals into
+                  stable, harmless micro-crystals of 2&ndash;4 micron size. These crystals
+                  remain suspended in water and flow freely. The conditioning effect
+                  lasts up to 7 days.
+                </p>
+                <div
+                  class="mt-6 pt-5 border-t border-jd-sky/10 flex items-center gap-2 text-jd-blue font-heading font-semibold uppercase tracking-wider text-xs"
+                >
+                  <i class="fas fa-atom"></i> Stage 4 Treatment
+                </div>
+              </div>
+              <div
+                class="relative w-full h-full min-h-[240px] md:min-h-0 overflow-hidden order-1 md:order-none"
+              >
+                <img
+                  src="assets/catalatic.png"
+                  alt="Catalytic crystal conversion technology"
+                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div
+                  class="pointer-events-none absolute inset-0 bg-gradient-to-t from-jd-deep/40 via-jd-deep/5 to-transparent"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Microprocessor Note -->
+        <div
+          class="mt-24 lg:mt-32 bg-gradient-to-r from-jd-deep via-jd-blue to-jd-sky rounded-3xl p-8 lg:p-12 text-white relative overflow-hidden"
+          data-animate="fade-up"
+        >
+          <div class="absolute inset-0 opacity-10">
+            <div
+              class="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-3xl"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 w-48 h-48 bg-white rounded-full blur-3xl"
+            ></div>
+          </div>
+          <div
+            class="relative z-10 flex flex-col md:flex-row items-center gap-8"
+          >
+            <div
+              class="w-20 h-20 min-w-[5rem] bg-white/15 rounded-2xl flex items-center justify-center"
+            >
+              <i class="fas fa-microchip text-4xl"></i>
+            </div>
+            <div class="text-center md:text-left">
+              <h3 class="text-2xl font-heading font-bold mb-3">
+                Microprocessor-Controlled System
+              </h3>
+              <p class="text-white/80 leading-relaxed font-body text-lg">
+                The entire Jaldoot system is controlled by an advanced
+                microprocessor that automatically manages and optimizes all four
+                technologies — Ultrasonic, Magnetic Static, Pulsing Power and
+                Catalytic — ensuring consistent, reliable performance across all
+                water conditions and flow rates.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section
+      class="pt-10 lg:pt-14 pb-20 lg:pb-28 bg-gradient-to-b from-white via-jd-sky/5 to-jd-sky/10 relative overflow-hidden"
+    >
+      <div
+        class="absolute top-1/2 left-0 w-80 h-80 bg-jd-sky/5 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-animate="fade-up">
+          <span
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold mb-4"
+          >
+            <i class="fas fa-shield-alt"></i> Quality Assurance
+          </span>
+          <h2
+            class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep mb-6"
+          >
+            Certifications &
+            <span class="gradient-text-green">Standards</span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="card-hover relative bg-gradient-to-b from-white to-jd-sky/5 rounded-3xl p-8 border border-gray-100 text-center group"
+            data-animate="fade-up"
+            data-delay="0"
+          >
+            <div
+              class="icon-float w-24 h-24 mx-auto bg-gradient-to-br from-jd-sky/20 to-jd-blue/20 rounded-full flex items-center justify-center mb-6 group-hover:from-jd-sky/30 group-hover:to-jd-blue/30 transition-all duration-300"
+            >
+              <i class="fas fa-certificate text-jd-blue text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-heading font-bold text-jd-deep mb-3">
+              ISO 9001:2008
+            </h3>
+            <p class="text-jd-gray text-sm leading-relaxed font-body">
+              Krushi Nature Water Care Pvt. Ltd. is ISO 9001:2008 certified,
+              ensuring quality management systems and consistent product
+              standards across all operations.
+            </p>
+          </div>
+
+          <div
+            class="card-hover relative bg-gradient-to-b from-white to-jd-green/5 rounded-3xl p-8 border border-gray-100 text-center group"
+            data-animate="fade-up"
+            data-delay="150"
+          >
+            <div
+              class="icon-float w-24 h-24 mx-auto bg-gradient-to-br from-jd-green/20 to-emerald-500/20 rounded-full flex items-center justify-center mb-6 group-hover:from-jd-green/30 group-hover:to-emerald-500/30 transition-all duration-300"
+            >
+              <i class="fas fa-shield-alt text-jd-green text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-heading font-bold text-jd-deep mb-3">
+              Quality Manufacturing
+            </h3>
+            <p class="text-jd-gray text-sm leading-relaxed font-body">
+              All products are manufactured under strict quality control with
+              rigorous testing and quality assurance protocols for reliability
+              and durability.
+            </p>
+          </div>
+
+          <div
+            class="card-hover relative bg-gradient-to-b from-white to-purple-500/5 rounded-3xl p-8 border border-gray-100 text-center group"
+            data-animate="fade-up"
+            data-delay="300"
+          >
+            <div
+              class="icon-float w-24 h-24 mx-auto bg-gradient-to-br from-jd-deep/20 to-jd-sky/20 rounded-full flex items-center justify-center mb-6 group-hover:from-jd-deep/30 group-hover:to-jd-sky/30 transition-all duration-300"
+            >
+              <i class="fas fa-check-double text-jd-deep text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-heading font-bold text-jd-deep mb-3">
+              Advanced Technology
+            </h3>
+            <p class="text-jd-gray text-sm leading-relaxed font-body">
+              Combining four proven technologies — Ultrasonic, Magnetic Static,
+              Pulsing Power and Catalytic — for comprehensive water conditioning
+              solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="py-20 lg:py-28 relative overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-jd-deep via-jd-blue to-jd-sky"
+      ></div>
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-10 right-10 w-80 h-80 bg-white rounded-full blur-3xl"
+        ></div>
+      </div>
+      <div
+        class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        data-animate="fade-up"
+      >
+        <div
+          class="w-16 h-16 mx-auto bg-white/15 rounded-2xl flex items-center justify-center mb-6"
+        >
+          <i class="fas fa-paper-plane text-3xl text-white"></i>
+        </div>
+        <h2
+          class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-6"
+        >
+          Want to Know More <br class="hidden sm:inline" />About
+          <span class="gradient-text-white">Jaldoot?</span>
+        </h2>
+        <p
+          class="text-lg text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed font-body"
+        >
+          Get in touch with us and discover how our water conditioning
+          technology can solve your hard water problems — transforming hardness
+          into happiness.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="contact.html"
+            class="group inline-flex items-center justify-center gap-2 px-10 py-4 bg-white text-jd-deep rounded-full font-heading font-bold text-lg shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+          >
+            <i class="fas fa-paper-plane"></i>
+            Contact Us
+            <i
+              class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"
+            ></i>
+          </a>
+          <a
+            href="tel:9822209656"
+            class="inline-flex items-center justify-center gap-2 px-10 py-4 bg-jd-green text-white rounded-full font-heading font-bold text-lg shadow-lg shadow-jd-green/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+          >
+            <i class="fas fa-phone-alt"></i>
+            Call: 98222 09656
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER (Same as Home Page) ===== -->
+    <footer class="bg-gray-900 text-white relative">
+      <div class="absolute -top-1 left-0 right-0">
+        <svg viewBox="0 0 1440 50" fill="none" class="w-full">
+          <path
+            d="M0,25 C360,50 720,0 1080,25 C1260,37 1380,30 1440,25 L1440,50 L0,50Z"
+            fill="#111827"
+          />
+        </svg>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-8">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          <!-- Company -->
+          <div>
+            <div
+              class="inline-flex items-center justify-center bg-white rounded-xl px-3 py-2 shadow-lg shadow-black/20 mb-6"
+            >
+              <img
+                src="assets/logo.png"
+                alt="JALDOOT Water Conditioner"
+                class="h-8 sm:h-10 w-auto object-contain"
+                width="761"
+                height="356"
+              />
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-6 font-body">
+              Manufactured by Krushi Nature Water Care Pvt. Ltd. — ISO 9001:2008
+              certified company specializing in advanced water conditioning
+              technology.
+            </p>
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1.5 bg-jd-green/10 border border-jd-green/30 rounded-full text-jd-green text-xs font-heading font-semibold"
+            >
+              <i class="fas fa-check-circle"></i> ISO 9001:2008 Certified
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-heading font-semibold mb-6">Quick Links</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
+                  ></i
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
+                  ></i
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html"
+                  class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
+                  ></i
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
+                  ></i
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Applications -->
+          <div>
+            <h4 class="text-lg font-heading font-semibold mb-6">
+              Applications
+            </h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="products.html#domestic"
+                  class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
+                  ></i
+                  >Domestic Solutions</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html#agriculture"
+                  class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
+                  ></i
+                  >Agriculture & Irrigation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html#commercial"
+                  class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
+                  ></i
+                  >Commercial & Industrial</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html#solar-products"
+                  class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
+                  ></i
+                  >Solar Products</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h4 class="text-lg font-heading font-semibold mb-6">Contact</h4>
+            <ul class="space-y-4">
+              <li class="flex items-start text-sm text-gray-400 font-body">
+                <i class="fas fa-map-marker-alt text-jd-sky mr-3 mt-1"></i>
+                <span
+                  >Shop No. C-116, Mega Center, Magarpatta, Hadapsar,
+                  Pune-13</span
+                >
+              </li>
+              <li class="flex items-center text-sm text-gray-400 font-body">
+                <i class="fas fa-phone-alt text-jd-sky mr-3"></i>
+                <span>9822209656 / 9404039656</span>
+              </li>
+              <li class="flex items-center text-sm text-gray-400 font-body">
+                <i class="fas fa-envelope text-jd-sky mr-3"></i>
+                <span class="break-all">watercare.krushinature@gmail.com</span>
+              </li>
+              <li class="flex items-center text-sm text-gray-400 font-body">
+                <i class="fas fa-globe text-jd-sky mr-3"></i>
+                <a
+                  href="http://www.jaldootcorporation.com"
+                  target="_blank"
+                  class="hover:text-jd-sky transition-colors"
+                  >www.jaldootcorporation.com</a
+                >
+              </li>
+            </ul>
+
+            <div class="flex gap-3 mt-6">
+              <a
+                href="https://wa.me/919822209656"
+                target="_blank"
+                class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-green-500 transition-colors"
+                aria-label="WhatsApp"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a
+                href="mailto:watercare.krushinature@gmail.com"
+                class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-jd-blue transition-colors"
+                aria-label="Email"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a
+                href="tel:9822209656"
+                class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-jd-sky transition-colors"
+                aria-label="Call"
+              >
+                <i class="fas fa-phone-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+          <p class="text-gray-500 text-sm font-body">
+            &copy; <span id="footerYear">2024</span> Krushi Nature Water Care
+            Pvt. Ltd. All rights reserved.
+          </p>
+          <p class="text-gray-600 text-xs font-heading">
+            Hardness To Happiness — Crystal Clear Naturally Water
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== FLOATING BUTTONS ===== -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+      <button
+        id="backToTop"
+        class="w-12 h-12 bg-jd-deep text-white rounded-full shadow-lg hover:shadow-xl hover:bg-jd-blue transition-all duration-300 flex items-center justify-center opacity-0 translate-y-4 pointer-events-none"
+        aria-label="Back to top"
+      >
+        <i class="fas fa-arrow-up"></i>
+      </button>
+      <a
+        href="tel:9822209656"
+        class="w-12 h-12 bg-jd-blue text-white rounded-full shadow-lg hover:shadow-xl hover:bg-jd-deep transition-all duration-300 flex items-center justify-center group relative"
+        aria-label="Call"
+      >
+        <i class="fas fa-phone-alt text-lg"></i>
+        <span
+          class="absolute right-full mr-3 px-3 py-1.5 bg-gray-800 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden sm:block"
+          >Call: 9822209656</span
+        >
+      </a>
+      <a
+        href="https://wa.me/919822209656?text=Hello%2C%20I%20am%20interested%20in%20Jaldoot%20Water%20Conditioner."
+        target="_blank"
+        class="w-14 h-14 bg-green-500 text-white rounded-full shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-300 flex items-center justify-center group relative bounce-slow"
+        aria-label="WhatsApp"
+      >
+        <i class="fab fa-whatsapp text-2xl"></i>
+        <span
+          class="absolute right-full mr-3 px-3 py-1.5 bg-gray-800 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden sm:block"
+          >Chat on WhatsApp</span
+        >
+      </a>
+    </div>
+
+    <!-- ===== ALL JAVASCRIPT ===== -->
+    <script>
+      // ===== PRELOADER =====
+      window.addEventListener("load", function () {
+        const preloader = document.getElementById("preloader");
+        if (preloader) {
+          setTimeout(function () {
+            preloader.classList.add("hide");
+            setTimeout(function () {
+              preloader.style.display = "none";
+            }, 600);
+          }, 800);
+        }
+      });
+      setTimeout(function () {
+        const preloader = document.getElementById("preloader");
+        if (preloader && preloader.style.display !== "none") {
+          preloader.classList.add("hide");
+          setTimeout(function () {
+            preloader.style.display = "none";
+          }, 600);
+        }
+      }, 4000);
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // ===== FOOTER YEAR =====
+        const yearEl = document.getElementById("footerYear");
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+        // ===== NAVBAR SCROLL =====
+        const navbar = document.getElementById("navbar");
+        if (navbar) {
+          window.addEventListener(
+            "scroll",
+            function () {
+              if (window.scrollY > 80) {
+                navbar.classList.add("scrolled");
+              } else {
+                navbar.classList.remove("scrolled");
+              }
+            },
+            { passive: true },
+          );
+        }
+
+        // ===== MOBILE MENU =====
+        // Bound exactly once: main.js also defines initMobileMenu() and is
+        // loaded on index/about. Without the data flag below, both listeners
+        // fire on one tap and the two `classList.toggle("open")` calls cancel
+        // each other out, so the menu never opens.
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuBackdrop = document.getElementById("mobileMenuBackdrop");
+        const menuClose = document.getElementById("mobileMenuClose");
+        if (hamburger && mobileMenu && !hamburger.dataset.menuBound) {
+          hamburger.dataset.menuBound = "1";
+
+          const setMenu = function (open) {
+            hamburger.classList.toggle("active", open);
+            mobileMenu.classList.toggle("open", open);
+            if (menuBackdrop) menuBackdrop.classList.toggle("open", open);
+            hamburger.setAttribute("aria-expanded", open ? "true" : "false");
+            hamburger.setAttribute(
+              "aria-label",
+              open ? "Close menu" : "Toggle menu",
+            );
+            document.body.style.overflow = open ? "hidden" : "";
+          };
+
+          hamburger.addEventListener("click", function (e) {
+            e.stopPropagation();
+            setMenu(!mobileMenu.classList.contains("open"));
+          });
+
+          // Explicit X inside the panel.
+          if (menuClose) {
+            menuClose.addEventListener("click", function () {
+              setMenu(false);
+              hamburger.focus();
+            });
+          }
+
+          // Tapping any link closes the panel before the page navigates.
+          mobileMenu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+              setMenu(false);
+            });
+          });
+
+          // Backdrop tap / any click outside the panel and the button.
+          if (menuBackdrop) {
+            menuBackdrop.addEventListener("click", function () {
+              setMenu(false);
+            });
+          }
+          document.addEventListener("click", function (e) {
+            if (
+              mobileMenu.classList.contains("open") &&
+              !mobileMenu.contains(e.target) &&
+              !hamburger.contains(e.target)
+            ) {
+              setMenu(false);
+            }
+          });
+
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && mobileMenu.classList.contains("open")) {
+              setMenu(false);
+              hamburger.focus();
+            }
+          });
+
+          // Leaving the mobile breakpoint must not strand the open panel.
+          window.addEventListener("resize", function () {
+            if (window.innerWidth >= 1024 && mobileMenu.classList.contains("open")) {
+              setMenu(false);
+            }
+          });
+
+          hamburger.setAttribute("aria-expanded", "false");
+          hamburger.setAttribute("aria-controls", "mobileMenu");
+        }
+
+        // ===== BACK TO TOP =====
+        const backToTop = document.getElementById("backToTop");
+        if (backToTop) {
+          window.addEventListener(
+            "scroll",
+            function () {
+              if (window.scrollY > 500) {
+                backToTop.style.opacity = "1";
+                backToTop.style.transform = "translateY(0)";
+                backToTop.style.pointerEvents = "auto";
+              } else {
+                backToTop.style.opacity = "0";
+                backToTop.style.transform = "translateY(16px)";
+                backToTop.style.pointerEvents = "none";
+              }
+            },
+            { passive: true },
+          );
+          backToTop.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        }
+
+        // ===== HERO PARTICLES =====
+        const particleContainer = document.getElementById("heroParticles");
+        if (particleContainer) {
+          function createParticle() {
+            const particle = document.createElement("div");
+            particle.classList.add("hero-particle");
+            const size = Math.random() * 6 + 2;
+            particle.style.width = size + "px";
+            particle.style.height = size + "px";
+            particle.style.left = Math.random() * 100 + "%";
+            particle.style.background =
+              "radial-gradient(circle, rgba(0,173,238,0.4), rgba(0,173,238,0.1))";
+            particle.style.animationDuration = Math.random() * 10 + 8 + "s";
+            particle.style.animationDelay = Math.random() * 3 + "s";
+            particleContainer.appendChild(particle);
+            setTimeout(function () {
+              if (particle.parentNode)
+                particle.parentNode.removeChild(particle);
+            }, 20000);
+          }
+          for (let i = 0; i < 15; i++) {
+            setTimeout(createParticle, i * 400);
+          }
+          setInterval(createParticle, 2000);
+        }
+
+        // ===== SCROLL ANIMATIONS =====
+        const animElements = document.querySelectorAll("[data-animate]");
+        if (animElements.length && "IntersectionObserver" in window) {
+          const observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  const delay = entry.target.getAttribute("data-delay") || 0;
+                  setTimeout(function () {
+                    entry.target.classList.add("visible");
+                  }, parseInt(delay));
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.1, rootMargin: "0px 0px -40px 0px" },
+          );
+          animElements.forEach(function (el) {
+            observer.observe(el);
+          });
+        } else {
+          animElements.forEach(function (el) {
+            el.classList.add("visible");
+          });
+        }
+
+        // ===== COUNTER ANIMATION =====
+        const counters = document.querySelectorAll("[data-count]");
+        if (counters.length && "IntersectionObserver" in window) {
+          const counterObserver = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  animateCounter(entry.target);
+                  counterObserver.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.5 },
+          );
+          counters.forEach(function (c) {
+            counterObserver.observe(c);
+          });
+        }
+
+        function animateCounter(el) {
+          const target = parseInt(el.getAttribute("data-count"), 10);
+          const suffix = el.getAttribute("data-suffix") || "";
+          const duration = 2000;
+          const startTime = performance.now();
+
+          function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const easeOut = 1 - Math.pow(1 - progress, 3);
+            const current = Math.floor(easeOut * target);
+            el.textContent = current + suffix;
+            if (progress < 1) {
+              requestAnimationFrame(update);
+            } else {
+              el.textContent = target + suffix;
+            }
+          }
+          requestAnimationFrame(update);
+        }
+
+        // ===== SMOOTH SCROLL =====
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+          anchor.addEventListener("click", function (e) {
+            const href = this.getAttribute("href");
+            if (href === "#" || href.length <= 1) return;
+            const target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          });
+        });
+      });
+    </script>
+
+    <!-- Load main.js for compatibility -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
