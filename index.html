@@ -101,18 +101,14 @@
         -webkit-user-drag: none;
       }
 
-      /* Slide dots under the hero. This bar is solid #0a1628 and butts
-         straight onto the dark wave below it, so their heights add up into
-         one black band under the photo. Keep the padding tight so the dots
-         sit close to the image instead of floating in a slab of black - the
-         ::after pseudo element still gives each dot a 22px touch target. */
+       /* Slide dots under the hero - plain with just 3 dots, no black bar */
       .hero-dots {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 0.625rem;
-        padding: 0.5rem 1rem;
-        background: #0a1628;
+        padding: 0.75rem 1rem;
+        background: transparent;
       }
       .hero-dot {
         position: relative;
@@ -291,7 +287,6 @@
       }
 
       /* curved water separators */
-      .wave-top,
       .wave-bottom {
         position: absolute;
         left: 0;
@@ -312,17 +307,6 @@
       }
       .wave-bottom svg {
         height: clamp(48px, 7vw, 110px);
-      }
-      /* Only the top wave is dark, so only it stacks onto the hero's black
-         dots bar. At its old height the two read as one heavy black block
-         under the photo; this is all the curve needs to soften the step into
-         the light intro section. The white wave below is a full-width divider
-         between sections, so it keeps its original height. */
-      .wave-top svg {
-        height: clamp(40px, 4vw, 64px);
-      }
-      .wave-top path {
-        fill: #0a1628;
       }
       .wave-bottom path {
         fill: #ffffff;
@@ -2597,17 +2581,10 @@
 
     <!-- ===== INTRO / WHAT IS JALDOOT ===== -->
     <section class="intro-section">
-      <!-- Curved water separator (from the dark hero strip) -->
-      <div class="wave-top" aria-hidden="true">
-        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-          <path
-            d="M0,0 H1440 V26 C1230,92 1010,18 742,54 C520,84 232,14 0,66 Z"
-          ></path>
-        </svg>
-      </div>
+
 
       <div
-        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 lg:pt-44 pb-28 lg:pb-40"
+        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 lg:pt-20 pb-28 lg:pb-40"
       >
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <!-- ===== PRODUCT SHOWCASE ===== -->
