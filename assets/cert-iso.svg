@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1000" width="1200" height="1000" role="img" aria-label="ISO 9001:2008 quality management system certificate issued to Krushi Nature Water Care Pvt. Ltd.">
+  <defs>
+    <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00ADEE"/>
+      <stop offset="0.5" stop-color="#0066B3"/>
+      <stop offset="1" stop-color="#134FA1"/>
+    </linearGradient>
+    <linearGradient id="wash" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAF6FD"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="sealFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4DB74A"/>
+      <stop offset="1" stop-color="#0066B3"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="1000" fill="#FFFFFF"/>
+  <rect x="26" y="26" width="1148" height="948" fill="url(#wash)"/>
+  <rect x="26" y="26" width="1148" height="948" fill="none" stroke="url(#frame)" stroke-width="10"/>
+  <rect x="50" y="50" width="1100" height="900" fill="none" stroke="#0066B3" stroke-width="1.5" opacity="0.45"/>
+  <rect x="62" y="62" width="1076" height="876" fill="none" stroke="#00ADEE" stroke-width="1" opacity="0.35"/>
+
+  <g opacity="0.07" transform="rotate(-28 600 500)">
+    <text x="600" y="540" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="150" font-weight="700" fill="#0066B3" text-anchor="middle" letter-spacing="10">SPECIMEN</text>
+  </g>
+
+  <g transform="translate(600 158)">
+    <circle r="44" fill="url(#frame)"/>
+    <g stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.94">
+      <path d="M-24 6c6-11 15-11 21 0"/>
+      <path d="M-11 -3c6-11 15-11 21 0"/>
+      <path d="M2 -12c6-11 15-11 21 0"/>
+    </g>
+    <text y="35" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">JALDOOT</text>
+  </g>
+
+  <text x="600" y="262" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="17" font-weight="600" fill="#6D6E6F" text-anchor="middle" letter-spacing="7">KRUSHI NATURE WATER CARE PVT. LTD.</text>
+
+  <text x="600" y="342" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="50" font-weight="700" fill="#134FA1" text-anchor="middle" letter-spacing="2">CERTIFICATE OF REGISTRATION</text>
+
+  <rect x="480" y="368" width="240" height="5" fill="url(#frame)"/>
+
+  <text x="600" y="436" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" fill="#6D6E6F" text-anchor="middle">This is to certify that the Quality Management System of</text>
+  <text x="600" y="482" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="31" font-weight="700" fill="#0A1628" text-anchor="middle">Krushi Nature Water Care Pvt. Ltd.</text>
+  <text x="600" y="520" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="21" fill="#6D6E6F" text-anchor="middle">Nagpur, Maharashtra, India</text>
+
+  <rect x="320" y="560" width="560" height="108" rx="14" fill="#0066B3" opacity="0.07"/>
+  <rect x="320" y="560" width="560" height="108" rx="14" fill="none" stroke="#0066B3" stroke-width="1.5" opacity="0.35"/>
+  <text x="600" y="604" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="35" font-weight="700" fill="#134FA1" text-anchor="middle" letter-spacing="1">ISO 9001 : 2008</text>
+  <text x="600" y="638" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#6D6E6F" text-anchor="middle">Quality Management Systems &#8212; Requirements</text>
+
+  <text x="600" y="712" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#6D6E6F" text-anchor="middle">Scope: Design, manufacture and supply of water conditioning equipment</text>
+  <text x="600" y="742" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="19" fill="#6D6E6F" text-anchor="middle">Certificate No. IN-QMS-9001-2024 &#160;&#8226;&#160; Valid until 31 March 2027</text>
+
+  <g transform="translate(250 812)">
+    <path d="M0 0c42-15 84-15 126 0" fill="none" stroke="#134FA1" stroke-width="2"/>
+    <text x="63" y="30" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="600" fill="#134FA1" text-anchor="middle">Authorised Signatory</text>
+  </g>
+
+  <g transform="translate(950 838)">
+    <circle r="54" fill="url(#sealFill)"/>
+    <circle r="43" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.7"/>
+    <text y="-14" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">VERIFIED</text>
+    <text y="12" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">ISO</text>
+    <text y="32" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" opacity="0.9">SPECIMEN</text>
+  </g>
+</svg>

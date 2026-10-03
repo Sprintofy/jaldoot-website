@@ -132,6 +132,23 @@
         transform: translateY(-5px) scale(1.1);
       }
 
+      /* ===== CERTIFICATE FRAME ===== */
+      /* Keeps the three certificate figures identical in size so they line up
+         perfectly with each other and with the three cards above. The caption
+         gets a fixed height because grid stretches its items: without it a
+         caption that wraps to two lines on narrow screens would push that
+         figure taller than its neighbours and break the bottom alignment. */
+      .cert-frame {
+        display: flex;
+        flex-direction: column;
+      }
+      .cert-frame::before {
+        border-radius: 24px 24px 0 0;
+      }
+      .cert-frame figcaption {
+        min-height: 2.75rem;
+      }
+
       /* ===== SHINE EFFECT ===== */
       .shine-effect {
         position: relative;
@@ -1566,6 +1583,154 @@
               solutions.
             </p>
           </div>
+        </div>
+
+        <!-- Certificate scans. Placeholder artwork lives in assets/cert-*.svg —
+             replace those files with the real certificate scans (keep the same
+             file names) once they are available. The grid below repeats the
+             exact `md:grid-cols-3 gap-8` of the cards above, so the certificates
+             fill the same three columns as the cards and line up with them row
+             by row. Each frame reserves a 1200x1000 box with `object-contain`,
+             which keeps all six certificates exactly the same size regardless
+             of how the real scans are cropped. -->
+        <div class="grid md:grid-cols-3 gap-8 mt-16 lg:mt-20">
+          <figure
+            class="cert-frame card-hover relative bg-white rounded-3xl border border-gray-100 p-3 sm:p-4 shadow-sm hover:shadow-xl hover:shadow-jd-sky/10 transition-all duration-300"
+            data-animate="fade-up"
+            data-delay="0"
+          >
+            <div class="relative w-full aspect-[1200/1000] overflow-hidden rounded-2xl bg-jd-sky/5">
+              <img
+                src="assets/cert-iso.svg"
+                alt="ISO 9001:2008 quality management system certificate issued to Krushi Nature Water Care Pvt. Ltd."
+                class="absolute inset-0 w-full h-full object-contain"
+                width="1200"
+                height="1000"
+                loading="lazy"
+              />
+            </div>
+            <figcaption
+              class="mt-4 flex items-center justify-center gap-2 font-heading text-xs font-semibold uppercase tracking-widest text-jd-gray"
+            >
+              <i class="fas fa-certificate text-jd-blue"></i>
+              ISO 9001:2008
+            </figcaption>
+          </figure>
+
+          <figure
+            class="cert-frame card-hover relative bg-white rounded-3xl border border-gray-100 p-3 sm:p-4 shadow-sm hover:shadow-xl hover:shadow-jd-green/10 transition-all duration-300"
+            data-animate="fade-up"
+            data-delay="150"
+          >
+            <div class="relative w-full aspect-[1200/1000] overflow-hidden rounded-2xl bg-jd-green/5">
+              <img
+                src="assets/cert-quality.svg"
+                alt="Quality manufacturing certificate awarded to the Krushi Nature Water Care manufacturing unit in Nagpur"
+                class="absolute inset-0 w-full h-full object-contain"
+                width="1200"
+                height="1000"
+                loading="lazy"
+              />
+            </div>
+            <figcaption
+              class="mt-4 flex items-center justify-center gap-2 font-heading text-xs font-semibold uppercase tracking-widest text-jd-gray"
+            >
+              <i class="fas fa-shield-alt text-jd-green"></i>
+              Quality Manufacturing
+            </figcaption>
+          </figure>
+
+          <figure
+            class="cert-frame card-hover relative bg-white rounded-3xl border border-gray-100 p-3 sm:p-4 shadow-sm hover:shadow-xl hover:shadow-jd-sky/10 transition-all duration-300"
+            data-animate="fade-up"
+            data-delay="300"
+          >
+            <div class="relative w-full aspect-[1200/1000] overflow-hidden rounded-2xl bg-jd-deep/5">
+              <img
+                src="assets/cert-technology.svg"
+                alt="Compliance certificate for the four-stage ultrasonic, magnetic static, pulsing power and catalytic water conditioning technology"
+                class="absolute inset-0 w-full h-full object-contain"
+                width="1200"
+                height="1000"
+                loading="lazy"
+              />
+            </div>
+            <figcaption
+              class="mt-4 flex items-center justify-center gap-2 font-heading text-xs font-semibold uppercase tracking-widest text-jd-gray"
+            >
+              <i class="fas fa-check-double text-jd-deep"></i>
+              Advanced Technology
+            </figcaption>
+          </figure>
+
+          <figure
+            class="cert-frame card-hover relative bg-white rounded-3xl border border-gray-100 p-3 sm:p-4 shadow-sm hover:shadow-xl hover:shadow-jd-green/10 transition-all duration-300"
+            data-animate="fade-up"
+            data-delay="450"
+          >
+            <div class="relative w-full aspect-[1200/1000] overflow-hidden rounded-2xl bg-jd-green/5">
+              <img
+                src="assets/cert-isi.svg"
+                alt="Bureau of Indian Standards conformity certificate for Jaldoot water conditioners against IS 3834"
+                class="absolute inset-0 w-full h-full object-contain"
+                width="1200"
+                height="1000"
+                loading="lazy"
+              />
+            </div>
+            <figcaption
+              class="mt-4 flex items-center justify-center gap-2 font-heading text-xs font-semibold uppercase tracking-widest text-jd-gray"
+            >
+              <i class="fas fa-award text-jd-green"></i>
+              BIS / ISI Mark
+            </figcaption>
+          </figure>
+
+          <figure
+            class="cert-frame card-hover relative bg-white rounded-3xl border border-gray-100 p-3 sm:p-4 shadow-sm hover:shadow-xl hover:shadow-jd-sky/10 transition-all duration-300"
+            data-animate="fade-up"
+            data-delay="600"
+          >
+            <div class="relative w-full aspect-[1200/1000] overflow-hidden rounded-2xl bg-jd-sky/5">
+              <img
+                src="assets/cert-ce.svg"
+                alt="European conformity certificate showing the CE mark for Jaldoot water conditioning equipment"
+                class="absolute inset-0 w-full h-full object-contain"
+                width="1200"
+                height="1000"
+                loading="lazy"
+              />
+            </div>
+            <figcaption
+              class="mt-4 flex items-center justify-center gap-2 font-heading text-xs font-semibold uppercase tracking-widest text-jd-gray"
+            >
+              <i class="fas fa-globe text-jd-blue"></i>
+              CE Marking
+            </figcaption>
+          </figure>
+
+          <figure
+            class="cert-frame card-hover relative bg-white rounded-3xl border border-gray-100 p-3 sm:p-4 shadow-sm hover:shadow-xl hover:shadow-jd-sky/10 transition-all duration-300"
+            data-animate="fade-up"
+            data-delay="750"
+          >
+            <div class="relative w-full aspect-[1200/1000] overflow-hidden rounded-2xl bg-jd-deep/5">
+              <img
+                src="assets/cert-patent.svg"
+                alt="Indian patent certificate for the four-stage water conditioning apparatus invented by Krushi Nature Water Care"
+                class="absolute inset-0 w-full h-full object-contain"
+                width="1200"
+                height="1000"
+                loading="lazy"
+              />
+            </div>
+            <figcaption
+              class="mt-4 flex items-center justify-center gap-2 font-heading text-xs font-semibold uppercase tracking-widest text-jd-gray"
+            >
+              <i class="fas fa-lightbulb text-jd-deep"></i>
+              Patent Granted
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
