@@ -47,6 +47,102 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
     <style>
+      /* ===== TOP SOCIAL BAR ===== */
+      .topbar {
+        height: 38px;
+        overflow: hidden;
+        background: linear-gradient(
+          90deg,
+          #0a1628 0%,
+          #134fa1 58%,
+          #0066b3 100%
+        );
+        box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+        transition:
+          height 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          opacity 0.3s ease;
+      }
+      /* collapses on scroll so the navbar gets the full header back */
+      .navbar.is-hidden .topbar {
+        height: 0;
+        opacity: 0;
+      }
+      .topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        max-width: 80rem;
+        height: 38px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+      .topbar-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        min-width: 0;
+        font-family: "Inter", sans-serif;
+        font-size: 0.72rem;
+        letter-spacing: 0.02em;
+        color: rgba(255, 255, 255, 0.78);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .topbar-tag i {
+        flex: 0 0 auto;
+        color: #4db74a;
+        font-size: 0.68rem;
+      }
+      .topbar-social {
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .topbar-social a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        border-radius: 9999px;
+        background: rgba(255, 255, 255, 0.12);
+        color: #ffffff;
+        font-size: 0.76rem;
+        transition:
+          transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          background-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .topbar-social a:hover,
+      .topbar-social a:focus-visible {
+        transform: translateY(-2px) scale(1.08);
+        box-shadow: 0 6px 14px -6px rgba(0, 0, 0, 0.7);
+      }
+      .topbar-social .soc-fb:hover,
+      .topbar-social .soc-fb:focus-visible {
+        background: #1877f2;
+      }
+      .topbar-social .soc-ig:hover,
+      .topbar-social .soc-ig:focus-visible {
+        background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+      }
+      .topbar-social .soc-yt:hover,
+      .topbar-social .soc-yt:focus-visible {
+        background: #ff0000;
+      }
+      @media (max-width: 640px) {
+        .topbar-tag {
+          display: none;
+        }
+        .topbar-inner {
+          justify-content: flex-end;
+        }
+      }
+
+
       /* ===== PRELOADER ===== */
       #preloader {
         transition:
@@ -636,32 +732,9 @@
         border-color: rgba(255, 255, 255, 0.32);
       }
 
-      /* ===== PAGE HERO BANNER (product.png) =====
-         Same treatment as the About hero: the frame is locked to the 1920x819
-         ratio and the picture fills it edge to edge with object-fit: cover, so
-         both heroes render at an identical height with no side bars.
-
-         product.png is natively 1672x941 (a taller ratio), so cover trims the
-         top and bottom of the artwork. Re-export that asset at 1920x819 to
-         remove the trim; until then the frame height stays matched either way. */
-      .hero-banner {
-        position: relative;
-        z-index: 2;
-        width: 100%;
-        aspect-ratio: 1920 / 819;
-        margin-top: 80px; /* sit below the fixed navbar */
-        overflow: hidden;
-        background: #0a1628;
-      }
-      .hero-banner-img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        user-select: none;
-        -webkit-user-drag: none;
+      /* the hero clears the fixed header stack: topbar 38px + navbar 80px */
+      .page-hero {
+        margin-top: 118px;
       }
 
       /* The hero breadcrumb is styled once in css/styles.css
@@ -672,6 +745,69 @@
       .wave-divider svg {
         display: block;
       }
+          /* ===== CTA BAND (LIGHT, TWO COLUMN) ===== */
+      .cta-band-bg {
+        background:
+          radial-gradient(
+            760px 460px at 14% 4%,
+            rgba(255, 255, 255, 0.9),
+            rgba(255, 255, 255, 0) 62%
+          ),
+          radial-gradient(
+            720px 480px at 92% 96%,
+            rgba(125, 211, 252, 0.85),
+            rgba(125, 211, 252, 0) 66%
+          ),
+          linear-gradient(118deg, #f2fbff 0%, #d8f1ff 42%, #b3e4fc 100%);
+      }
+      .cta-kit {
+        position: relative;
+        width: 100%;
+        max-width: 540px;
+        margin: 0 auto;
+        pointer-events: none;
+      }
+      .cta-kit-glow {
+        position: absolute;
+        left: 50%;
+        bottom: -10%;
+        width: 100%;
+        height: 58%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        background: radial-gradient(
+          closest-side,
+          rgba(13, 76, 130, 0.26) 0%,
+          rgba(13, 76, 130, 0.1) 52%,
+          rgba(13, 76, 130, 0) 78%
+        );
+        filter: blur(16px);
+      }
+      .cta-kit-img {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 24px 30px rgba(9, 62, 110, 0.3));
+        transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .cta-kit:hover .cta-kit-img {
+        transform: translateY(-8px) scale(1.02);
+      }
+      @media (max-width: 1023px) {
+        .cta-kit {
+          max-width: 420px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .cta-kit-img {
+          transition: none;
+        }
+        .cta-kit:hover .cta-kit-img {
+          transform: none;
+        }
+      }
+
     </style>
   </head>
   <body class="font-body text-jd-gray bg-white overflow-x-hidden">
@@ -721,6 +857,47 @@
       id="navbar"
       class="navbar fixed top-0 left-0 right-0 z-50 transition-all duration-500"
     >
+      <!-- ===== SOCIAL BAR ===== -->
+      <div class="topbar">
+        <div class="topbar-inner">
+          <span class="topbar-tag">
+            <i class="fas fa-tint" aria-hidden="true"></i>
+            Crystal Clear Naturally Water &mdash; Krushi Nature Water Care Pvt.
+            Ltd.
+          </span>
+
+          <div class="topbar-social">
+            <a
+              class="soc-fb"
+              href="https://www.facebook.com/jaldootwatersystems"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Jaldoot on Facebook"
+            >
+              <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a
+              class="soc-ig"
+              href="https://www.instagram.com/jaldootwatersystems"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Jaldoot on Instagram"
+            >
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a
+              class="soc-yt"
+              href="https://www.youtube.com/@jaldootwatersystemsindia"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Jaldoot on YouTube"
+            >
+              <i class="fab fa-youtube" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
           <a
@@ -845,20 +1022,8 @@
 
     <!-- Page Hero -->
     <section
-      class="relative min-h-[60vh] lg:min-h-[70vh] flex flex-col items-center overflow-hidden bg-gradient-to-br from-jd-dark via-jd-deep to-jd-blue"
+      class="page-hero relative flex items-center overflow-hidden bg-gradient-to-br from-jd-dark via-jd-deep to-jd-blue"
     >
-      <!-- Page Hero Banner: assets/product.png, shown complete (never cropped) -->
-      <div class="hero-banner">
-        <img
-          src="assets/product.png"
-          alt="Jaldoot water conditioner product range"
-          class="hero-banner-img"
-          width="1672"
-          height="941"
-          fetchpriority="high"
-        />
-      </div>
-
       <!-- Particles -->
       <div
         id="heroParticles"
@@ -901,22 +1066,37 @@
         style="top: 30%; right: 15%; animation-delay: 2s"
       ></div>
 
-      <!-- Content: the banner above is the hero. The visible heading, badge,
-           intro copy, buttons and orbit visual were removed as duplicates, so
-           the <h1> is kept screen-reader only to preserve one accessible h1. -->
-      <div class="hero-crumb">
-        <h1 class="sr-only">Our Product Range</h1>
-
-        <!-- Breadcrumb: dead-centre of the hero image, black text.
-             No data-animate here on purpose: hero content must never depend on a
-             scroll-reveal to become visible. -->
-        <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+      <!-- Content: text-only hero. No data-animate here on purpose: hero copy
+           must never depend on a scroll-reveal to become visible. -->
+      <div
+        class="relative z-10 w-full max-w-3xl mx-auto px-4 sm:px-6 text-center py-14 lg:py-20"
+      >
+        <nav class="hero-breadcrumb mb-7" aria-label="Breadcrumb">
           <a href="index.html" class="font-heading">
             <i class="fas fa-home mr-1"></i> Home
           </a>
           <i class="fas fa-chevron-right hero-crumb-sep"></i>
           <span class="hero-crumb-current font-heading">Products</span>
         </nav>
+
+        <span
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-sm font-heading font-semibold mb-5"
+        >
+          <i class="fas fa-box-open"></i> Our Products
+        </span>
+
+        <h1
+          class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-5 leading-tight"
+        >
+          The Jaldoot
+          <span class="text-jd-sky">Water Conditioner</span>
+          Range
+        </h1>
+
+        <p class="text-white/75 text-base lg:text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          Chemical-free, salt-free units for homes, farms, hotels and factories
+          &mdash; sized for the line you actually have.
+        </p>
       </div>
 
       <!-- Wave Bottom -->
@@ -5199,11 +5379,9 @@
     </section>
 
     <!-- ===== CTA ===== -->
-    <section class="py-20 lg:py-28 relative overflow-hidden">
-      <div
-        class="absolute inset-0 bg-gradient-to-r from-jd-deep via-jd-blue to-jd-sky"
-      ></div>
-      <div class="absolute inset-0 opacity-10">
+    <section class="cta-band py-16 lg:py-20 relative overflow-hidden">
+<div class="absolute inset-0 cta-band-bg"></div>
+      <div class="absolute inset-0 opacity-70">
         <div
           class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"
         ></div>
@@ -5214,37 +5392,37 @@
       <div
         class="absolute inset-0 opacity-[0.07]"
         style="
-          background-image: radial-gradient(circle, white 1px, transparent 1px);
+          background-image: radial-gradient(circle, #134fa1 1px, transparent 1px);
           background-size: 40px 40px;
         "
       ></div>
       <div
-        class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
-        data-animate="fade-up"
+        class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center"
       >
+        <div class="text-center lg:text-left" data-animate="fade-up">
         <div
-          class="w-16 h-16 mx-auto bg-white/15 rounded-2xl flex items-center justify-center mb-6 float-y"
+          class="w-12 h-12 mx-auto lg:mx-0 bg-white/75 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-jd-sky/25 float-y"
         >
-          <i class="fas fa-paper-plane text-3xl text-white"></i>
+          <i class="fas fa-paper-plane text-2xl text-jd-blue"></i>
         </div>
         <span
-          class="inline-block px-4 py-1.5 rounded-full bg-white/15 border border-white/20 text-white text-sm font-heading font-semibold mb-6"
+          class="inline-block px-4 py-1.5 rounded-full bg-white/70 border border-jd-blue/20 text-jd-deep text-sm font-heading font-semibold mb-5"
           >Hardness to happiness</span
         >
         <h2
-          class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-6 leading-tight"
+          class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-jd-dark mb-4"
         >
           Crystal Clear
-          <span class="gradient-text-white">Naturally Water</span>
+          <span class="gradient-text-blue">Naturally Water</span>
         </h2>
-        <p class="text-white/70 text-lg mb-10 max-w-2xl mx-auto">
+        <p class="text-jd-deep/80 text-sm lg:text-base mb-7 max-w-xl mx-auto lg:mx-0">
           Tell us about your line &mdash; pipe material, diameter and flow &mdash; and
           we will suggest the right Jaldoot unit.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
           <a
             href="contact.html"
-            class="group inline-flex items-center justify-center gap-2 px-10 py-4 bg-white text-jd-deep rounded-full font-heading font-bold text-lg shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            class="group inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 bg-white text-jd-deep rounded-full font-heading font-bold text-base shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <i class="fas fa-paper-plane"></i>
             Request a quote
@@ -5254,11 +5432,26 @@
           </a>
           <a
             href="tel:9822209656"
-            class="inline-flex items-center justify-center gap-2 px-10 py-4 bg-jd-green text-white rounded-full font-heading font-bold text-lg shadow-lg shadow-jd-green/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 bg-jd-green text-white rounded-full font-heading font-bold text-base shadow-lg shadow-jd-green/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <i class="fas fa-phone-alt"></i>
             Call: 98222 09656
           </a>
+        </div>
+        </div>
+
+        <!-- transparent product cut-out -->
+        <div class="cta-kit" data-animate="fade-up" data-delay="120">
+          <span class="cta-kit-glow" aria-hidden="true"></span>
+          <img
+            class="cta-kit-img"
+            src="assets/jaldoot-kit.png"
+            alt="Jaldoot water conditioner kit: control unit, power adapter, sensor cable and the blue magnetic conditioning chamber"
+            width="1450"
+            height="754"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
     </section>
@@ -5415,8 +5608,8 @@
               <li class="flex items-start text-sm text-gray-400">
                 <i class="fas fa-map-marker-alt text-jd-sky mr-3 mt-1"></i
                 ><span
-                  >Shop No. C-116, Mega Center, Magarpatta, Hadapsar,
-                  Pune-13</span
+                  >Plot No. 83, Near Maruthi Meter, Ramtekadi Industrial
+                  Estate, Hadapsar, Pune - 411028</span
                 >
               </li>
               <li class="flex items-center text-sm text-gray-400">
@@ -5538,6 +5731,7 @@
         if (navbar) {
           const onScroll = function () {
             navbar.classList.toggle("scrolled", window.scrollY > 80);
+            navbar.classList.toggle("is-hidden", window.scrollY > 80);
           };
           window.addEventListener("scroll", onScroll, { passive: true });
           onScroll();

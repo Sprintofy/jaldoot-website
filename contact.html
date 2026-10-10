@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Contact Jaldoot Water Conditioner - Krushi Nature Water Care Pvt. Ltd., Mega Center, Magarpatta, Hadapsar, Pune. Call 9822209656, WhatsApp or send an enquiry for a product recommendation."
+      content="Contact Jaldoot Water Conditioner - Krushi Nature Water Care Pvt. Ltd., Plot No. 83, Ramtekadi Industrial Estate, Hadapsar, Pune - 411028. Call 9822209656, WhatsApp or send an enquiry for a product recommendation."
     />
     <meta
       name="keywords"
-      content="contact Jaldoot, water conditioner enquiry, Krushi Nature Water Care, Magarpatta Pune, Jaldoot dealer, hard water treatment contact"
+      content="contact Jaldoot, water conditioner enquiry, Krushi Nature Water Care, Hadapsar Pune, Jaldoot dealer, hard water treatment contact"
     />
     <meta name="author" content="Krushi Nature Water Care Pvt. Ltd." />
     <title>
@@ -48,6 +48,102 @@
     <link rel="stylesheet" href="css/styles.css" />
 
     <style>
+      /* ===== TOP SOCIAL BAR ===== */
+      .topbar {
+        height: 38px;
+        overflow: hidden;
+        background: linear-gradient(
+          90deg,
+          #0a1628 0%,
+          #134fa1 58%,
+          #0066b3 100%
+        );
+        box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+        transition:
+          height 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          opacity 0.3s ease;
+      }
+      /* collapses on scroll so the navbar gets the full header back */
+      .navbar.is-hidden .topbar {
+        height: 0;
+        opacity: 0;
+      }
+      .topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        max-width: 80rem;
+        height: 38px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+      .topbar-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        min-width: 0;
+        font-family: "Inter", sans-serif;
+        font-size: 0.72rem;
+        letter-spacing: 0.02em;
+        color: rgba(255, 255, 255, 0.78);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .topbar-tag i {
+        flex: 0 0 auto;
+        color: #4db74a;
+        font-size: 0.68rem;
+      }
+      .topbar-social {
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .topbar-social a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        border-radius: 9999px;
+        background: rgba(255, 255, 255, 0.12);
+        color: #ffffff;
+        font-size: 0.76rem;
+        transition:
+          transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          background-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .topbar-social a:hover,
+      .topbar-social a:focus-visible {
+        transform: translateY(-2px) scale(1.08);
+        box-shadow: 0 6px 14px -6px rgba(0, 0, 0, 0.7);
+      }
+      .topbar-social .soc-fb:hover,
+      .topbar-social .soc-fb:focus-visible {
+        background: #1877f2;
+      }
+      .topbar-social .soc-ig:hover,
+      .topbar-social .soc-ig:focus-visible {
+        background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+      }
+      .topbar-social .soc-yt:hover,
+      .topbar-social .soc-yt:focus-visible {
+        background: #ff0000;
+      }
+      @media (max-width: 640px) {
+        .topbar-tag {
+          display: none;
+        }
+        .topbar-inner {
+          justify-content: flex-end;
+        }
+      }
+
+
       /* ===== PRELOADER ===== */
       #preloader {
         transition:
@@ -598,6 +694,69 @@
         }
       }
 
+          /* ===== CTA BAND (LIGHT, TWO COLUMN) ===== */
+      .cta-band-bg {
+        background:
+          radial-gradient(
+            760px 460px at 14% 4%,
+            rgba(255, 255, 255, 0.9),
+            rgba(255, 255, 255, 0) 62%
+          ),
+          radial-gradient(
+            720px 480px at 92% 96%,
+            rgba(125, 211, 252, 0.85),
+            rgba(125, 211, 252, 0) 66%
+          ),
+          linear-gradient(118deg, #f2fbff 0%, #d8f1ff 42%, #b3e4fc 100%);
+      }
+      .cta-kit {
+        position: relative;
+        width: 100%;
+        max-width: 540px;
+        margin: 0 auto;
+        pointer-events: none;
+      }
+      .cta-kit-glow {
+        position: absolute;
+        left: 50%;
+        bottom: -10%;
+        width: 100%;
+        height: 58%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        background: radial-gradient(
+          closest-side,
+          rgba(13, 76, 130, 0.26) 0%,
+          rgba(13, 76, 130, 0.1) 52%,
+          rgba(13, 76, 130, 0) 78%
+        );
+        filter: blur(16px);
+      }
+      .cta-kit-img {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 24px 30px rgba(9, 62, 110, 0.3));
+        transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .cta-kit:hover .cta-kit-img {
+        transform: translateY(-8px) scale(1.02);
+      }
+      @media (max-width: 1023px) {
+        .cta-kit {
+          max-width: 420px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .cta-kit-img {
+          transition: none;
+        }
+        .cta-kit:hover .cta-kit-img {
+          transform: none;
+        }
+      }
+
     </style>
   </head>
 
@@ -659,6 +818,47 @@
       id="navbar"
       class="navbar fixed top-0 left-0 right-0 z-50 transition-all duration-500"
     >
+      <!-- ===== SOCIAL BAR ===== -->
+      <div class="topbar">
+        <div class="topbar-inner">
+          <span class="topbar-tag">
+            <i class="fas fa-tint" aria-hidden="true"></i>
+            Crystal Clear Naturally Water &mdash; Krushi Nature Water Care Pvt.
+            Ltd.
+          </span>
+
+          <div class="topbar-social">
+            <a
+              class="soc-fb"
+              href="https://www.facebook.com/jaldootwatersystems"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Jaldoot on Facebook"
+            >
+              <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a
+              class="soc-ig"
+              href="https://www.instagram.com/jaldootwatersystems"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Jaldoot on Instagram"
+            >
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a
+              class="soc-yt"
+              href="https://www.youtube.com/@jaldootwatersystemsindia"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Jaldoot on YouTube"
+            >
+              <i class="fab fa-youtube" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
           <!-- Logo -->
@@ -942,7 +1142,7 @@
               <div
                 class="absolute -bottom-4 -left-4 contact-chip bg-white/10 rounded-2xl px-4 py-2 border border-white/20 text-white text-sm font-heading font-semibold shadow-xl float-y-delay"
               >
-                <i class="fas fa-location-dot text-jd-sky mr-2"></i>Magarpatta
+                <i class="fas fa-location-dot text-jd-sky mr-2"></i>Hadapsar, Pune
               </div>
             </div>
           </div>
@@ -1010,7 +1210,7 @@
             One <span class="gradient-text-blue">Simple Conversation</span> Away
           </h2>
           <p class="text-jd-gray mt-3 sm:mt-4 text-sm sm:text-base px-2">
-            Visit our office in Magarpatta, call us, or drop a message &mdash;
+            Visit our office in Hadapsar, Pune, call us, or drop a message &mdash;
             whichever is easiest for you.
           </p>
         </div>
@@ -1026,9 +1226,9 @@
               Visit Us
             </h3>
             <p class="text-jd-gray text-sm leading-relaxed">
-              Shop No. C-116, Mega Center,<br />
-              Magarpatta, Hadapsar,<br />
-              Pune - 413028,<br />
+              Plot No. 83, Near Maruthi Meter,<br />
+              Ramtekadi Industrial Estate,<br />
+              Hadapsar, Pune - 411028,<br />
               Maharashtra, India
             </p>
           </div>
@@ -1348,13 +1548,13 @@
                   <p
                     class="font-heading font-semibold text-jd-deep text-sm sm:text-base"
                   >
-                    Mega Center, Magarpatta
+                    Ramtekadi Industrial Estate
                   </p>
                   <p class="text-xs sm:text-sm text-jd-gray mt-1">
-                    Hadapsar, Pune - 413028
+                    Hadapsar, Pune - 411028
                   </p>
                   <a
-                    href="https://maps.google.com/?q=Mega+Center+Magarpatta+Hadapsar+Pune"
+                    href="https://maps.google.com/?q=Plot+No+83+Ramtekadi+Industrial+Estate+Hadapsar+Pune+411028"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="inline-flex items-center gap-1.5 mt-3 text-xs font-semibold text-jd-blue hover:text-jd-sky transition-colors"
@@ -1499,7 +1699,7 @@
               <p
                 class="px-4 sm:px-5 pb-4 sm:pb-5 text-jd-gray text-sm leading-relaxed"
               >
-                Absolutely. Our showroom at Mega Center, Magarpatta is open
+                Absolutely. Our office at Ramtekadi Industrial Estate, Hadapsar is open
                 Monday to Saturday. We recommend calling ahead so we can arrange
                 a live product demonstration for you.
               </p>
@@ -1666,11 +1866,9 @@
     </section>
 
     <!-- ===== CTA ===== -->
-    <section class="py-20 lg:py-28 relative overflow-hidden">
-      <div
-        class="absolute inset-0 bg-gradient-to-r from-jd-deep via-jd-blue to-jd-sky"
-      ></div>
-      <div class="absolute inset-0 opacity-10">
+    <section class="cta-band py-16 lg:py-20 relative overflow-hidden">
+<div class="absolute inset-0 cta-band-bg"></div>
+      <div class="absolute inset-0 opacity-70">
         <div
           class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"
         ></div>
@@ -1681,44 +1879,44 @@
       <div
         class="absolute inset-0 opacity-[0.07]"
         style="
-          background-image: radial-gradient(circle, white 1px, transparent 1px);
+          background-image: radial-gradient(circle, #134fa1 1px, transparent 1px);
           background-size: 40px 40px;
         "
       ></div>
       <div
-        class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
-        data-animate="fade-up"
+        class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center"
       >
+        <div class="text-center lg:text-left" data-animate="fade-up">
         <div
-          class="w-16 h-16 mx-auto bg-white/15 rounded-2xl flex items-center justify-center mb-6 float-y"
+          class="w-12 h-12 mx-auto lg:mx-0 bg-white/75 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-jd-sky/25 float-y"
         >
-          <i class="fas fa-headset text-3xl text-white"></i>
+          <i class="fas fa-headset text-2xl text-jd-blue"></i>
         </div>
         <span
-          class="inline-block px-4 py-1.5 rounded-full bg-white/15 border border-white/20 text-white text-sm font-heading font-semibold mb-6"
+          class="inline-block px-4 py-1.5 rounded-full bg-white/70 border border-jd-blue/20 text-jd-deep text-sm font-heading font-semibold mb-5"
           >Hardness to happiness</span
         >
         <h2
-          class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-6 leading-tight"
+          class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-jd-dark mb-4"
         >
           Let Us Solve Your
-          <span class="gradient-text-white">Water Problem</span>
+          <span class="gradient-text-blue">Water Problem</span>
         </h2>
-        <p class="text-white/70 text-lg mb-10 max-w-2xl mx-auto">
+        <p class="text-jd-deep/80 text-sm lg:text-base mb-7 max-w-xl mx-auto lg:mx-0">
           One call is usually enough to know whether a Jaldoot unit will help your
           line &mdash; and which model to start with.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
           <a
             href="tel:9822209656"
-            class="inline-flex items-center justify-center gap-2 px-10 py-4 bg-jd-green text-white rounded-full font-heading font-bold text-lg shadow-lg shadow-jd-green/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 bg-jd-green text-white rounded-full font-heading font-bold text-base shadow-lg shadow-jd-green/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <i class="fas fa-phone-alt"></i>
             Call: 98222 09656
           </a>
           <a
             href="#contact-form"
-            class="group inline-flex items-center justify-center gap-2 px-10 py-4 bg-white text-jd-deep rounded-full font-heading font-bold text-lg shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            class="group inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 bg-white text-jd-deep rounded-full font-heading font-bold text-base shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <i class="fas fa-paper-plane"></i>
             Send a message
@@ -1726,6 +1924,21 @@
               class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"
             ></i>
           </a>
+        </div>
+        </div>
+
+        <!-- transparent product cut-out -->
+        <div class="cta-kit" data-animate="fade-up" data-delay="120">
+          <span class="cta-kit-glow" aria-hidden="true"></span>
+          <img
+            class="cta-kit-img"
+            src="assets/jaldoot-kit.png"
+            alt="Jaldoot water conditioner kit: control unit, power adapter, sensor cable and the blue magnetic conditioning chamber"
+            width="1450"
+            height="754"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
     </section>
@@ -1882,8 +2095,8 @@
               <li class="flex items-start text-sm text-gray-400">
                 <i class="fas fa-map-marker-alt text-jd-sky mr-3 mt-1"></i
                 ><span
-                  >Shop No. C-116, Mega Center, Magarpatta, Hadapsar,
-                  Pune-13</span
+                  >Plot No. 83, Near Maruthi Meter, Ramtekadi Industrial
+                  Estate, Hadapsar, Pune - 411028</span
                 >
               </li>
               <li class="flex items-center text-sm text-gray-400">
@@ -2012,6 +2225,7 @@
         if (navbar) {
           const onScroll = function () {
             navbar.classList.toggle("scrolled", window.scrollY > 80);
+            navbar.classList.toggle("is-hidden", window.scrollY > 80);
           };
           window.addEventListener("scroll", onScroll, { passive: true });
           onScroll();

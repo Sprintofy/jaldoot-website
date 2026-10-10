@@ -41,6 +41,102 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
     <style>
+      /* ===== TOP SOCIAL BAR ===== */
+      .topbar {
+        height: 38px;
+        overflow: hidden;
+        background: linear-gradient(
+          90deg,
+          #0a1628 0%,
+          #134fa1 58%,
+          #0066b3 100%
+        );
+        box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.08);
+        transition:
+          height 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          opacity 0.3s ease;
+      }
+      /* collapses on scroll so the navbar gets the full header back */
+      .navbar.is-hidden .topbar {
+        height: 0;
+        opacity: 0;
+      }
+      .topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        max-width: 80rem;
+        height: 38px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+      .topbar-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        min-width: 0;
+        font-family: "Inter", sans-serif;
+        font-size: 0.72rem;
+        letter-spacing: 0.02em;
+        color: rgba(255, 255, 255, 0.78);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .topbar-tag i {
+        flex: 0 0 auto;
+        color: #4db74a;
+        font-size: 0.68rem;
+      }
+      .topbar-social {
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .topbar-social a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        border-radius: 9999px;
+        background: rgba(255, 255, 255, 0.12);
+        color: #ffffff;
+        font-size: 0.76rem;
+        transition:
+          transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          background-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .topbar-social a:hover,
+      .topbar-social a:focus-visible {
+        transform: translateY(-2px) scale(1.08);
+        box-shadow: 0 6px 14px -6px rgba(0, 0, 0, 0.7);
+      }
+      .topbar-social .soc-fb:hover,
+      .topbar-social .soc-fb:focus-visible {
+        background: #1877f2;
+      }
+      .topbar-social .soc-ig:hover,
+      .topbar-social .soc-ig:focus-visible {
+        background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+      }
+      .topbar-social .soc-yt:hover,
+      .topbar-social .soc-yt:focus-visible {
+        background: #ff0000;
+      }
+      @media (max-width: 640px) {
+        .topbar-tag {
+          display: none;
+        }
+        .topbar-inner {
+          justify-content: flex-end;
+        }
+      }
+
+
       /* ===== PRELOADER ===== */
       #preloader {
         transition:
@@ -52,7 +148,337 @@
         visibility: hidden;
       }
 
-      /* ===== SCROLL ANIMATIONS ===== */
+/* ===== VIDEO TESTIMONIALS ===== */
+      .tv-section {
+        position: relative;
+        background: #f5f9fd;
+        overflow: hidden;
+      }
+      .tv-head {
+        max-width: 44rem;
+        margin: 0 auto 4rem;
+        text-align: center;
+      }
+      .tv-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.5rem 1.25rem;
+        border-radius: 9999px;
+        background: rgba(0, 102, 179, 0.1);
+        border: 1px solid rgba(0, 102, 179, 0.2);
+        color: #0066b3;
+        font-family: "Poppins", sans-serif;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 1.25rem;
+      }
+      .tv-title {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        color: #0a1628;
+        line-height: 1.2;
+        font-size: clamp(1.9rem, 4vw, 3rem);
+        margin-bottom: 1rem;
+      }
+      .tv-title span {
+        color: #0066b3;
+      }
+      .tv-sub {
+        font-family: "Inter", sans-serif;
+        color: #6d6e6f;
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      /* --- card --- */
+      .tv-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background: #fff;
+        border: 1px solid rgba(0, 102, 179, 0.18);
+        border-radius: 1.5rem;
+        overflow: hidden;
+        text-align: center;
+        cursor: default;
+        transition:
+          transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          border-color 0.5s ease,
+          box-shadow 0.5s ease;
+        will-change: transform;
+      }
+      .tv-card:hover,
+      .tv-card:focus-within {
+        transform: translateY(-12px);
+        border-color: rgba(0, 102, 179, 0.45);
+        box-shadow: 0 30px 60px -24px rgba(10, 22, 40, 0.45);
+      }
+
+      /* --- thumbnail ---
+         The gradient is a fallback: if a poster image is missing the card
+         still renders a branded tile instead of a broken-image icon. */
+      .tv-thumb {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        background: linear-gradient(135deg, #134fa1 0%, #0066b3 45%, #00adee 100%);
+      }
+      .tv-thumb-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1);
+        transition: transform 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .tv-thumb-img.is-missing {
+        display: none;
+      }
+      .tv-card:hover .tv-thumb-img,
+      .tv-card:focus-within .tv-thumb-img {
+        transform: scale(1.12);
+      }
+      .tv-thumb::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(
+          180deg,
+          rgba(10, 22, 40, 0.05) 0%,
+          rgba(10, 22, 40, 0.2) 50%,
+          rgba(10, 22, 40, 0.72) 100%
+        );
+        opacity: 0.8;
+        transition: opacity 0.5s ease;
+      }
+      .tv-card:hover .tv-thumb::after,
+      .tv-card:focus-within .tv-thumb::after {
+        opacity: 1;
+      }
+
+      /* --- centered circular play button --- */
+      .tv-thumb-btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4.25rem;
+        height: 4.25rem;
+        padding-left: 0.2rem;
+        border-radius: 9999px;
+        border: 2px solid rgba(255, 255, 255, 0.7);
+        background: rgba(255, 255, 255, 0.16);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        color: #fff;
+        font-size: 1.05rem;
+        cursor: pointer;
+        box-shadow: 0 10px 26px -10px rgba(0, 0, 0, 0.6);
+        transition:
+          transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          background-color 0.45s ease,
+          border-color 0.45s ease,
+          box-shadow 0.45s ease;
+      }
+      .tv-thumb-btn::before {
+        content: "";
+        position: absolute;
+        inset: -0.55rem;
+        border-radius: 9999px;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        opacity: 0;
+        animation: tv-pulse 2.6s ease-out infinite;
+        pointer-events: none;
+      }
+      @keyframes tv-pulse {
+        0% {
+          transform: scale(0.85);
+          opacity: 0.7;
+        }
+        70% {
+          transform: scale(1.3);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1.3);
+          opacity: 0;
+        }
+      }
+      .tv-thumb-btn:hover,
+      .tv-thumb-btn:focus-visible {
+        transform: translate(-50%, -50%) scale(1.12);
+        background: #0066b3;
+        border-color: #fff;
+        box-shadow: 0 14px 32px -10px rgba(0, 102, 179, 0.8);
+      }
+      .tv-thumb-btn:hover::before,
+      .tv-thumb-btn:focus-visible::before {
+        animation: none;
+        opacity: 0;
+      }
+      .tv-thumb-btn i {
+        transition: transform 0.35s ease;
+      }
+      .tv-thumb-btn:hover i {
+        transform: scale(1.15);
+      }
+      .tv-thumb-btn:focus-visible {
+        outline: 3px solid #4db74a;
+        outline-offset: 3px;
+      }
+
+      /* --- modal --- */
+      .tv-modal {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.25rem;
+        background: rgba(7, 21, 39, 0.82);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.35s ease,
+          visibility 0.35s ease;
+      }
+      .tv-modal.is-open {
+        opacity: 1;
+        visibility: visible;
+      }
+      .tv-modal-box {
+        position: relative;
+        width: 100%;
+        max-width: 56rem;
+        transform: translateY(28px) scale(0.96);
+        opacity: 0;
+        transition:
+          transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          opacity 0.45s ease;
+      }
+      .tv-modal.is-open .tv-modal-box {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      .tv-modal-box video {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 78vh;
+        margin: 0 auto;
+        border-radius: 1.25rem;
+        background: #000;
+        box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.6);
+      }
+      .tv-modal-close {
+        position: absolute;
+        top: -0.75rem;
+        right: -0.75rem;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: 9999px;
+        background: #fff;
+        color: #0a1628;
+        font-size: 1.05rem;
+        box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.5);
+        transition:
+          transform 0.3s ease,
+          background-color 0.3s ease,
+          color 0.3s ease;
+      }
+      .tv-modal-close:hover {
+        transform: rotate(90deg) scale(1.08);
+        background: #0066b3;
+        color: #fff;
+      }
+
+      .tv-more {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.65rem;
+        padding: 1rem 2.25rem;
+        border-radius: 9999px;
+        background: #0066b3;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        box-shadow: 0 12px 28px -10px rgba(0, 102, 179, 0.6);
+        transition:
+          transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          background-color 0.35s ease,
+          box-shadow 0.35s ease;
+      }
+      .tv-more:hover {
+        transform: translateY(-3px);
+        background: #134fa1;
+        box-shadow: 0 18px 36px -12px rgba(0, 102, 179, 0.7);
+      }
+      .tv-more:hover i {
+        transform: translateX(5px);
+      }
+      .tv-more i {
+        transition: transform 0.35s ease;
+      }
+      .tv-more:focus-visible {
+        outline: 3px solid #4db74a;
+        outline-offset: 4px;
+      }
+
+      @media (max-width: 1023px) {
+        .tv-thumb-btn {
+          width: 3.5rem;
+          height: 3.5rem;
+          font-size: 0.95rem;
+        }
+        .tv-head {
+          margin-bottom: 3rem;
+        }
+      }
+
+      @media (max-width: 639px) {
+        .tv-card:hover,
+        .tv-card:focus-within {
+          transform: translateY(-6px);
+        }
+        .tv-thumb-img {
+          transform: scale(1.04);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .tv-card,
+        .tv-thumb-img,
+        .tv-thumb-btn,
+        .tv-modal,
+        .tv-modal-box {
+          transition: none;
+        }
+        .tv-thumb-btn::before {
+          animation: none;
+        }
+      }
+
+            /* ===== SCROLL ANIMATIONS ===== */
       [data-animate] {
         opacity: 0;
         transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -293,34 +719,14 @@
          The frame is locked to the picture's own 1920x819 ratio, so the whole
          image is always visible - nothing is cropped off the top, left or
          right on any screen size. It only ever gets shorter. */
-      .hero-banner {
-        position: relative;
-        z-index: 2;
-        width: 100%;
-        aspect-ratio: 1920 / 819;
-        margin-top: 80px; /* sit below the fixed navbar */
-        overflow: hidden;
-        background: #0a1628;
-      }
-      .hero-banner-img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        user-select: none;
-        -webkit-user-drag: none;
-      }
-      @media (max-width: 768px) {
-        .hero-banner-img {
-          object-fit: contain;
-        }
-      }
-
       /* The hero breadcrumb is styled once in css/styles.css
          (.hero-crumb / .hero-breadcrumb) so it renders identically on every
          inner page. Do not override it here. */
+
+      /* the hero clears the fixed header stack: topbar 38px + navbar 80px */
+      .about-hero {
+        margin-top: 118px;
+      }
 
       /* ===== BOUNCE SLOW ===== */
       .bounce-slow {
@@ -487,6 +893,69 @@
         color: rgba(107, 114, 128, 0.85);
         margin-top: 0.9rem;
       }
+          /* ===== CTA BAND (LIGHT, TWO COLUMN) ===== */
+      .cta-band-bg {
+        background:
+          radial-gradient(
+            760px 460px at 14% 4%,
+            rgba(255, 255, 255, 0.9),
+            rgba(255, 255, 255, 0) 62%
+          ),
+          radial-gradient(
+            720px 480px at 92% 96%,
+            rgba(125, 211, 252, 0.85),
+            rgba(125, 211, 252, 0) 66%
+          ),
+          linear-gradient(118deg, #f2fbff 0%, #d8f1ff 42%, #b3e4fc 100%);
+      }
+      .cta-kit {
+        position: relative;
+        width: 100%;
+        max-width: 540px;
+        margin: 0 auto;
+        pointer-events: none;
+      }
+      .cta-kit-glow {
+        position: absolute;
+        left: 50%;
+        bottom: -10%;
+        width: 100%;
+        height: 58%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        background: radial-gradient(
+          closest-side,
+          rgba(13, 76, 130, 0.26) 0%,
+          rgba(13, 76, 130, 0.1) 52%,
+          rgba(13, 76, 130, 0) 78%
+        );
+        filter: blur(16px);
+      }
+      .cta-kit-img {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 24px 30px rgba(9, 62, 110, 0.3));
+        transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .cta-kit:hover .cta-kit-img {
+        transform: translateY(-8px) scale(1.02);
+      }
+      @media (max-width: 1023px) {
+        .cta-kit {
+          max-width: 420px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .cta-kit-img {
+          transition: none;
+        }
+        .cta-kit:hover .cta-kit-img {
+          transform: none;
+        }
+      }
+
     </style>
   </head>
 
@@ -542,6 +1011,47 @@
       id="navbar"
       class="navbar fixed top-0 left-0 right-0 z-50 transition-all duration-500"
     >
+      <!-- ===== SOCIAL BAR ===== -->
+      <div class="topbar">
+        <div class="topbar-inner">
+          <span class="topbar-tag">
+            <i class="fas fa-tint" aria-hidden="true"></i>
+            Crystal Clear Naturally Water &mdash; Krushi Nature Water Care Pvt.
+            Ltd.
+          </span>
+
+          <div class="topbar-social">
+            <a
+              class="soc-fb"
+              href="https://www.facebook.com/jaldootwatersystems"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Jaldoot on Facebook"
+            >
+              <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a
+              class="soc-ig"
+              href="https://www.instagram.com/jaldootwatersystems"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Jaldoot on Instagram"
+            >
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a
+              class="soc-yt"
+              href="https://www.youtube.com/@jaldootwatersystemsindia"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Jaldoot on YouTube"
+            >
+              <i class="fab fa-youtube" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
           <!-- Logo -->
@@ -673,20 +1183,8 @@
 
     <!-- ===== PAGE HERO WITH ANIMATIONS ===== -->
     <section
-      class="relative min-h-[60vh] lg:min-h-[70vh] flex flex-col items-center overflow-hidden bg-gradient-to-br from-jd-dark via-jd-deep to-jd-blue"
+      class="about-hero relative flex items-center overflow-hidden bg-gradient-to-br from-jd-dark via-jd-deep to-jd-blue"
     >
-      <!-- Page Hero Banner: assets/about.png, shown complete (never cropped) -->
-      <div class="hero-banner">
-        <img
-          src="assets/about.png"
-          alt="Krushi Nature Water Care - Jaldoot water conditioning technology"
-          class="hero-banner-img"
-          width="1920"
-          height="819"
-          fetchpriority="high"
-        />
-      </div>
-
       <!-- Particles -->
       <div
         id="heroParticles"
@@ -729,22 +1227,36 @@
         style="top: 30%; right: 15%; animation-delay: 2s"
       ></div>
 
-      <!-- Content: the banner above is the hero. The visible heading, badge and
-           intro copy were removed as duplicates, so the <h1> is kept
-           screen-reader only to preserve one accessible h1 on the page. -->
-      <div class="hero-crumb">
-        <h1 class="sr-only">About Our Company</h1>
-
-        <!-- Breadcrumb: dead-centre of the hero image, black text.
-             No data-animate here on purpose: hero content must never depend on a
-             scroll-reveal to become visible. -->
-        <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+      <!-- Content: text-only hero. No data-animate here on purpose: hero copy
+           must never depend on a scroll-reveal to become visible. -->
+      <div
+        class="relative z-10 w-full max-w-3xl mx-auto px-4 sm:px-6 text-center py-14 lg:py-20"
+      >
+        <nav class="hero-breadcrumb mb-7" aria-label="Breadcrumb">
           <a href="index.html" class="font-heading">
             <i class="fas fa-home mr-1"></i> Home
           </a>
           <i class="fas fa-chevron-right hero-crumb-sep"></i>
           <span class="hero-crumb-current font-heading">About</span>
         </nav>
+
+        <span
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-sm font-heading font-semibold mb-5"
+        >
+          <i class="fas fa-info-circle"></i> About Us
+        </span>
+
+        <h1
+          class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-5 leading-tight"
+        >
+          Krushi Nature Water Care
+          <span class="text-jd-green">Pvt. Ltd.</span>
+        </h1>
+
+        <p class="text-white/75 text-base lg:text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          An ISO 9001:2008 certified company manufacturing advanced water
+          conditioning solutions &mdash; and the team behind Jaldoot.
+        </p>
       </div>
 
       <!-- Wave Bottom -->
@@ -876,18 +1388,24 @@
           </div>
 
           <div class="relative" data-animate="fade-left">
-            <!-- Company image: sized by height so the intrinsic 934x1684 ratio is
-                 preserved and nothing is ever cropped. The desktop heights track
-                 the height of the copy column on the left (688px from 1280 up,
-                 800px in the 1024-1279 band where that column is narrower). -->
-            <img
-              src="assets/aboutimg.png"
-              alt="Jaldoot water conditioning technology"
-              class="block w-auto h-[560px] sm:h-[640px] lg:h-[800px] xl:h-[688px] mx-auto rounded-3xl border border-jd-sky/10 shadow-xl shadow-jd-sky/10"
-              width="934"
-              height="1684"
-              loading="lazy"
-            />
+            <!-- Company video: sized by height so the intrinsic 464x832 ratio is
+                 preserved and nothing is ever cropped - the same box the previous
+                 934x1684 image occupied. The desktop heights track the height of
+                 the copy column on the left (688px from 1280 up, 800px in the
+                 1024-1279 band where that column is narrower). preload=metadata
+                 keeps the 24 MB file from loading until the visitor presses play. -->
+            <video
+              class="block w-auto h-[560px] sm:h-[640px] lg:h-[800px] xl:h-[688px] mx-auto rounded-3xl border border-jd-sky/10 shadow-xl shadow-jd-sky/10 bg-jd-dark"
+              controls
+              playsinline
+              preload="metadata"
+              poster="assets/videos/aboutvid-poster.jpg"
+              width="464"
+              height="832"
+            >
+              <source src="assets/videos/aboutvid.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>
@@ -1222,37 +1740,17 @@
           </p>
         </div>
 
-        <!-- Technology cards. Each card is a 45/55 two-column split with no gap:
-             the image column is 45% and the copy column 55% (swapped on even
-             cards so the layout alternates), both stretched to the same row
-             height. The row height is driven purely by the copy, and the image
-             fills its column with object-fit: cover, so there is never dead
-             space and the cards never grow taller than the text needs. The image
-             is always first in the DOM, so mobile stacks image-above-content on
-             every card without any order overrides. Card images, in order:
-             assets/ultrasonic.png, assets/magnetic.png, assets/pulsing.png,
-             assets/catalatic.png -->
+        <!-- Technology cards. Each card is now a single full-width copy panel:
+             the illustrative imagery was removed, so the cards read as a clean
+             stacked list and the section is far lighter to load. -->
         <div class="grid gap-6 lg:gap-8">
-          <!-- 01 Ultrasonic: image left, content right -->
+          <!-- 01 Ultrasonic -->
           <div
             class="card-hover group relative bg-white rounded-3xl overflow-hidden border border-jd-sky/10 shadow-sm hover:shadow-xl hover:shadow-jd-sky/10 transition-all duration-300"
             data-animate="fade-up"
             data-delay="0"
           >
-            <div class="grid md:grid-cols-[45%_55%] items-stretch">
-              <div
-                class="relative w-full h-full min-h-[240px] md:min-h-0 overflow-hidden"
-              >
-                <img
-                  src="assets/ultrasonic.png"
-                  alt="Ultrasonic wave technology"
-                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div
-                  class="pointer-events-none absolute inset-0 bg-gradient-to-t from-jd-deep/40 via-jd-deep/5 to-transparent"
-                ></div>
-              </div>
+            <div class="block">
               <div class="relative p-8 sm:p-10 flex flex-col">
                 <span
                   class="absolute top-7 right-8 font-heading text-xs font-semibold tracking-[0.35em] text-jd-sky/50"
@@ -1290,13 +1788,13 @@
             </div>
           </div>
 
-          <!-- 02 Magnetic Static: content left, image right -->
+          <!-- 02 Magnetic Static -->
           <div
             class="card-hover group relative bg-white rounded-3xl overflow-hidden border border-jd-sky/10 shadow-sm hover:shadow-xl hover:shadow-jd-sky/10 transition-all duration-300"
             data-animate="fade-up"
             data-delay="150"
           >
-            <div class="grid md:grid-cols-[55%_45%] items-stretch">
+            <div class="block">
               <div class="relative p-8 sm:p-10 flex flex-col order-2 md:order-none">
                 <span
                   class="absolute top-7 right-8 font-heading text-xs font-semibold tracking-[0.35em] text-jd-sky/50"
@@ -1331,42 +1829,16 @@
                   <i class="fas fa-magnet"></i> Stage 2 Treatment
                 </div>
               </div>
-              <div
-                class="relative w-full h-full min-h-[240px] md:min-h-0 overflow-hidden order-1 md:order-none"
-              >
-                <img
-                  src="assets/magnetic.png"
-                  alt="Permanent magnetic field technology"
-                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div
-                  class="pointer-events-none absolute inset-0 bg-gradient-to-t from-jd-deep/40 via-jd-deep/5 to-transparent"
-                ></div>
-              </div>
             </div>
           </div>
 
-          <!-- 03 Pulsing Power: image left, content right -->
+          <!-- 03 Pulsing Power -->
           <div
             class="card-hover group relative bg-white rounded-3xl overflow-hidden border border-jd-sky/10 shadow-sm hover:shadow-xl hover:shadow-jd-sky/10 transition-all duration-300"
             data-animate="fade-up"
             data-delay="300"
           >
-            <div class="grid md:grid-cols-[45%_55%] items-stretch">
-              <div
-                class="relative w-full h-full min-h-[240px] md:min-h-0 overflow-hidden"
-              >
-                <img
-                  src="assets/pulsing.png"
-                  alt="Pulsing power coil technology"
-                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div
-                  class="pointer-events-none absolute inset-0 bg-gradient-to-t from-jd-deep/40 via-jd-deep/5 to-transparent"
-                ></div>
-              </div>
+            <div class="block">
               <div class="relative p-8 sm:p-10 flex flex-col">
                 <span
                   class="absolute top-7 right-8 font-heading text-xs font-semibold tracking-[0.35em] text-jd-sky/50"
@@ -1404,13 +1876,13 @@
             </div>
           </div>
 
-          <!-- 04 Catalytic: content left, image right -->
+          <!-- 04 Catalytic -->
           <div
             class="card-hover group relative bg-white rounded-3xl overflow-hidden border border-jd-sky/10 shadow-sm hover:shadow-xl hover:shadow-jd-sky/10 transition-all duration-300"
             data-animate="fade-up"
             data-delay="450"
           >
-            <div class="grid md:grid-cols-[55%_45%] items-stretch">
+            <div class="block">
               <div class="relative p-8 sm:p-10 flex flex-col order-2 md:order-none">
                 <span
                   class="absolute top-7 right-8 font-heading text-xs font-semibold tracking-[0.35em] text-jd-sky/50"
@@ -1444,19 +1916,6 @@
                 >
                   <i class="fas fa-atom"></i> Stage 4 Treatment
                 </div>
-              </div>
-              <div
-                class="relative w-full h-full min-h-[240px] md:min-h-0 overflow-hidden order-1 md:order-none"
-              >
-                <img
-                  src="assets/catalatic.png"
-                  alt="Catalytic crystal conversion technology"
-                  class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div
-                  class="pointer-events-none absolute inset-0 bg-gradient-to-t from-jd-deep/40 via-jd-deep/5 to-transparent"
-                ></div>
               </div>
             </div>
           </div>
@@ -1735,12 +2194,200 @@
       </div>
     </section>
 
+<!-- ===== VIDEO TESTIMONIALS ===== -->
+    <section
+      class="tv-section py-20 lg:py-28 scroll-mt-20"
+      aria-labelledby="tvTitle"
+      id="testimonials"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="tv-head" data-animate="fade-up">
+          <span class="tv-eyebrow">
+            <i class="fas fa-quote-left" aria-hidden="true"></i>
+            Customer stories
+          </span>
+          <h2 class="tv-title" id="tvTitle">
+            Real People. <span>Real Results.</span>
+          </h2>
+          <p class="tv-sub">
+            Hear directly from the homeowners, farmers and factory owners who
+            rely on Jaldoot every day.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8"
+        >
+          <!-- Video 1 -->
+          <article class="tv-card" data-animate="fade-up" data-delay="0">
+            <div class="tv-thumb">
+              <img
+                src="assets/videos/vid1-poster.jpg"
+                alt="Video testimonial — screwmedia farm, Belgaum"
+                class="tv-thumb-img"
+                width="640"
+                height="360"
+                loading="lazy"
+              />
+              <button
+                type="button"
+                class="tv-thumb-btn"
+                data-tv-video="assets/videos/vid1.mp4"
+                aria-label="Play video: Screwmedia Farming, Belgaum"
+              >
+                <i class="fas fa-play" aria-hidden="true"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Video 2 -->
+          <article class="tv-card" data-animate="fade-up" data-delay="120">
+            <div class="tv-thumb">
+              <img
+                src="assets/videos/vid2-poster.jpg"
+                alt="Video testimonial — Jaldoot installed on a farm in Belgaum"
+                class="tv-thumb-img"
+                width="640"
+                height="360"
+                loading="lazy"
+              />
+              <button
+                type="button"
+                class="tv-thumb-btn"
+                data-tv-video="assets/videos/vid2.mp4"
+                aria-label="Play video: Field Installation, Belgaum"
+              >
+                <i class="fas fa-play" aria-hidden="true"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Video 3 -->
+          <article class="tv-card" data-animate="fade-up" data-delay="240">
+            <div class="tv-thumb">
+              <img
+                src="assets/videos/vid3-poster.jpg"
+                alt="Video testimonial — hard water control in a housing society"
+                class="tv-thumb-img"
+                width="640"
+                height="360"
+                loading="lazy"
+              />
+              <button
+                type="button"
+                class="tv-thumb-btn"
+                data-tv-video="assets/videos/vid3.mp4"
+                aria-label="Play video: Housing Society Water Treatment"
+              >
+                <i class="fas fa-play" aria-hidden="true"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Video 4 -->
+          <article class="tv-card" data-animate="fade-up" data-delay="0">
+            <div class="tv-thumb">
+              <img
+                src="assets/videos/vid4-poster.jpg"
+                alt="Video testimonial — Jaldoot unit installed in an open field"
+                class="tv-thumb-img"
+                width="640"
+                height="360"
+                loading="lazy"
+              />
+              <button
+                type="button"
+                class="tv-thumb-btn"
+                data-tv-video="assets/videos/vid4.mp4"
+                aria-label="Play video: Agriculture Field Installation"
+              >
+                <i class="fas fa-play" aria-hidden="true"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Video 5 -->
+          <article class="tv-card" data-animate="fade-up" data-delay="120">
+            <div class="tv-thumb">
+              <img
+                src="assets/videos/vid5-poster.jpg"
+                alt="Video testimonial — Jaldoot water conditioner for vehicles"
+                class="tv-thumb-img"
+                width="640"
+                height="360"
+                loading="lazy"
+              />
+              <button
+                type="button"
+                class="tv-thumb-btn"
+                data-tv-video="assets/videos/vid5.mp4"
+                aria-label="Play video: Vehicle Water Conditioner"
+              >
+                <i class="fas fa-play" aria-hidden="true"></i>
+              </button>
+            </div>
+          </article>
+
+          <!-- Video 6 -->
+          <article class="tv-card" data-animate="fade-up" data-delay="240">
+            <div class="tv-thumb">
+              <img
+                src="assets/videos/vid6-poster.jpg"
+                alt="Video testimonial — hard water solution for a rooftop pool"
+                class="tv-thumb-img"
+                width="640"
+                height="360"
+                loading="lazy"
+              />
+              <button
+                type="button"
+                class="tv-thumb-btn"
+                data-tv-video="assets/videos/vid6.mp4"
+                aria-label="Play video: Rooftop Pool Water Treatment"
+              >
+                <i class="fas fa-play" aria-hidden="true"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <div class="text-center mt-14" data-animate="fade-up" data-delay="120">
+          <a href="contact.html" class="tv-more">
+            Share Your Story
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIAL VIDEO MODAL ===== -->
+    <div
+      class="tv-modal"
+      id="tvModal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Customer testimonial video"
+      aria-hidden="true"
+    >
+      <div class="tv-modal-box">
+        <button
+          type="button"
+          class="tv-modal-close"
+          id="tvModalClose"
+          aria-label="Close video"
+        >
+          <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+        <video id="tvModalVideo" controls playsinline preload="none">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
     <!-- ===== CTA SECTION ===== -->
-    <section class="py-20 lg:py-28 relative overflow-hidden">
-      <div
-        class="absolute inset-0 bg-gradient-to-r from-jd-deep via-jd-blue to-jd-sky"
-      ></div>
-      <div class="absolute inset-0 opacity-10">
+    <section class="cta-band py-16 lg:py-20 relative overflow-hidden">
+<div class="absolute inset-0 cta-band-bg"></div>
+      <div class="absolute inset-0 opacity-70">
         <div
           class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"
         ></div>
@@ -1749,31 +2396,31 @@
         ></div>
       </div>
       <div
-        class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
-        data-animate="fade-up"
+        class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center"
       >
+        <div class="text-center lg:text-left" data-animate="fade-up">
         <div
-          class="w-16 h-16 mx-auto bg-white/15 rounded-2xl flex items-center justify-center mb-6"
+          class="w-12 h-12 mx-auto lg:mx-0 bg-white/75 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-jd-sky/25"
         >
-          <i class="fas fa-paper-plane text-3xl text-white"></i>
+          <i class="fas fa-paper-plane text-2xl text-jd-blue"></i>
         </div>
         <h2
-          class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-6"
+          class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-jd-dark mb-4"
         >
           Want to Know More <br class="hidden sm:inline" />About
-          <span class="gradient-text-white">Jaldoot?</span>
+          <span class="gradient-text-blue">Jaldoot?</span>
         </h2>
         <p
-          class="text-lg text-white/70 mb-10 max-w-2xl mx-auto leading-relaxed font-body"
+          class="text-jd-deep/80 text-sm lg:text-base mb-7 max-w-xl mx-auto lg:mx-0 leading-relaxed font-body"
         >
           Get in touch with us and discover how our water conditioning
           technology can solve your hard water problems — transforming hardness
           into happiness.
         </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
           <a
             href="contact.html"
-            class="group inline-flex items-center justify-center gap-2 px-10 py-4 bg-white text-jd-deep rounded-full font-heading font-bold text-lg shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            class="group inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 bg-white text-jd-deep rounded-full font-heading font-bold text-base shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <i class="fas fa-paper-plane"></i>
             Contact Us
@@ -1783,11 +2430,26 @@
           </a>
           <a
             href="tel:9822209656"
-            class="inline-flex items-center justify-center gap-2 px-10 py-4 bg-jd-green text-white rounded-full font-heading font-bold text-lg shadow-lg shadow-jd-green/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 bg-jd-green text-white rounded-full font-heading font-bold text-base shadow-lg shadow-jd-green/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <i class="fas fa-phone-alt"></i>
             Call: 98222 09656
           </a>
+        </div>
+        </div>
+
+        <!-- transparent product cut-out -->
+        <div class="cta-kit" data-animate="fade-up" data-delay="120">
+          <span class="cta-kit-glow" aria-hidden="true"></span>
+          <img
+            class="cta-kit-img"
+            src="assets/jaldoot-kit.png"
+            alt="Jaldoot water conditioner kit: control unit, power adapter, sensor cable and the blue magnetic conditioning chamber"
+            width="1450"
+            height="754"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
       </div>
     </section>
@@ -1933,8 +2595,8 @@
               <li class="flex items-start text-sm text-gray-400 font-body">
                 <i class="fas fa-map-marker-alt text-jd-sky mr-3 mt-1"></i>
                 <span
-                  >Shop No. C-116, Mega Center, Magarpatta, Hadapsar,
-                  Pune-13</span
+                  >Plot No. 83, Near Maruthi Meter, Ramtekadi Industrial
+                  Estate, Hadapsar, Pune - 411028</span
                 >
               </li>
               <li class="flex items-center text-sm text-gray-400 font-body">
@@ -2068,8 +2730,10 @@
             function () {
               if (window.scrollY > 80) {
                 navbar.classList.add("scrolled");
+                navbar.classList.add("is-hidden");
               } else {
                 navbar.classList.remove("scrolled");
+                navbar.classList.remove("is-hidden");
               }
             },
             { passive: true },
@@ -2228,6 +2892,80 @@
             el.classList.add("visible");
           });
         }
+
+        // ===== TESTIMONIAL VIDEO MODAL =====
+        (function initTestimonialModal() {
+          const modal = document.getElementById("tvModal");
+          const player = document.getElementById("tvModalVideo");
+          const closeBtn = document.getElementById("tvModalClose");
+          const triggers = document.querySelectorAll("[data-tv-video]");
+
+          // Poster images that 404 hide themselves so the .tv-thumb gradient
+          // shows through instead of a broken-image icon.
+          document.querySelectorAll(".tv-thumb-img").forEach(function (img) {
+            img.addEventListener("error", function () {
+              img.classList.add("is-missing");
+            });
+            if (img.complete && img.naturalWidth === 0) {
+              img.classList.add("is-missing");
+            }
+          });
+
+          if (!modal || !player || !triggers.length) return;
+
+          let lastFocused = null;
+
+          function openModal(src, trigger) {
+            lastFocused = trigger;
+            player.src = src;
+            modal.classList.add("is-open");
+            modal.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+            const p = player.play();
+            if (p && typeof p.catch === "function") {
+              p.catch(function () {
+                /* browser blocked autoplay — controls are visible, user can start */
+              });
+            }
+            closeBtn.focus();
+          }
+
+          function closeModal() {
+            modal.classList.remove("is-open");
+            modal.setAttribute("aria-hidden", "true");
+            document.body.style.overflow = "";
+            player.pause();
+            player.removeAttribute("src");
+            player.load();
+            if (lastFocused) lastFocused.focus();
+          }
+
+          triggers.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+              openModal(btn.getAttribute("data-tv-video"), btn);
+            });
+          });
+
+          if (closeBtn) closeBtn.addEventListener("click", closeModal);
+
+          // Click on the backdrop (but not the video box) closes the modal.
+          modal.addEventListener("click", function (e) {
+            if (e.target === modal) closeModal();
+          });
+
+          document.addEventListener("keydown", function (e) {
+            if (!modal.classList.contains("is-open")) return;
+            if (e.key === "Escape") {
+              closeModal();
+            } else if (e.key === "Tab") {
+              // keep focus trapped inside the dialog
+              e.preventDefault();
+              closeBtn.focus();
+            }
+          });
+        })();
+
+        
 
         // ===== COUNTER ANIMATION =====
         const counters = document.querySelectorAll("[data-count]");
