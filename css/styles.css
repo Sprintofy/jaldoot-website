@@ -130,11 +130,11 @@ body {
   position: relative;
   display: inline-flex;
   align-items: center;
-  padding: 0.55rem 1.25rem !important;
+  padding: 0.3rem 1rem !important;
   margin: 0 0.05rem;
   border-radius: 999px !important;
   font-family: "Outfit", "Poppins", sans-serif !important;
-  font-size: 1.125rem !important;
+  font-size: 1rem !important;
   font-weight: 600 !important;
   letter-spacing: 0.015em;
   color: #37485c !important;

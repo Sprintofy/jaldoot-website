@@ -49,7 +49,7 @@
     <style>
       /* ===== TOP SOCIAL BAR ===== */
       .topbar {
-        height: 38px;
+        height: 34px;
         overflow: hidden;
         background: linear-gradient(
           90deg,
@@ -73,7 +73,7 @@
         justify-content: space-between;
         gap: 1rem;
         max-width: 80rem;
-        height: 38px;
+        height: 34px;
         margin: 0 auto;
         padding: 0 1rem;
       }
@@ -83,9 +83,10 @@
         gap: 0.5rem;
         min-width: 0;
         font-family: "Inter", sans-serif;
-        font-size: 0.72rem;
+        font-size: 0.85rem;
+        font-weight: 500;
         letter-spacing: 0.02em;
-        color: rgba(255, 255, 255, 0.78);
+        color: rgba(255, 255, 255, 0.82);
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -93,7 +94,7 @@
       .topbar-tag i {
         flex: 0 0 auto;
         color: #4db74a;
-        font-size: 0.68rem;
+        font-size: 0.8rem;
       }
       .topbar-social {
         display: flex;
@@ -105,8 +106,8 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 26px;
-        height: 26px;
+        width: 28px;
+        height: 28px;
         border-radius: 9999px;
         background: rgba(255, 255, 255, 0.12);
         color: #ffffff;
@@ -734,7 +735,7 @@
 
       /* the hero clears the fixed header stack: topbar 38px + navbar 80px */
       .page-hero {
-        margin-top: 118px;
+        margin-top: 90px;
       }
 
       /* The hero breadcrumb is styled once in css/styles.css
@@ -899,7 +900,7 @@
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-20">
+        <div class="flex items-center justify-between h-14">
           <a
             href="index.html"
             class="nav-brand flex items-center shrink-0 group"
@@ -908,7 +909,7 @@
             <img
               src="assets/logo.png"
               alt="JALDOOT Water Conditioner"
-              class="h-12 sm:h-14 w-auto object-contain mix-blend-multiply"
+              class="h-9 sm:h-10 w-auto object-contain mix-blend-multiply"
               width="761"
               height="356"
             />
@@ -936,7 +937,7 @@
             >
             <a
               href="contact.html"
-              class="nav-cta ml-4 px-6 py-2.5 bg-gradient-to-r from-jd-deep via-jd-blue to-jd-sky text-white font-heading transition-all duration-300"
+              class="nav-cta ml-4 px-5 py-2 bg-gradient-to-r from-jd-deep via-jd-blue to-jd-sky text-white font-heading transition-all duration-300"
               ><i class="fas fa-paper-plane mr-2 text-xs"></i>Get Quote</a>
           </div>
           <button
@@ -1078,12 +1079,6 @@
           <i class="fas fa-chevron-right hero-crumb-sep"></i>
           <span class="hero-crumb-current font-heading">Products</span>
         </nav>
-
-        <span
-          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-sm font-heading font-semibold mb-5"
-        >
-          <i class="fas fa-box-open"></i> Our Products
-        </span>
 
         <h1
           class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-5 leading-tight"
