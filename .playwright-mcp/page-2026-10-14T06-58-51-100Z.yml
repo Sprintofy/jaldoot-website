@@ -1,0 +1,460 @@
+- generic [active] [ref=f22e1]:
+  - generic [ref=f22e3]:
+    - heading "JALDOOT" [level=2] [ref=f22e11]
+    - paragraph [ref=f22e12]: Water Conditioner
+  - navigation [ref=f22e13]:
+    - generic [ref=f22e15]:
+      - generic [ref=f22e16]:
+        - generic [aria-hidden] [ref=f22e17]: 
+        - text: Crystal Clear Naturally Water — Krushi Nature Water Care Pvt. Ltd.
+      - generic [ref=f22e18]:
+        - link "Jaldoot on Facebook" [ref=f22e19] [cursor=pointer]:
+          - /url: https://www.facebook.com/jaldootwatersystems
+          - generic [aria-hidden] [ref=f22e20]: 
+        - link "Jaldoot on Instagram" [ref=f22e21] [cursor=pointer]:
+          - /url: https://www.instagram.com/jaldootwatersystems
+          - generic [aria-hidden] [ref=f22e22]: 
+        - link "Jaldoot on YouTube" [ref=f22e23] [cursor=pointer]:
+          - /url: https://www.youtube.com/@jaldootwatersystemsindia
+          - generic [aria-hidden] [ref=f22e24]: 
+    - generic [ref=f22e26]:
+      - link "JALDOOT Water Conditioner - home" [ref=f22e27] [cursor=pointer]:
+        - /url: index.html
+        - img "JALDOOT Water Conditioner" [ref=f22e28]
+      - generic [ref=f22e29]:
+        - link "Home" [ref=f22e30] [cursor=pointer]:
+          - /url: index.html
+        - link "About" [ref=f22e31] [cursor=pointer]:
+          - /url: about.html
+        - link "Products" [ref=f22e32] [cursor=pointer]:
+          - /url: products.html
+        - link "Contact" [ref=f22e33] [cursor=pointer]:
+          - /url: contact.html
+        - link " Get Quote" [ref=f22e34] [cursor=pointer]:
+          - /url: contact.html
+          - generic [ref=f22e35]: 
+          - text: Get Quote
+  - text:       
+  - generic [ref=f22e45]:
+    - navigation "Breadcrumb" [ref=f22e46]:
+      - link " Home" [ref=f22e47] [cursor=pointer]:
+        - /url: index.html
+        - generic [ref=f22e48]: 
+        - text: Home
+      - generic [ref=f22e49]: 
+      - generic [ref=f22e50]: About
+    - heading "Krushi Nature Water Care Pvt. Ltd." [level=1] [ref=f22e51]
+    - paragraph [ref=f22e52]: An ISO 9001:2008 certified company manufacturing advanced water conditioning solutions — and the team behind Jaldoot.
+  - generic [ref=f22e62]:
+    - generic [ref=f22e63]:
+      - generic [ref=f22e64]:
+        - generic [ref=f22e65]: 
+        - text: Company Introduction
+      - heading "Krushi Nature Water Care Pvt. Ltd." [level=2] [ref=f22e66]
+      - generic [ref=f22e67]:
+        - paragraph [ref=f22e68]:
+          - text: Krushi Nature Water Care Pvt. Ltd. is an
+          - strong [ref=f22e69]: ISO 9001:2008 certified
+          - text: company engaged in the manufacturing and supply of advanced water conditioning solutions. The company specializes in
+          - strong [ref=f22e70]: Magnetic, Electro Magnetic, Electronic, Pulse, Water Conditioner/Softener, De-Scalar and Catalytic Technology
+          - text: products.
+        - paragraph [ref=f22e71]:
+          - text: The company's flagship product,
+          - strong [ref=f22e72]: Jaldoot Water Conditioner
+          - text: ", represents the culmination of advanced research in water treatment technology. It combines"
+          - strong [ref=f22e73]: Ultrasonic, Magnetic Static, Pulsing Power and Catalytic Technology
+          - text: in a single microprocessor-controlled system.
+        - paragraph [ref=f22e74]: Jaldoot technology transforms hard water problems into lasting solutions — converting hardness-causing minerals into harmless 2–4 micron crystals without using chemicals, salt, or requiring ongoing maintenance.
+      - generic [ref=f22e75]:
+        - generic [ref=f22e76]:
+          - generic [ref=f22e77]: 
+          - generic [ref=f22e79]: No Chemicals
+        - generic [ref=f22e80]:
+          - generic [ref=f22e81]: 
+          - generic [ref=f22e83]: Zero Maintenance
+        - generic [ref=f22e84]:
+          - generic [ref=f22e85]: 
+          - generic [ref=f22e87]: ISO Certified
+        - generic [ref=f22e88]:
+          - generic [ref=f22e89]: 
+          - generic [ref=f22e91]: 4-in-1 Technology
+    - button "Watch company introduction video" [ref=f22e93] [cursor=pointer]:
+      - generic [ref=f22e94]: Your browser does not support the video tag.
+  - generic [ref=f22e96]:
+    - generic [ref=f22e97]:
+      - generic [ref=f22e98]:
+        - generic [ref=f22e99]: 
+        - text: Skill-set & specifications
+      - heading "Know it before you install" [level=2] [ref=f22e100]
+      - paragraph [ref=f22e101]: Ten reasons it services itself — plus the full specs.
+      - generic [ref=f22e107]:
+        - generic [ref=f22e108]:
+          - generic [ref=f22e109]: "10"
+          - generic [ref=f22e110]: Skill points
+        - generic [ref=f22e111]:
+          - generic [ref=f22e112]: "8"
+          - generic [ref=f22e113]: Spec parameters
+        - generic [ref=f22e114]:
+          - generic [ref=f22e115]: "8"
+          - generic [ref=f22e116]: Pipe materials
+    - generic [ref=f22e117]:
+      - generic [ref=f22e118]:
+        - generic [ref=f22e119]:
+          - generic [ref=f22e120]: 
+          - generic [ref=f22e122]:
+            - heading "Why it runs itself" [level=3] [ref=f22e123]
+            - paragraph [ref=f22e124]: Everything it does without you
+          - generic [ref=f22e125]:
+            - generic [ref=f22e126]: 
+            - text: "10"
+        - separator [ref=f22e127]
+        - list [ref=f22e128]:
+          - listitem [ref=f22e129]:
+            - generic [ref=f22e133]: Easy to install — no special skills needed.
+          - listitem [ref=f22e134]:
+            - generic [ref=f22e138]: No maintenance — set it & forget it.
+          - listitem [ref=f22e139]:
+            - generic [ref=f22e143]: Longer life and low consumption.
+          - listitem [ref=f22e144]:
+            - generic [ref=f22e148]: No moving parts.
+          - listitem [ref=f22e149]:
+            - generic [ref=f22e153]: No backwashing.
+          - listitem [ref=f22e154]:
+            - generic [ref=f22e158]: Easy installation, no replacement required.
+          - listitem [ref=f22e159]:
+            - generic [ref=f22e163]: Movable product — take it with you when you want.
+          - listitem [ref=f22e164]:
+            - generic [ref=f22e168]: Maintenance-free, eco-friendly solution against scale problems.
+          - listitem [ref=f22e169]:
+            - generic [ref=f22e173]: No chemicals, no salts & additives.
+          - listitem [ref=f22e174]:
+            - generic [ref=f22e178]: Our product models represent on varied work.
+      - generic [ref=f22e179]:
+        - generic [ref=f22e180]:
+          - generic [ref=f22e181]: 
+          - generic [ref=f22e183]:
+            - heading "The numbers behind it" [level=3] [ref=f22e184]
+            - paragraph [ref=f22e185]: Measured at the unit itself
+          - generic [ref=f22e186]:
+            - generic [ref=f22e187]: 
+            - text: "8"
+        - separator [ref=f22e188]
+        - table [ref=f22e190]:
+          - rowgroup [ref=f22e191]:
+            - row [ref=f22e192]:
+              - columnheader "Parameter" [ref=f22e193]
+              - columnheader "Specification" [ref=f22e194]
+          - rowgroup [ref=f22e195]:
+            - row [ref=f22e196]:
+              - rowheader "Supply voltage" [ref=f22e197]
+              - cell "110–240 V, 50/60 Hz" [ref=f22e198]
+            - row [ref=f22e199]:
+              - rowheader "Power consumption" [ref=f22e200]
+              - cell "5 Watt to 25 Watt" [ref=f22e201]
+            - row [ref=f22e202]:
+              - rowheader "Application voltage" [ref=f22e203]
+              - cell "12 V DC" [ref=f22e204]
+            - row [ref=f22e205]:
+              - rowheader "Coil cable" [ref=f22e206]
+              - cell "1 mm² / 20 AWG, blue maximum" [ref=f22e207]
+            - row [ref=f22e208]:
+              - rowheader "Coil temperature" [ref=f22e209]
+              - cell "176 °F (80 °C)" [ref=f22e210]
+            - row [ref=f22e211]:
+              - rowheader "Capable of driving" [ref=f22e212]
+              - cell "2 coils, double layer" [ref=f22e213]
+            - row [ref=f22e214]:
+              - rowheader "Maximum enclosure temperature" [ref=f22e215]
+              - cell "149 °F (60 °C)" [ref=f22e216]
+            - row [ref=f22e217]:
+              - rowheader "Minimum enclosure temperature" [ref=f22e218]
+              - cell "14 °F (10 °C)" [ref=f22e219]
+    - generic [ref=f22e220]:
+      - generic [ref=f22e221]:
+        - generic [ref=f22e222]: 
+        - generic [ref=f22e224]:
+          - heading "Effective on" [level=3] [ref=f22e225]
+          - paragraph [ref=f22e226]: Pipe materials Jaldoot can be fitted on
+      - link "Ask our team " [ref=f22e227] [cursor=pointer]:
+        - /url: contact.html
+        - text: Ask our team
+        - generic [ref=f22e228]: 
+      - generic [ref=f22e229]:
+        - generic [ref=f22e230]: CPVC
+        - generic [ref=f22e231]: RPVC
+        - generic [ref=f22e232]: UPVC
+        - generic [ref=f22e233]: HDPE
+        - generic [ref=f22e234]: Copper
+        - generic [ref=f22e235]: Brass
+        - generic [ref=f22e236]: SS 304
+        - generic [ref=f22e237]: SS 316
+      - paragraph [ref=f22e238]:
+        - generic [ref=f22e239]: 
+        - generic [ref=f22e240]: The brochure lists “HOPE COPPER” in this list; read as the pipe materials HDPE and copper. Pipe diameters from 1″ up to 20″ or 6″ are supported depending on the model — ask our team about the model suited to your line.
+  - generic [ref=f22e242]:
+    - generic [ref=f22e243]:
+      - generic [ref=f22e244]:
+        - generic [ref=f22e245]: 
+        - text: Our Technology
+      - heading "Jaldoot Technology" [level=2] [ref=f22e246]
+      - paragraph [ref=f22e247]: Four powerful technologies combined in one microprocessor-controlled system for comprehensive water conditioning.
+    - generic [ref=f22e248]:
+      - article [ref=f22e249]:
+        - generic [aria-hidden] [ref=f22e250]: "01"
+        - generic [ref=f22e253]:
+          - generic [ref=f22e254]:
+            - generic [ref=f22e255]: 
+            - generic [ref=f22e257]:
+              - heading "Ultrasonic" [level=3] [ref=f22e258]
+              - paragraph [ref=f22e259]: High-frequency wave technology
+          - paragraph [ref=f22e260]: Ultrasonic waves break down hard water mineral bonds at a molecular level. This first line of treatment initiates the conversion process, disrupting calcium and magnesium compound structures to begin transformation into harmless particles.
+          - generic [ref=f22e261]:
+            - generic [ref=f22e262]: 
+            - text: Stage 1 Treatment
+      - article [ref=f22e263]:
+        - generic [aria-hidden] [ref=f22e264]: "02"
+        - generic [ref=f22e267]:
+          - generic [ref=f22e268]:
+            - generic [ref=f22e269]: 
+            - generic [ref=f22e271]:
+              - heading "Magnetic Static" [level=3] [ref=f22e272]
+              - paragraph [ref=f22e273]: Permanent magnetic field
+          - paragraph [ref=f22e274]: A permanent magnetic field alters the crystalline structure of calcium carbonate from its hard, scale-forming calcite form into a softer aragonite form that does not adhere to pipe surfaces and equipment.
+          - generic [ref=f22e275]:
+            - generic [ref=f22e276]: 
+            - text: Stage 2 Treatment
+      - article [ref=f22e277]:
+        - generic [aria-hidden] [ref=f22e278]: "03"
+        - generic [ref=f22e281]:
+          - generic [ref=f22e282]:
+            - generic [ref=f22e283]: 
+            - generic [ref=f22e285]:
+              - heading "Pulsing Power" [level=3] [ref=f22e286]
+              - paragraph [ref=f22e287]: Variable frequency signals
+          - paragraph [ref=f22e288]: The microprocessor generates variable-frequency electronic pulses through coil cables. These signals create an oscillating electromagnetic field preventing mineral crystallization and scale formation throughout the pipe system.
+          - generic [ref=f22e289]:
+            - generic [ref=f22e290]: 
+            - text: Stage 3 Treatment
+      - article [ref=f22e291]:
+        - generic [aria-hidden] [ref=f22e292]: "04"
+        - generic [ref=f22e295]:
+          - generic [ref=f22e296]:
+            - generic [ref=f22e297]: 
+            - generic [ref=f22e299]:
+              - heading "Catalytic Technology" [level=3] [ref=f22e300]
+              - paragraph [ref=f22e301]: Crystal conversion process
+          - paragraph [ref=f22e302]: Catalytic conversion transforms remaining hardness minerals into stable, harmless micro-crystals of 2–4 micron size. These crystals remain suspended in water and flow freely. The conditioning effect lasts up to 7 days.
+          - generic [ref=f22e303]:
+            - generic [ref=f22e304]: 
+            - text: Stage 4 Treatment
+    - generic [ref=f22e309]:
+      - generic [ref=f22e310]: 
+      - generic [ref=f22e312]:
+        - heading "Microprocessor-Controlled System" [level=3] [ref=f22e313]
+        - paragraph [ref=f22e314]: The entire Jaldoot system is controlled by an advanced microprocessor that automatically manages and optimizes all four technologies — Ultrasonic, Magnetic Static, Pulsing Power and Catalytic — ensuring consistent, reliable performance across all water conditions and flow rates.
+  - generic [ref=f22e317]:
+    - generic [ref=f22e318]:
+      - generic [ref=f22e319]:
+        - generic [ref=f22e320]: 
+        - text: Quality Assurance
+      - heading "Certifications & Standards" [level=2] [ref=f22e321]
+      - paragraph [ref=f22e322]: Six certificates, one promise — every Jaldoot that leaves our line is built under the same quality system.
+    - generic [ref=f22e323]:
+      - article [ref=f22e324]:
+        - generic [ref=f22e326]: 
+        - heading "ISO 9001:2008" [level=3] [ref=f22e328]
+        - paragraph [ref=f22e329]: Krushi Nature Water Care Pvt. Ltd. is ISO 9001:2008 certified, ensuring quality management systems and consistent product standards across all operations.
+      - article [ref=f22e330]:
+        - generic [ref=f22e332]: 
+        - heading "Quality Manufacturing" [level=3] [ref=f22e334]
+        - paragraph [ref=f22e335]: All products are manufactured under strict quality control with rigorous testing and quality assurance protocols for reliability and durability.
+      - article [ref=f22e336]:
+        - generic [ref=f22e338]: 
+        - heading "Advanced Technology" [level=3] [ref=f22e340]
+        - paragraph [ref=f22e341]: Combining four proven technologies — Ultrasonic, Magnetic Static, Pulsing Power and Catalytic — for comprehensive water conditioning solutions.
+    - generic [ref=f22e343]:
+      - figure " ISO 9001:2008" [ref=f22e344]:
+        - img "ISO 9001:2008 quality management system certificate issued to Krushi Nature Water Care Pvt. Ltd." [ref=f22e346]
+        - generic [ref=f22e347]:
+          - generic [ref=f22e348]: 
+          - text: ISO 9001:2008
+      - figure " Quality Manufacturing" [ref=f22e349]:
+        - img "Quality manufacturing certificate awarded to the Krushi Nature Water Care manufacturing unit in Nagpur" [ref=f22e351]
+        - generic [ref=f22e352]:
+          - generic [ref=f22e353]: 
+          - text: Quality Manufacturing
+      - figure " Advanced Technology" [ref=f22e354]:
+        - img "Compliance certificate for the four-stage ultrasonic, magnetic static, pulsing power and catalytic water conditioning technology" [ref=f22e356]
+        - generic [ref=f22e357]:
+          - generic [ref=f22e358]: 
+          - text: Advanced Technology
+      - figure " BIS / ISI Mark" [ref=f22e359]:
+        - img "Bureau of Indian Standards conformity certificate for Jaldoot water conditioners against IS 3834" [ref=f22e361]
+        - generic [ref=f22e362]:
+          - generic [ref=f22e363]: 
+          - text: BIS / ISI Mark
+      - figure " CE Marking" [ref=f22e364]:
+        - img "European conformity certificate showing the CE mark for Jaldoot water conditioning equipment" [ref=f22e366]
+        - generic [ref=f22e367]:
+          - generic [ref=f22e368]: 
+          - text: CE Marking
+      - figure " Patent Granted" [ref=f22e369]:
+        - img "Indian patent certificate for the four-stage water conditioning apparatus invented by Krushi Nature Water Care" [ref=f22e371]
+        - generic [ref=f22e372]:
+          - generic [ref=f22e373]: 
+          - text: Patent Granted
+  - region [ref=f22e374]:
+    - generic [ref=f22e375]:
+      - generic [ref=f22e376]:
+        - generic [ref=f22e377]:
+          - generic [aria-hidden] [ref=f22e378]: 
+          - text: Customer stories
+        - heading "Real People. Real Results." [level=2] [ref=f22e379]
+        - paragraph [ref=f22e380]: Hear directly from the homeowners, farmers and factory owners who rely on Jaldoot every day.
+      - generic [ref=f22e381]:
+        - article [ref=f22e382]:
+          - generic [ref=f22e383]:
+            - img "Video testimonial — screwmedia farm, Belgaum" [ref=f22e384]
+            - 'button "Play video: Screwmedia Farming, Belgaum" [ref=f22e385] [cursor=pointer]':
+              - generic [aria-hidden] [ref=f22e386]: 
+        - article [ref=f22e387]:
+          - generic [ref=f22e388]:
+            - img "Video testimonial — Jaldoot installed on a farm in Belgaum" [ref=f22e389]
+            - 'button "Play video: Field Installation, Belgaum" [ref=f22e390] [cursor=pointer]':
+              - generic [aria-hidden] [ref=f22e391]: 
+        - article [ref=f22e392]:
+          - generic [ref=f22e393]:
+            - img "Video testimonial — hard water control in a housing society" [ref=f22e394]
+            - 'button "Play video: Housing Society Water Treatment" [ref=f22e395] [cursor=pointer]':
+              - generic [aria-hidden] [ref=f22e396]: 
+        - article [ref=f22e397]:
+          - generic [ref=f22e398]:
+            - img "Video testimonial — Jaldoot unit installed in an open field" [ref=f22e399]
+            - 'button "Play video: Agriculture Field Installation" [ref=f22e400] [cursor=pointer]':
+              - generic [aria-hidden] [ref=f22e401]: 
+        - article [ref=f22e402]:
+          - generic [ref=f22e403]:
+            - img "Video testimonial — Jaldoot water conditioner for vehicles" [ref=f22e404]
+            - 'button "Play video: Vehicle Water Conditioner" [ref=f22e405] [cursor=pointer]':
+              - generic [aria-hidden] [ref=f22e406]: 
+        - article [ref=f22e407]:
+          - generic [ref=f22e408]:
+            - img "Video testimonial — hard water solution for a rooftop pool" [ref=f22e409]
+            - 'button "Play video: Rooftop Pool Water Treatment" [ref=f22e410] [cursor=pointer]':
+              - generic [aria-hidden] [ref=f22e411]: 
+      - link "Share Your Story" [ref=f22e413] [cursor=pointer]:
+        - /url: contact.html
+        - text: Share Your Story
+        - generic [aria-hidden] [ref=f22e414]: 
+  - generic [ref=f22e420]:
+    - generic [ref=f22e421]:
+      - generic [ref=f22e422]: 
+      - heading "Want to Know More About Jaldoot?" [level=2] [ref=f22e424]
+      - paragraph [ref=f22e425]: Get in touch with us and discover how our water conditioning technology can solve your hard water problems — transforming hardness into happiness.
+      - generic [ref=f22e426]:
+        - link " Contact Us " [ref=f22e427] [cursor=pointer]:
+          - /url: contact.html
+          - generic [ref=f22e428]: 
+          - text: Contact Us
+          - generic [ref=f22e429]: 
+        - 'link " Call: 98222 09656" [ref=f22e430] [cursor=pointer]':
+          - /url: tel:9822209656
+          - generic [ref=f22e431]: 
+          - text: "Call: 98222 09656"
+    - generic:
+      - 'img "Jaldoot water conditioner kit: control unit, power adapter, sensor cable and the blue magnetic conditioning chamber"'
+  - contentinfo [ref=f22e432]:
+    - generic [ref=f22e436]:
+      - generic [ref=f22e437]:
+        - generic [ref=f22e438]:
+          - img "JALDOOT Water Conditioner" [ref=f22e440]
+          - paragraph [ref=f22e441]: Manufactured by Krushi Nature Water Care Pvt. Ltd. — ISO 9001:2008 certified company specializing in advanced water conditioning technology.
+          - generic [ref=f22e442]:
+            - generic [ref=f22e443]: 
+            - text: ISO 9001:2008 Certified
+        - generic [ref=f22e444]:
+          - heading "Quick Links" [level=4] [ref=f22e445]
+          - list [ref=f22e446]:
+            - listitem [ref=f22e447]:
+              - link " Home" [ref=f22e448] [cursor=pointer]:
+                - /url: index.html
+                - generic [ref=f22e449]: 
+                - text: Home
+            - listitem [ref=f22e450]:
+              - link " About Us" [ref=f22e451] [cursor=pointer]:
+                - /url: about.html
+                - generic [ref=f22e452]: 
+                - text: About Us
+            - listitem [ref=f22e453]:
+              - link " Products" [ref=f22e454] [cursor=pointer]:
+                - /url: products.html
+                - generic [ref=f22e455]: 
+                - text: Products
+            - listitem [ref=f22e456]:
+              - link " Contact Us" [ref=f22e457] [cursor=pointer]:
+                - /url: contact.html
+                - generic [ref=f22e458]: 
+                - text: Contact Us
+        - generic [ref=f22e459]:
+          - heading "Applications" [level=4] [ref=f22e460]
+          - list [ref=f22e461]:
+            - listitem [ref=f22e462]:
+              - link " Domestic Solutions" [ref=f22e463] [cursor=pointer]:
+                - /url: products.html#domestic
+                - generic [ref=f22e464]: 
+                - text: Domestic Solutions
+            - listitem [ref=f22e465]:
+              - link " Agriculture & Irrigation" [ref=f22e466] [cursor=pointer]:
+                - /url: products.html#agriculture
+                - generic [ref=f22e467]: 
+                - text: Agriculture & Irrigation
+            - listitem [ref=f22e468]:
+              - link " Commercial & Industrial" [ref=f22e469] [cursor=pointer]:
+                - /url: products.html#commercial
+                - generic [ref=f22e470]: 
+                - text: Commercial & Industrial
+            - listitem [ref=f22e471]:
+              - link " Solar Products" [ref=f22e472] [cursor=pointer]:
+                - /url: products.html#solar-products
+                - generic [ref=f22e473]: 
+                - text: Solar Products
+        - generic [ref=f22e474]:
+          - heading "Contact" [level=4] [ref=f22e475]
+          - list [ref=f22e476]:
+            - listitem [ref=f22e477]:
+              - generic [ref=f22e478]: 
+              - generic [ref=f22e479]: Plot No. 83, Near Maruthi Meter, Ramtekadi Industrial Estate, Hadapsar, Pune - 411028
+            - listitem [ref=f22e480]:
+              - generic [ref=f22e481]: 
+              - generic [ref=f22e482]: 9822209656 / 9404039656
+            - listitem [ref=f22e483]:
+              - generic [ref=f22e484]: 
+              - generic [ref=f22e485]: watercare.krushinature@gmail.com
+            - listitem [ref=f22e486]:
+              - generic [ref=f22e487]: 
+              - link "www.jaldootcorporation.com" [ref=f22e488] [cursor=pointer]:
+                - /url: http://www.jaldootcorporation.com
+          - generic [ref=f22e489]:
+            - link "WhatsApp" [ref=f22e490] [cursor=pointer]:
+              - /url: https://wa.me/919822209656
+              - generic [ref=f22e491]: 
+            - link "Email" [ref=f22e492] [cursor=pointer]:
+              - /url: mailto:watercare.krushinature@gmail.com
+              - generic [ref=f22e493]: 
+            - link "Call" [ref=f22e494] [cursor=pointer]:
+              - /url: tel:9822209656
+              - generic [ref=f22e495]: 
+      - generic [ref=f22e496]:
+        - paragraph [ref=f22e497]: © 2026 Krushi Nature Water Care Pvt. Ltd. All rights reserved.
+        - paragraph [ref=f22e498]: Hardness To Happiness — Crystal Clear Naturally Water
+  - generic [ref=f22e499]:
+    - button "Back to top":
+      - generic: 
+    - link "Call" [ref=f22e500] [cursor=pointer]:
+      - /url: tel:9822209656
+      - generic [ref=f22e501]: 
+      - generic: "Call: 9822209656"
+    - link "WhatsApp" [ref=f22e502] [cursor=pointer]:
+      - /url: https://wa.me/919822209656?text=Hello%2C%20I%20am%20interested%20in%20Jaldoot%20Water%20Conditioner.
+      - generic [ref=f22e503]: 
+      - generic: Chat on WhatsApp

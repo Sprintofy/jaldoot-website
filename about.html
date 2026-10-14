@@ -473,10 +473,294 @@
         .tv-modal,
         .tv-modal-box {
           transition: none;
-        }
-        .tv-thumb-btn::before {
           animation: none;
         }
+        .tv-card:hover,
+        .tv-card:focus-within {
+          transform: none;
+        }
+        .tv-thumb-img {
+          transform: none;
+        }
+      }
+
+      /* ===== YOUTUBE VIDEOS CAROUSEL ===== */
+      /* --- carousel wrapper --- */
+      .yt-carousel-wrapper {
+        position: relative;
+        padding: 0 1rem;
+      }
+
+      /* --- carousel track --- */
+      .yt-carousel-track {
+        display: flex;
+        gap: 1.5rem;
+        animation: yt-marquee 30s linear infinite;
+        width: max-content;
+      }
+      .yt-carousel-track-container:hover .yt-carousel-track,
+      .yt-carousel-track-container:focus-within .yt-carousel-track {
+        animation-play-state: paused;
+      }
+
+      @keyframes yt-marquee {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+      }
+
+      /* --- video card --- */
+      .yt-card {
+        position: relative;
+        flex: 0 0 auto;
+        width: 320px;
+        min-width: 320px;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border: 1px solid rgba(0, 102, 179, 0.12);
+        border-radius: 1.5rem;
+        overflow: hidden;
+        transition:
+          transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          border-color 0.3s ease,
+          box-shadow 0.4s ease;
+        will-change: transform;
+        cursor: pointer;
+      }
+      .yt-card:hover,
+      .yt-card:focus-within {
+        transform: translateY(-8px) scale(1.02);
+        border-color: rgba(0, 102, 179, 0.3);
+        box-shadow: 0 24px 48px -16px rgba(10, 22, 40, 0.35);
+        z-index: 10;
+      }
+
+      /* --- thumbnail --- */
+      .yt-thumb {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        background: linear-gradient(135deg, #134fa1 0%, #0066b3 45%, #00adee 100%);
+      }
+      .yt-thumb-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1);
+        transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        background: #071527;
+      }
+      .yt-card:hover .yt-thumb-img,
+      .yt-card:focus-within .yt-thumb-img {
+        transform: scale(1.08);
+      }
+
+      /* --- hover overlay --- */
+      .yt-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        background: rgba(7, 21, 39, 0.88);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        opacity: 0;
+        transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        pointer-events: none;
+      }
+      .yt-card:hover .yt-overlay,
+      .yt-card:focus-within .yt-overlay {
+        opacity: 1;
+      }
+      .yt-play-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 68px;
+        height: 68px;
+        border-radius: 9999px;
+        background: rgba(255, 255, 255, 0.15);
+        border: 2px solid rgba(255, 255, 255, 0.7);
+        color: #fff;
+        font-size: 1.5rem;
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        transform: scale(0.85);
+        transition:
+          transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          background-color 0.3s ease,
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+        box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.5);
+        animation: yt-pulse 2.2s ease-out infinite;
+      }
+      @keyframes yt-pulse {
+        0% {
+          transform: scale(0.85);
+          box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.5), 0 0 0 0 rgba(255, 255, 255, 0.4);
+        }
+        50% {
+          transform: scale(0.95);
+          box-shadow: 0 12px 32px -10px rgba(0, 0, 0, 0.6), 0 0 0 12px rgba(255, 255, 255, 0.15);
+        }
+        100% {
+          transform: scale(0.85);
+          box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.5), 0 0 0 0 rgba(255, 255, 255, 0.4);
+        }
+      }
+      .yt-card:hover .yt-play-btn,
+      .yt-card:focus-within .yt-play-btn {
+        transform: scale(1.1);
+        background: rgba(255, 255, 255, 0.25);
+        border-color: #fff;
+      }
+      .yt-card:hover .yt-play-btn i,
+      .yt-card:focus-within .yt-play-btn i {
+        animation: yt-play-bounce 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      @keyframes yt-play-bounce {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.25); }
+      }
+      .yt-overlay-text {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.95);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        opacity: 0;
+        transform: translateY(6px);
+        transition:
+          opacity 0.25s ease 0.05s,
+          transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s;
+        white-space: nowrap;
+      }
+      .yt-card:hover .yt-overlay-text,
+      .yt-card:focus-within .yt-overlay-text {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .yt-duration { z-index: 1; }
+
+      /* --- video meta --- */
+      .yt-meta {
+        padding: 1rem 1.1rem 1.25rem;
+        text-align: left;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      .yt-video-title {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 0.95rem;
+        line-height: 1.4;
+        color: #0a1628;
+        margin: 0 0 0.5rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        transition: color 0.3s ease;
+      }
+      .yt-card:hover .yt-video-title,
+      .yt-card:focus-within .yt-video-title {
+        color: #0066b3;
+      }
+      .yt-video-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: "Inter", sans-serif;
+        font-size: 0.75rem;
+        color: #6d6e6f;
+      }
+      .yt-video-meta i { color: #0066b3; font-size: 0.7rem; }
+      .yt-video-meta .yt-divider { color: rgba(0, 102, 179, 0.3); }
+
+      /* --- view more button --- */
+      .yt-more {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.65rem;
+        padding: 1rem 2.5rem;
+        border-radius: 9999px;
+        background: linear-gradient(135deg, #134fa1, #0066b3, #00adee);
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        box-shadow: 0 12px 28px -10px rgba(0, 102, 179, 0.6);
+        transition:
+          transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          background 0.35s ease,
+          box-shadow 0.35s ease;
+      }
+      .yt-more:hover {
+        transform: translateY(-3px) scale(1.02);
+        background: linear-gradient(135deg, #0066b3, #00adee, #4db74a);
+        box-shadow: 0 18px 36px -12px rgba(0, 102, 179, 0.7);
+      }
+      .yt-more:hover i:last-child { transform: translateX(4px); }
+      .yt-more i { transition: transform 0.3s ease; }
+      .yt-more:focus-visible { outline: 3px solid #4db74a; outline-offset: 4px; }
+
+      /* --- modal --- */
+      .yt-modal {
+        transition: opacity 0.35s ease, visibility 0.35s ease;
+      }
+      .yt-modal.is-open { opacity: 1; visibility: visible; }
+      .yt-modal-box {
+        transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.45s ease;
+      }
+      .yt-modal.is-open .yt-modal-box { transform: scale(1); opacity: 1; }
+      .yt-modal-close {
+        transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+      }
+      .yt-modal-close:hover { transform: rotate(90deg) scale(1.1); }
+      .yt-modal-caption { transition: opacity 0.3s ease, transform 0.3s ease; }
+
+      @media (max-width: 1023px) {
+        .yt-head { margin-bottom: 2.5rem; }
+        .yt-card { width: 280px; min-width: 280px; }
+      }
+      @media (max-width: 639px) {
+        .yt-carousel-wrapper { padding: 0 0.5rem; }
+        .yt-fade-left, .yt-fade-right { width: 24px; }
+        .yt-carousel-track { gap: 1rem; animation-duration: 25s; }
+        .yt-card { width: 260px; min-width: 260px; }
+        .yt-play-btn { width: 56px; height: 56px; font-size: 1.25rem; }
+        .yt-overlay-text { font-size: 0.75rem; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .yt-carousel-track {
+          animation: none;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+          gap: 1.5rem;
+          width: 100%;
+        }
+        .yt-carousel-track-container { overflow: visible; }
+        .yt-card, .yt-thumb-img, .yt-overlay, .yt-play-btn, .yt-overlay-text,
+        .yt-modal, .yt-modal-box, .yt-modal-close {
+          transition: none; animation: none;
+        }
+        .yt-card:hover, .yt-card:focus-within { transform: none; }
+        .yt-thumb-img { transform: none; }
+        .yt-overlay { opacity: 1; }
+        .yt-play-btn { transform: scale(1); }
+        .yt-overlay-text { opacity: 1; transform: none; }
       }
 
             /* ===== SCROLL ANIMATIONS ===== */
@@ -790,32 +1074,220 @@
       }
 
       /* ===== STANDALONE CHECK BADGES =====
-         The skill-set list marks each point with .check-icon. css/styles.css
-         only scopes .check-icon under .feature-check, so the badge needs its
-         own rule here to render at full size. */
+         css/styles.css only scopes .check-icon under .feature-check, so the
+         badge needs its own rule here to render at full size. */
       .check-icon {
-        flex-shrink: 0;
-        width: 24px;
-        height: 24px;
-        margin-top: 1px;
-        border-radius: 8px;
+        flex: 0 0 auto;
+        width: 34px;
+        height: 34px;
+        border-radius: 11px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(
-          135deg,
-          rgba(0, 173, 238, 0.18),
-          rgba(77, 183, 74, 0.22)
-        );
-        border: 1px solid rgba(0, 102, 179, 0.18);
-        color: var(--primary-blue);
+        background: linear-gradient(140deg, #0066b3, #00adee 60%, #4db74a);
+        color: #ffffff;
+        box-shadow: 0 10px 18px -10px rgba(0, 102, 179, 0.85);
+        transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .check-icon svg {
+        width: 15px;
+        height: 15px;
+        filter: drop-shadow(0 1px 1px rgba(10, 22, 40, 0.25));
       }
 
-      /* ===== SKILL SET + SPECIFICATIONS (merged block) =====
-         One section, two columns: skill-set on the left, spec table on the
-         right, and a shared "Effective on" strip below. Both columns share
-         the same card shell (.ss-panel) so the pair reads as one designed
-         unit instead of two unrelated defaults. */
+      /* ===== SKILL SET + SPECIFICATIONS =====
+         One section, three tiers of the same visual language: a centred
+         heading, a pair of equal-height panels that share one card shell,
+         and a full-width strip under them. Everything is drawn from the
+         brand ramp -- deep blue, sky, leaf green -- on a cool wash. */
+
+      /* --- section shell --- */
+      .ss-section {
+        background:
+          radial-gradient(
+            1000px 460px at 10% -12%,
+            rgba(0, 173, 238, 0.14),
+            transparent 62%
+          ),
+          radial-gradient(
+            880px 440px at 92% 4%,
+            rgba(77, 183, 74, 0.13),
+            transparent 64%
+          ),
+          linear-gradient(180deg, #f4faff 0%, #ffffff 38%, #ffffff 100%);
+      }
+      /* faint blueprint grid so the white space reads as designed */
+      .ss-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(0, 102, 179, 0.055) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 102, 179, 0.055) 1px, transparent 1px);
+        background-size: 58px 58px;
+        mask-image: radial-gradient(
+          ellipse 78% 62% at 50% 34%,
+          #000 0%,
+          transparent 78%
+        );
+        -webkit-mask-image: radial-gradient(
+          ellipse 78% 62% at 50% 34%,
+          #000 0%,
+          transparent 78%
+        );
+        pointer-events: none;
+      }
+
+      /* --- heading block --- */
+      .ss-heading-wrap {
+        max-width: 52rem;
+        margin: 0 auto clamp(2rem, 1.5rem + 2.2vw, 3.25rem);
+        text-align: center;
+      }
+      .ss-badge {
+        display: inline-flex;
+        align-items: center;
+        align-self: flex-start;
+        gap: 0.5rem;
+        padding: 0.4rem 1rem;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-family: var(--font-heading);
+        font-weight: 600;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+      .ss-badge-blue {
+        color: #ffffff;
+        background: linear-gradient(135deg, #0066b3, #00adee);
+        box-shadow: 0 12px 24px -14px rgba(0, 102, 179, 0.9);
+      }
+      .ss-badge-green {
+        color: #ffffff;
+        background: linear-gradient(135deg, #2f8f2c, #4db74a 60%, #00adee);
+        box-shadow: 0 12px 24px -14px rgba(47, 143, 44, 0.9);
+      }
+      /* quiet outline variant for the eyebrow above the section heading */
+      .ss-badge-soft {
+        color: var(--primary-blue);
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid rgba(0, 102, 179, 0.2);
+        box-shadow: 0 10px 24px -18px rgba(10, 22, 40, 0.6);
+      }
+
+      .ss-heading {
+        font-family: var(--font-heading);
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        color: var(--deep-blue);
+        font-size: clamp(2rem, 1.35rem + 2.6vw, 3.25rem);
+        text-wrap: balance;
+      }
+      .ss-heading-sub {
+        font-size: 1.0625rem;
+        line-height: 1.7;
+        color: #4b5c70;
+        max-width: 40rem;
+        margin: 1rem auto 0;
+      }
+      /* short gradient flourish under the sub-copy */
+      .ss-heading-mark {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        margin-top: 1.35rem;
+      }
+      .ss-heading-mark::before,
+      .ss-heading-mark::after {
+        content: "";
+        height: 1px;
+        width: clamp(2.5rem, 8vw, 5.5rem);
+        background: linear-gradient(
+          90deg,
+          rgba(0, 102, 179, 0),
+          rgba(0, 102, 179, 0.28)
+        );
+      }
+      .ss-heading-mark::after {
+        background: linear-gradient(
+          90deg,
+          rgba(0, 102, 179, 0.28),
+          rgba(0, 102, 179, 0)
+        );
+      }
+      .ss-heading-mark span {
+        display: flex;
+        gap: 0.4rem;
+      }
+      .ss-heading-mark i {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+      }
+      .ss-heading-mark i:nth-child(1) {
+        background: var(--primary-blue);
+      }
+      .ss-heading-mark i:nth-child(2) {
+        background: var(--sky-blue, #00adee);
+      }
+      .ss-heading-mark i:nth-child(3) {
+        background: var(--leaf-green, #4db74a);
+      }
+
+      /* compact counters that give the heading block some weight */
+      .ss-stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        align-items: start;
+        gap: 0.75rem 0.5rem;
+        max-width: 38rem;
+        margin: 1.85rem auto 0;
+      }
+      @media (min-width: 560px) {
+        .ss-stats {
+          gap: 0.75rem clamp(1.5rem, 4vw, 3.25rem);
+        }
+      }
+      .ss-stat {
+        text-align: center;
+      }
+      .ss-stat b {
+        display: block;
+        font-family: var(--font-heading);
+        font-weight: 800;
+        font-size: clamp(1.375rem, 1.1rem + 1.2vw, 2rem);
+        line-height: 1;
+        letter-spacing: -0.02em;
+        background: linear-gradient(135deg, #134fa1, #00adee 60%, #4db74a);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .ss-stat span {
+        display: block;
+        margin-top: 0.4rem;
+        font-size: 0.6875rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #64748b;
+      }
+      @media (min-width: 560px) {
+        .ss-stat span {
+          font-size: 0.75rem;
+          letter-spacing: 0.12em;
+        }
+      }
+      /* narrow phones: keep each label on one line beside its figure */
+      @media (max-width: 430px) {
+        .ss-stat span {
+          font-size: 0.625rem;
+          letter-spacing: 0.04em;
+        }
+      }
 
       /* --- shared card shell for both columns --- */
       .ss-panel {
@@ -824,94 +1296,163 @@
         flex-direction: column;
         overflow: hidden;
         padding: clamp(1.35rem, 1rem + 1.4vw, 2rem);
-        border-radius: 1.5rem;
-        background: #ffffff;
-        border: 1px solid rgba(0, 102, 179, 0.12);
+        border-radius: 1.75rem;
+        background:
+          linear-gradient(180deg, #ffffff 0%, #fdfeff 100%);
+        border: 1px solid rgba(0, 102, 179, 0.13);
         box-shadow:
-          0 26px 60px -36px rgba(10, 22, 40, 0.4),
+          0 30px 66px -40px rgba(10, 22, 40, 0.5),
           0 2px 6px -4px rgba(0, 102, 179, 0.14);
         transition:
           box-shadow 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-          transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          border-color 0.45s ease;
       }
-      /* hairline colour bar along the top edge, tinted per column */
+      /* colour bar along the top edge, tinted per column */
       .ss-panel::before {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
-        height: 3px;
+        height: 4px;
+        background: linear-gradient(90deg, #0066b3, #00adee 55%, #4db74a);
+        background-size: 200% 100%;
+        transition: background-position 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       }
       .ss-panel--skills::before {
-        background: linear-gradient(90deg, #0066b3, #00adee);
+        background-image: linear-gradient(90deg, #0066b3, #00adee);
       }
       .ss-panel--specs::before {
-        background: linear-gradient(90deg, #4db74a, #00adee);
+        background-image: linear-gradient(90deg, #4db74a, #00adee);
+      }
+      /* corner bloom so the card interior is never flat white */
+      .ss-panel::after {
+        content: "";
+        position: absolute;
+        top: -120px;
+        right: -110px;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(0, 173, 238, 0.12),
+          transparent 68%
+        );
+        pointer-events: none;
+      }
+      .ss-panel--specs::after {
+        background: radial-gradient(
+          circle,
+          rgba(77, 183, 74, 0.13),
+          transparent 68%
+        );
+      }
+      .ss-panel > * {
+        position: relative;
       }
       @media (hover: hover) {
         .ss-panel:hover {
-          transform: translateY(-4px);
+          transform: translateY(-5px);
+          border-color: rgba(0, 102, 179, 0.24);
           box-shadow:
-            0 36px 74px -34px rgba(0, 102, 179, 0.3),
-            0 4px 12px -6px rgba(0, 102, 179, 0.18);
+            0 44px 84px -42px rgba(0, 102, 179, 0.34),
+            0 6px 16px -8px rgba(0, 102, 179, 0.2);
+        }
+        .ss-panel:hover::before {
+          background-position: 100% 0;
+        }
+        .ss-panel--specs:hover::before {
+          background-position: 0% 0;
+        }
+        .ss-panel:hover .check-icon {
+          transform: scale(1.06) rotate(-4deg);
         }
       }
 
-      /* --- heading block --- */
-      .ss-badge {
+      /* --- card header --- */
+      .ss-card-head {
+        display: flex;
+        align-items: center;
+        gap: 0.85rem;
+        margin-bottom: 1.05rem;
+      }
+      /* the text block shrinks before the mark or the count pill does */
+      .ss-card-name {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+      .ss-card-mark {
+        flex: 0 0 auto;
         display: inline-flex;
         align-items: center;
-        align-self: flex-start;
-        gap: 0.5rem;
-        padding: 0.34rem 0.9rem;
-        border-radius: 999px;
-        font-size: 0.8125rem;
-        font-family: var(--font-heading);
-        font-weight: 600;
-        letter-spacing: 0.02em;
-        margin-bottom: 0.9rem;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        font-size: 1rem;
+        color: #ffffff;
       }
-      .ss-badge-blue {
-        background: rgba(0, 102, 179, 0.1);
-        color: var(--primary-blue);
+      .ss-panel--skills .ss-card-mark {
+        background: linear-gradient(140deg, #0066b3, #00adee);
+        box-shadow: 0 14px 26px -14px rgba(0, 102, 179, 0.9);
       }
-      .ss-badge-green {
-        background: rgba(61, 168, 58, 0.1);
-        color: var(--accent-green, #3da83a);
+      .ss-panel--specs .ss-card-mark {
+        background: linear-gradient(140deg, #2f8f2c, #4db74a);
+        box-shadow: 0 14px 26px -14px rgba(47, 143, 44, 0.9);
       }
-
-      /* shared section heading above both cards */
-      .ss-heading {
+      .ss-card-head h3 {
         font-family: var(--font-heading);
         font-weight: 700;
-        line-height: 1.15;
+        line-height: 1.2;
+        letter-spacing: -0.01em;
         color: var(--deep-blue);
-        font-size: clamp(1.85rem, 1.35rem + 2vw, 2.75rem);
-        margin-bottom: 1rem;
+        font-size: clamp(1.0625rem, 0.95rem + 0.6vw, 1.375rem);
+        margin: 0;
       }
-      .ss-heading-sub {
-        font-size: 1.0625rem;
-        line-height: 1.7;
-        color: rgba(71, 85, 105, 0.95);
-        max-width: 56rem;
-        margin: 0 auto;
+      .ss-card-head p {
+        margin: 3px 0 0;
+        font-size: 0.8125rem;
+        line-height: 1.4;
+        color: #64748b;
       }
-      .ss-heading-wrap {
-        max-width: 46rem;
-        margin: 0 auto clamp(2.25rem, 1.6rem + 2.4vw, 3.5rem);
-        text-align: center;
+      /* below this width the sub-line costs more room than it earns */
+      @media (max-width: 420px) {
+        .ss-card-head p {
+          display: none;
+        }
+        .ss-card-mark {
+          width: 40px;
+          height: 40px;
+          border-radius: 13px;
+          font-size: 0.9rem;
+        }
+      }
+      .ss-count {
+        margin-left: auto;
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.32rem 0.7rem;
+        border-radius: 999px;
+        font-family: var(--font-heading);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        color: var(--primary-blue);
+        background: rgba(0, 173, 238, 0.1);
+        border: 1px solid rgba(0, 102, 179, 0.12);
+      }
+      .ss-panel--specs .ss-count {
+        color: #2f8f2c;
+        background: rgba(77, 183, 74, 0.12);
+      }
+      .ss-count i {
+        font-size: 0.65rem;
       }
 
-      /* short label inside each card */
-      .ss-card-title {
-        font-family: var(--font-heading);
-        font-weight: 600;
-        line-height: 1.25;
-        color: var(--deep-blue);
-        font-size: clamp(1.125rem, 1rem + 0.5vw, 1.3125rem);
-        margin-bottom: 0.85rem;
-      }
       /* hairline that separates the heading from the content below it */
       .ss-rule {
         height: 1px;
@@ -925,76 +1466,106 @@
         );
       }
 
-      /* --- skill list --- */
+      /* --- skill tiles --- */
       .ss-list {
         list-style: none;
         margin: 0;
         padding: 0;
         display: grid;
         grid-template-columns: 1fr;
-        gap: 0.3rem;
+        gap: 0.7rem;
         align-content: start;
+        flex: 1 1 auto;
       }
-      /* two balanced columns at desktop, read top-to-bottom then across */
-      @media (min-width: 640px) {
+      @media (min-width: 560px) {
         .ss-list {
           grid-template-columns: 1fr 1fr;
-          grid-template-rows: repeat(6, auto);
-          grid-auto-flow: column;
-          align-items: center;
-          gap: 0.35rem 0.85rem;
-          /* fills the card so both columns finish level */
-          flex: 1 1 auto;
-          align-content: space-between;
+          gap: 0.75rem 0.8rem;
         }
       }
       .ss-item {
         position: relative;
         display: flex;
-        align-items: flex-start;
-        gap: 0.65rem;
-        padding: 0.55rem 0.6rem;
-        border-radius: 0.85rem;
-        font-size: 0.9375rem;
-        line-height: 1.5;
-        color: #374151;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.8rem 0.9rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.96),
+          rgba(240, 248, 255, 0.72)
+        );
+        border: 1px solid rgba(0, 102, 179, 0.1);
+        box-shadow: 0 12px 24px -20px rgba(10, 22, 40, 0.55);
         transition:
-          background-color 0.3s ease,
-          transform 0.3s ease;
+          transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          box-shadow 0.35s ease,
+          border-color 0.35s ease,
+          background 0.35s ease;
       }
-      @media (hover: hover) {
-        .ss-item:hover {
-          background: rgba(0, 173, 238, 0.08);
-          transform: translateX(2px);
-        }
-      }
-      /* left tick that fades in on hover */
-      .ss-item::before {
+      /* left accent that grows in on hover */
+      .ss-item::after {
         content: "";
         position: absolute;
         left: 0;
-        top: 0.5rem;
-        bottom: 0.5rem;
-        width: 2px;
-        border-radius: 2px;
+        top: 18%;
+        bottom: 18%;
+        width: 3px;
+        border-radius: 0 3px 3px 0;
         background: linear-gradient(180deg, #00adee, #4db74a);
         opacity: 0;
-        transition: opacity 0.3s ease;
+        transform: scaleY(0.2);
+        transform-origin: top;
+        transition:
+          opacity 0.35s ease,
+          transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .ss-item > span:last-child {
+        font-size: 0.9375rem;
+        font-weight: 500;
+        line-height: 1.45;
+        color: #26364a;
       }
       @media (hover: hover) {
-        .ss-item:hover::before {
-          opacity: 1;
+        .ss-item:hover {
+          transform: translateY(-3px);
+          border-color: rgba(0, 173, 238, 0.36);
+          background: linear-gradient(
+            145deg,
+            #ffffff,
+            rgba(219, 240, 255, 0.8)
+          );
+          box-shadow: 0 22px 34px -24px rgba(0, 102, 179, 0.65);
         }
+        .ss-item:hover::after {
+          opacity: 1;
+          transform: scaleY(1);
+        }
+      }
+      .ss-item:focus-within {
+        border-color: rgba(0, 102, 179, 0.4);
       }
 
       /* --- technical specifications table --- */
       .ss-spec-scroll {
         overflow-x: auto;
-        margin: 0 -0.35rem;
-        padding: 0.35rem;
+        margin: 0;
+        padding: 0.4rem;
+        border-radius: 1.1rem;
+        background: linear-gradient(
+          160deg,
+          rgba(240, 248, 255, 0.7),
+          rgba(255, 255, 255, 0.5)
+        );
+        border: 1px solid rgba(0, 102, 179, 0.09);
+        flex: 1 1 auto;
+        display: flex;
       }
       .ss-table {
         width: 100%;
+        min-width: 21rem;
+        height: 100%;
         border: none;
         border-radius: 0;
         overflow: visible;
@@ -1002,31 +1573,31 @@
         border-spacing: 0;
       }
       .ss-table thead th {
-        padding: 0.8rem 1.1rem;
-        font-size: 0.75rem;
+        padding: 0.75rem 1rem;
+        font-size: 0.7rem;
         font-family: var(--font-heading);
-        font-weight: 600;
-        letter-spacing: 0.09em;
+        font-weight: 700;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
         text-align: left;
         white-space: nowrap;
         color: #ffffff;
-        background: linear-gradient(135deg, var(--deep-blue), var(--primary-blue));
+        background: linear-gradient(135deg, #134fa1, #0066b3 70%, #00adee);
       }
       .ss-table thead th:first-child {
-        border-radius: 0.85rem 0 0 0.85rem;
+        border-radius: 0.8rem 0 0 0.8rem;
       }
       .ss-table thead th:last-child {
-        border-radius: 0 0.85rem 0.85rem 0;
+        border-radius: 0 0.8rem 0.8rem 0;
       }
       .ss-table tbody th,
       .ss-table tbody td {
-        padding: 0.75rem 1.1rem;
+        padding: 0.7rem 1rem;
         font-size: 0.9375rem;
         line-height: 1.5;
         vertical-align: middle;
         text-align: left;
-        border-bottom: 1px solid rgba(0, 102, 179, 0.09);
+        border-bottom: 1px solid rgba(0, 102, 179, 0.08);
       }
       .ss-table tbody th {
         width: 46%;
@@ -1046,7 +1617,7 @@
       }
       @media (hover: hover) {
         .ss-table tbody tr:hover {
-          background: rgba(0, 173, 238, 0.09);
+          background: rgba(0, 173, 238, 0.1);
         }
         .ss-table tbody tr:hover th {
           color: var(--primary-blue);
@@ -1061,8 +1632,8 @@
       @media (max-width: 640px) {
         .ss-table thead th {
           padding: 0.6rem 0.6rem;
-          font-size: 0.6875rem;
-          letter-spacing: 0.05em;
+          font-size: 0.65rem;
+          letter-spacing: 0.06em;
         }
         .ss-table thead th:first-child {
           border-radius: 0.6rem 0 0 0.6rem;
@@ -1072,7 +1643,7 @@
         }
         .ss-table tbody th,
         .ss-table tbody td {
-          padding: 0.6rem 0.6rem;
+          padding: 0.6rem 0.55rem;
           font-size: 0.8125rem;
         }
         .ss-table tbody th {
@@ -1091,7 +1662,7 @@
         display: grid;
         gap: 1.1rem;
         padding: clamp(1.25rem, 1rem + 1vw, 1.85rem);
-        border-radius: 1.5rem;
+        border-radius: 1.75rem;
         border: 1px solid rgba(0, 102, 179, 0.16);
         background: linear-gradient(
           135deg,
@@ -1099,7 +1670,7 @@
           rgba(0, 173, 238, 0.06) 45%,
           rgba(77, 183, 74, 0.09)
         );
-        box-shadow: 0 24px 54px -34px rgba(10, 22, 40, 0.42);
+        box-shadow: 0 26px 58px -36px rgba(10, 22, 40, 0.45);
       }
       /* soft glow in the top-right corner */
       .ss-effective::before {
@@ -1114,6 +1685,21 @@
           circle,
           rgba(0, 173, 238, 0.2),
           transparent 65%
+        );
+        pointer-events: none;
+      }
+      .ss-effective::after {
+        content: "";
+        position: absolute;
+        bottom: -60%;
+        left: -6%;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(77, 183, 74, 0.16),
+          transparent 68%
         );
         pointer-events: none;
       }
@@ -1170,29 +1756,49 @@
       .ss-eff-chips {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.5rem;
+        gap: 0.55rem;
       }
       .ss-chip {
-        display: inline-block;
-        padding: 0.36rem 0.85rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.5rem 0.95rem;
         border-radius: 999px;
         background: #ffffff;
-        border: 1px solid rgba(0, 102, 179, 0.2);
+        border: 1px solid rgba(0, 102, 179, 0.16);
         color: var(--primary-blue);
         font-size: 0.8125rem;
         font-weight: 600;
         font-family: var(--font-heading);
-        box-shadow: 0 4px 10px -6px rgba(0, 102, 179, 0.35);
+        letter-spacing: 0.01em;
+        box-shadow: 0 10px 20px -14px rgba(0, 102, 179, 0.55);
         transition:
           border-color 0.3s ease,
           color 0.3s ease,
-          transform 0.3s ease;
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      /* leading dot in the brand ramp, one shade further along per chip */
+      .ss-chip::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--chip-dot, var(--primary-blue));
+        box-shadow: 0 0 0 3px rgba(0, 102, 179, 0.1);
+      }
+      .ss-chip:nth-child(3n + 2) {
+        --chip-dot: var(--sky-blue, #00adee);
+      }
+      .ss-chip:nth-child(3n + 3) {
+        --chip-dot: var(--leaf-green, #4db74a);
       }
       @media (hover: hover) {
         .ss-chip:hover {
-          border-color: rgba(77, 183, 74, 0.55);
-          color: #2f8f2c;
-          transform: translateY(-2px);
+          border-color: rgba(0, 173, 238, 0.5);
+          color: var(--deep-blue);
+          transform: translateY(-3px);
+          box-shadow: 0 16px 26px -16px rgba(0, 102, 179, 0.6);
         }
       }
 
@@ -1201,9 +1807,9 @@
         display: flex;
         align-items: flex-start;
         gap: 0.65rem;
-        padding: 0.85rem 1rem;
-        border-radius: 0.9rem;
-        background: rgba(255, 255, 255, 0.72);
+        padding: 0.95rem 1.1rem;
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.78);
         border: 1px solid rgba(0, 102, 179, 0.12);
         /* same measure as the body copy elsewhere on the page */
         font-size: 0.9375rem;
@@ -1222,15 +1828,15 @@
         justify-content: center;
         gap: 0.55rem;
         width: 100%;
-        padding: 0.8rem 1.4rem;
+        padding: 0.85rem 1.5rem;
         border-radius: 999px;
         font-family: var(--font-heading);
         font-weight: 600;
-        font-size: 0.875rem;
+        font-size: 0.9rem;
         white-space: nowrap;
         color: #ffffff;
         background: linear-gradient(135deg, #0066b3, #00adee);
-        box-shadow: 0 14px 26px -14px rgba(0, 102, 179, 0.8);
+        box-shadow: 0 16px 28px -14px rgba(0, 102, 179, 0.85);
         transition:
           transform 0.3s ease,
           box-shadow 0.3s ease,
@@ -1240,7 +1846,7 @@
         .ss-eff-cta:hover {
           transform: translateY(-2px);
           background: linear-gradient(135deg, #134fa1, #0066b3);
-          box-shadow: 0 20px 34px -16px rgba(0, 102, 179, 0.85);
+          box-shadow: 0 22px 36px -16px rgba(0, 102, 179, 0.9);
         }
         .ss-eff-cta:hover > i {
           transform: translateX(4px);
@@ -1284,8 +1890,6 @@
           grid-row: 3;
         }
       }
-
-
       /* ===== TECHNOLOGY CARDS =====
          Four stages in a single row on wide screens. Each card carries its
          own illustration, a colour bar that wipes in on hover, a slow image
@@ -2296,72 +2900,91 @@
           </div>
 
           <div class="relative" data-animate="fade-left">
-            <!-- Company video: sized by height so the intrinsic 464x832 ratio is
-                 preserved and nothing is ever cropped - the same box the previous
-                 934x1684 image occupied. The desktop heights track the height of
-                 the copy column on the left (688px from 1280 up, 800px in the
-                 1024-1279 band where that column is narrower). preload=metadata
-                 keeps the 24 MB file from loading until the visitor presses play. -->
-            <video
-              class="block w-auto h-[560px] sm:h-[640px] lg:h-[800px] xl:h-[688px] mx-auto rounded-3xl border border-jd-sky/10 shadow-xl shadow-jd-sky/10 bg-jd-dark"
-              controls
-              playsinline
-              preload="metadata"
-              poster="assets/videos/aboutvid-poster.jpg"
-              width="464"
-              height="832"
+            <!-- Company image -->
+            <img
+              src="assets/pro1.png"
+              alt="Krushi Nature Water Care Pvt. Ltd. - Company Facility"
+              class="block w-auto h-[560px] sm:h-[640px] lg:h-[800px] xl:h-[688px] mx-auto rounded-3xl border border-jd-sky/10 shadow-xl shadow-jd-sky/10 bg-jd-dark transition-transform duration-300 hover:scale-[1.01] object-cover"
+            />
+
+            <!-- Company video trigger button -->
+            <button
+              type="button"
+              id="companyVideoTrigger"
+              class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-3 px-6 py-3 bg-white/95 backdrop-blur-sm rounded-full shadow-xl shadow-jd-blue/20 border border-jd-sky/20 text-jd-deep font-heading font-semibold hover:bg-white hover:shadow-jd-blue/30 transition-all duration-300 hover:-translate-y-1 hover:scale-105 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-jd-sky/40"
+              aria-label="Watch company introduction video"
             >
-              <source src="assets/videos/aboutvid.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+              <span
+                class="w-10 h-10 bg-gradient-to-r from-jd-blue to-jd-sky rounded-full flex items-center justify-center text-white shadow-lg shadow-jd-blue/40"
+                aria-hidden="true"
+              >
+                <i class="fas fa-play" style="margin-left: 2px;"></i>
+              </span>
+              <span class="hidden sm:inline">Watch Our Story</span>
+            </button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== SKILL SET + SPECIFICATIONS ===== -->
+<!-- ===== SKILL SET + SPECIFICATIONS ===== -->
     <section
       id="specifications"
-      class="ss-section py-14 lg:py-20 bg-white relative overflow-hidden"
+      class="ss-section py-16 lg:py-24 relative overflow-hidden"
     >
       <div
-        class="absolute top-0 right-0 w-96 h-96 bg-jd-sky/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"
+        class="absolute top-0 right-0 w-[26rem] h-[26rem] bg-jd-sky/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"
       ></div>
       <div
-        class="absolute bottom-0 left-0 w-80 h-80 bg-jd-green/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"
+        class="absolute bottom-0 left-0 w-[22rem] h-[22rem] bg-jd-green/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"
       ></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <!-- one shared heading for the pair of cards below -->
         <div class="ss-heading-wrap" data-animate="fade-up">
-          <span class="ss-badge ss-badge-blue">
+          <span class="ss-badge ss-badge-soft">
             <i class="fas fa-circle-info"></i> Skill-set &amp; specifications
           </span>
           <h2 class="ss-heading">
             Know it <span class="gradient-text-blue">before you install</span>
           </h2>
           <p class="ss-heading-sub">
-            Eleven reasons it services itself &mdash; plus the full specs.
+            Ten reasons it services itself &mdash; plus the full specs.
           </p>
+          <div class="ss-heading-mark" aria-hidden="true">
+            <span><i></i><i></i><i></i></span>
+          </div>
+          <div class="ss-stats">
+            <div class="ss-stat">
+              <b>10</b><span>Skill points</span>
+            </div>
+            <div class="ss-stat">
+              <b>8</b><span>Spec parameters</span>
+            </div>
+            <div class="ss-stat">
+              <b>8</b><span>Pipe materials</span>
+            </div>
+          </div>
         </div>
 
-        <div class="grid lg:grid-cols-12 gap-8 lg:gap-10">
+        <div class="grid xl:grid-cols-12 gap-8 lg:gap-10">
           <!-- ---------- skill set ---------- -->
           <div
-            class="lg:col-span-6 h-full ss-panel ss-panel--skills"
+            class="xl:col-span-6 h-full ss-panel ss-panel--skills"
             data-animate="fade-right"
           >
-            <span
-              class="ss-badge ss-badge-blue"
-              ><i class="fas fa-screwdriver-wrench"></i> Our skill-set
-              includes</span
-            >
-            <h3 class="ss-card-title">Why it runs itself</h3>
+            <div class="ss-card-head">
+              <span class="ss-card-mark"><i class="fas fa-screwdriver-wrench"></i></span>
+              <div class="ss-card-name">
+                <h3>Why it runs itself</h3>
+                <p>Everything it does without you</p>
+              </div>
+              <span class="ss-count"><i class="fas fa-check-double"></i> 10</span>
+            </div>
             <hr class="ss-rule" />
             <ul class="ss-list">
               <li class="ss-item">
                 <span class="check-icon">
                   <svg
-                    class="w-3 h-3"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -2379,7 +3002,6 @@
               <li class="ss-item">
                 <span class="check-icon">
                   <svg
-                    class="w-3 h-3"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -2397,7 +3019,6 @@
               <li class="ss-item">
                 <span class="check-icon">
                   <svg
-                    class="w-3 h-3"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -2415,7 +3036,6 @@
               <li class="ss-item">
                 <span class="check-icon">
                   <svg
-                    class="w-3 h-3"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -2433,7 +3053,6 @@
               <li class="ss-item">
                 <span class="check-icon">
                   <svg
-                    class="w-3 h-3"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -2451,7 +3070,6 @@
               <li class="ss-item">
                 <span class="check-icon">
                   <svg
-                    class="w-3 h-3"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -2469,7 +3087,6 @@
               <li class="ss-item">
                 <span class="check-icon">
                   <svg
-                    class="w-3 h-3"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -2487,7 +3104,6 @@
               <li class="ss-item">
                 <span class="check-icon">
                   <svg
-                    class="w-3 h-3"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -2506,7 +3122,6 @@
               <li class="ss-item">
                 <span class="check-icon">
                   <svg
-                    class="w-3 h-3"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -2524,7 +3139,6 @@
               <li class="ss-item">
                 <span class="check-icon">
                   <svg
-                    class="w-3 h-3"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -2544,15 +3158,17 @@
 
           <!-- ---------- technical specifications ---------- -->
           <div
-            class="lg:col-span-6 h-full ss-panel ss-panel--specs"
+            class="xl:col-span-6 h-full ss-panel ss-panel--specs"
             data-animate="fade-left"
           >
-            <span class="ss-badge ss-badge-green"
-              ><i class="fas fa-table-list"></i> Technical specifications</span
-            >
-            <h3 class="ss-card-title">
-              The numbers behind it
-            </h3>
+            <div class="ss-card-head">
+              <span class="ss-card-mark"><i class="fas fa-table-list"></i></span>
+              <div class="ss-card-name">
+                <h3>The numbers behind it</h3>
+                <p>Measured at the unit itself</p>
+              </div>
+              <span class="ss-count"><i class="fas fa-list-check"></i> 8</span>
+            </div>
             <hr class="ss-rule" />
             <div class="ss-spec-scroll">
               <table class="spec-table ss-table">
@@ -3022,193 +3638,96 @@
       </div>
     </section>
 
-<!-- ===== VIDEO TESTIMONIALS ===== -->
+<!-- ===== YOUTUBE VIDEOS (AUTO-SCROLLING CAROUSEL) ===== -->
     <section
-      class="tv-section py-20 lg:py-28 scroll-mt-20"
-      aria-labelledby="tvTitle"
-      id="testimonials"
+      class="yt-section py-20 lg:py-28 scroll-mt-20 bg-white relative overflow-hidden"
+      aria-labelledby="ytTitle"
+      id="youtube-videos"
     >
+      <!-- Background glow accents -->
+      <div
+        class="absolute top-0 right-0 w-96 h-96 bg-jd-sky/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-80 h-80 bg-jd-green/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"
+      ></div>
+
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="tv-head" data-animate="fade-up">
-          <span class="tv-eyebrow">
-            <i class="fas fa-quote-left" aria-hidden="true"></i>
-            Customer stories
+        <!-- Section Header -->
+        <div class="yt-head text-center" data-animate="fade-up">
+          <span class="yt-eyebrow inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold mb-6">
+            <i class="fab fa-youtube" aria-hidden="true"></i>
+            Jaldoot on YouTube
           </span>
-          <h2 class="tv-title" id="tvTitle">
-            Real People. <span>Real Results.</span>
+          <h2 class="yt-title text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep mb-6 leading-tight" id="ytTitle">
+            Real People. <span class="gradient-text-blue">Real Results.</span>
           </h2>
-          <p class="tv-sub">
-            Hear directly from the homeowners, farmers and factory owners who
-            rely on Jaldoot every day.
+          <p class="yt-sub text-jd-gray text-base lg:text-lg max-w-2xl mx-auto leading-relaxed font-body">
+            Watch genuine customer stories, installations, and demonstrations from the Jaldoot Systems India YouTube channel.
           </p>
         </div>
 
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 lg:gap-8"
-        >
-          <!-- Video 1 -->
-          <article class="tv-card" data-animate="fade-up" data-delay="0">
-            <div class="tv-thumb">
-              <img
-                src="assets/videos/vid1-poster.jpg"
-                alt="Video testimonial — screwmedia farm, Belgaum"
-                class="tv-thumb-img"
-                width="640"
-                height="360"
-                loading="lazy"
-              />
-              <button
-                type="button"
-                class="tv-thumb-btn"
-                data-tv-video="assets/videos/vid1.mp4"
-                aria-label="Play video: Screwmedia Farming, Belgaum"
-              >
-                <i class="fas fa-play" aria-hidden="true"></i>
-              </button>
+        <!-- Auto-scrolling Video Carousel -->
+        <div class="yt-carousel-wrapper relative mt-12" role="region" aria-label="YouTube video carousel">
+          <div class="yt-carousel-track-container overflow-hidden">
+            <div class="yt-carousel-track flex gap-6 sm:gap-7 lg:gap-8 will-change-transform" role="list" aria-label="YouTube videos">
+              <!-- Video cards will be populated by JavaScript (duplicated for seamless loop) -->
             </div>
-          </article>
-
-          <!-- Video 2 -->
-          <article class="tv-card" data-animate="fade-up" data-delay="120">
-            <div class="tv-thumb">
-              <img
-                src="assets/videos/vid2-poster.jpg"
-                alt="Video testimonial — Jaldoot installed on a farm in Belgaum"
-                class="tv-thumb-img"
-                width="640"
-                height="360"
-                loading="lazy"
-              />
-              <button
-                type="button"
-                class="tv-thumb-btn"
-                data-tv-video="assets/videos/vid2.mp4"
-                aria-label="Play video: Field Installation, Belgaum"
-              >
-                <i class="fas fa-play" aria-hidden="true"></i>
-              </button>
-            </div>
-          </article>
-
-          <!-- Video 3 -->
-          <article class="tv-card" data-animate="fade-up" data-delay="240">
-            <div class="tv-thumb">
-              <img
-                src="assets/videos/vid3-poster.jpg"
-                alt="Video testimonial — hard water control in a housing society"
-                class="tv-thumb-img"
-                width="640"
-                height="360"
-                loading="lazy"
-              />
-              <button
-                type="button"
-                class="tv-thumb-btn"
-                data-tv-video="assets/videos/vid3.mp4"
-                aria-label="Play video: Housing Society Water Treatment"
-              >
-                <i class="fas fa-play" aria-hidden="true"></i>
-              </button>
-            </div>
-          </article>
-
-          <!-- Video 4 -->
-          <article class="tv-card" data-animate="fade-up" data-delay="0">
-            <div class="tv-thumb">
-              <img
-                src="assets/videos/vid4-poster.jpg"
-                alt="Video testimonial — Jaldoot unit installed in an open field"
-                class="tv-thumb-img"
-                width="640"
-                height="360"
-                loading="lazy"
-              />
-              <button
-                type="button"
-                class="tv-thumb-btn"
-                data-tv-video="assets/videos/vid4.mp4"
-                aria-label="Play video: Agriculture Field Installation"
-              >
-                <i class="fas fa-play" aria-hidden="true"></i>
-              </button>
-            </div>
-          </article>
-
-          <!-- Video 5 -->
-          <article class="tv-card" data-animate="fade-up" data-delay="120">
-            <div class="tv-thumb">
-              <img
-                src="assets/videos/vid5-poster.jpg"
-                alt="Video testimonial — Jaldoot water conditioner for vehicles"
-                class="tv-thumb-img"
-                width="640"
-                height="360"
-                loading="lazy"
-              />
-              <button
-                type="button"
-                class="tv-thumb-btn"
-                data-tv-video="assets/videos/vid5.mp4"
-                aria-label="Play video: Vehicle Water Conditioner"
-              >
-                <i class="fas fa-play" aria-hidden="true"></i>
-              </button>
-            </div>
-          </article>
-
-          <!-- Video 6 -->
-          <article class="tv-card" data-animate="fade-up" data-delay="240">
-            <div class="tv-thumb">
-              <img
-                src="assets/videos/vid6-poster.jpg"
-                alt="Video testimonial — hard water solution for a rooftop pool"
-                class="tv-thumb-img"
-                width="640"
-                height="360"
-                loading="lazy"
-              />
-              <button
-                type="button"
-                class="tv-thumb-btn"
-                data-tv-video="assets/videos/vid6.mp4"
-                aria-label="Play video: Rooftop Pool Water Treatment"
-              >
-                <i class="fas fa-play" aria-hidden="true"></i>
-              </button>
-            </div>
-          </article>
+          </div>
         </div>
 
-        <div class="text-center mt-14" data-animate="fade-up" data-delay="120">
-          <a href="contact.html" class="tv-more">
-            Share Your Story
-            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        <!-- View More Button -->
+        <div class="text-center mt-14" data-animate="fade-up" data-delay="200">
+          <a
+            href="https://www.youtube.com/@jaldootsystemsindia/videos"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="yt-more inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-jd-deep via-jd-blue to-jd-sky text-white font-heading font-semibold text-base shadow-xl shadow-jd-blue/30 transition-all duration-300 hover:from-jd-blue hover:via-jd-sky hover:to-jd-blue hover:shadow-jd-sky/40 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-jd-sky/30"
+          >
+            <i class="fab fa-youtube text-lg" aria-hidden="true"></i>
+            <span>View More Videos on YouTube</span>
+            <i class="fas fa-external-link-alt text-sm" aria-hidden="true"></i>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- ===== TESTIMONIAL VIDEO MODAL ===== -->
+    <!-- ===== YOUTUBE VIDEO MODAL ===== -->
     <div
-      class="tv-modal"
-      id="tvModal"
+      class="yt-modal fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-jd-dark/90 backdrop-blur-sm opacity-0 invisible transition-all duration-300"
+      id="ytModal"
       role="dialog"
       aria-modal="true"
-      aria-label="Customer testimonial video"
+      aria-label="YouTube video player"
       aria-hidden="true"
     >
-      <div class="tv-modal-box">
+      <div class="yt-modal-box w-full max-w-4xl transform scale-95 opacity-0 transition-all duration-300">
+        <!-- Close button -->
         <button
           type="button"
-          class="tv-modal-close"
-          id="tvModalClose"
-          aria-label="Close video"
+          class="yt-modal-close absolute -top-12 right-0 z-10 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm text-white flex items-center justify-center hover:bg-jd-sky hover:text-white transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jd-sky"
+          id="ytModalClose"
+          aria-label="Close video player"
         >
-          <i class="fas fa-times" aria-hidden="true"></i>
+          <i class="fas fa-times text-lg" aria-hidden="true"></i>
         </button>
-        <video id="tvModalVideo" controls playsinline preload="none">
-          Your browser does not support the video tag.
-        </video>
+
+        <!-- Video player container (16:9 aspect ratio) -->
+        <div class="relative" style="aspect-ratio: 16 / 9;">
+          <video
+            id="ytModalVideo"
+            class="w-full h-full rounded-2xl shadow-2xl border border-jd-sky/20"
+            controls
+            playsinline
+            style="object-fit: contain;"
+            preload="metadata"
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Video title caption -->
+        <div class="yt-modal-caption text-center mt-4 text-white/80 font-body text-sm hidden" id="ytModalCaption" aria-live="polite"></div>
       </div>
     </div>
 
@@ -3521,6 +4040,72 @@
       </a>
     </div>
 
+    <!-- ===== TESTIMONIAL VIDEO MODAL ===== -->
+    <div
+      class="tv-modal fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-jd-dark/90 backdrop-blur-sm opacity-0 invisible transition-all duration-300"
+      id="tvModal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Testimonial video player"
+      aria-hidden="true"
+    >
+      <div class="tv-modal-box w-full max-w-4xl transform scale-95 opacity-0 transition-all duration-300">
+        <button
+          type="button"
+          class="tv-modal-close absolute -top-12 right-0 z-10 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm text-white flex items-center justify-center hover:bg-jd-sky hover:text-white transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jd-sky"
+          id="tvModalClose"
+          aria-label="Close video player"
+        >
+          <i class="fas fa-times text-lg" aria-hidden="true"></i>
+        </button>
+        <div class="relative" style="aspect-ratio: 16 / 9;">
+          <video
+            id="tvModalVideo"
+            class="w-full h-full rounded-2xl shadow-2xl border border-jd-sky/20"
+            controls
+            playsinline
+            style="object-fit: contain;"
+            preload="metadata"
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== COMPANY INTRODUCTION VIDEO MODAL ===== -->
+    <div
+      class="tv-modal fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-jd-dark/90 backdrop-blur-sm opacity-0 invisible transition-all duration-300"
+      id="companyVideoModal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Company introduction video player"
+      aria-hidden="true"
+    >
+      <div class="tv-modal-box w-full max-w-4xl transform scale-95 opacity-0 transition-all duration-300">
+        <button
+          type="button"
+          class="tv-modal-close absolute -top-12 right-0 z-10 w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm text-white flex items-center justify-center hover:bg-jd-sky hover:text-white transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-jd-sky"
+          id="companyVideoModalClose"
+          aria-label="Close video player"
+        >
+          <i class="fas fa-times text-lg" aria-hidden="true"></i>
+        </button>
+        <div class="relative" style="aspect-ratio: 16 / 9;">
+          <video
+            id="companyModalVideo"
+            class="w-full h-full rounded-2xl shadow-2xl border border-jd-sky/20"
+            controls
+            playsinline
+            style="object-fit: contain;"
+            preload="metadata"
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+
     <!-- ===== ALL JAVASCRIPT ===== -->
     <script>
       // ===== PRELOADER =====
@@ -3793,6 +4378,279 @@
           });
         })();
 
+        // ===== COMPANY INTRODUCTION VIDEO MODAL =====
+        (function initCompanyVideoModal() {
+          const modal = document.getElementById("companyVideoModal");
+          const player = document.getElementById("companyModalVideo");
+          const closeBtn = document.getElementById("companyVideoModalClose");
+          const trigger = document.getElementById("companyVideoTrigger");
+
+          if (!modal || !player || !trigger || !closeBtn) return;
+
+          let lastFocused = null;
+          const videoSrc = "assets/videos/vidssave.com HARD WATER CONDITIONER 360P.mp4";
+
+          function openModal() {
+            lastFocused = trigger;
+            player.src = videoSrc;
+            modal.classList.add("is-open");
+            modal.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+            const p = player.play();
+            if (p && typeof p.catch === "function") {
+              p.catch(function () {
+                /* browser blocked autoplay — controls are visible, user can start */
+              });
+            }
+            closeBtn.focus();
+          }
+
+          function closeModal() {
+            modal.classList.remove("is-open");
+            modal.setAttribute("aria-hidden", "true");
+            document.body.style.overflow = "";
+            player.pause();
+            player.removeAttribute("src");
+            player.load();
+            if (lastFocused) lastFocused.focus();
+          }
+
+          trigger.addEventListener("click", openModal);
+          trigger.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              openModal();
+            }
+          });
+
+          closeBtn.addEventListener("click", closeModal);
+
+          // Click on the backdrop (but not the video box) closes the modal.
+          modal.addEventListener("click", function (e) {
+            if (e.target === modal) closeModal();
+          });
+
+          document.addEventListener("keydown", function (e) {
+            if (!modal.classList.contains("is-open")) return;
+            if (e.key === "Escape") {
+              closeModal();
+            } else if (e.key === "Tab") {
+              // keep focus trapped inside the dialog
+              e.preventDefault();
+              closeBtn.focus();
+            }
+          });
+        })();
+
+        // ===== LOCAL VIDEO CAROUSEL =====
+        (function initLocalVideoCarousel() {
+          const grid = document.querySelector(".yt-carousel-track");
+          const modal = document.getElementById("ytModal");
+          const videoPlayer = document.getElementById("ytModalVideo");
+          const closeBtn = document.getElementById("ytModalClose");
+          const caption = document.getElementById("ytModalCaption");
+
+          if (!grid || !modal || !videoPlayer || !closeBtn) return;
+
+          // --- Video data: replace with real data from Jaldoot Systems India channel ---
+          // Each video: { src: "path/to/video.mp4", poster: "path/to/poster.jpg", title: "Video Title", duration: "12:34" }
+          const videos = [
+            {
+              src: "assets/videos/vid1.mp4",
+              poster: "assets/videos/vid1-poster.jpg",
+              title: "Jaldoot Water Conditioner - Installation Demo",
+              duration: "2:15"
+            },
+            {
+              src: "assets/videos/vid2.mp4",
+              poster: "assets/videos/vid2-poster.jpg",
+              title: "Hard Water Transformation - Live Test",
+              duration: "1:45"
+            },
+            {
+              src: "assets/videos/vid3.mp4",
+              poster: "assets/videos/vid3-poster.jpg",
+              title: "Agriculture Field Installation - Belgaum",
+              duration: "3:20"
+            },
+            {
+              src: "assets/videos/vid4.mp4",
+              poster: "assets/videos/vid4-poster.jpg",
+              title: "Housing Society Water Treatment",
+              duration: "2:50"
+            },
+            {
+              src: "assets/videos/vid5.mp4",
+              poster: "assets/videos/vid5-poster.jpg",
+              title: "Vehicle Water Conditioner Demo",
+              duration: "1:30"
+            },
+            {
+              src: "assets/videos/vid6.mp4",
+              poster: "assets/videos/vid6-poster.jpg",
+              title: "Rooftop Pool Water Treatment",
+              duration: "2:10"
+            },
+            {
+              src: "assets/videos/jaldoot.mp4",
+              poster: "assets/videos/jaldoot-poster.jpg",
+              title: "Jaldoot 4-in-1 Technology Overview",
+              duration: "4:30"
+            },
+            {
+              src: "assets/videos/vidssave.com HARD WATER CONDITIONER 360P.mp4",
+              poster: "assets/videos/aboutvid-poster.jpg",
+              title: "Complete Product Introduction",
+              duration: "5:20"
+            }
+          ];
+
+          // --- Populate carousel (duplicated for seamless loop) ---
+          function createCard(video, index) {
+            const card = document.createElement("article");
+            card.className = "yt-card";
+            card.setAttribute("role", "listitem");
+            card.setAttribute("tabindex", "0");
+            card.dataset.videoSrc = video.src;
+            card.dataset.videoTitle = video.title;
+
+            card.innerHTML = `
+              <div class="yt-thumb">
+                <img
+                  src="${video.poster}"
+                  alt="${video.title}"
+                  class="yt-thumb-img"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  onerror="this.onerror=null; this.src='assets/videos/jaldoot-poster.jpg'; this.style.display='block';"
+                />
+                <div class="yt-overlay" aria-hidden="true">
+                  <button type="button" class="yt-play-btn" aria-label="Play video: ${video.title}">
+                    <i class="fas fa-play" aria-hidden="true"></i>
+                  </button>
+                  <span class="yt-overlay-text">Click to Play Video</span>
+                </div>
+                <span class="yt-duration absolute bottom-3 right-3 px-2 py-0.5 bg-jd-dark/90 text-white text-xs font-mono rounded">${video.duration}</span>
+              </div>
+              <div class="yt-meta">
+                <h3 class="yt-video-title">${video.title}</h3>
+                <div class="yt-video-meta">
+                  <i class="fas fa-play-circle" aria-hidden="true"></i>
+                  <span>Jaldoot Systems India</span>
+                </div>
+              </div>
+            `;
+
+            // Ensure image loads properly
+            const img = card.querySelector(".yt-thumb-img");
+            if (img.complete && img.naturalWidth === 0) {
+              img.src = "assets/videos/jaldoot-poster.jpg";
+            }
+
+            // Click handler to open modal
+            const playBtn = card.querySelector(".yt-play-btn");
+            const openModal = function () {
+              openVideoModal(video);
+            };
+            card.addEventListener("click", openModal);
+            card.addEventListener("keydown", function (e) {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                openModal();
+              }
+            });
+            if (playBtn) {
+              playBtn.addEventListener("click", function (e) {
+                e.stopPropagation();
+                openModal();
+              });
+            }
+
+            return card;
+          }
+
+          // Add original set
+          videos.forEach(function (video, index) {
+            grid.appendChild(createCard(video, index));
+          });
+          // Add duplicate set for seamless loop
+          videos.forEach(function (video, index) {
+            grid.appendChild(createCard(video, index + videos.length));
+          });
+
+          // --- Modal functions ---
+          let lastFocused = null;
+
+          function openVideoModal(video) {
+            lastFocused = document.activeElement;
+            videoPlayer.src = video.src;
+            videoPlayer.poster = video.poster;
+            videoPlayer.title = video.title;
+            
+            if (caption) {
+              caption.textContent = video.title;
+              caption.classList.remove("hidden");
+            }
+            modal.classList.add("is-open");
+            modal.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+            closeBtn.focus();
+
+            // Attempt autoplay
+            const playPromise = videoPlayer.play();
+            if (playPromise && typeof playPromise.catch === "function") {
+              playPromise.catch(function () {
+                // Autoplay blocked, user can click play
+              });
+            }
+
+            // Trap focus
+            document.addEventListener("keydown", handleKeyDown);
+          }
+
+          function closeVideoModal() {
+            modal.classList.remove("is-open");
+            modal.setAttribute("aria-hidden", "true");
+            document.body.style.overflow = "";
+            videoPlayer.pause();
+            videoPlayer.removeAttribute("src");
+            videoPlayer.load();
+            if (caption) {
+              caption.classList.add("hidden");
+              caption.textContent = "";
+            }
+            if (lastFocused) lastFocused.focus();
+            document.removeEventListener("keydown", handleKeyDown);
+          }
+
+          function handleKeyDown(e) {
+            if (!modal.classList.contains("is-open")) return;
+            if (e.key === "Escape") {
+              closeVideoModal();
+            } else if (e.key === "Tab") {
+              // Keep focus trapped inside the dialog
+              e.preventDefault();
+              closeBtn.focus();
+            }
+          }
+
+          // Event listeners
+          closeBtn.addEventListener("click", closeVideoModal);
+
+          // Click on backdrop (but not the video box) closes the modal
+          modal.addEventListener("click", function (e) {
+            if (e.target === modal) closeVideoModal();
+          });
+
+          // Handle video load errors
+          videoPlayer.addEventListener("error", function () {
+            console.warn("Video failed to load");
+          });
+        })();
+
+
+
         
 
         // ===== COUNTER ANIMATION =====
@@ -3849,8 +4707,5 @@
         });
       });
     </script>
-
-    <!-- Load main.js for compatibility -->
-    <script src="js/main.js"></script>
   </body>
 </html>
