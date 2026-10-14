@@ -1,0 +1,1047 @@
+- generic [active] [ref=f7e1]:
+  - generic [ref=f7e3]:
+    - heading "JALDOOT" [level=2] [ref=f7e11]
+    - paragraph [ref=f7e12]: Water Conditioner
+  - navigation [ref=f7e13]:
+    - generic [ref=f7e15]:
+      - generic [ref=f7e16]:
+        - generic [aria-hidden] [ref=f7e17]: 
+        - text: Crystal Clear Naturally Water — Krushi Nature Water Care Pvt. Ltd.
+      - generic [ref=f7e18]:
+        - link "Jaldoot on Facebook" [ref=f7e19] [cursor=pointer]:
+          - /url: https://www.facebook.com/jaldootwatersystems
+          - generic [aria-hidden] [ref=f7e20]: 
+        - link "Jaldoot on Instagram" [ref=f7e21] [cursor=pointer]:
+          - /url: https://www.instagram.com/jaldootwatersystems
+          - generic [aria-hidden] [ref=f7e22]: 
+        - link "Jaldoot on YouTube" [ref=f7e23] [cursor=pointer]:
+          - /url: https://www.youtube.com/@jaldootwatersystemsindia
+          - generic [aria-hidden] [ref=f7e24]: 
+    - generic [ref=f7e26]:
+      - link "JALDOOT Water Conditioner - home" [ref=f7e27] [cursor=pointer]:
+        - /url: index.html
+        - img "JALDOOT Water Conditioner" [ref=f7e28]
+      - generic [ref=f7e29]:
+        - link "Home" [ref=f7e30] [cursor=pointer]:
+          - /url: index.html
+        - link "About" [ref=f7e31] [cursor=pointer]:
+          - /url: about.html
+        - link "Products" [ref=f7e32] [cursor=pointer]:
+          - /url: products.html
+        - link "Contact" [ref=f7e33] [cursor=pointer]:
+          - /url: contact.html
+        - link " Get Quote" [ref=f7e34] [cursor=pointer]:
+          - /url: contact.html
+          - generic [ref=f7e35]: 
+          - text: Get Quote
+  - text:       
+  - generic [ref=f7e45]:
+    - navigation "Breadcrumb" [ref=f7e46]:
+      - link " Home" [ref=f7e47] [cursor=pointer]:
+        - /url: index.html
+        - generic [ref=f7e48]: 
+        - text: Home
+      - generic [ref=f7e49]: 
+      - generic [ref=f7e50]: Products
+    - heading "The Jaldoot Water Conditioner Range" [level=1] [ref=f7e51]
+    - paragraph [ref=f7e52]: Chemical-free, salt-free units for homes, farms, hotels and factories — sized for the line you actually have.
+  - generic [ref=f7e60]:
+    - generic [ref=f7e62]:
+      - img "Jaldoot water conditioner unit" [ref=f7e65]
+      - generic [ref=f7e66]:
+        - generic [aria-hidden] [ref=f7e68]: 
+        - generic [ref=f7e69]: 4-in-1 technology
+      - generic [ref=f7e70]:
+        - generic [aria-hidden] [ref=f7e72]: 
+        - generic [ref=f7e73]: 5–25W power draw
+    - generic [ref=f7e74]:
+      - generic [ref=f7e75]:
+        - generic [aria-hidden] [ref=f7e76]: 
+        - text: The Product
+      - heading "A Three Dimensional Water Conditioner" [level=2] [ref=f7e77]
+      - paragraph [ref=f7e78]: Four working principles in one compact unit, so hard water is conditioned instead of treated with chemicals.
+      - generic [ref=f7e79]:
+        - generic [ref=f7e80]:
+          - generic [aria-hidden] [ref=f7e82]: 
+          - generic [ref=f7e83]:
+            - heading "Ultrasonic" [level=3] [ref=f7e84]
+            - paragraph [ref=f7e85]: Sonic pulses break the mineral bonds that form scale, at the molecular level.
+        - generic [ref=f7e86]:
+          - generic [aria-hidden] [ref=f7e88]: 
+          - generic [ref=f7e89]:
+            - heading "Magnetic Static" [level=3] [ref=f7e90]
+            - paragraph [ref=f7e91]: A permanent field holds minerals in solution, away from pipe walls.
+        - generic [ref=f7e92]:
+          - generic [aria-hidden] [ref=f7e94]: 
+          - generic [ref=f7e95]:
+            - heading "Pulsing Power" [level=3] [ref=f7e96]
+            - paragraph [ref=f7e97]: Dynamic high-frequency energy dissolves scale that is already deposited.
+        - generic [ref=f7e98]:
+          - generic [aria-hidden] [ref=f7e100]: 
+          - generic [ref=f7e101]:
+            - heading "Catalytic Technology" [level=3] [ref=f7e102]
+            - paragraph [ref=f7e103]: The patented coil induces ionisation at the cathode and anode.
+      - generic [ref=f7e104]:
+        - generic [ref=f7e105]:
+          - term [ref=f7e106]: Micron crystals
+          - definition [ref=f7e107]: 2–4
+        - generic [ref=f7e108]:
+          - term [ref=f7e109]: Days of effect
+          - definition [ref=f7e110]: "0"
+        - generic [ref=f7e111]:
+          - term [ref=f7e112]: Chemicals
+          - definition [ref=f7e113]: "0"
+        - generic [ref=f7e114]:
+          - term [ref=f7e115]: Stages
+          - definition [ref=f7e116]: "0"
+      - generic [ref=f7e117]:
+        - link "See where it is used" [ref=f7e118] [cursor=pointer]:
+          - /url: "#applications"
+        - link "Request a quote" [ref=f7e122] [cursor=pointer]:
+          - /url: contact.html
+          - text: Request a quote
+          - generic [aria-hidden] [ref=f7e123]: 
+      - group [ref=f7e124]:
+        - generic "Read the technical description" [ref=f7e125] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f7e127]: 
+  - generic [ref=f7e129]:
+    - generic [ref=f7e130]:
+      - generic [ref=f7e131]:
+        - generic [ref=f7e132]:
+          - generic [aria-hidden] [ref=f7e133]: 
+          - text: Problems caused by hard water
+        - heading "Calcite — the main cause of scale" [level=2] [ref=f7e134]
+        - generic [ref=f7e136]:
+          - paragraph [ref=f7e137]: Calcite, the main cause of scale, is the most common form of calcium carbonate and occurs naturally as an ingredient of chalk, limestone and marble. Water passing over and permeating through such rocks dissolves calcite; when this water subsequently flows through a water system the calcite precipitates out to form a very hard scale on surfaces.
+          - paragraph [ref=f7e138]: When hard water is heated, or evaporation takes place, the problems are exacerbated. Calcite forms ever growing layers of rock-like deposits until eventually pipes, jets and equipment become totally blocked. The problem increases as the water gets hotter.
+      - generic [ref=f7e140]:
+        - generic [ref=f7e141]:
+          - generic [ref=f7e143]: 
+          - heading "Why it matters" [level=3] [ref=f7e144]
+        - list [ref=f7e145]:
+          - listitem [ref=f7e146]:
+            - generic [ref=f7e148]: 
+            - paragraph [ref=f7e149]: Scale builds up inside pipes and fittings, shrinking the bore over time.
+          - listitem [ref=f7e150]:
+            - generic [ref=f7e152]: 
+            - paragraph [ref=f7e153]: The thicker the scale, the harder the system works and the more fuel it burns.
+          - listitem [ref=f7e154]:
+            - generic [ref=f7e156]: 
+            - paragraph [ref=f7e157]: Hotter water accelerates scale growth, so heating is where the damage starts.
+          - listitem [ref=f7e158]:
+            - generic [ref=f7e160]: 
+            - paragraph [ref=f7e161]: Once removed, scale keeps returning unless the water itself is treated.
+    - generic [ref=f7e162]:
+      - generic [ref=f7e164]:
+        - heading "What it costs you" [level=3] [ref=f7e165]
+        - paragraph [ref=f7e166]: Scale is rarely one big failure. It is a steady drain on efficiency, running costs and equipment life.
+      - generic [ref=f7e167]:
+        - article [ref=f7e168]:
+          - generic [aria-hidden]: "01"
+          - heading "Wasted energy & money" [level=3] [ref=f7e177]
+          - paragraph [ref=f7e178]: Just one eighth of an inch of scale reduces heating efficiency by 25%.
+          - generic [ref=f7e179]: 25% efficiency lost
+        - article [ref=f7e180]:
+          - generic [aria-hidden]: "02"
+          - heading "Expensive de-scaling" [level=3] [ref=f7e188]
+          - paragraph [ref=f7e189]: It is very expensive to remove scale from pipes and boilers.
+          - generic [ref=f7e190]: High removal cost
+        - article [ref=f7e191]:
+          - generic [aria-hidden]: "03"
+          - heading "Costly down-time" [level=3] [ref=f7e199]
+          - paragraph [ref=f7e200]: Higher warranty costs, costly down-time and higher cleaning agent costs.
+          - generic [ref=f7e201]: Production stops
+        - article [ref=f7e202]:
+          - generic [aria-hidden]: "04"
+          - heading "Blocked showers & plumbing" [level=3] [ref=f7e216]
+          - paragraph [ref=f7e217]: Shower and plumbing blockages, reduced efficiency and higher energy costs.
+          - generic [ref=f7e218]: Higher energy bills
+        - article [ref=f7e219]:
+          - generic [aria-hidden]: "05"
+          - heading "Premature failure" [level=3] [ref=f7e232]
+          - paragraph [ref=f7e233]: Premature & unexpected failure, higher maintenance and more time spent cleaning.
+          - generic [ref=f7e234]: Shorter equipment life
+        - article [ref=f7e235]:
+          - generic [aria-hidden]: "06"
+          - heading "More soap & detergent" [level=3] [ref=f7e246]
+          - paragraph [ref=f7e247]: Hard water wastes soap, detergent and shampoo, raising everyday running costs.
+          - generic [ref=f7e248]: Everyday running cost
+  - generic [ref=f7e251]:
+    - generic [ref=f7e252]:
+      - generic [ref=f7e253]:
+        - generic [ref=f7e254]: 
+        - text: How it works?
+      - heading "Process of the Jaldoot Water Conditioner" [level=2] [ref=f7e255]
+      - generic [ref=f7e256]:
+        - generic [aria-hidden] [ref=f7e257]: 
+        - text: 3-Stage — Electrolysis, Electronic Frequency with Permanent Magnet, Electromagnetic
+    - generic [ref=f7e258]:
+      - article [ref=f7e261]:
+        - generic [ref=f7e262]:
+          - generic [ref=f7e263]: "1"
+          - generic [aria-hidden] [ref=f7e265]: 
+          - heading "Electrolysis" [level=3] [ref=f7e266]
+          - paragraph [ref=f7e267]: The process of induced ionization is taken to its ultimate stage of cathode and anode, breaking down hard water mineral bonds and initiating the transformation of scale-causing minerals.
+          - generic [ref=f7e277]:
+            - generic [aria-hidden] [ref=f7e278]: 
+            - text: Stage 1
+      - article [ref=f7e279]:
+        - generic [ref=f7e280]:
+          - generic [ref=f7e281]: "2"
+          - generic [aria-hidden] [ref=f7e283]: 
+          - heading "Electronic Frequency with Permanent Magnet" [level=3] [ref=f7e284]
+          - paragraph [ref=f7e285]: A frequency modulated (FM) waveform within the audio frequency (AF) bandwidth, combined with a permanent magnet. It alters the crystalline structure of hard water minerals, converting them into microscopic 2–4 micron crystals.
+          - generic [ref=f7e292]:
+            - generic [aria-hidden] [ref=f7e293]: 
+            - text: Stage 2
+      - article [ref=f7e294]:
+        - generic [ref=f7e295]:
+          - generic [ref=f7e296]: "3"
+          - generic [aria-hidden] [ref=f7e298]: 
+          - heading "Electromagnetic" [level=3] [ref=f7e299]
+          - paragraph [ref=f7e300]: The principles of magneto hydrodynamics (MHD) applied through a patented signal passed through a coil wrapped around the pipe to be treated, ensuring complete conditioning of the water.
+          - generic [ref=f7e311]:
+            - generic [aria-hidden] [ref=f7e312]: 
+            - text: Stage 3
+  - generic [ref=f7e320]:
+    - generic [ref=f7e321]:
+      - generic [ref=f7e322]:
+        - generic [aria-hidden] [ref=f7e323]: 
+        - text: Scale reduction
+      - heading "Changed size, modified charge, new crystal shape" [level=2] [ref=f7e324]
+      - paragraph [ref=f7e325]: Rock-hard calcite is not removed by force — it is broken down at particle level, so it can never build up again.
+    - generic [ref=f7e326]:
+      - generic [ref=f7e327]:
+        - generic [ref=f7e352]:
+          - generic [ref=f7e353]: Untreated calcite
+          - generic [ref=f7e355]: Signal field
+          - generic [ref=f7e357]: 2–4 micron crystals
+        - generic [ref=f7e359]:
+          - paragraph [ref=f7e360]:
+            - text: It is this changed size, modified charge and crystalline shape that has the first two beneficial properties for the reduction of scale. The
+            - strong [ref=f7e361]: 2–4 micron sized crystals become non-sticky
+            - text: and will not coagulate or precipitate and form scale in the same way as untreated calcium carbonate nuclei would.
+          - paragraph [ref=f7e362]:
+            - text: This process is so effective that the water has been found to
+            - strong [ref=f7e363]: feel and behave like chemically softened water
+            - text: . The presence of the large crystalline shapes disrupts the equilibrium between the fluid and any existing scale. Smaller particles in general dissolve more easily, so the larger particles will have reduced the levels of calcite in solution.
+          - paragraph [ref=f7e364]:
+            - text: Hence, existing scale deposited by precipitation will
+            - strong [ref=f7e365]: soften and gradually be absorbed into solution
+            - text: and flow out of the system. In areas of still water, e.g. tanks etc., the soft scale would settle to the bottom and could then be removed simply by flushing.
+      - generic [ref=f7e366]:
+        - generic [ref=f7e367]:
+          - generic [ref=f7e375]:
+            - generic [ref=f7e376]: "7"
+            - generic [ref=f7e377]: Days
+          - heading "The longer lasting effect" [level=3] [ref=f7e378]
+          - paragraph [ref=f7e379]:
+            - text: It has been established that the physiochemical process already described is more efficient because the signal energy is
+            - strong [ref=f7e380]: dynamically changing
+            - text: . By changing the signal field at high audio frequencies, unique to Jaldoot, the energy imparted to the nuclei is considerably accelerated.
+          - paragraph [ref=f7e381]:
+            - text: An important property of Jaldoot processed water is that the charged crystalline shape growth will remain in that state for
+            - strong [ref=f7e382]: up to 7 days
+            - text: . Thus in stored water systems the effect is much longer lasting than other ionization methods, retarding the reversion back to the smaller nuclei structures that are readily precipitated.
+        - generic [ref=f7e383]:
+          - generic [ref=f7e388]:
+            - heading "Shape you can see" [level=4] [ref=f7e389]
+            - paragraph [ref=f7e390]: Angular calcite turns into rounded 2–4 micron crystals that no longer stick together.
+          - generic [ref=f7e396]:
+            - heading "Existing scale softens" [level=4] [ref=f7e397]
+            - paragraph [ref=f7e398]: Deposits break equilibrium, dissolve and go back into solution instead of growing.
+          - generic [ref=f7e403]:
+            - heading "Flushes out" [level=4] [ref=f7e404]
+            - paragraph [ref=f7e405]: In tanks and still water the soft scale settles and is removed by a simple flush.
+        - generic [ref=f7e406]:
+          - generic [ref=f7e407]:
+            - generic [ref=f7e408]: 2–4
+            - generic [ref=f7e409]: Micron crystals
+          - generic [ref=f7e410]:
+            - generic [ref=f7e411]: "0"
+            - generic [ref=f7e412]: Days shape growth retained
+        - paragraph [ref=f7e413]: Technical description reproduced from the Jaldoot company brochure.
+  - generic [ref=f7e417]:
+    - generic [ref=f7e418]:
+      - generic [ref=f7e419]:
+        - generic [aria-hidden] [ref=f7e420]: 
+        - text: Benefits
+      - heading "With the Jaldoot Water Conditioner" [level=2] [ref=f7e421]
+      - paragraph [ref=f7e422]: Hover, tap or tab any card to flip it and see what sits behind the claim.
+    - generic [ref=f7e423]:
+      - article [ref=f7e424] [cursor=pointer]:
+        - generic [ref=f7e425]:
+          - generic [ref=f7e426]:
+            - generic [aria-hidden] [ref=f7e428]: 
+            - heading "Maintenance-free" [level=3] [ref=f7e429]
+            - paragraph [ref=f7e430]: Eco-friendly solution against scale problems, with no backwashing and no moving parts.
+            - generic [ref=f7e431]:
+              - generic [aria-hidden] [ref=f7e432]: 
+              - text: Flip card
+          - generic [ref=f7e433]:
+            - heading "Nothing to service" [level=4] [ref=f7e441]
+            - paragraph [ref=f7e442]: No impeller, no seal, no filter bed. Fit the unit and leave it running.
+            - generic [ref=f7e443]:
+              - generic [aria-hidden] [ref=f7e444]: 
+              - text: No moving parts
+      - article [ref=f7e445] [cursor=pointer]:
+        - generic [ref=f7e446]:
+          - generic [ref=f7e447]:
+            - generic [aria-hidden] [ref=f7e449]: 
+            - heading "No chemicals, no salts" [level=3] [ref=f7e450]
+            - paragraph [ref=f7e451]: No chemicals, no salts & additives anywhere in the process.
+            - generic [ref=f7e452]:
+              - generic [aria-hidden] [ref=f7e453]: 
+              - text: Flip card
+          - generic [ref=f7e454]:
+            - heading "Physical conditioning only" [level=4] [ref=f7e463]
+            - paragraph [ref=f7e464]: Nothing to top up, nothing to buy, no taste or chemistry change in the water.
+            - generic [ref=f7e465]:
+              - generic [aria-hidden] [ref=f7e466]: 
+              - text: 100% physical
+      - article [ref=f7e467] [cursor=pointer]:
+        - generic [ref=f7e468]:
+          - generic [ref=f7e469]:
+            - generic [aria-hidden] [ref=f7e471]: 
+            - heading "Easy installation" [level=3] [ref=f7e472]
+            - paragraph [ref=f7e473]: No replacement required. Movable product — take it with you when you want.
+            - generic [ref=f7e474]:
+              - generic [aria-hidden] [ref=f7e475]: 
+              - text: Flip card
+          - generic [ref=f7e476]:
+            - heading "Clamps onto the line" [level=4] [ref=f7e486]
+            - paragraph [ref=f7e487]: Fit it around the existing pipe in minutes — no cutting, no plumbing changes.
+            - generic [ref=f7e488]:
+              - generic [aria-hidden] [ref=f7e489]: 
+              - text: Clamp-on
+      - article [ref=f7e490] [cursor=pointer]:
+        - generic [ref=f7e491]:
+          - generic [ref=f7e492]:
+            - generic [aria-hidden] [ref=f7e494]: 
+            - heading "Works on every pipe" [level=3] [ref=f7e495]
+            - paragraph [ref=f7e496]: Effective on CPVC, RPVC, UPVC, HDPE, copper, brass, SS 304 and SS 316.
+            - generic [ref=f7e497]:
+              - generic [aria-hidden] [ref=f7e498]: 
+              - text: Flip card
+          - generic [ref=f7e499]:
+            - heading "Any material, same result" [level=4] [ref=f7e510]
+            - paragraph [ref=f7e511]: Thermoplastics, copper, brass and stainless steel — the field does not care what it is clamped to.
+            - generic [ref=f7e512]:
+              - generic [aria-hidden] [ref=f7e513]: 
+              - text: 8 materials
+      - article [ref=f7e514] [cursor=pointer]:
+        - generic [ref=f7e515]:
+          - generic [ref=f7e516]:
+            - generic [aria-hidden] [ref=f7e518]: 
+            - heading "Wide size range" [level=3] [ref=f7e519]
+            - paragraph [ref=f7e520]: Suitable for pipe diameters from 1″ up to 20″ or 6″ depending on the model.
+            - generic [ref=f7e521]:
+              - generic [aria-hidden] [ref=f7e522]: 
+              - text: Flip card
+          - generic [ref=f7e523]:
+            - heading "1″ to 20″ on one family" [level=4] [ref=f7e531]
+            - paragraph [ref=f7e532]: Pick the model that matches the line you already have instead of re-piping.
+            - generic [ref=f7e533]:
+              - generic [aria-hidden] [ref=f7e534]: 
+              - text: 1″ – 20″
+      - article [ref=f7e535] [cursor=pointer]:
+        - generic [ref=f7e536]:
+          - generic [ref=f7e537]:
+            - generic [aria-hidden] [ref=f7e539]: 
+            - heading "Models for varied work" [level=3] [ref=f7e540]
+            - paragraph [ref=f7e541]: Our product models represent on varied work across industries.
+            - generic [ref=f7e542]:
+              - generic [aria-hidden] [ref=f7e543]: 
+              - text: Flip card
+          - generic [ref=f7e544]:
+            - heading "Home, farm or factory" [level=4] [ref=f7e553]
+            - paragraph [ref=f7e554]: One product family, tuned models for domestic lines, agriculture and industrial duty.
+            - generic [ref=f7e555]:
+              - generic [aria-hidden] [ref=f7e556]: 
+              - text: Home · Farm · Industry
+  - generic [ref=f7e558]:
+    - generic [ref=f7e559]:
+      - generic [ref=f7e560]:
+        - generic [ref=f7e561]:
+          - generic [ref=f7e562]: 
+          - text: The results
+        - heading "What changes" [level=2] [ref=f7e563]
+        - paragraph [ref=f7e564]: Results described in the Jaldoot company brochure. Performance varies with water chemistry, dosage and installation.
+        - generic [ref=f7e565]:
+          - link "Get a quote" [ref=f7e566] [cursor=pointer]:
+            - /url: contact.html
+          - link "See before / after" [ref=f7e570] [cursor=pointer]:
+            - /url: "#before-after"
+      - generic [ref=f7e573]:
+        - generic [ref=f7e574]:
+          - generic [ref=f7e575]: Softer, better water.
+          - generic [ref=f7e580]: Reduced hard water problems.
+          - generic [ref=f7e585]: Investment in capital equipment is protected.
+          - generic [ref=f7e590]: Reduced scaling and corrosion issues.
+          - generic [ref=f7e595]: Soaps, detergents and shampoos mix and lather better with softer water.
+          - generic [ref=f7e600]: Laundry items feel softer.
+        - generic [ref=f7e605]:
+          - generic [ref=f7e606]: Swimming pool water is clearer and softer, backwashing is reduced, and scum lines are more easily cleaned away.
+          - generic [ref=f7e611]: Salt water chlorinators work more effectively — there is no scale build up, black spot disappears and chemical usage is reduced.
+          - generic [ref=f7e616]: Water with a lower surface tension is more easily absorbed into the ground, reducing surface crust and runoff and improving plant and crop health.
+          - generic [ref=f7e621]: Able to irrigate with brackish water.
+          - generic [ref=f7e626]: Less spotting on your car when you wash it.
+    - generic [ref=f7e631]:
+      - generic [ref=f7e632]:
+        - img "Corroded, scale-choked heat exchanger and pipework before water treatment" [ref=f7e634]
+        - generic [ref=f7e635]:
+          - generic [aria-hidden] [ref=f7e636]: 
+          - text: Before — hard water
+        - generic [ref=f7e637]:
+          - generic [ref=f7e639]: 
+          - heading "Hard water problems" [level=3] [ref=f7e640]
+        - paragraph [ref=f7e641]: Without treatment the water keeps building scale on everything it touches, and every machine on the line pays for it.
+        - list [ref=f7e642]:
+          - listitem [ref=f7e643]:
+            - generic [ref=f7e645]: 
+            - text: From fouling of cooling towers and clogging of water pipes to scaling of coffee pots, dishwashers, drill heads, ice machines, heater exchangers, washing machines and water heaters.
+          - listitem [ref=f7e646]:
+            - generic [ref=f7e648]: 
+            - text: Most companies just build the extra maintenance required to clean the scale off into their schedules.
+          - listitem [ref=f7e649]:
+            - generic [ref=f7e651]: 
+            - text: Added expense of the shortened life span of the equipment.
+      - generic [ref=f7e653]: 
+      - generic [ref=f7e654]:
+        - img "Clean, scale-free heat exchanger and pipework after Jaldoot treatment" [ref=f7e656]
+        - generic [ref=f7e657]:
+          - generic [aria-hidden] [ref=f7e658]: 
+          - text: After — with Jaldoot
+        - generic [ref=f7e659]:
+          - generic [ref=f7e661]: 
+          - heading "Soft water benefits with Jaldoot" [level=3] [ref=f7e662]
+        - paragraph [ref=f7e663]: The same line, the same equipment — only the water is conditioned, and the whole plant feels the difference.
+        - list [ref=f7e664]:
+          - listitem [ref=f7e665]:
+            - generic [ref=f7e667]: 
+            - text: Eco friendly hard water treatment, no chemicals & no salts.
+          - listitem [ref=f7e668]:
+            - generic [ref=f7e670]: 
+            - text: Prevents calcium carbonate scaling; over time existing scaling is dissolved.
+          - listitem [ref=f7e671]:
+            - generic [ref=f7e673]: 
+            - text: Stops the deposition of salt and in all cases brings it back to solution.
+  - generic [ref=f7e676]:
+    - generic [ref=f7e677]:
+      - generic [ref=f7e678]:
+        - generic [ref=f7e679]: 
+        - text: Before / After
+      - heading "See the difference Jaldoot makes" [level=2] [ref=f7e680]
+      - paragraph [ref=f7e681]: Hard scale that once blocked pipes and equipment is softened, dissolved and flushed away.
+    - generic [ref=f7e682]:
+      - generic [ref=f7e683]:
+        - generic [ref=f7e686]:
+          - generic [ref=f7e687]: 
+          - paragraph [ref=f7e688]: Before
+          - paragraph [ref=f7e689]: Thick, rock-like limescale clinging to pipes, fittings and heating elements.
+        - generic [ref=f7e690]: Hard Water
+      - generic [ref=f7e691]:
+        - generic [ref=f7e694]:
+          - generic [ref=f7e695]: 
+          - paragraph [ref=f7e696]: After
+          - paragraph [ref=f7e697]: Scale softened into 2–4 micron crystals that stay suspended and wash away harmlessly.
+        - generic [ref=f7e698]: Jaldoot Treated
+    - generic [ref=f7e699]:
+      - generic [ref=f7e700]:
+        - generic [ref=f7e701]: "0"
+        - paragraph [ref=f7e702]: Less scale at 80°C (brochure example)
+      - generic [ref=f7e703]: 
+      - generic [ref=f7e704]:
+        - generic [ref=f7e705]: "0"
+        - paragraph [ref=f7e706]: Lasting conditioned effect
+    - paragraph [ref=f7e707]: Comparison described in the Jaldoot company brochure. Results depend on water chemistry, dosage and installation.
+  - generic [ref=f7e710]:
+    - generic [ref=f7e711]:
+      - generic [ref=f7e712]:
+        - generic [ref=f7e713]: 
+        - text: Applications
+      - heading "Where Jaldoot is Used" [level=2] [ref=f7e714]
+      - paragraph [ref=f7e715]: Eight application groups described in the Jaldoot company brochure.
+    - generic [ref=f7e716]:
+      - link " 1. Domestic Homes, bungalows, societies" [ref=f7e717] [cursor=pointer]:
+        - /url: "#domestic"
+        - generic [ref=f7e718]: 
+        - heading "1. Domestic" [level=3] [ref=f7e720]
+        - paragraph [ref=f7e721]: Homes, bungalows, societies
+      - link " 2. Agriculture Horticulture, floriculture & irrigation" [ref=f7e722] [cursor=pointer]:
+        - /url: "#agriculture"
+        - generic [ref=f7e723]: 
+        - heading "2. Agriculture" [level=3] [ref=f7e725]
+        - paragraph [ref=f7e726]: Horticulture, floriculture & irrigation
+      - link " 3. Poultry Farming Hatcheries & poultry houses" [ref=f7e727] [cursor=pointer]:
+        - /url: "#poultry"
+        - generic [ref=f7e728]: 
+        - heading "3. Poultry Farming" [level=3] [ref=f7e730]
+        - paragraph [ref=f7e731]: Hatcheries & poultry houses
+      - link " 4. Dairy Farming Barns & milking parlors" [ref=f7e732] [cursor=pointer]:
+        - /url: "#dairy"
+        - generic [ref=f7e733]: 
+        - heading "4. Dairy Farming" [level=3] [ref=f7e735]
+        - paragraph [ref=f7e736]: Barns & milking parlors
+      - link " 5. Swimming Pools Clearer, softer pool water" [ref=f7e737] [cursor=pointer]:
+        - /url: "#pools"
+        - generic [ref=f7e738]: 
+        - heading "5. Swimming Pools" [level=3] [ref=f7e740]
+        - paragraph [ref=f7e741]: Clearer, softer pool water
+      - link " 6. Golf Courses & Fish ponds" [ref=f7e742] [cursor=pointer]:
+        - /url: "#golf"
+        - generic [ref=f7e743]: 
+        - heading "6. Golf Courses" [level=3] [ref=f7e745]
+        - paragraph [ref=f7e746]: "& Fish ponds"
+      - link " 7. Commercial & Industrial applications" [ref=f7e747] [cursor=pointer]:
+        - /url: "#commercial"
+        - generic [ref=f7e748]: 
+        - heading "7. Commercial" [level=3] [ref=f7e750]
+        - paragraph [ref=f7e751]: "& Industrial applications"
+      - link " 8. JVC for RO Plant Membrane protection" [ref=f7e752] [cursor=pointer]:
+        - /url: "#ro-plant"
+        - generic [ref=f7e753]: 
+        - heading "8. JVC for RO Plant" [level=3] [ref=f7e755]
+        - paragraph [ref=f7e756]: Membrane protection
+  - generic [ref=f7e757]:
+    - generic [aria-hidden]: "01"
+    - generic [ref=f7e759]:
+      - generic [ref=f7e760]:
+        - generic [ref=f7e761]: Application 01
+        - heading "Domestic Applications" [level=2] [ref=f7e762]
+        - generic [ref=f7e763]:
+          - heading "Hard water problems" [level=3] [ref=f7e764]
+          - list [ref=f7e765]:
+            - listitem [ref=f7e766]:
+              - generic [ref=f7e767]: 
+              - text: Itchy skin when you get out of the shower?
+            - listitem [ref=f7e769]:
+              - generic [ref=f7e770]: 
+              - text: Dry, hard to manage hair?
+            - listitem [ref=f7e772]:
+              - generic [ref=f7e773]: 
+              - text: Spots on your glassware even when you use a rinse aid in the dishwasher?
+            - listitem [ref=f7e775]:
+              - generic [ref=f7e776]: 
+              - text: Dirty scum inside your water kettle?
+            - listitem [ref=f7e778]:
+              - generic [ref=f7e779]: 
+              - text: Cloudy marks on your shower screen no matter how much you clean it?
+            - listitem [ref=f7e781]:
+              - generic [ref=f7e782]: 
+              - text: Scaly stuff on your shower head?
+      - generic [ref=f7e784]:
+        - generic [ref=f7e785]:
+          - heading "Soft water benefits with Jaldoot" [level=3] [ref=f7e786]
+          - generic [ref=f7e787]:
+            - generic [ref=f7e788]: Kitchen and bathroom surfaces stay cleaner and are easier to clean.
+            - generic [ref=f7e793]: Reduce your detergent in washing machines and dish washers.
+            - generic [ref=f7e798]: Cold water cleans as effectively as hot water, so your washing will be cleaner and softer.
+            - generic [ref=f7e803]: You will save money using less detergent and not using hot water.
+            - generic [ref=f7e808]: Eco friendly system without chemicals or salts.
+            - generic [ref=f7e813]: Heating elements in hot water systems, dishwashers and washing machines are protected against scale build up.
+            - generic [ref=f7e818]: Problems with blue water syndrome or blue green water will be reduced, extending the life of your copper pipes.
+            - generic [ref=f7e823]: After you have showered you will notice that your skin and hair will feel softer.
+            - generic [ref=f7e828]: Household appliances and piping will be protected against hard water problems.
+            - generic [ref=f7e833]: Evaporative air conditioners will work more efficiently and effectively.
+            - generic [ref=f7e838]: Your gardens will benefit using less water; garden systems and sprinklers stay clean and last longer.
+            - generic [ref=f7e843]: Scale in your water heater will gradually go away — this will decrease your energy bill.
+            - generic [ref=f7e848]: Important minerals remain in the water.
+            - generic [ref=f7e853]: Less time and effort spent on repairs and maintenance at your home.
+            - generic [ref=f7e858]: Reduction of harmful bacteria and biofilm.
+        - generic [ref=f7e863]:
+          - heading "Application areas" [level=3] [ref=f7e864]
+          - generic [ref=f7e865]:
+            - generic [ref=f7e866]: Bungalows
+            - generic [ref=f7e867]: Buildings
+            - generic [ref=f7e868]: Apartments
+            - generic [ref=f7e869]: Societies
+            - generic [ref=f7e870]: Golf courses
+            - generic [ref=f7e871]: Fitness clubs
+            - generic [ref=f7e872]: Residences
+            - generic [ref=f7e873]: Condominiums & large buildings
+  - generic [ref=f7e874]:
+    - generic [aria-hidden]: "02"
+    - generic [ref=f7e876]:
+      - generic [ref=f7e877]:
+        - generic [ref=f7e878]: Application 02
+        - heading "Agriculture, Horticulture, Floriculture & Irrigation" [level=2] [ref=f7e879]
+        - generic [ref=f7e880]:
+          - heading "Hard water problems" [level=3] [ref=f7e881]
+          - list [ref=f7e882]:
+            - listitem [ref=f7e883]:
+              - generic [ref=f7e884]: 
+              - text: Plants in soils that are irrigated with hard water means the salt in soil stops crops from growing as well as they could.
+            - listitem [ref=f7e886]:
+              - generic [ref=f7e887]: 
+              - text: Hard water from a bore well typically has very high surface tension. This inhibits the ability of the water to be taken up into the plant stem and absorbed into cell structure.
+            - listitem [ref=f7e889]:
+              - generic [ref=f7e890]: 
+              - text: It is water that supports the stems and keeps them firm and straight, and if it is not well absorbed then the plant quickly becomes dehydrated and wilts.
+      - generic [ref=f7e892]:
+        - generic [ref=f7e893]:
+          - heading "Soft water benefits with Jaldoot" [level=3] [ref=f7e894]
+          - generic [ref=f7e895]: Salt, iron and other minerals will be kept in solution so they don't crust and damage plants & equipment.
+          - generic [ref=f7e900]: Irrigate with a softer, wetter water.
+          - generic [ref=f7e905]: Less water is lost to evaporation as water is absorbed into the ground more easily.
+          - generic [ref=f7e910]: Water will then be more easily taken up by plants.
+          - generic [ref=f7e915]: Greater feeder roots have been reported.
+          - generic [ref=f7e920]: Pipe and sprinkler nozzles will be protected from lime scale deposits.
+          - generic [ref=f7e925]: Jaldoot Water Conditioner makes a static mixer, so you get great water for mixing fertilizer.
+          - generic [ref=f7e930]: Cut flowers last longer.
+          - generic [ref=f7e935]: Enables all plant stock to experience full growth for maximum quality; the irrigation system will operate at full capacity without the inhibition of scale.
+          - generic [ref=f7e940]: Reduction of harmful bacteria and biofilm.
+          - generic [ref=f7e945]: Reduction of maintenance on irrigation systems and water tapping.
+        - generic [ref=f7e950]:
+          - heading "Application areas" [level=3] [ref=f7e951]
+          - generic [ref=f7e952]:
+            - generic [ref=f7e953]: Plants
+            - generic [ref=f7e954]: Livestock
+            - generic [ref=f7e955]: Irrigation systems
+            - generic [ref=f7e956]: Machinery
+            - generic [ref=f7e957]: And many more
+  - generic [ref=f7e958]:
+    - generic [aria-hidden]: "03"
+    - generic [ref=f7e960]:
+      - generic [ref=f7e961]:
+        - generic [ref=f7e962]: Application 03
+        - heading "Poultry Farming" [level=2] [ref=f7e963]
+        - generic [ref=f7e964]:
+          - heading "Hard water problems" [level=3] [ref=f7e965]
+          - paragraph [ref=f7e966]: Well water or bore-hole water usually contain high levels of calcium carbonate, as can areas where there are high TDS. This can cause a build-up of lime scale in pipes, boilers, chillers, thermostats, elements and fittings on hatchery machines. Lime scale build-up can prevent such equipment from working efficiently and result in the frequent breakdown of equipment and loss of production.
+      - generic [ref=f7e968]:
+        - heading "Soft water benefits with Jaldoot" [level=3] [ref=f7e969]
+        - generic [ref=f7e970]: It cleans the nipple, drinker, sprinkler and spray by removing scaling on it.
+        - generic [ref=f7e975]: It does not allow scale to be deposited by cleaning the drinking cone and cooling panel.
+        - generic [ref=f7e980]: It increases the effectiveness of medicines given through water, which nourishes birds better.
+        - generic [ref=f7e985]: It increases the life of instruments related to water — water heaters, boilers and cooling pads in poultry.
+        - generic [ref=f7e990]: Pure form of calcium in water helps to increase the weight of birds.
+        - generic [ref=f7e995]: Increases the thickness of egg over and helps to reduce the loss.
+        - generic [ref=f7e1000]: Avoids bad effects of chlorine in water on birds.
+        - generic [ref=f7e1005]: You can easily recover the cost of the machine through increased production.
+        - generic [ref=f7e1010]: Reduces infection and diseases through water; birds benefit from the improvements.
+  - generic [ref=f7e1015]:
+    - generic [aria-hidden]: "04"
+    - generic [ref=f7e1017]:
+      - generic [ref=f7e1018]:
+        - generic [ref=f7e1019]: Application 04
+        - heading "Dairy Farming" [level=2] [ref=f7e1020]
+        - generic [ref=f7e1021]:
+          - heading "Hard water problems" [level=3] [ref=f7e1022]
+          - paragraph [ref=f7e1023]: Well water or bore-hole water usually contain high levels of calcium carbonate, as can areas where there are high TDS. This can cause a build-up of lime scale in the barn, milking parlor and house, and lime scale build-up can prevent such equipment from working efficiently and result in the frequent breakdown of equipment and loss of production.
+      - generic [ref=f7e1025]:
+        - heading "Soft water benefits with Jaldoot" [level=3] [ref=f7e1026]
+        - generic [ref=f7e1027]: The Jaldoot Water Conditioner system, treating the water supply from the well to the barn, milking parlor and house, has substantially reduced scaling problems.
+        - generic [ref=f7e1032]: Improves the taste of water, especially if hydrogen sulfide or chlorine is in the water delivery system.
+        - generic [ref=f7e1037]: Improves the mineral content of water and benefits animal health.
+        - generic [ref=f7e1042]: Saves equipment replacement and repair cost and improves profit–loss performance for the entire operation.
+        - generic [ref=f7e1047]: Reduces overall dairy maintenance.
+  - generic [ref=f7e1052]:
+    - generic [aria-hidden]: "05"
+    - generic [ref=f7e1054]:
+      - generic [ref=f7e1055]:
+        - generic [ref=f7e1056]: Application 05
+        - heading "Swimming Pools" [level=2] [ref=f7e1057]
+        - generic [ref=f7e1058]:
+          - heading "Hard water problems" [level=3] [ref=f7e1059]
+          - list [ref=f7e1060]:
+            - listitem [ref=f7e1061]:
+              - generic [ref=f7e1062]: 
+              - text: Spending too much on chemicals?
+            - listitem [ref=f7e1064]:
+              - generic [ref=f7e1065]: 
+              - text: Trouble keeping your pool clean?
+            - listitem [ref=f7e1067]:
+              - generic [ref=f7e1068]: 
+              - text: Problems with stains and marks?
+            - listitem [ref=f7e1070]:
+              - generic [ref=f7e1071]: 
+              - text: Constantly replacing parts?
+      - generic [ref=f7e1074]:
+        - heading "Soft water benefits with Jaldoot" [level=3] [ref=f7e1075]
+        - generic [ref=f7e1076]: Swimmers will be swimming in less chemicals and softer water.
+        - generic [ref=f7e1081]: Use of less pool chemicals and maintain better results — saving time & money.
+        - generic [ref=f7e1086]: The pool system pipes, pumps, heating elements, filter and salt water chlorinator will run more efficiently and have a much longer life.
+        - generic [ref=f7e1091]: No more unsightly scale marks on the waterline.
+        - generic [ref=f7e1096]: Paintwork and tiles will need less cleaning and maintenance.
+        - generic [ref=f7e1101]: More time to actually enjoy your pool rather than testing & cleaning.
+  - generic [ref=f7e1106]:
+    - generic [aria-hidden]: "06"
+    - generic [ref=f7e1108]:
+      - generic [ref=f7e1109]:
+        - generic [ref=f7e1110]: Application 06
+        - heading "Golf Courses & Fish Ponds" [level=2] [ref=f7e1111]
+        - generic [ref=f7e1112]:
+          - heading "Hard water problems" [level=3] [ref=f7e1113]
+          - paragraph [ref=f7e1114]: Choking of ponds with red and green algae that was the result of run-off from the greens and fairways that were fed with fertilizers. These fertilizers increased levels of nitrogen and phosphates in the water which then triggered the algal blooms.
+      - generic [ref=f7e1116]:
+        - heading "Soft water benefits with Jaldoot" [level=3] [ref=f7e1117]
+        - paragraph [ref=f7e1118]: By treating the water in this process it dissociates the chemical bonds of the heavily mineralized water. This in turn removes the nutrients the algae feeds on and the algae dies — quickly. The algae is then removed from the pond and the true beauty of the natural clean water soon returns.
+        - generic [ref=f7e1119]: Effectively reduce harmful substances in the water.
+        - generic [ref=f7e1124]: Control and stabilize water condition.
+        - generic [ref=f7e1129]: Establish a good water quality environment.
+        - generic [ref=f7e1134]: Stabilize water condition.
+  - generic [ref=f7e1139]:
+    - generic [aria-hidden]: "07"
+    - generic [ref=f7e1141]:
+      - generic [ref=f7e1142]:
+        - generic [ref=f7e1143]: Application 07
+        - heading "Commercial & Industrial Applications" [level=2] [ref=f7e1144]
+        - paragraph [ref=f7e1145]: Hard water problems in commercial and industrial settings show up as fouling of cooling towers, clogged pipes and scaling of equipment — and in most companies the extra maintenance required to clean the scale off is simply built into their schedules.
+        - generic [ref=f7e1147]:
+          - paragraph [ref=f7e1150]: Industrial Water Treatment
+          - paragraph [ref=f7e1151]: Cooling towers · Heat exchangers · Boilers
+      - generic [ref=f7e1152]:
+        - heading "Application areas" [level=3] [ref=f7e1153]
+        - generic [ref=f7e1154]:
+          - generic [ref=f7e1155]: Hospitals
+          - generic [ref=f7e1156]: Aluminum industry
+          - generic [ref=f7e1157]: Chemical manufacturing
+          - generic [ref=f7e1158]: Lumber industry
+          - generic [ref=f7e1159]: Car industry
+          - generic [ref=f7e1160]: Rubber production
+          - generic [ref=f7e1161]: Cooling towers
+          - generic [ref=f7e1162]: Heat exchangers
+          - generic [ref=f7e1163]: Injection molding
+          - generic [ref=f7e1164]: Food production
+          - generic [ref=f7e1165]: Hotels and resorts
+          - generic [ref=f7e1166]: Maritime and cargo industry
+          - generic [ref=f7e1167]: Waste water treatment
+          - generic [ref=f7e1168]: Printing industry
+          - generic [ref=f7e1169]: Textile industry
+          - generic [ref=f7e1170]: Refineries
+          - generic [ref=f7e1171]: RO plant (reverse osmosis plant)
+          - generic [ref=f7e1172]: Restaurants and cafes
+          - generic [ref=f7e1173]: And many more
+        - generic [ref=f7e1174]:
+          - heading "Soft water benefits with Jaldoot" [level=3] [ref=f7e1175]
+          - generic [ref=f7e1176]: Prevents calcium carbonate scaling; over time existing scaling is dissolved.
+          - generic [ref=f7e1181]: Maximum working life of expensive production equipment and commercial machinery.
+          - generic [ref=f7e1186]: Inexpensive installation without interruption of the production process.
+          - generic [ref=f7e1191]: Productivity increase due to the reduction of lime incrustations.
+  - generic [ref=f7e1196]:
+    - generic [aria-hidden]: "08"
+    - generic [ref=f7e1199]:
+      - generic [ref=f7e1200]:
+        - generic [ref=f7e1201]: Application 08
+        - heading "JVC for RO Plant" [level=2] [ref=f7e1202]
+        - paragraph [ref=f7e1203]: Reverse osmosis plants sit at the end of the application list in the Jaldoot company brochure. The RO plant is named among the commercial and industrial application areas, and the Jaldoot Water Conditioner is used to treat the water feeding the plant so that scaling is prevented across the membrane system and the rest of the line.
+        - generic [ref=f7e1204]:
+          - generic [ref=f7e1205]: Helps prevent the calcium carbonate scaling that restricts reverse osmosis membranes.
+          - generic [ref=f7e1210]: Keeps pumps, high-pressure lines and fittings running without lime build-up.
+          - generic [ref=f7e1215]: No chemicals, no salts and no additives added to the process.
+          - generic [ref=f7e1220]: Applies to CPVC, RPVC, UPVC, HDPE, copper, brass, SS 304 and SS 316 lines.
+        - paragraph [ref=f7e1225]: Product and application text reproduced from the Jaldoot company brochure.
+        - generic [ref=f7e1226]:
+          - link "Discuss your RO plant" [ref=f7e1227] [cursor=pointer]:
+            - /url: contact.html
+          - link "Solar products" [ref=f7e1228] [cursor=pointer]:
+            - /url: "#solar-products"
+      - generic [ref=f7e1230]:
+        - generic [ref=f7e1231]:
+          - heading "JVC Unit" [level=3] [ref=f7e1235]
+          - paragraph [ref=f7e1236]: Jaldoot Water Conditioner for reverse osmosis plants
+        - generic [ref=f7e1237]:
+          - generic [ref=f7e1238]:
+            - generic [ref=f7e1239]: 12 V DC
+            - generic [ref=f7e1240]: Application voltage
+          - generic [ref=f7e1241]:
+            - generic [ref=f7e1242]: 5–25 W
+            - generic [ref=f7e1243]: Power consumption
+          - generic [ref=f7e1244]:
+            - generic [ref=f7e1245]: "2"
+            - generic [ref=f7e1246]: Coils, double layer
+          - generic [ref=f7e1247]:
+            - generic [ref=f7e1248]: 80 °C
+            - generic [ref=f7e1249]: Coil temperature
+        - link "Get a recommendation" [ref=f7e1250] [cursor=pointer]:
+          - /url: contact.html
+  - generic [ref=f7e1253]:
+    - generic [ref=f7e1254]:
+      - generic [ref=f7e1255]:
+        - generic [ref=f7e1256]: 
+        - text: Say no to chemical farming. Go organic!
+      - heading "Solar Products" [level=2] [ref=f7e1257]
+      - paragraph [ref=f7e1258]:
+        - text: "The Jaldoot solar range is presented in the company brochure alongside the water conditioners: the"
+        - strong [ref=f7e1259]: Solar Insect Killer
+        - text: ", the"
+        - strong [ref=f7e1260]: Solar Insect Trap
+        - text: and the
+        - strong [ref=f7e1261]: BuzzZap Solar Trap
+        - text: .
+      - heading "Product highlights" [level=3] [ref=f7e1262]
+      - generic [ref=f7e1263]:
+        - generic [ref=f7e1264]:
+          - generic [ref=f7e1265]: 
+          - text: 100% eco-friendly
+        - generic [ref=f7e1267]:
+          - generic [ref=f7e1268]: 
+          - text: Solar powered
+        - generic [ref=f7e1270]:
+          - generic [ref=f7e1271]: 
+          - text: No chemicals
+        - generic [ref=f7e1273]:
+          - generic [ref=f7e1274]: 
+          - text: No harmful pesticides
+        - generic [ref=f7e1276]:
+          - generic [ref=f7e1277]: 
+          - text: Easy installation
+        - generic [ref=f7e1279]:
+          - generic [ref=f7e1280]: 
+          - text: No maintenance
+        - generic [ref=f7e1282]:
+          - generic [ref=f7e1283]: 
+          - text: Excellent returns
+      - generic [ref=f7e1285]:
+        - heading "Savings claimed in the brochure" [level=3] [ref=f7e1286]
+        - generic [ref=f7e1287]:
+          - generic [ref=f7e1288]:
+            - generic [ref=f7e1289]: "0"
+            - paragraph [ref=f7e1290]: savings in manpower
+          - generic [ref=f7e1291]:
+            - generic [ref=f7e1292]: "0"
+            - paragraph [ref=f7e1293]: cost saving in pesticides & insecticides
+        - paragraph [ref=f7e1294]: Figures are company claims reproduced from the Jaldoot brochure.
+    - generic [ref=f7e1295]:
+      - generic [ref=f7e1296]:
+        - article [ref=f7e1297]:
+          - generic [ref=f7e1298]: 
+          - generic [ref=f7e1300]:
+            - heading "Solar Insect Killer" [level=3] [ref=f7e1301]
+            - generic [ref=f7e1302]:
+              - generic [ref=f7e1303]: Fully automatic.
+              - generic [ref=f7e1308]: No external power required.
+              - generic [ref=f7e1313]: Captures and kills all positively phototropic flying insects.
+              - generic [ref=f7e1318]: Effective up to 2.5 acres.
+              - generic [ref=f7e1323]: Works for 4 hours after sunset, killing a majority of enemy insects.
+              - generic [ref=f7e1328]: Installed with positive results in almost all vegetables and fruits.
+        - article [ref=f7e1333]:
+          - generic [ref=f7e1334]: 
+          - generic [ref=f7e1336]:
+            - heading "Solar Insect Trap" [level=3] [ref=f7e1337]
+            - generic [ref=f7e1338]:
+              - generic [ref=f7e1339]: Fully automatic.
+              - generic [ref=f7e1344]: No external power required.
+              - generic [ref=f7e1349]: Captures and kills all positively phototropic flying insects.
+              - generic [ref=f7e1354]: Effective up to 0.5 acres.
+              - generic [ref=f7e1359]: Works for 3 hours after sunset, killing a majority of enemy insects.
+              - generic [ref=f7e1364]: Best in the class product.
+      - paragraph [ref=f7e1369]: Coverage and effectiveness figures are company claims reproduced from the Jaldoot company brochure.
+  - generic [ref=f7e1377]:
+    - generic [ref=f7e1378]:
+      - generic [ref=f7e1379]:
+        - generic [ref=f7e1380]: 
+        - text: BuzzZap
+      - heading "BuzzZap Solar Trap" [level=2] [ref=f7e1381]
+      - paragraph [ref=f7e1382]: The most popular theories hold that positively phototactic insects are drawn to lights because they act like a navigational guide. Many insects find their way by keeping a natural light source, such as the sun or the moon, at a constant angle. Using the same principle, a UV light with a frequency that attracts more than 1800 different flying insects was designed. The insects tend to cross the electric wire mesh around the UV light and get electrocuted. With the use of a solar PV panel to charge the battery, a high tech electronic high voltage circuit is used for the functioning of the system.
+    - heading "Product composition" [level=3] [ref=f7e1383]
+    - table [ref=f7e1385]:
+      - rowgroup [ref=f7e1386]:
+        - row [ref=f7e1387]:
+          - columnheader "Sr. No." [ref=f7e1388]
+          - columnheader "Item" [ref=f7e1389]
+          - columnheader "BuzzZap Solar Trap" [ref=f7e1390]
+      - rowgroup [ref=f7e1391]:
+        - row [ref=f7e1392]:
+          - rowheader "1." [ref=f7e1393]
+          - cell "Operation method" [ref=f7e1394]
+          - cell "DC generated by solar panel" [ref=f7e1395]
+        - row [ref=f7e1396]:
+          - rowheader "2." [ref=f7e1397]
+          - cell "Trapping system" [ref=f7e1398]
+          - cell "Light trap requirement attachment · trapping net" [ref=f7e1399]
+        - row [ref=f7e1400]:
+          - rowheader "3." [ref=f7e1401]
+          - cell "Capacity of solar panel" [ref=f7e1402]
+          - 'cell "18 W high efficiency poly crystalline solar cells · 350 mm × 395 mm · cloudy: 40% charge" [ref=f7e1403]'
+        - row [ref=f7e1404]:
+          - rowheader "4." [ref=f7e1405]
+          - cell "Lamp" [ref=f7e1406]
+          - cell "Fluorescent lamp (blue & purple light colour) · 6 W · special purpose" [ref=f7e1407]
+        - row [ref=f7e1408]:
+          - rowheader "5." [ref=f7e1409]
+          - cell "Electric consumption / hour" [ref=f7e1410]
+          - cell "Rated consumption 15 W · standby consumption 7 W" [ref=f7e1411]
+        - row [ref=f7e1412]:
+          - rowheader "6." [ref=f7e1413]
+          - cell "Controller & battery protection" [ref=f7e1414]
+          - cell "Battery over charge protection · battery deep discharge protection · low battery protection · rain protection" [ref=f7e1415]
+        - row [ref=f7e1416]:
+          - rowheader "7." [ref=f7e1417]
+          - cell "Battery" [ref=f7e1418]
+          - cell "7.2 Ah 12 V SMF · battery 1 year warranty" [ref=f7e1419]
+        - row [ref=f7e1420]:
+          - rowheader "8." [ref=f7e1421]
+          - cell "Weight & package" [ref=f7e1422]
+          - 'cell "Weight (net): 15 kg · box packing for easy delivery · easy assembly by user at the field" [ref=f7e1423]'
+        - row [ref=f7e1424]:
+          - rowheader "9." [ref=f7e1425]
+          - cell "Assembly & keeping" [ref=f7e1426]
+          - cell "Easy moving, disassembly, keeping, etc." [ref=f7e1427]
+        - row [ref=f7e1428]:
+          - rowheader "10." [ref=f7e1429]
+          - cell "Working time" [ref=f7e1430]
+          - cell "After sunset 3 to 4 hours, 365 days / per year" [ref=f7e1431]
+        - row [ref=f7e1432]:
+          - rowheader "11." [ref=f7e1433]
+          - cell "Design" [ref=f7e1434]
+          - cell "Specially designed for Indian climate conditions" [ref=f7e1435]
+        - row [ref=f7e1436]:
+          - rowheader "12." [ref=f7e1437]
+          - cell "Life & service" [ref=f7e1438]
+          - cell "10 years with proper care · easily available service" [ref=f7e1439]
+    - generic [ref=f7e1440]:
+      - generic [ref=f7e1441]:
+        - heading "Multifunction software" [level=3] [ref=f7e1442]
+        - generic [ref=f7e1443]: Auto ON/OFF
+        - generic [ref=f7e1448]: Rain protection
+        - generic [ref=f7e1453]: Battery over charging protection
+        - generic [ref=f7e1458]: Low battery protection
+      - generic [ref=f7e1463]:
+        - heading "Easy installation" [level=3] [ref=f7e1464]
+        - list [ref=f7e1465]:
+          - listitem [ref=f7e1466]: 1. Push the pipe in the ground, 1 foot below.
+          - listitem [ref=f7e1467]: 2. Place the main box on the pipe.
+          - listitem [ref=f7e1468]: 3. Adjust the height.
+          - listitem [ref=f7e1469]: 4. Push the start button and forget it.
+      - generic [ref=f7e1470]:
+        - heading "Working" [level=3] [ref=f7e1471]
+        - paragraph [ref=f7e1472]: A UV light with a frequency that attracts more than 1800 different flying insects. The insects tend to cross the electric wire mesh around the UV light and get electrocuted. A high tech electronic high voltage circuit powers the system, charged by a solar PV panel.
+    - generic [ref=f7e1473]:
+      - heading "Company claims from the brochure" [level=3] [ref=f7e1474]
+      - generic [ref=f7e1475]:
+        - generic [ref=f7e1476]: BuzzZap is one of the most innovative products developed by the company.
+        - generic [ref=f7e1481]: Made in India with 100% in-house R&D.
+        - generic [ref=f7e1486]: Successful installations in different parts of India in different vegetable and fruit gardens, tea estates, poultry farms etc. with great results.
+        - generic [ref=f7e1491]: The company exports BuzzZap to many countries like France, Philippines, Maldives etc.
+        - generic [ref=f7e1496]: The company is able to demonstrate a reduction in the use of chemical spray to more than 50%.
+      - paragraph [ref=f7e1501]: These are company statements reproduced verbatim from the Jaldoot brochure and are not independently verified.
+    - generic [ref=f7e1502]:
+      - link "Enquire about BuzzZap" [ref=f7e1503] [cursor=pointer]:
+        - /url: contact.html
+      - link "About the manufacturer" [ref=f7e1504] [cursor=pointer]:
+        - /url: about.html
+  - generic [ref=f7e1511]:
+    - generic [ref=f7e1512]:
+      - generic [ref=f7e1513]: 
+      - generic [ref=f7e1515]: Hardness to happiness
+      - heading "Crystal Clear Naturally Water" [level=2] [ref=f7e1516]
+      - paragraph [ref=f7e1517]: Tell us about your line — pipe material, diameter and flow — and we will suggest the right Jaldoot unit.
+      - generic [ref=f7e1518]:
+        - link " Request a quote " [ref=f7e1519] [cursor=pointer]:
+          - /url: contact.html
+          - generic [ref=f7e1520]: 
+          - text: Request a quote
+          - generic [ref=f7e1521]: 
+        - 'link " Call: 98222 09656" [ref=f7e1522] [cursor=pointer]':
+          - /url: tel:9822209656
+          - generic [ref=f7e1523]: 
+          - text: "Call: 98222 09656"
+    - generic:
+      - 'img "Jaldoot water conditioner kit: control unit, power adapter, sensor cable and the blue magnetic conditioning chamber"'
+  - contentinfo [ref=f7e1524]:
+    - generic [ref=f7e1528]:
+      - generic [ref=f7e1529]:
+        - generic [ref=f7e1530]:
+          - img "JALDOOT Water Conditioner" [ref=f7e1532]
+          - paragraph [ref=f7e1533]: A product of Krushi Nature Water Care Pvt. Ltd. — ISO 9001:2008 certified company.
+          - generic [ref=f7e1534]:
+            - generic [ref=f7e1535]: 
+            - text: ISO 9001:2008 Certified
+          - generic [ref=f7e1536]:
+            - link "WhatsApp" [ref=f7e1537] [cursor=pointer]:
+              - /url: https://wa.me/919822209656
+              - generic [ref=f7e1538]: 
+            - link "Email" [ref=f7e1539] [cursor=pointer]:
+              - /url: mailto:watercare.krushinature@gmail.com
+              - generic [ref=f7e1540]: 
+            - link "Call" [ref=f7e1541] [cursor=pointer]:
+              - /url: tel:9822209656
+              - generic [ref=f7e1542]: 
+        - generic [ref=f7e1543]:
+          - heading "Quick Links" [level=4] [ref=f7e1544]
+          - list [ref=f7e1545]:
+            - listitem [ref=f7e1546]:
+              - link " Home" [ref=f7e1547] [cursor=pointer]:
+                - /url: index.html
+                - generic [ref=f7e1548]: 
+                - text: Home
+            - listitem [ref=f7e1549]:
+              - link " About Us" [ref=f7e1550] [cursor=pointer]:
+                - /url: about.html
+                - generic [ref=f7e1551]: 
+                - text: About Us
+            - listitem [ref=f7e1552]:
+              - link " Products" [ref=f7e1553] [cursor=pointer]:
+                - /url: products.html
+                - generic [ref=f7e1554]: 
+                - text: Products
+            - listitem [ref=f7e1555]:
+              - link " Contact" [ref=f7e1556] [cursor=pointer]:
+                - /url: contact.html
+                - generic [ref=f7e1557]: 
+                - text: Contact
+        - generic [ref=f7e1558]:
+          - heading "Applications" [level=4] [ref=f7e1559]
+          - list [ref=f7e1560]:
+            - listitem [ref=f7e1561]:
+              - link " Domestic" [ref=f7e1562] [cursor=pointer]:
+                - /url: "#domestic"
+                - generic [ref=f7e1563]: 
+                - text: Domestic
+            - listitem [ref=f7e1564]:
+              - link " Agriculture" [ref=f7e1565] [cursor=pointer]:
+                - /url: "#agriculture"
+                - generic [ref=f7e1566]: 
+                - text: Agriculture
+            - listitem [ref=f7e1567]:
+              - link " Poultry Farming" [ref=f7e1568] [cursor=pointer]:
+                - /url: "#poultry"
+                - generic [ref=f7e1569]: 
+                - text: Poultry Farming
+            - listitem [ref=f7e1570]:
+              - link " Commercial & Industrial" [ref=f7e1571] [cursor=pointer]:
+                - /url: "#commercial"
+                - generic [ref=f7e1572]: 
+                - text: Commercial & Industrial
+            - listitem [ref=f7e1573]:
+              - link " JVC for RO Plant" [ref=f7e1574] [cursor=pointer]:
+                - /url: "#ro-plant"
+                - generic [ref=f7e1575]: 
+                - text: JVC for RO Plant
+            - listitem [ref=f7e1576]:
+              - link " Solar Products" [ref=f7e1577] [cursor=pointer]:
+                - /url: "#solar-products"
+                - generic [ref=f7e1578]: 
+                - text: Solar Products
+        - generic [ref=f7e1579]:
+          - heading "Contact" [level=4] [ref=f7e1580]
+          - list [ref=f7e1581]:
+            - listitem [ref=f7e1582]:
+              - generic [ref=f7e1583]: 
+              - generic [ref=f7e1584]: Plot No. 83, Near Maruthi Meter, Ramtekadi Industrial Estate, Hadapsar, Pune - 411028
+            - listitem [ref=f7e1585]:
+              - generic [ref=f7e1586]: 
+              - generic [ref=f7e1587]: 9822209656 / 9404039656
+            - listitem [ref=f7e1588]:
+              - generic [ref=f7e1589]: 
+              - generic [ref=f7e1590]: watercare.krushinature@gmail.com
+            - listitem [ref=f7e1591]:
+              - generic [ref=f7e1592]: 
+              - link "www.jaldootcorporation.com" [ref=f7e1593] [cursor=pointer]:
+                - /url: http://www.jaldootcorporation.com
+      - generic [ref=f7e1594]:
+        - paragraph [ref=f7e1595]: © 2026 Krushi Nature Water Care Pvt. Ltd. All rights reserved.
+        - paragraph [ref=f7e1596]: Hardness To Happiness — Crystal Clear Naturally Water
+  - generic [ref=f7e1597]:
+    - button "Back to top":
+      - generic: 
+    - link "Call" [ref=f7e1598] [cursor=pointer]:
+      - /url: tel:9822209656
+      - generic [ref=f7e1599]: 
+      - generic: "Call: 9822209656"
+    - link "WhatsApp" [ref=f7e1600] [cursor=pointer]:
+      - /url: https://wa.me/919822209656?text=Hello%2C%20I%20am%20interested%20in%20Jaldoot%20Water%20Conditioner.
+      - generic [ref=f7e1601]: 
+      - generic: Chat on WhatsApp
