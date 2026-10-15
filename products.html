@@ -13,8 +13,7 @@
     />
     <meta name="author" content="Krushi Nature Water Care Pvt. Ltd." />
     <title>
-      Products | JALDOOT Water Conditioner | Krushi Nature Water Care Pvt.
-      Ltd.
+      Products | JALDOOT Water Conditioner | Krushi Nature Water Care Pvt. Ltd.
     </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -142,7 +141,6 @@
           justify-content: flex-end;
         }
       }
-
 
       /* ===== PRELOADER ===== */
       #preloader {
@@ -342,7 +340,11 @@
         top: -10%;
         width: 10px;
         height: 10px;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(0, 173, 238, 0.5));
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.9),
+          rgba(0, 173, 238, 0.5)
+        );
         border-radius: 50% 50% 50% 0;
         transform: rotate(-45deg);
         pointer-events: none;
@@ -478,15 +480,15 @@
       .hw-section {
         background:
           radial-gradient(
-              900px 520px at 88% -6%,
-              rgba(249, 115, 22, 0.11) 0%,
-              transparent 62%
-            ),
+            900px 520px at 88% -6%,
+            rgba(249, 115, 22, 0.11) 0%,
+            transparent 62%
+          ),
           radial-gradient(
-              720px 520px at 6% 104%,
-              rgba(0, 173, 238, 0.09) 0%,
-              transparent 62%
-            ),
+            720px 520px at 6% 104%,
+            rgba(0, 173, 238, 0.09) 0%,
+            transparent 62%
+          ),
           linear-gradient(180deg, #fffaf7 0%, #fdf6f2 42%, #f6fbff 100%);
       }
       .hw-section::before {
@@ -752,10 +754,12 @@
       @keyframes hw-signal-pulse {
         0%,
         100% {
-          box-shadow: 0 0 0 3px color-mix(in srgb, var(--signal) 18%, transparent);
+          box-shadow: 0 0 0 3px
+            color-mix(in srgb, var(--signal) 18%, transparent);
         }
         50% {
-          box-shadow: 0 0 0 6px color-mix(in srgb, var(--signal) 6%, transparent);
+          box-shadow: 0 0 0 6px
+            color-mix(in srgb, var(--signal) 6%, transparent);
         }
       }
       @media (prefers-reduced-motion: reduce) {
@@ -896,7 +900,9 @@
         background: radial-gradient(closest-side, var(--glow), transparent 72%);
         filter: blur(12px);
         opacity: 0.45;
-        transition: opacity 0.5s ease, transform 0.5s ease;
+        transition:
+          opacity 0.5s ease,
+          transform 0.5s ease;
         pointer-events: none;
       }
       #how-it-works .hiw-card:hover {
@@ -999,7 +1005,9 @@
         );
         border: 1px solid rgba(125, 211, 252, 0.16);
         color: var(--glow);
-        transition: border-color 0.5s ease, transform 0.5s ease;
+        transition:
+          border-color 0.5s ease,
+          transform 0.5s ease;
       }
       #how-it-works .hiw-visual svg {
         display: block;
@@ -1025,8 +1033,8 @@
         animation:
           hiw-spin 7s linear infinite,
           hiw-dash-move 1.6s linear infinite;
-        animation-duration: calc(7s / var(--hiw-rate)),
-          calc(1.6s / var(--hiw-rate));
+        animation-duration:
+          calc(7s / var(--hiw-rate)), calc(1.6s / var(--hiw-rate));
       }
       #how-it-works .hiw-bubble {
         animation: hiw-rise 3.6s ease-in infinite;
@@ -1177,7 +1185,7 @@
         }
       }
 
-/* ===== BENEFITS: FLIP CARDS ===== */
+      /* ===== BENEFITS: FLIP CARDS ===== */
       #benefits .bn-lead {
         margin-top: 1rem;
         color: var(--gray);
@@ -1244,7 +1252,8 @@
       }
       #benefits .bn-card:hover .bn-front {
         border-color: color-mix(in srgb, var(--tint) 42%, transparent);
-        box-shadow: 0 30px 56px -30px color-mix(in srgb, var(--tint) 70%, transparent);
+        box-shadow: 0 30px 56px -30px
+          color-mix(in srgb, var(--tint) 70%, transparent);
       }
       #benefits .bn-card:hover .bn-front::before {
         transform: scaleX(1);
@@ -1314,7 +1323,12 @@
         gap: 0.875rem;
         text-align: center;
         color: #eaf6ff;
-        background: linear-gradient(158deg, #0b2a55 0%, #12437f 52%, #06121f 100%);
+        background: linear-gradient(
+          158deg,
+          #0b2a55 0%,
+          #12437f 52%,
+          #06121f 100%
+        );
         border: 1px solid color-mix(in srgb, var(--tint) 48%, transparent);
         box-shadow: 0 26px 54px -30px rgba(6, 18, 31, 0.95);
       }
@@ -1423,7 +1437,7 @@
         }
       }
 
-/* ===== SCALE REDUCTION: MOLECULAR TRANSFORMATION ===== */
+      /* ===== SCALE REDUCTION: MOLECULAR TRANSFORMATION ===== */
       #scale-reduction {
         background:
           radial-gradient(
@@ -1873,14 +1887,16 @@
         }
       }
 
-/* ===== BEFORE / AFTER COMPARISON (results + before-after) ===== */
-      #results .ba-grid , #before-after .ba-grid {
+      /* ===== BEFORE / AFTER COMPARISON (results + before-after) ===== */
+      #results .ba-grid,
+      #before-after .ba-grid {
         display: grid;
         gap: 1.5rem;
         margin-top: 4rem;
         grid-template-areas: "before" "swap" "after";
       }
-      #results .ba-panel , #before-after .ba-panel {
+      #results .ba-panel,
+      #before-after .ba-panel {
         position: relative;
         isolation: isolate;
         overflow: hidden;
@@ -1889,13 +1905,20 @@
         padding: 2rem;
         border-radius: 1.75rem;
       }
-      #results .ba-before , #before-after .ba-before {
+      #results .ba-before,
+      #before-after .ba-before {
         grid-area: before;
-        background: linear-gradient(162deg, #f4f5f7 0%, #e2e5ea 58%, #d7dbe2 100%);
+        background: linear-gradient(
+          162deg,
+          #f4f5f7 0%,
+          #e2e5ea 58%,
+          #d7dbe2 100%
+        );
         border: 1px solid rgba(15, 23, 42, 0.14);
         box-shadow: 0 22px 48px -34px rgba(15, 23, 42, 0.65);
       }
-      #results .ba-before::before , #before-after .ba-before::before {
+      #results .ba-before::before,
+      #before-after .ba-before::before {
         content: "";
         position: absolute;
         inset: auto 0 0 0;
@@ -1911,14 +1934,21 @@
         -webkit-mask-image: linear-gradient(to top, #000 0%, transparent 84%);
         animation: ba-crust 22s linear infinite;
       }
-      #results .ba-after , #before-after .ba-after {
+      #results .ba-after,
+      #before-after .ba-after {
         grid-area: after;
         color: #eaf6ff;
-        background: linear-gradient(158deg, #0d3a72 0%, #0a2b4d 52%, #062033 100%);
+        background: linear-gradient(
+          158deg,
+          #0d3a72 0%,
+          #0a2b4d 52%,
+          #062033 100%
+        );
         border: 1px solid rgba(125, 211, 252, 0.26);
         box-shadow: 0 26px 54px -32px rgba(6, 18, 31, 0.95);
       }
-      #results .ba-after::before , #before-after .ba-after::before {
+      #results .ba-after::before,
+      #before-after .ba-after::before {
         content: "";
         position: absolute;
         right: -6rem;
@@ -1933,7 +1963,8 @@
         );
         animation: ba-glow 8s ease-in-out infinite;
       }
-      #results .ba-after::after , #before-after .ba-after::after {
+      #results .ba-after::after,
+      #before-after .ba-after::after {
         content: "";
         position: absolute;
         inset: -45% -20%;
@@ -1948,7 +1979,8 @@
         animation: sr-sheen 9s ease-in-out infinite;
       }
 
-      #results .ba-swap , #before-after .ba-swap {
+      #results .ba-swap,
+      #before-after .ba-swap {
         grid-area: swap;
         align-self: center;
         justify-self: center;
@@ -1962,11 +1994,13 @@
         background: linear-gradient(145deg, #0d3a72, #4db74a);
         box-shadow: 0 14px 30px -14px rgba(10, 43, 77, 0.9);
       }
-      #results .ba-swap i , #before-after .ba-swap i {
+      #results .ba-swap i,
+      #before-after .ba-swap i {
         font-size: 1rem;
         animation: ba-swap 3.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
       }
-      #results .ba-swap::after , #before-after .ba-swap::after {
+      #results .ba-swap::after,
+      #before-after .ba-swap::after {
         content: "";
         position: absolute;
         inset: 0;
@@ -1975,20 +2009,23 @@
         animation: bn-pulse 3.6s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
       }
       @media (min-width: 1024px) {
-        #results .ba-grid , #before-after .ba-grid {
+        #results .ba-grid,
+        #before-after .ba-grid {
           grid-template-areas: "before swap after";
           grid-template-columns: 1fr 5.5rem 1fr;
           gap: 1.5rem 0;
         }
       }
 
-      #results .ba-photo , #before-after .ba-photo {
+      #results .ba-photo,
+      #before-after .ba-photo {
         position: relative;
         overflow: hidden;
         height: 12.5rem;
         margin: -2rem -2rem 1.5rem;
       }
-      #results .ba-photo img , #before-after .ba-photo img {
+      #results .ba-photo img,
+      #before-after .ba-photo img {
         display: block;
         width: 200%;
         max-width: none;
@@ -1997,27 +2034,33 @@
         transform: scale(1.01);
         transition: transform 1.4s cubic-bezier(0.2, 0.75, 0.25, 1);
       }
-      #results .ba-after .ba-photo img , #before-after .ba-after .ba-photo img {
+      #results .ba-after .ba-photo img,
+      #before-after .ba-after .ba-photo img {
         margin-left: -100%;
       }
-      #results .ba-photo::after , #before-after .ba-photo::after {
+      #results .ba-photo::after,
+      #before-after .ba-photo::after {
         content: "";
         position: absolute;
         inset: auto 0 0 0;
         height: 45%;
         pointer-events: none;
       }
-      #results .ba-before .ba-photo::after , #before-after .ba-before .ba-photo::after {
+      #results .ba-before .ba-photo::after,
+      #before-after .ba-before .ba-photo::after {
         background: linear-gradient(to top, #dfe3e9, rgba(223, 227, 233, 0));
       }
-      #results .ba-after .ba-photo::after , #before-after .ba-after .ba-photo::after {
+      #results .ba-after .ba-photo::after,
+      #before-after .ba-after .ba-photo::after {
         background: linear-gradient(to top, #062033, rgba(6, 32, 51, 0));
       }
-      #results .ba-panel:hover .ba-photo img , #before-after .ba-panel:hover .ba-photo img {
+      #results .ba-panel:hover .ba-photo img,
+      #before-after .ba-panel:hover .ba-photo img {
         transform: scale(1.07);
       }
 
-      #results .ba-label , #before-after .ba-label {
+      #results .ba-label,
+      #before-after .ba-label {
         display: inline-flex;
         align-self: flex-start;
         align-items: center;
@@ -2030,23 +2073,27 @@
         letter-spacing: 0.16em;
         text-transform: uppercase;
       }
-      #results .ba-before .ba-label , #before-after .ba-before .ba-label {
+      #results .ba-before .ba-label,
+      #before-after .ba-before .ba-label {
         color: #b91c1c;
         background: rgba(220, 38, 38, 0.12);
         border: 1px solid rgba(220, 38, 38, 0.28);
       }
-      #results .ba-after .ba-label , #before-after .ba-after .ba-label {
+      #results .ba-after .ba-label,
+      #before-after .ba-after .ba-label {
         color: #fff;
         background: color-mix(in srgb, #4db74a 34%, transparent);
         border: 1px solid color-mix(in srgb, #4db74a 55%, transparent);
       }
-      #results .ba-head , #before-after .ba-head {
+      #results .ba-head,
+      #before-after .ba-head {
         display: flex;
         align-items: center;
         gap: 1rem;
         margin-top: 1.375rem;
       }
-      #results .ba-icon , #before-after .ba-icon {
+      #results .ba-icon,
+      #before-after .ba-icon {
         display: grid;
         place-items: center;
         width: 3rem;
@@ -2054,61 +2101,74 @@
         border-radius: 0.875rem;
         font-size: 1.1rem;
       }
-      #results .ba-before .ba-icon , #before-after .ba-before .ba-icon {
+      #results .ba-before .ba-icon,
+      #before-after .ba-before .ba-icon {
         color: #b91c1c;
         background: rgba(220, 38, 38, 0.12);
         border: 1px solid rgba(220, 38, 38, 0.24);
       }
-      #results .ba-after .ba-icon , #before-after .ba-after .ba-icon {
+      #results .ba-after .ba-icon,
+      #before-after .ba-after .ba-icon {
         color: #fff;
         background: linear-gradient(145deg, #4db74a, rgba(6, 18, 31, 0.85));
         box-shadow: 0 12px 24px -14px #4db74a;
       }
-      #results .ba-title , #before-after .ba-title {
+      #results .ba-title,
+      #before-after .ba-title {
         font-family: "Outfit", "Poppins", sans-serif;
         font-weight: 700;
         font-size: 1.25rem;
         line-height: 1.3;
       }
-      #results .ba-before .ba-title , #before-after .ba-before .ba-title {
+      #results .ba-before .ba-title,
+      #before-after .ba-before .ba-title {
         color: #1e293b;
       }
-      #results .ba-after .ba-title , #before-after .ba-after .ba-title {
+      #results .ba-after .ba-title,
+      #before-after .ba-after .ba-title {
         color: #fff;
       }
-      #results .ba-sub , #before-after .ba-sub {
+      #results .ba-sub,
+      #before-after .ba-sub {
         position: relative;
         margin-top: 1rem;
         font-size: 0.875rem;
         line-height: 1.6;
       }
-      #results .ba-before .ba-sub , #before-after .ba-before .ba-sub {
+      #results .ba-before .ba-sub,
+      #before-after .ba-before .ba-sub {
         color: #475569;
       }
-      #results .ba-after .ba-sub , #before-after .ba-after .ba-sub {
+      #results .ba-after .ba-sub,
+      #before-after .ba-after .ba-sub {
         color: rgba(226, 240, 255, 0.78);
       }
 
-      #results .ba-list , #before-after .ba-list {
+      #results .ba-list,
+      #before-after .ba-list {
         position: relative;
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
         margin-top: 1.5rem;
       }
-      #results .ba-list li , #before-after .ba-list li {
+      #results .ba-list li,
+      #before-after .ba-list li {
         display: flex;
         gap: 0.875rem;
         font-size: 0.875rem;
         line-height: 1.6;
       }
-      #results .ba-before .ba-list li , #before-after .ba-before .ba-list li {
+      #results .ba-before .ba-list li,
+      #before-after .ba-before .ba-list li {
         color: #475569;
       }
-      #results .ba-after .ba-list li , #before-after .ba-after .ba-list li {
+      #results .ba-after .ba-list li,
+      #before-after .ba-after .ba-list li {
         color: rgba(226, 240, 255, 0.86);
       }
-      #results .ba-mark , #before-after .ba-mark {
+      #results .ba-mark,
+      #before-after .ba-mark {
         flex: 0 0 auto;
         display: grid;
         place-items: center;
@@ -2118,21 +2178,24 @@
         border-radius: 50%;
         font-size: 0.55rem;
       }
-      #results .ba-before .ba-mark , #before-after .ba-before .ba-mark {
+      #results .ba-before .ba-mark,
+      #before-after .ba-before .ba-mark {
         color: #dc2626;
         background: rgba(220, 38, 38, 0.14);
         border: 1px solid rgba(220, 38, 38, 0.26);
         animation: ba-mark 3.6s ease-in-out infinite;
         animation-delay: calc(var(--i, 0) * 0.3s);
       }
-      #results .ba-after .ba-mark , #before-after .ba-after .ba-mark {
+      #results .ba-after .ba-mark,
+      #before-after .ba-after .ba-mark {
         color: #fff;
         background: linear-gradient(145deg, #4db74a, #3da83a);
         box-shadow: 0 8px 16px -10px #4db74a;
         animation: ba-mark 3.6s ease-in-out infinite;
         animation-delay: calc(var(--i, 0) * 0.22s);
       }
-      #results .ba-after .ba-list , #before-after .ba-after .ba-list {
+      #results .ba-after .ba-list,
+      #before-after .ba-after .ba-list {
         flex: 1 1 auto;
       }
 
@@ -2174,7 +2237,8 @@
         }
       }
       @media (max-width: 640px) {
-        #results .ba-photo , #before-after .ba-photo {
+        #results .ba-photo,
+        #before-after .ba-photo {
           height: 10rem;
           margin: -1.5rem -1.5rem 1.25rem;
         }
@@ -2185,7 +2249,8 @@
         #results .ba-after::after,
         #results .ba-swap i,
         #results .ba-swap::after,
-        #results .ba-mark , #before-after .ba-before::before,
+        #results .ba-mark,
+        #before-after .ba-before::before,
         #results .ba-after::before,
         #results .ba-after::after,
         #results .ba-swap i,
@@ -2195,7 +2260,7 @@
         }
       }
 
-/* ===== BEFORE / AFTER SLIDER (interactive comparison) ===== */
+      /* ===== BEFORE / AFTER SLIDER (interactive comparison) ===== */
       #before-after .dv-frame {
         position: relative;
         overflow: hidden;
@@ -2377,7 +2442,11 @@
         box-shadow: 0 24px 46px -28px rgba(0, 102, 179, 0.55);
       }
       #before-after .dv-stat-green {
-        background: linear-gradient(150deg, rgba(77, 183, 74, 0.12), rgba(255, 255, 255, 0.9));
+        background: linear-gradient(
+          150deg,
+          rgba(77, 183, 74, 0.12),
+          rgba(255, 255, 255, 0.9)
+        );
         border-color: rgba(77, 183, 74, 0.3);
       }
       #before-after .dv-stat::after {
@@ -2486,7 +2555,7 @@
         }
       }
 
-/* ===== SOLAR PRODUCTS: NIGHT TRAP VISUAL + CARDS ===== */
+      /* ===== SOLAR PRODUCTS: NIGHT TRAP VISUAL + CARDS ===== */
       #solar-products {
         background:
           radial-gradient(
@@ -2685,11 +2754,8 @@
       #solar-products .sp-card:hover {
         transform: translateY(-8px);
         border-color: color-mix(in srgb, var(--tint) 45%, transparent);
-        box-shadow: 0 34px 64px -32px color-mix(
-          in srgb,
-          var(--tint) 65%,
-          transparent
-        );
+        box-shadow: 0 34px 64px -32px
+          color-mix(in srgb, var(--tint) 65%, transparent);
       }
       #solar-products .sp-card-top {
         display: flex;
@@ -2801,7 +2867,7 @@
         }
       }
 
-/* ===== RO PLANT: LIGHT APPLICATION SECTION ===== */
+      /* ===== RO PLANT: LIGHT APPLICATION SECTION ===== */
       #ro-plant {
         background:
           radial-gradient(
@@ -2863,11 +2929,8 @@
       #ro-plant .rp-spec:hover {
         transform: translateY(-4px);
         border-color: color-mix(in srgb, var(--tint, #00adee) 45%, transparent);
-        box-shadow: 0 18px 32px -22px color-mix(
-          in srgb,
-          var(--tint, #00adee) 80%,
-          transparent
-        );
+        box-shadow: 0 18px 32px -22px
+          color-mix(in srgb, var(--tint, #00adee) 80%, transparent);
       }
       #ro-plant .rp-spec b {
         display: block;
@@ -2923,15 +2986,36 @@
         }
       }
 
-/* ===== DOMESTIC: BEFORE / AFTER PLATE ===== */
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-figure {
+      /* ===== DOMESTIC: BEFORE / AFTER PLATE ===== */
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-figure {
         position: relative;
         overflow: hidden;
         border-radius: 1.75rem;
         border: 1px solid rgba(0, 102, 179, 0.12);
         box-shadow: 0 34px 70px -36px rgba(10, 22, 40, 0.8);
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-figure img {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-figure
+        img {
         display: block;
         width: 100%;
         height: auto;
@@ -2939,7 +3023,17 @@
         transform: scale(1.01);
         animation: dm-drift 26s ease-in-out infinite alternate;
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-caption {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-caption {
         display: flex;
         flex-wrap: wrap;
         gap: 0.625rem 1.5rem;
@@ -2951,12 +3045,34 @@
         font-weight: 600;
         color: var(--gray);
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-caption span {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-caption
+        span {
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-caption i {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-caption
+        i {
         width: 0.5rem;
         height: 0.5rem;
         border-radius: 50%;
@@ -2964,33 +3080,93 @@
         box-shadow: 0 0 0 3px color-mix(in srgb, var(--dot) 22%, transparent);
       }
 
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-cols {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-cols {
         display: grid;
         gap: 1.25rem;
         margin-top: 2.25rem;
       }
       @media (min-width: 900px) {
-        :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-cols {
+        :is(
+            #domestic,
+            #agriculture,
+            #poultry,
+            #dairy,
+            #pools,
+            #golf,
+            #commercial,
+            #solar-products
+          )
+          .dm-cols {
           grid-template-columns: 1fr 1fr;
         }
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-card {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-card {
         position: relative;
         isolation: isolate;
         overflow: hidden;
         padding: 1.5rem 1.625rem;
         border-radius: 1.25rem;
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-before {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-before {
         background: linear-gradient(162deg, #f4f5f7 0%, #e2e5ea 100%);
         border: 1px solid rgba(15, 23, 42, 0.14);
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-after {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-after {
         color: #eaf6ff;
         background: linear-gradient(158deg, #0d3a72 0%, #062033 100%);
         border: 1px solid rgba(125, 211, 252, 0.26);
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-after::before {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-after::before {
         content: "";
         position: absolute;
         right: -5rem;
@@ -3005,11 +3181,32 @@
         );
         animation: ba-glow 8s ease-in-out infinite;
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-card > * {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-card
+        > * {
         position: relative;
         z-index: 1;
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-title {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-title {
         display: flex;
         align-items: center;
         gap: 0.625rem;
@@ -3017,13 +3214,46 @@
         font-weight: 700;
         font-size: 0.9375rem;
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-before .dm-title {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-before
+        .dm-title {
         color: #b91c1c;
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-after .dm-title {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-after
+        .dm-title {
         color: #fff;
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-title i {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-title
+        i {
         display: grid;
         place-items: center;
         width: 1.75rem;
@@ -3031,35 +3261,114 @@
         border-radius: 0.5rem;
         font-size: 0.7rem;
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-before .dm-title i {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-before
+        .dm-title
+        i {
         color: #dc2626;
         background: rgba(220, 38, 38, 0.14);
         border: 1px solid rgba(220, 38, 38, 0.26);
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-after .dm-title i {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-after
+        .dm-title
+        i {
         color: #fff;
         background: linear-gradient(145deg, #4db74a, #3da83a);
         box-shadow: 0 8px 16px -10px #4db74a;
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-list {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-list {
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
         margin-top: 1.125rem;
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-list li {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-list
+        li {
         display: flex;
         gap: 0.75rem;
         font-size: 0.875rem;
         line-height: 1.6;
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-before .dm-list li {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-before
+        .dm-list
+        li {
         color: #475569;
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-after .dm-list li {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-after
+        .dm-list
+        li {
         color: rgba(226, 240, 255, 0.86);
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-mark {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-mark {
         flex: 0 0 auto;
         display: grid;
         place-items: center;
@@ -3071,17 +3380,49 @@
         animation: ba-mark 3.6s ease-in-out infinite;
         animation-delay: calc(var(--i, 0) * 0.24s);
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-before .dm-mark {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-before
+        .dm-mark {
         color: #dc2626;
         background: rgba(220, 38, 38, 0.14);
         border: 1px solid rgba(220, 38, 38, 0.26);
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-after .dm-mark {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-after
+        .dm-mark {
         color: #fff;
         background: linear-gradient(145deg, #4db74a, #3da83a);
         box-shadow: 0 8px 16px -10px #4db74a;
       }
-      :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-areas {
+      :is(
+          #domestic,
+          #agriculture,
+          #poultry,
+          #dairy,
+          #pools,
+          #golf,
+          #commercial,
+          #solar-products
+        )
+        .dm-areas {
         margin-top: 1.5rem;
         padding: 1.25rem 1.5rem;
         border-radius: 1.25rem;
@@ -3097,14 +3438,45 @@
         }
       }
       @media (prefers-reduced-motion: reduce) {
-        :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-figure img,
-        :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-after::before,
-        :is(#domestic, #agriculture, #poultry, #dairy, #pools, #golf, #commercial, #solar-products) .dm-mark {
+        :is(
+            #domestic,
+            #agriculture,
+            #poultry,
+            #dairy,
+            #pools,
+            #golf,
+            #commercial,
+            #solar-products
+          )
+          .dm-figure
+          img,
+        :is(
+            #domestic,
+            #agriculture,
+            #poultry,
+            #dairy,
+            #pools,
+            #golf,
+            #commercial,
+            #solar-products
+          )
+          .dm-after::before,
+        :is(
+            #domestic,
+            #agriculture,
+            #poultry,
+            #dairy,
+            #pools,
+            #golf,
+            #commercial,
+            #solar-products
+          )
+          .dm-mark {
           animation: none !important;
         }
       }
 
-/* ===== APPLICATIONS: HOVER MEDIA ===== */
+      /* ===== APPLICATIONS: HOVER MEDIA ===== */
       #applications .app-card {
         isolation: isolate;
         overflow: hidden;
@@ -3202,7 +3574,7 @@
       .wave-divider svg {
         display: block;
       }
-          /* ===== CTA BAND (LIGHT, TWO COLUMN) ===== */
+      /* ===== CTA BAND (LIGHT, TWO COLUMN) ===== */
       .cta-band-bg {
         background:
           radial-gradient(
@@ -3264,7 +3636,6 @@
           transform: none;
         }
       }
-
     </style>
   </head>
   <body class="font-body text-jd-gray bg-white overflow-x-hidden">
@@ -3282,7 +3653,12 @@
             class="absolute inset-0 border-4 border-transparent border-t-jd-sky rounded-full animate-spin"
           ></div>
           <div class="absolute inset-0 flex items-center justify-center">
-            <svg width="36" height="36" viewBox="0 0 40 40" class="animate-pulse">
+            <svg
+              width="36"
+              height="36"
+              viewBox="0 0 40 40"
+              class="animate-pulse"
+            >
               <path
                 d="M20 4 C20 4 8 18 8 26 C8 33 13 38 20 38 C27 38 32 33 32 26 C32 18 20 4 20 4Z"
                 fill="#00ADEE"
@@ -3394,7 +3770,8 @@
             <a
               href="contact.html"
               class="nav-cta ml-4 px-5 py-2 bg-gradient-to-r from-jd-deep via-jd-blue to-jd-sky text-white font-heading transition-all duration-300"
-              ><i class="fas fa-paper-plane mr-2 text-xs"></i>Get Quote</a>
+              ><i class="fas fa-paper-plane mr-2 text-xs"></i>Get Quote</a
+            >
           </div>
           <button
             class="lg:hidden hamburger flex flex-col gap-1.5 p-2 relative z-[60]"
@@ -3415,24 +3792,27 @@
           </button>
         </div>
       </div>
-
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobileMenuBackdrop" class="mobile-menu-backdrop" aria-hidden="true"></div>
+    <div
+      id="mobileMenuBackdrop"
+      class="mobile-menu-backdrop"
+      aria-hidden="true"
+    ></div>
 
     <div
       class="mobile-menu fixed inset-y-0 right-0 w-80 max-w-[85vw] shadow-2xl lg:hidden"
       id="mobileMenu"
     >
-        <button
-          type="button"
-          class="mobile-menu-close absolute top-5 right-5"
-          id="mobileMenuClose"
-          aria-label="Close menu"
-        >
-          <i class="fas fa-times"></i>
-        </button>
+      <button
+        type="button"
+        class="mobile-menu-close absolute top-5 right-5"
+        id="mobileMenuClose"
+        aria-label="Close menu"
+      >
+        <i class="fas fa-times"></i>
+      </button>
       <div class="p-6 pt-24 flex flex-col gap-2">
         <a
           href="index.html"
@@ -3544,7 +3924,9 @@
           Range
         </h1>
 
-        <p class="text-white/75 text-base lg:text-lg max-w-2xl mx-auto leading-relaxed font-body">
+        <p
+          class="text-white/75 text-base lg:text-lg max-w-2xl mx-auto leading-relaxed font-body"
+        >
           Chemical-free, salt-free units for homes, farms, hotels and factories
           &mdash; sized for the line you actually have.
         </p>
@@ -3597,7 +3979,10 @@
                   class="absolute left-1/2 top-14 -translate-x-1/2 w-72 h-72 bg-jd-sky/20 rounded-full blur-3xl pointer-events-none"
                   aria-hidden="true"
                 ></div>
-                <div id="dropletField" class="absolute inset-0 overflow-hidden"></div>
+                <div
+                  id="dropletField"
+                  class="absolute inset-0 overflow-hidden"
+                ></div>
 
                 <img
                   src="assets/pro1.png"
@@ -3616,7 +4001,10 @@
                 <span
                   class="w-8 h-8 rounded-full bg-jd-deep flex items-center justify-center"
                 >
-                  <i class="fas fa-microchip text-jd-sky" aria-hidden="true"></i>
+                  <i
+                    class="fas fa-microchip text-jd-sky"
+                    aria-hidden="true"
+                  ></i>
                 </span>
                 <span class="font-heading font-semibold text-sm text-jd-deep"
                   >4-in-1 technology</span
@@ -3663,7 +4051,9 @@
                   <i class="fas fa-wave-square" aria-hidden="true"></i>
                 </span>
                 <div>
-                  <h3 class="font-heading font-bold text-jd-deep">Ultrasonic</h3>
+                  <h3 class="font-heading font-bold text-jd-deep">
+                    Ultrasonic
+                  </h3>
                   <p>
                     Sonic pulses break the mineral bonds that form scale, at the
                     molecular level.
@@ -3691,10 +4081,12 @@
                   <i class="fas fa-bolt" aria-hidden="true"></i>
                 </span>
                 <div>
-                  <h3 class="font-heading font-bold text-jd-deep">Pulsing Power</h3>
+                  <h3 class="font-heading font-bold text-jd-deep">
+                    Pulsing Power
+                  </h3>
                   <p>
-                    Dynamic high-frequency energy dissolves scale that is already
-                    deposited.
+                    Dynamic high-frequency energy dissolves scale that is
+                    already deposited.
                   </p>
                 </div>
               </div>
@@ -3708,13 +4100,16 @@
                     Catalytic Technology
                   </h3>
                   <p>
-                    The patented coil induces ionisation at the cathode and anode.
+                    The patented coil induces ionisation at the cathode and
+                    anode.
                   </p>
                 </div>
               </div>
             </div>
 
-            <dl class="unit-stats mt-9 grid grid-cols-2 sm:grid-cols-4 gap-px rounded-2xl overflow-hidden bg-jd-sky/15 border border-jd-sky/15">
+            <dl
+              class="unit-stats mt-9 grid grid-cols-2 sm:grid-cols-4 gap-px rounded-2xl overflow-hidden bg-jd-sky/15 border border-jd-sky/15"
+            >
               <div class="unit-stat">
                 <dt>Micron crystals</dt>
                 <dd>2&ndash;4</dd>
@@ -3764,26 +4159,29 @@
               </summary>
               <div class="space-y-4 mt-4 text-jd-gray leading-relaxed">
                 <p>
-                  <strong class="text-jd-deep">"JALDOOT"</strong> takes the process
-                  of induced ionization to its ultimate stage of cathode and anode.
-                  The principles of magneto hydrodynamics (MHD) are applied by passing
-                  the Jaldoot patented signal through a coil wrapped around the pipe to
-                  be treated. The signal consists of a frequency modulated (FM)
-                  waveform within the audio frequency (AF) bandwidth.
+                  <strong class="text-jd-deep">"JALDOOT"</strong> takes the
+                  process of induced ionization to its ultimate stage of cathode
+                  and anode. The principles of magneto hydrodynamics (MHD) are
+                  applied by passing the Jaldoot patented signal through a coil
+                  wrapped around the pipe to be treated. The signal consists of
+                  a frequency modulated (FM) waveform within the audio frequency
+                  (AF) bandwidth.
                 </p>
                 <p>
-                  This inaudible sonic frequency signal sets up a dynamic field around
-                  and through the coil, pipe and water, and modifies the calcium
-                  carbonate crystal nuclei. The field acts at the surfaces of the
-                  nuclei, modifies the nature of the electrical charges, and this
-                  ionization effect thus alters the growth rate and pattern of the
-                  crystals in general and on specific planes.
+                  This inaudible sonic frequency signal sets up a dynamic field
+                  around and through the coil, pipe and water, and modifies the
+                  calcium carbonate crystal nuclei. The field acts at the
+                  surfaces of the nuclei, modifies the nature of the electrical
+                  charges, and this ionization effect thus alters the growth
+                  rate and pattern of the crystals in general and on specific
+                  planes.
                 </p>
                 <p>
-                  By changing the signal field at high audio frequencies, the energy
-                  imparted to the nuclei is considerably accelerated. The crystal
-                  intra molecular structure is rapidly broken down, which causes a fast
-                  dissolution of any existing scale forming molecules.
+                  By changing the signal field at high audio frequencies, the
+                  energy imparted to the nuclei is considerably accelerated. The
+                  crystal intra molecular structure is rapidly broken down,
+                  which causes a fast dissolution of any existing scale forming
+                  molecules.
                 </p>
                 <p class="text-xs text-jd-gray/70">
                   Figures reproduced from the Jaldoot company brochure.
@@ -3963,11 +4361,11 @@
             <div class="hw-lead text-jd-gray leading-relaxed">
               <p>
                 Calcite, the main cause of scale, is the most common form of
-                calcium carbonate and occurs naturally as an ingredient of chalk,
-                limestone and marble. Water passing over and permeating through
-                such rocks dissolves calcite; when this water subsequently flows
-                through a water system the calcite precipitates out to form a very
-                hard scale on surfaces.
+                calcium carbonate and occurs naturally as an ingredient of
+                chalk, limestone and marble. Water passing over and permeating
+                through such rocks dissolves calcite; when this water
+                subsequently flows through a water system the calcite
+                precipitates out to form a very hard scale on surfaces.
               </p>
               <p>
                 When hard water is heated, or evaporation takes place, the
@@ -3982,7 +4380,9 @@
           <div class="lg:col-span-5" data-animate="fade-left">
             <div class="hw-reasons">
               <div class="hw-reasons-head">
-                <span aria-hidden="true"><i class="fas fa-circle-info"></i></span>
+                <span aria-hidden="true"
+                  ><i class="fas fa-circle-info"></i
+                ></span>
                 <h3>Why it matters</h3>
               </div>
 
@@ -3990,8 +4390,8 @@
                 <li class="hw-reason">
                   <span aria-hidden="true"><i class="fas fa-xmark"></i></span>
                   <p>
-                    Scale builds up inside pipes and fittings, shrinking the bore
-                    over time.
+                    Scale builds up inside pipes and fittings, shrinking the
+                    bore over time.
                   </p>
                 </li>
                 <li class="hw-reason">
@@ -4017,8 +4417,8 @@
                     ><i class="fas fa-shield-halved"></i
                   ></span>
                   <p>
-                    Once removed, scale keeps returning unless the water itself is
-                    treated.
+                    Once removed, scale keeps returning unless the water itself
+                    is treated.
                   </p>
                 </li>
               </ul>
@@ -4072,8 +4472,18 @@
                   <path d="M13 38v3M35 38v3" />
                   <circle cx="24" cy="26" r="6.5" />
                   <path d="M14.5 26h-2M35.5 26h-2" opacity=".5" />
-                  <path d="M24 26l4.8-4.4" stroke="var(--signal)" stroke-width="2" />
-                  <circle cx="24" cy="26" r="1.4" fill="var(--signal)" stroke="none" />
+                  <path
+                    d="M24 26l4.8-4.4"
+                    stroke="var(--signal)"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="24"
+                    cy="26"
+                    r="1.4"
+                    fill="var(--signal)"
+                    stroke="none"
+                  />
                   <path d="M17.5 33.5H14M34.5 33.5H31" opacity=".4" />
                 </svg>
               </div>
@@ -4120,11 +4530,16 @@
                     stroke-width="2.2"
                   />
                   <path d="M7 24h2.8M9 22.4l1.6 1.6-1.6 1.6" opacity=".55" />
-                  <path d="M41 24h-2.8M39 22.4l-1.6 1.6 1.6 1.6" opacity=".55" />
+                  <path
+                    d="M41 24h-2.8M39 22.4l-1.6 1.6 1.6 1.6"
+                    opacity=".55"
+                  />
                 </svg>
               </div>
               <h3>Expensive de-scaling</h3>
-              <p>It is very expensive to remove scale from pipes and boilers.</p>
+              <p>
+                It is very expensive to remove scale from pipes and boilers.
+              </p>
               <span class="hw-cost-signal">High removal cost</span>
             </article>
 
@@ -4153,7 +4568,11 @@
                 >
                   <path d="M24 16v3" />
                   <circle cx="24" cy="11" r="5" />
-                  <path d="M24 11l2.6-2.4" stroke="var(--signal)" stroke-width="2" />
+                  <path
+                    d="M24 11l2.6-2.4"
+                    stroke="var(--signal)"
+                    stroke-width="2"
+                  />
                   <path d="M15 19v18a9 5 0 0 0 18 0V19" />
                   <path d="M17.5 23h13" opacity=".35" />
                   <path
@@ -4162,8 +4581,15 @@
                     stroke-width="2.6"
                     stroke-linecap="round"
                   />
-                  <path d="M22.5 34.5l-2 3.5 3-1 1.5 3" stroke="var(--signal)" />
-                  <path d="M20 41.5v.4M28.5 40.5v.4" stroke="var(--signal)" stroke-width="2" />
+                  <path
+                    d="M22.5 34.5l-2 3.5 3-1 1.5 3"
+                    stroke="var(--signal)"
+                  />
+                  <path
+                    d="M20 41.5v.4M28.5 40.5v.4"
+                    stroke="var(--signal)"
+                    stroke-width="2"
+                  />
                 </svg>
               </div>
               <h3>Costly down-time</h3>
@@ -4205,8 +4631,20 @@
                     stroke="var(--signal)"
                     stroke-width="2"
                   />
-                  <circle cx="16.5" cy="24" r="1.2" fill="var(--signal)" stroke="none" />
-                  <circle cx="20.5" cy="24" r="1.2" fill="var(--signal)" stroke="none" />
+                  <circle
+                    cx="16.5"
+                    cy="24"
+                    r="1.2"
+                    fill="var(--signal)"
+                    stroke="none"
+                  />
+                  <circle
+                    cx="20.5"
+                    cy="24"
+                    r="1.2"
+                    fill="var(--signal)"
+                    stroke="none"
+                  />
                   <circle cx="24.5" cy="24" r="1.2" />
                   <circle cx="28.5" cy="24" r="1.2" />
                   <circle cx="32" cy="24" r="1.2" />
@@ -4248,14 +4686,43 @@
                 >
                   <path d="M4 20h12M4 24h12M4 28h12" />
                   <path d="M16 20h4M16 24h4M16 28h4" opacity=".45" />
-                  <path d="M20 20l2 2-2 2 2 2" stroke="var(--signal)" stroke-width="2" />
-                  <path d="M28 20l-2 2 2 2-2 2" stroke="var(--signal)" stroke-width="2" />
+                  <path
+                    d="M20 20l2 2-2 2 2 2"
+                    stroke="var(--signal)"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M28 20l-2 2 2 2-2 2"
+                    stroke="var(--signal)"
+                    stroke-width="2"
+                  />
                   <path d="M32 20h12M32 24h12M32 28h12" />
                   <path d="M32 20h-4M32 24h-4M32 28h-4" opacity=".45" />
-                  <path d="M24 19V10M20.5 21l-5-6M27.5 21l5-6" stroke="var(--signal)" stroke-width="2" />
-                  <path d="M20.5 27l-4 6M27.5 27l4 6" stroke="var(--signal)" stroke-width="2" opacity=".8" />
-                  <circle cx="15" cy="37" r="1.3" fill="var(--signal)" stroke="none" />
-                  <circle cx="33" cy="37" r="1.3" fill="var(--signal)" stroke="none" />
+                  <path
+                    d="M24 19V10M20.5 21l-5-6M27.5 21l5-6"
+                    stroke="var(--signal)"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M20.5 27l-4 6M27.5 27l4 6"
+                    stroke="var(--signal)"
+                    stroke-width="2"
+                    opacity=".8"
+                  />
+                  <circle
+                    cx="15"
+                    cy="37"
+                    r="1.3"
+                    fill="var(--signal)"
+                    stroke="none"
+                  />
+                  <circle
+                    cx="33"
+                    cy="37"
+                    r="1.3"
+                    fill="var(--signal)"
+                    stroke="none"
+                  />
                 </svg>
               </div>
               <h3>Premature failure</h3>
@@ -4340,7 +4807,7 @@
             Process of the Jaldoot
             <span class="gradient-text-blue">Water Conditioner</span>
           </h2>
-<div
+          <div
             class="mt-6 inline-flex items-center gap-2 px-5 py-2.5 hiw-banner rounded-full font-heading font-semibold"
           >
             <i class="fas fa-layer-group" aria-hidden="true"></i>
@@ -4367,8 +4834,8 @@
               </div>
               <h3 class="hiw-title">Electrolysis</h3>
               <p class="hiw-copy">
-                The process of induced ionization is taken to its ultimate stage of
-                cathode and anode, breaking down hard water mineral bonds and
+                The process of induced ionization is taken to its ultimate stage
+                of cathode and anode, breaking down hard water mineral bonds and
                 initiating the transformation of scale-causing minerals.
               </p>
 
@@ -4381,8 +4848,22 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
-                  <rect x="6" y="10" width="12" height="36" rx="3" opacity=".45" />
-                  <rect x="102" y="10" width="12" height="36" rx="3" opacity=".45" />
+                  <rect
+                    x="6"
+                    y="10"
+                    width="12"
+                    height="36"
+                    rx="3"
+                    opacity=".45"
+                  />
+                  <rect
+                    x="102"
+                    y="10"
+                    width="12"
+                    height="36"
+                    rx="3"
+                    opacity=".45"
+                  />
                   <path d="M26 46h68" opacity=".4" />
                   <path d="M26 42h68" class="hiw-dash" />
                   <path
@@ -4435,10 +4916,10 @@
                 Electronic Frequency with Permanent Magnet
               </h3>
               <p class="hiw-copy">
-                A frequency modulated (FM) waveform within the audio frequency (AF)
-                bandwidth, combined with a permanent magnet. It alters the crystalline
-                structure of hard water minerals, converting them into microscopic
-                2&ndash;4 micron crystals.
+                A frequency modulated (FM) waveform within the audio frequency
+                (AF) bandwidth, combined with a permanent magnet. It alters the
+                crystalline structure of hard water minerals, converting them
+                into microscopic 2&ndash;4 micron crystals.
               </p>
 
               <div class="hiw-visual" aria-hidden="true">
@@ -4452,7 +4933,10 @@
                 >
                   <path d="M36 6v12a14 14 0 0 0 28 0V6" opacity=".45" />
                   <path d="M32 6h8M60 6h8" opacity=".45" />
-                  <path d="M36 46a6 6 0 0 1 12 0M60 46a6 6 0 0 1 12 0" opacity=".35" />
+                  <path
+                    d="M36 46a6 6 0 0 1 12 0M60 46a6 6 0 0 1 12 0"
+                    opacity=".35"
+                  />
                   <path
                     d="M8 30c7 0 7-13 14-13s7 13 14 13 7-13 14-13 7 13 14 13 7-13 14-13 7 13 14 13"
                     class="hiw-wave"
@@ -4485,8 +4969,8 @@
               <h3 class="hiw-title">Electromagnetic</h3>
               <p class="hiw-copy">
                 The principles of magneto hydrodynamics (MHD) applied through a
-                patented signal passed through a coil wrapped around the pipe to be
-                treated, ensuring complete conditioning of the water.
+                patented signal passed through a coil wrapped around the pipe to
+                be treated, ensuring complete conditioning of the water.
               </p>
 
               <div class="hiw-visual" aria-hidden="true">
@@ -4506,7 +4990,14 @@
                     class="hiw-field"
                     opacity=".45"
                   />
-                  <rect x="6" y="26" width="108" height="12" rx="6" opacity=".45" />
+                  <rect
+                    x="6"
+                    y="26"
+                    width="108"
+                    height="12"
+                    rx="6"
+                    opacity=".45"
+                  />
                   <path d="M12 32h96" class="hiw-dash" />
                   <ellipse cx="20" cy="32" rx="4" ry="13" opacity=".6" />
                   <ellipse cx="36" cy="32" rx="4" ry="13" opacity=".6" />
@@ -4526,8 +5017,11 @@
       </div>
     </section>
 
-<!-- ===== SCALE REDUCTION ===== -->
-    <section id="scale-reduction" class="py-20 lg:py-28 relative overflow-hidden text-white scroll-mt-36">
+    <!-- ===== SCALE REDUCTION ===== -->
+    <section
+      id="scale-reduction"
+      class="py-20 lg:py-28 relative overflow-hidden text-white scroll-mt-36"
+    >
       <div
         class="absolute inset-0 opacity-10"
         style="
@@ -4555,7 +5049,8 @@
         <div class="text-center max-w-3xl mx-auto mb-16" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 border border-white/20 text-white text-sm font-heading font-medium"
-            ><i class="fas fa-layer-group" aria-hidden="true"></i> Scale reduction</span
+            ><i class="fas fa-layer-group" aria-hidden="true"></i> Scale
+            reduction</span
           >
           <h2
             class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-heading font-bold leading-tight"
@@ -4564,8 +5059,8 @@
             <span class="gradient-text-white">crystal shape</span>
           </h2>
           <p class="mt-5 text-white/70 leading-relaxed">
-            Rock-hard calcite is not removed by force &mdash; it is broken down at
-            particle level, so it can never build up again.
+            Rock-hard calcite is not removed by force &mdash; it is broken down
+            at particle level, so it can never build up again.
           </p>
         </div>
 
@@ -4591,7 +5086,11 @@
                     fill="rgba(249, 115, 22, 0.18)"
                     stroke-width="2"
                   />
-                  <path d="M110 42l4 106M72 166l52-18M98 150l38-34" opacity=".45" class="sr-crack" />
+                  <path
+                    d="M110 42l4 106M72 166l52-18M98 150l38-34"
+                    opacity=".45"
+                    class="sr-crack"
+                  />
                   <path
                     d="M64 66l-10-6M148 62l12-8M64 158l-12 4M152 172l10 6"
                     opacity=".6"
@@ -4606,52 +5105,132 @@
                   <ellipse cx="268" cy="118" rx="44" ry="22" opacity=".45" />
                 </g>
                 <g class="sr-core">
-                  <circle cx="268" cy="118" r="13" fill="rgba(125, 211, 252, 0.16)" stroke="#7dd3fc" stroke-width="2" />
-                  <path d="M270 108l-8 12h6l-2 10 10-13h-6z" fill="#7dd3fc" stroke="none" />
+                  <circle
+                    cx="268"
+                    cy="118"
+                    r="13"
+                    fill="rgba(125, 211, 252, 0.16)"
+                    stroke="#7dd3fc"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M270 108l-8 12h6l-2 10 10-13h-6z"
+                    fill="#7dd3fc"
+                    stroke="none"
+                  />
                 </g>
 
-                <path d="M322 118h212" stroke="#4db74a" class="sr-flow" opacity=".7" />
+                <path
+                  d="M322 118h212"
+                  stroke="#4db74a"
+                  class="sr-flow"
+                  opacity=".7"
+                />
                 <g stroke="#4db74a">
-                  <circle cx="352" cy="92" r="5" fill="rgba(77, 183, 74, 0.28)" class="sr-mote" />
-                  <circle cx="392" cy="140" r="4" fill="rgba(77, 183, 74, 0.28)" class="sr-mote" style="animation-delay: 0.9s" />
-                  <circle cx="432" cy="88" r="6" fill="rgba(77, 183, 74, 0.22)" class="sr-mote" style="animation-delay: 1.8s" />
-                  <circle cx="472" cy="146" r="4.5" fill="rgba(77, 183, 74, 0.28)" class="sr-mote" style="animation-delay: 2.7s" />
-                  <circle cx="512" cy="104" r="5" fill="rgba(77, 183, 74, 0.24)" class="sr-mote" style="animation-delay: 3.6s" />
-                  <circle cx="372" cy="168" r="3.5" fill="rgba(77, 183, 74, 0.3)" class="sr-mote" style="animation-delay: 4.4s" />
-                  <circle cx="452" cy="60" r="3.5" fill="rgba(77, 183, 74, 0.3)" class="sr-mote" style="animation-delay: 1.3s" />
-                  <circle cx="502" cy="182" r="3.5" fill="rgba(77, 183, 74, 0.3)" class="sr-mote" style="animation-delay: 3.1s" />
+                  <circle
+                    cx="352"
+                    cy="92"
+                    r="5"
+                    fill="rgba(77, 183, 74, 0.28)"
+                    class="sr-mote"
+                  />
+                  <circle
+                    cx="392"
+                    cy="140"
+                    r="4"
+                    fill="rgba(77, 183, 74, 0.28)"
+                    class="sr-mote"
+                    style="animation-delay: 0.9s"
+                  />
+                  <circle
+                    cx="432"
+                    cy="88"
+                    r="6"
+                    fill="rgba(77, 183, 74, 0.22)"
+                    class="sr-mote"
+                    style="animation-delay: 1.8s"
+                  />
+                  <circle
+                    cx="472"
+                    cy="146"
+                    r="4.5"
+                    fill="rgba(77, 183, 74, 0.28)"
+                    class="sr-mote"
+                    style="animation-delay: 2.7s"
+                  />
+                  <circle
+                    cx="512"
+                    cy="104"
+                    r="5"
+                    fill="rgba(77, 183, 74, 0.24)"
+                    class="sr-mote"
+                    style="animation-delay: 3.6s"
+                  />
+                  <circle
+                    cx="372"
+                    cy="168"
+                    r="3.5"
+                    fill="rgba(77, 183, 74, 0.3)"
+                    class="sr-mote"
+                    style="animation-delay: 4.4s"
+                  />
+                  <circle
+                    cx="452"
+                    cy="60"
+                    r="3.5"
+                    fill="rgba(77, 183, 74, 0.3)"
+                    class="sr-mote"
+                    style="animation-delay: 1.3s"
+                  />
+                  <circle
+                    cx="502"
+                    cy="182"
+                    r="3.5"
+                    fill="rgba(77, 183, 74, 0.3)"
+                    class="sr-mote"
+                    style="animation-delay: 3.1s"
+                  />
                 </g>
               </svg>
 
               <div class="sr-legend">
-                <span style="--dot: #f97316"><i aria-hidden="true"></i> Untreated calcite</span>
-                <span style="--dot: #7dd3fc"><i aria-hidden="true"></i> Signal field</span>
-                <span style="--dot: #4db74a"><i aria-hidden="true"></i> 2&ndash;4 micron crystals</span>
+                <span style="--dot: #f97316"
+                  ><i aria-hidden="true"></i> Untreated calcite</span
+                >
+                <span style="--dot: #7dd3fc"
+                  ><i aria-hidden="true"></i> Signal field</span
+                >
+                <span style="--dot: #4db74a"
+                  ><i aria-hidden="true"></i> 2&ndash;4 micron crystals</span
+                >
               </div>
             </div>
 
             <div class="sr-note">
               <p>
-                It is this changed size, modified charge and crystalline shape that
-                has the first two beneficial properties for the reduction of scale.
-                The <strong>2&ndash;4 micron sized crystals become non-sticky</strong>
-                and will not coagulate or precipitate and form scale in the same way
-                as untreated calcium carbonate nuclei would.
+                It is this changed size, modified charge and crystalline shape
+                that has the first two beneficial properties for the reduction
+                of scale. The
+                <strong
+                  >2&ndash;4 micron sized crystals become non-sticky</strong
+                >
+                and will not coagulate or precipitate and form scale in the same
+                way as untreated calcium carbonate nuclei would.
               </p>
               <p>
                 This process is so effective that the water has been found to
-                <strong>feel and behave like chemically softened water</strong>. The
-                presence of the large crystalline shapes disrupts the equilibrium
-                between the fluid and any existing scale. Smaller particles in
-                general dissolve more easily, so the larger particles will have
-                reduced the levels of calcite in solution.
+                <strong>feel and behave like chemically softened water</strong>.
+                The presence of the large crystalline shapes disrupts the
+                equilibrium between the fluid and any existing scale. Smaller
+                particles in general dissolve more easily, so the larger
+                particles will have reduced the levels of calcite in solution.
               </p>
               <p>
                 Hence, existing scale deposited by precipitation will
-                <strong>soften and gradually be absorbed into solution</strong> and
-                flow out of the system. In areas of still water, e.g. tanks etc., the
-                soft scale would settle to the bottom and could then be removed
-                simply by flushing.
+                <strong>soften and gradually be absorbed into solution</strong>
+                and flow out of the system. In areas of still water, e.g. tanks
+                etc., the soft scale would settle to the bottom and could then
+                be removed simply by flushing.
               </p>
             </div>
           </div>
@@ -4676,7 +5255,14 @@
                       opacity=".55"
                     />
                   </g>
-                  <circle cx="60" cy="60" r="46" fill="none" stroke="rgba(255, 255, 255, 0.14)" stroke-width="7" />
+                  <circle
+                    cx="60"
+                    cy="60"
+                    r="46"
+                    fill="none"
+                    stroke="rgba(255, 255, 255, 0.14)"
+                    stroke-width="7"
+                  />
                   <circle
                     class="sr-ring-bar"
                     cx="60"
@@ -4700,39 +5286,53 @@
               <p>
                 It has been established that the physiochemical process already
                 described is more efficient because the signal energy is
-                <strong>dynamically changing</strong>. By changing the signal field
-                at high audio frequencies, unique to Jaldoot, the energy imparted
-                to the nuclei is considerably accelerated.
+                <strong>dynamically changing</strong>. By changing the signal
+                field at high audio frequencies, unique to Jaldoot, the energy
+                imparted to the nuclei is considerably accelerated.
               </p>
               <p>
-                An important property of Jaldoot processed water is that the charged
-                crystalline shape growth will remain in that state for
-                <strong>up to 7 days</strong>. Thus in stored water systems the effect
-                is much longer lasting than other ionization methods, retarding the
-                reversion back to the smaller nuclei structures that are readily
-                precipitated.
+                An important property of Jaldoot processed water is that the
+                charged crystalline shape growth will remain in that state for
+                <strong>up to 7 days</strong>. Thus in stored water systems the
+                effect is much longer lasting than other ionization methods,
+                retarding the reversion back to the smaller nuclei structures
+                that are readily precipitated.
               </p>
             </div>
 
             <div class="mt-6">
               <div class="sr-mini" style="--tint: #f97316">
                 <span class="sr-mini-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <path d="M12 3l7 6-4 8-9 2-2-9z" />
                   </svg>
                 </span>
                 <div>
                   <h4>Shape you can see</h4>
                   <p>
-                    Angular calcite turns into rounded 2&ndash;4 micron crystals that
-                    no longer stick together.
+                    Angular calcite turns into rounded 2&ndash;4 micron crystals
+                    that no longer stick together.
                   </p>
                 </div>
               </div>
 
               <div class="sr-mini" style="--tint: #00adee">
                 <span class="sr-mini-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <path d="M3 8h18v8H3z" />
                     <path d="M7 8v3M11 8v5M15 8v3M19 8v5" opacity=".6" />
                   </svg>
@@ -4740,15 +5340,22 @@
                 <div>
                   <h4>Existing scale softens</h4>
                   <p>
-                    Deposits break equilibrium, dissolve and go back into solution
-                    instead of growing.
+                    Deposits break equilibrium, dissolve and go back into
+                    solution instead of growing.
                   </p>
                 </div>
               </div>
 
               <div class="sr-mini" style="--tint: #4db74a">
                 <span class="sr-mini-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
                     <path d="M12 3v11" />
                     <path d="M8 11l4 4 4-4" />
                     <path d="M4 19h16" />
@@ -4757,8 +5364,8 @@
                 <div>
                   <h4>Flushes out</h4>
                   <p>
-                    In tanks and still water the soft scale settles and is removed by
-                    a simple flush.
+                    In tanks and still water the soft scale settles and is
+                    removed by a simple flush.
                   </p>
                 </div>
               </div>
@@ -4776,15 +5383,16 @@
             </div>
 
             <p class="sr-foot">
-              Technical description reproduced from the Jaldoot company brochure.
+              Technical description reproduced from the Jaldoot company
+              brochure.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-<!-- ===== BENEFITS ===== -->
-    <section
+    <!-- ===== BENEFITS ===== -->
+    <!-- <section
       id="benefits"
       class="py-20 lg:py-28 bg-white scroll-mt-36 relative overflow-hidden"
     >
@@ -5140,7 +5748,7 @@
           </article>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- ===== RESULTS ===== -->
     <section
@@ -5160,8 +5768,8 @@
               What <span class="gradient-text-blue">changes</span>
             </h2>
             <p class="text-jd-gray mt-6 leading-relaxed">
-              Results described in the Jaldoot company brochure. Performance varies with
-              water chemistry, dosage and installation.
+              Results described in the Jaldoot company brochure. Performance
+              varies with water chemistry, dosage and installation.
             </p>
             <div class="flex flex-col sm:flex-row gap-3 mt-8">
               <a href="contact.html" class="btn-primary justify-center">
@@ -5180,10 +5788,7 @@
                   />
                 </svg>
               </a>
-              <a
-                href="#before-after"
-                class="btn-secondary justify-center"
-              >
+              <a href="#before-after" class="btn-secondary justify-center">
                 <span>See before / after</span>
               </a>
             </div>
@@ -5289,8 +5894,8 @@
                     </svg>
                   </span>
                   <span class="text-sm text-jd-gray"
-                    >Soaps, detergents and shampoos mix and lather better with softer
-                    water.</span
+                    >Soaps, detergents and shampoos mix and lather better with
+                    softer water.</span
                   >
                 </div>
                 <div class="feature-check">
@@ -5332,8 +5937,8 @@
                     </svg>
                   </span>
                   <span class="text-sm text-jd-gray"
-                    >Swimming pool water is clearer and softer, backwashing is reduced,
-                    and scum lines are more easily cleaned away.</span
+                    >Swimming pool water is clearer and softer, backwashing is
+                    reduced, and scum lines are more easily cleaned away.</span
                   >
                 </div>
                 <div class="feature-check">
@@ -5353,9 +5958,9 @@
                     </svg>
                   </span>
                   <span class="text-sm text-jd-gray"
-                    >Salt water chlorinators work more effectively &mdash; there is no
-                    scale build up, black spot disappears and chemical usage is
-                    reduced.</span
+                    >Salt water chlorinators work more effectively &mdash; there
+                    is no scale build up, black spot disappears and chemical
+                    usage is reduced.</span
                   >
                 </div>
                 <div class="feature-check">
@@ -5375,9 +5980,9 @@
                     </svg>
                   </span>
                   <span class="text-sm text-jd-gray"
-                    >Water with a lower surface tension is more easily absorbed into
-                    the ground, reducing surface crust and runoff and improving plant
-                    and crop health.</span
+                    >Water with a lower surface tension is more easily absorbed
+                    into the ground, reducing surface crust and runoff and
+                    improving plant and crop health.</span
                   >
                 </div>
                 <div class="feature-check">
@@ -5425,7 +6030,7 @@
           </div>
         </div>
 
-<!-- Hard water problems vs soft water benefits -->
+        <!-- Hard water problems vs soft water benefits -->
         <div class="ba-grid">
           <div class="ba-panel ba-before" data-animate="fade-up" data-delay="0">
             <div class="ba-photo">
@@ -5438,8 +6043,8 @@
             </div>
 
             <span class="ba-label">
-              <i class="fas fa-circle-exclamation" aria-hidden="true"></i> Before
-              &mdash; hard water
+              <i class="fas fa-circle-exclamation" aria-hidden="true"></i>
+              Before &mdash; hard water
             </span>
 
             <div class="ba-head">
@@ -5459,16 +6064,16 @@
                 <span class="ba-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                From fouling of cooling towers and clogging of water pipes to scaling
-                of coffee pots, dishwashers, drill heads, ice machines, heater
-                exchangers, washing machines and water heaters.
+                From fouling of cooling towers and clogging of water pipes to
+                scaling of coffee pots, dishwashers, drill heads, ice machines,
+                heater exchangers, washing machines and water heaters.
               </li>
               <li style="--i: 1">
                 <span class="ba-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Most companies just build the extra maintenance required to clean the
-                scale off into their schedules.
+                Most companies just build the extra maintenance required to
+                clean the scale off into their schedules.
               </li>
               <li style="--i: 2">
                 <span class="ba-mark" aria-hidden="true">
@@ -5483,7 +6088,11 @@
             <i class="fas fa-right-left"></i>
           </div>
 
-          <div class="ba-panel ba-after" data-animate="fade-up" data-delay="150">
+          <div
+            class="ba-panel ba-after"
+            data-animate="fade-up"
+            data-delay="150"
+          >
             <div class="ba-photo">
               <img
                 src="assets/hardsoft.png"
@@ -5494,8 +6103,8 @@
             </div>
 
             <span class="ba-label">
-              <i class="fas fa-circle-check" aria-hidden="true"></i> After &mdash;
-              with Jaldoot
+              <i class="fas fa-circle-check" aria-hidden="true"></i> After
+              &mdash; with Jaldoot
             </span>
 
             <div class="ba-head">
@@ -5521,8 +6130,8 @@
                 <span class="ba-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Prevents calcium carbonate scaling; over time existing scaling is
-                dissolved.
+                Prevents calcium carbonate scaling; over time existing scaling
+                is dissolved.
               </li>
               <li style="--i: 2">
                 <span class="ba-mark" aria-hidden="true">
@@ -5537,7 +6146,7 @@
       </div>
     </section>
 
-<!-- ===== BEFORE / AFTER ===== -->
+    <!-- ===== BEFORE / AFTER ===== -->
     <section
       id="before-after"
       class="py-20 lg:py-28 bg-white scroll-mt-36 relative overflow-hidden"
@@ -5555,11 +6164,12 @@
           <h2
             class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep leading-tight"
           >
-            See the <span class="gradient-text-blue">difference</span> Jaldoot makes
+            See the <span class="gradient-text-blue">difference</span> Jaldoot
+            makes
           </h2>
           <p class="text-jd-gray mt-6">
-            Hard scale that once blocked pipes and equipment is softened, dissolved
-            and flushed away.
+            Hard scale that once blocked pipes and equipment is softened,
+            dissolved and flushed away.
           </p>
           <span class="dv-hint">
             <i class="fas fa-arrows-left-right" aria-hidden="true"></i> Drag the
@@ -5601,7 +6211,8 @@
         <div class="dv-cards max-w-5xl mx-auto">
           <div class="ba-panel ba-before" data-animate="fade-up" data-delay="0">
             <span class="ba-label">
-              <i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Hard water
+              <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+              Hard water
             </span>
 
             <div class="ba-head">
@@ -5625,15 +6236,38 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                <rect x="8" y="18" width="204" height="52" rx="8" opacity=".45" />
-                <path d="M30 18v14M62 18v22M94 18v30M126 18v34M158 18v28M190 18v20" stroke-width="4" stroke="#dc2626" />
-                <path d="M30 70V56M62 70V48M94 70V40M126 70V36M158 70V42M190 70V50" stroke-width="4" stroke="#dc2626" />
-                <path d="M18 44h16M186 44h16" stroke="#dc2626" class="sr-dash" />
+                <rect
+                  x="8"
+                  y="18"
+                  width="204"
+                  height="52"
+                  rx="8"
+                  opacity=".45"
+                />
+                <path
+                  d="M30 18v14M62 18v22M94 18v30M126 18v34M158 18v28M190 18v20"
+                  stroke-width="4"
+                  stroke="#dc2626"
+                />
+                <path
+                  d="M30 70V56M62 70V48M94 70V40M126 70V36M158 70V42M190 70V50"
+                  stroke-width="4"
+                  stroke="#dc2626"
+                />
+                <path
+                  d="M18 44h16M186 44h16"
+                  stroke="#dc2626"
+                  class="sr-dash"
+                />
               </svg>
             </div>
           </div>
 
-          <div class="ba-panel ba-after" data-animate="fade-up" data-delay="150">
+          <div
+            class="ba-panel ba-after"
+            data-animate="fade-up"
+            data-delay="150"
+          >
             <span class="ba-label">
               <i class="fas fa-leaf" aria-hidden="true"></i> Jaldoot treated
             </span>
@@ -5646,8 +6280,8 @@
             </div>
 
             <p class="ba-sub">
-              Scale softened into 2&ndash;4 micron crystals that stay suspended and
-              wash away harmlessly.
+              Scale softened into 2&ndash;4 micron crystals that stay suspended
+              and wash away harmlessly.
             </p>
 
             <div class="dv-art" aria-hidden="true">
@@ -5659,13 +6293,54 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                <rect x="8" y="18" width="204" height="52" rx="8" opacity=".55" />
+                <rect
+                  x="8"
+                  y="18"
+                  width="204"
+                  height="52"
+                  rx="8"
+                  opacity=".55"
+                />
                 <path d="M18 44h184" stroke="#4db74a" class="sr-dash" />
-                <circle cx="40" cy="44" r="4" fill="rgba(77, 183, 74, 0.3)" class="hiw-rise" />
-                <circle cx="72" cy="44" r="3" fill="rgba(77, 183, 74, 0.3)" class="hiw-rise" style="animation-delay: 0.9s" />
-                <circle cx="104" cy="44" r="4.5" fill="rgba(77, 183, 74, 0.26)" class="hiw-rise" style="animation-delay: 1.8s" />
-                <circle cx="140" cy="44" r="3.4" fill="rgba(77, 183, 74, 0.3)" class="hiw-rise" style="animation-delay: 2.6s" />
-                <circle cx="176" cy="44" r="4" fill="rgba(77, 183, 74, 0.28)" class="hiw-rise" style="animation-delay: 3.3s" />
+                <circle
+                  cx="40"
+                  cy="44"
+                  r="4"
+                  fill="rgba(77, 183, 74, 0.3)"
+                  class="hiw-rise"
+                />
+                <circle
+                  cx="72"
+                  cy="44"
+                  r="3"
+                  fill="rgba(77, 183, 74, 0.3)"
+                  class="hiw-rise"
+                  style="animation-delay: 0.9s"
+                />
+                <circle
+                  cx="104"
+                  cy="44"
+                  r="4.5"
+                  fill="rgba(77, 183, 74, 0.26)"
+                  class="hiw-rise"
+                  style="animation-delay: 1.8s"
+                />
+                <circle
+                  cx="140"
+                  cy="44"
+                  r="3.4"
+                  fill="rgba(77, 183, 74, 0.3)"
+                  class="hiw-rise"
+                  style="animation-delay: 2.6s"
+                />
+                <circle
+                  cx="176"
+                  cy="44"
+                  r="4"
+                  fill="rgba(77, 183, 74, 0.28)"
+                  class="hiw-rise"
+                  style="animation-delay: 3.3s"
+                />
                 <path d="M196 34l12 10-12 10" stroke="#4db74a" />
               </svg>
             </div>
@@ -5678,7 +6353,10 @@
             <span>Less scale at 80&deg;C (brochure example)</span>
           </div>
 
-          <i class="fas fa-arrow-right dv-stat-arrow hidden sm:block" aria-hidden="true"></i>
+          <i
+            class="fas fa-arrow-right dv-stat-arrow hidden sm:block"
+            aria-hidden="true"
+          ></i>
 
           <div class="dv-stat dv-stat-green">
             <b data-count="7" data-suffix=" days">0</b>
@@ -5687,8 +6365,8 @@
         </div>
 
         <p class="dv-foot">
-          Comparison described in the Jaldoot company brochure. Results depend on water
-          chemistry, dosage and installation.
+          Comparison described in the Jaldoot company brochure. Results depend
+          on water chemistry, dosage and installation.
         </p>
       </div>
 
@@ -5812,9 +6490,7 @@
           </p>
         </div>
 
-        <div
-          class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-14"
-        >
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-14">
           <a
             href="#domestic"
             class="app-card card-hover relative shine-effect text-center"
@@ -5829,7 +6505,9 @@
                 decoding="async"
               />
             </div>
-            <div class="icon-badge icon-float bg-blue-50 text-jd-blue mx-auto mb-4">
+            <div
+              class="icon-badge icon-float bg-blue-50 text-jd-blue mx-auto mb-4"
+            >
               <i class="fas fa-home text-xl"></i>
             </div>
             <h3 class="text-base font-heading font-bold text-jd-deep mb-1">
@@ -5851,7 +6529,9 @@
                 decoding="async"
               />
             </div>
-            <div class="icon-badge icon-float bg-green-50 text-jd-green mx-auto mb-4">
+            <div
+              class="icon-badge icon-float bg-green-50 text-jd-green mx-auto mb-4"
+            >
               <i class="fas fa-seedling text-xl"></i>
             </div>
             <h3 class="text-base font-heading font-bold text-jd-deep mb-1">
@@ -5875,7 +6555,9 @@
                 decoding="async"
               />
             </div>
-            <div class="icon-badge icon-float bg-yellow-50 text-yellow-600 mx-auto mb-4">
+            <div
+              class="icon-badge icon-float bg-yellow-50 text-yellow-600 mx-auto mb-4"
+            >
               <i class="fas fa-egg text-xl"></i>
             </div>
             <h3 class="text-base font-heading font-bold text-jd-deep mb-1">
@@ -5897,7 +6579,9 @@
                 decoding="async"
               />
             </div>
-            <div class="icon-badge icon-float bg-purple-50 text-purple-600 mx-auto mb-4">
+            <div
+              class="icon-badge icon-float bg-purple-50 text-purple-600 mx-auto mb-4"
+            >
               <i class="fas fa-cow text-xl"></i>
             </div>
             <h3 class="text-base font-heading font-bold text-jd-deep mb-1">
@@ -5919,7 +6603,9 @@
                 decoding="async"
               />
             </div>
-            <div class="icon-badge icon-float bg-cyan-50 text-cyan-600 mx-auto mb-4">
+            <div
+              class="icon-badge icon-float bg-cyan-50 text-cyan-600 mx-auto mb-4"
+            >
               <i class="fas fa-water text-xl"></i>
             </div>
             <h3 class="text-base font-heading font-bold text-jd-deep mb-1">
@@ -5941,7 +6627,9 @@
                 decoding="async"
               />
             </div>
-            <div class="icon-badge icon-float bg-emerald-50 text-emerald-600 mx-auto mb-4">
+            <div
+              class="icon-badge icon-float bg-emerald-50 text-emerald-600 mx-auto mb-4"
+            >
               <i class="fas fa-fish text-xl"></i>
             </div>
             <h3 class="text-base font-heading font-bold text-jd-deep mb-1">
@@ -5963,7 +6651,9 @@
                 decoding="async"
               />
             </div>
-            <div class="icon-badge icon-float bg-sky-50 text-jd-sky mx-auto mb-4">
+            <div
+              class="icon-badge icon-float bg-sky-50 text-jd-sky mx-auto mb-4"
+            >
               <i class="fas fa-industry text-xl"></i>
             </div>
             <h3 class="text-base font-heading font-bold text-jd-deep mb-1">
@@ -5985,7 +6675,9 @@
                 decoding="async"
               />
             </div>
-            <div class="icon-badge icon-float bg-indigo-50 text-jd-deep mx-auto mb-4">
+            <div
+              class="icon-badge icon-float bg-indigo-50 text-jd-deep mx-auto mb-4"
+            >
               <i class="fas fa-filter text-xl"></i>
             </div>
             <h3 class="text-base font-heading font-bold text-jd-deep mb-1">
@@ -5997,7 +6689,7 @@
       </div>
     </section>
 
-<!-- ---------- 1. DOMESTIC ---------- -->
+    <!-- ---------- 1. DOMESTIC ---------- -->
     <section
       id="domestic"
       class="py-20 lg:py-28 bg-white scroll-mt-36 relative overflow-hidden border-t border-jd-sky/10"
@@ -6021,8 +6713,8 @@
             Domestic Applications
           </h2>
           <p class="text-jd-gray mt-4 leading-relaxed">
-            The same kitchen, bathroom and geyser — before and after the water is
-            conditioned with Jaldoot.
+            The same kitchen, bathroom and geyser — before and after the water
+            is conditioned with Jaldoot.
           </p>
         </div>
 
@@ -6048,8 +6740,8 @@
         <div class="dm-cols">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
             <h3 class="dm-title">
-              <i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Hard water
-              problems
+              <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+              Hard water problems
             </h3>
             <ul class="dm-list">
               <li style="--i: 0">
@@ -6113,8 +6805,8 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Heating elements, dishwashers and washing machines stay protected
-                against scale.
+                Heating elements, dishwashers and washing machines stay
+                protected against scale.
               </li>
               <li style="--i: 4">
                 <span class="dm-mark" aria-hidden="true">
@@ -6176,7 +6868,7 @@
       </div>
     </section>
 
-        <!-- ---------- 2. AGRICULTURE ---------- -->
+    <!-- ---------- 2. AGRICULTURE ---------- -->
     <section
       id="agriculture"
       class="py-20 lg:py-28 bg-white scroll-mt-36 relative overflow-hidden border-t border-jd-sky/10"
@@ -6193,10 +6885,15 @@
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-heading font-semibold uppercase tracking-wider"
             >Application 02</span
           >
-          <h2 class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight">
+          <h2
+            class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+          >
             Agriculture, Horticulture, Floriculture & Irrigation
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">Irrigating with hard water quietly costs yield — the water and the equipment both suffer.</p>
+          <p class="text-jd-gray mt-4 leading-relaxed">
+            Irrigating with hard water quietly costs yield — the water and the
+            equipment both suffer.
+          </p>
         </div>
 
         <figure class="dm-figure" data-animate="fade-up">
@@ -6221,14 +6918,16 @@
         <div class="dm-cols">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
             <h3 class="dm-title">
-              <i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Hard water problems
+              <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+              Hard water problems
             </h3>
             <ul class="dm-list">
               <li style="--i: 0">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Salt in hard water soils stops crops growing as well as they could.
+                Salt in hard water soils stops crops growing as well as they
+                could.
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
@@ -6246,14 +6945,16 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Salt, iron and other minerals crust over and damage plants and equipment.
+                Salt, iron and other minerals crust over and damage plants and
+                equipment.
               </li>
             </ul>
           </div>
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
             <h3 class="dm-title">
-              <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits with Jaldoot
+              <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits
+              with Jaldoot
             </h3>
             <ul class="dm-list">
               <li style="--i: 0">
@@ -6284,20 +6985,24 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Better water for mixing fertilizer, thanks to the built-in static mixer.
+                Better water for mixing fertilizer, thanks to the built-in
+                static mixer.
               </li>
               <li style="--i: 5">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Cut flowers last longer and the irrigation system runs at full capacity.
+                Cut flowers last longer and the irrigation system runs at full
+                capacity.
               </li>
             </ul>
           </div>
         </div>
 
         <div class="dm-areas" data-animate="fade-up" data-delay="200">
-          <h3 class="text-xs font-heading font-bold uppercase tracking-wider text-jd-deep mb-4">
+          <h3
+            class="text-xs font-heading font-bold uppercase tracking-wider text-jd-deep mb-4"
+          >
             Application areas
           </h3>
           <div class="flex flex-wrap gap-2">
@@ -6326,7 +7031,7 @@
       </div>
     </section>
 
-        <!-- ---------- 3. POULTRY ---------- -->
+    <!-- ---------- 3. POULTRY ---------- -->
     <section
       id="poultry"
       class="py-20 lg:py-28 bg-white scroll-mt-36 relative overflow-hidden border-t border-jd-sky/10"
@@ -6343,10 +7048,15 @@
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-heading font-semibold uppercase tracking-wider"
             >Application 03</span
           >
-          <h2 class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight">
+          <h2
+            class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+          >
             Poultry Farming
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">Every drinker, spray line and cooling pad in the shed depends on clean water.</p>
+          <p class="text-jd-gray mt-4 leading-relaxed">
+            Every drinker, spray line and cooling pad in the shed depends on
+            clean water.
+          </p>
         </div>
 
         <figure class="dm-figure" data-animate="fade-up">
@@ -6371,14 +7081,16 @@
         <div class="dm-cols">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
             <h3 class="dm-title">
-              <i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Hard water problems
+              <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+              Hard water problems
             </h3>
             <ul class="dm-list">
               <li style="--i: 0">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Scale builds up on nipple drinkers, drinker cones and spray lines.
+                Scale builds up on nipple drinkers, drinker cones and spray
+                lines.
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
@@ -6403,26 +7115,30 @@
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
             <h3 class="dm-title">
-              <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits with Jaldoot
+              <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits
+              with Jaldoot
             </h3>
             <ul class="dm-list">
               <li style="--i: 0">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Cleans nipples, drinkers, sprinklers and sprays by removing scale.
+                Cleans nipples, drinkers, sprinklers and sprays by removing
+                scale.
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Stops scale being deposited on drinking cones and cooling panels.
+                Stops scale being deposited on drinking cones and cooling
+                panels.
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Makes water-borne medicines more effective, so birds are better nourished.
+                Makes water-borne medicines more effective, so birds are better
+                nourished.
               </li>
               <li style="--i: 3">
                 <span class="dm-mark" aria-hidden="true">
@@ -6440,14 +7156,17 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Less chlorine effect, less infection — the cost is recovered through output.
+                Less chlorine effect, less infection — the cost is recovered
+                through output.
               </li>
             </ul>
           </div>
         </div>
 
         <div class="dm-areas" data-animate="fade-up" data-delay="200">
-          <h3 class="text-xs font-heading font-bold uppercase tracking-wider text-jd-deep mb-4">
+          <h3
+            class="text-xs font-heading font-bold uppercase tracking-wider text-jd-deep mb-4"
+          >
             Application areas
           </h3>
           <div class="flex flex-wrap gap-2">
@@ -6476,7 +7195,7 @@
       </div>
     </section>
 
-        <!-- ---------- 4. DAIRY ---------- -->
+    <!-- ---------- 4. DAIRY ---------- -->
     <section
       id="dairy"
       class="py-20 lg:py-28 bg-white scroll-mt-36 relative overflow-hidden border-t border-jd-sky/10"
@@ -6493,10 +7212,15 @@
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-heading font-semibold uppercase tracking-wider"
             >Application 04</span
           >
-          <h2 class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight">
+          <h2
+            class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+          >
             Dairy Farming
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">From the well to the parlour — conditioned water protects the herd and the equipment.</p>
+          <p class="text-jd-gray mt-4 leading-relaxed">
+            From the well to the parlour — conditioned water protects the herd
+            and the equipment.
+          </p>
         </div>
 
         <figure class="dm-figure" data-animate="fade-up">
@@ -6521,7 +7245,8 @@
         <div class="dm-cols">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
             <h3 class="dm-title">
-              <i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Hard water problems
+              <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+              Hard water problems
             </h3>
             <ul class="dm-list">
               <li style="--i: 0">
@@ -6553,20 +7278,23 @@
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
             <h3 class="dm-title">
-              <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits with Jaldoot
+              <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits
+              with Jaldoot
             </h3>
             <ul class="dm-list">
               <li style="--i: 0">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Treats the water from the well through to the barn, parlour and house.
+                Treats the water from the well through to the barn, parlour and
+                house.
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Improves the taste of water, especially with hydrogen sulfide or chlorine.
+                Improves the taste of water, especially with hydrogen sulfide or
+                chlorine.
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
@@ -6584,14 +7312,17 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Reduces overall dairy maintenance and improves profit and loss performance.
+                Reduces overall dairy maintenance and improves profit and loss
+                performance.
               </li>
             </ul>
           </div>
         </div>
 
         <div class="dm-areas" data-animate="fade-up" data-delay="200">
-          <h3 class="text-xs font-heading font-bold uppercase tracking-wider text-jd-deep mb-4">
+          <h3
+            class="text-xs font-heading font-bold uppercase tracking-wider text-jd-deep mb-4"
+          >
             Application areas
           </h3>
           <div class="flex flex-wrap gap-2">
@@ -6620,7 +7351,7 @@
       </div>
     </section>
 
-        <!-- ---------- 5. SWIMMING POOLS ---------- -->
+    <!-- ---------- 5. SWIMMING POOLS ---------- -->
     <section
       id="pools"
       class="py-20 lg:py-28 bg-white scroll-mt-36 relative overflow-hidden border-t border-jd-sky/10"
@@ -6637,10 +7368,15 @@
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-heading font-semibold uppercase tracking-wider"
             >Application 05</span
           >
-          <h2 class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight">
+          <h2
+            class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+          >
             Swimming Pools
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">Conditioned water cuts the chemical bill and keeps the waterline free of scale marks.</p>
+          <p class="text-jd-gray mt-4 leading-relaxed">
+            Conditioned water cuts the chemical bill and keeps the waterline
+            free of scale marks.
+          </p>
         </div>
 
         <figure class="dm-figure" data-animate="fade-up">
@@ -6665,7 +7401,8 @@
         <div class="dm-cols">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
             <h3 class="dm-title">
-              <i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Hard water problems
+              <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+              Hard water problems
             </h3>
             <ul class="dm-list">
               <li style="--i: 0">
@@ -6697,7 +7434,8 @@
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
             <h3 class="dm-title">
-              <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits with Jaldoot
+              <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits
+              with Jaldoot
             </h3>
             <ul class="dm-list">
               <li style="--i: 0">
@@ -6716,7 +7454,8 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Pipes, pumps, heating elements, filter and salt chlorinator run more efficiently.
+                Pipes, pumps, heating elements, filter and salt chlorinator run
+                more efficiently.
               </li>
               <li style="--i: 3">
                 <span class="dm-mark" aria-hidden="true">
@@ -6741,7 +7480,9 @@
         </div>
 
         <div class="dm-areas" data-animate="fade-up" data-delay="200">
-          <h3 class="text-xs font-heading font-bold uppercase tracking-wider text-jd-deep mb-4">
+          <h3
+            class="text-xs font-heading font-bold uppercase tracking-wider text-jd-deep mb-4"
+          >
             Application areas
           </h3>
           <div class="flex flex-wrap gap-2">
@@ -6770,7 +7511,7 @@
       </div>
     </section>
 
-        <!-- ---------- 6. GOLF COURSES & FISH PONDS ---------- -->
+    <!-- ---------- 6. GOLF COURSES & FISH PONDS ---------- -->
     <section
       id="golf"
       class="py-20 lg:py-28 bg-white scroll-mt-36 relative overflow-hidden border-t border-jd-sky/10"
@@ -6787,10 +7528,15 @@
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-heading font-semibold uppercase tracking-wider"
             >Application 06</span
           >
-          <h2 class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight">
+          <h2
+            class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+          >
             Golf Courses & Fish Ponds
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">Stable, clean water for the ponds and the irrigation that feeds the course.</p>
+          <p class="text-jd-gray mt-4 leading-relaxed">
+            Stable, clean water for the ponds and the irrigation that feeds the
+            course.
+          </p>
         </div>
 
         <figure class="dm-figure" data-animate="fade-up">
@@ -6815,7 +7561,8 @@
         <div class="dm-cols">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
             <h3 class="dm-title">
-              <i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Hard water problems
+              <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+              Hard water problems
             </h3>
             <ul class="dm-list">
               <li style="--i: 0">
@@ -6847,7 +7594,8 @@
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
             <h3 class="dm-title">
-              <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits with Jaldoot
+              <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits
+              with Jaldoot
             </h3>
             <ul class="dm-list">
               <li style="--i: 0">
@@ -6879,7 +7627,9 @@
         </div>
 
         <div class="dm-areas" data-animate="fade-up" data-delay="200">
-          <h3 class="text-xs font-heading font-bold uppercase tracking-wider text-jd-deep mb-4">
+          <h3
+            class="text-xs font-heading font-bold uppercase tracking-wider text-jd-deep mb-4"
+          >
             Application areas
           </h3>
           <div class="flex flex-wrap gap-2">
@@ -6908,7 +7658,7 @@
       </div>
     </section>
 
-        <!-- ---------- 7. COMMERCIAL & INDUSTRIAL ---------- -->
+    <!-- ---------- 7. COMMERCIAL & INDUSTRIAL ---------- -->
     <section
       id="commercial"
       class="py-20 lg:py-28 bg-white scroll-mt-36 relative overflow-hidden border-t border-jd-sky/10"
@@ -6925,10 +7675,15 @@
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-heading font-semibold uppercase tracking-wider"
             >Application 07</span
           >
-          <h2 class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight">
+          <h2
+            class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+          >
             Commercial & Industrial Applications
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">From a single hospital tap to a refinery line — every industry sees the same result.</p>
+          <p class="text-jd-gray mt-4 leading-relaxed">
+            From a single hospital tap to a refinery line — every industry sees
+            the same result.
+          </p>
         </div>
 
         <figure class="dm-figure" data-animate="fade-up">
@@ -6953,7 +7708,8 @@
         <div class="dm-cols">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
             <h3 class="dm-title">
-              <i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Hard water problems
+              <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+              Hard water problems
             </h3>
             <ul class="dm-list">
               <li style="--i: 0">
@@ -6966,7 +7722,8 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Shorter equipment life and more maintenance built into the schedule.
+                Shorter equipment life and more maintenance built into the
+                schedule.
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
@@ -6985,14 +7742,16 @@
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
             <h3 class="dm-title">
-              <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits with Jaldoot
+              <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits
+              with Jaldoot
             </h3>
             <ul class="dm-list">
               <li style="--i: 0">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Prevents calcium carbonate scaling; existing scaling dissolves over time.
+                Prevents calcium carbonate scaling; existing scaling dissolves
+                over time.
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
@@ -7018,7 +7777,7 @@
       </div>
     </section>
 
-<!-- ---------- 8. JVC FOR RO PLANT ---------- -->
+    <!-- ---------- 8. JVC FOR RO PLANT ---------- -->
     <section
       id="ro-plant"
       class="py-20 lg:py-28 relative overflow-hidden scroll-mt-36 border-t border-jd-sky/10"
@@ -7053,8 +7812,8 @@
             JVC for RO Plant
           </h2>
           <p class="text-jd-gray mt-4 leading-relaxed">
-            The Jaldoot unit conditions the water feeding the plant, so scaling never
-            reaches the membrane system or the rest of the line.
+            The Jaldoot unit conditions the water feeding the plant, so scaling
+            never reaches the membrane system or the rest of the line.
           </p>
         </div>
 
@@ -7076,9 +7835,27 @@
                 <path d="M250 118h70v-52" stroke="#4db74a" class="sr-dash" />
 
                 <g class="rp-unit">
-                  <rect x="80" y="86" width="70" height="64" rx="16" fill="rgba(0, 173, 238, 0.14)" />
-                  <path d="M115 98l-12 18h9l-3 18 15-21h-10z" fill="#00adee" stroke="none" />
-                  <rect x="96" y="140" width="38" height="10" rx="5" opacity=".5" />
+                  <rect
+                    x="80"
+                    y="86"
+                    width="70"
+                    height="64"
+                    rx="16"
+                    fill="rgba(0, 173, 238, 0.14)"
+                  />
+                  <path
+                    d="M115 98l-12 18h9l-3 18 15-21h-10z"
+                    fill="#00adee"
+                    stroke="none"
+                  />
+                  <rect
+                    x="96"
+                    y="140"
+                    width="38"
+                    height="10"
+                    rx="5"
+                    opacity=".5"
+                  />
                 </g>
                 <ellipse
                   class="rp-ring"
@@ -7092,29 +7869,97 @@
                 />
 
                 <g class="sr-dash">
-                  <rect x="230" y="88" width="100" height="60" rx="14" fill="rgba(255, 255, 255, 0.75)" />
-                  <path d="M246 98v40M262 98v40M278 98v40M294 98v40M310 98v40" opacity=".45" />
+                  <rect
+                    x="230"
+                    y="88"
+                    width="100"
+                    height="60"
+                    rx="14"
+                    fill="rgba(255, 255, 255, 0.75)"
+                  />
+                  <path
+                    d="M246 98v40M262 98v40M278 98v40M294 98v40M310 98v40"
+                    opacity=".45"
+                  />
                 </g>
-                <rect x="222" y="80" width="116" height="76" rx="18" opacity=".35" />
+                <rect
+                  x="222"
+                  y="80"
+                  width="116"
+                  height="76"
+                  rx="18"
+                  opacity=".35"
+                />
 
                 <g fill="#f97316" stroke="none">
                   <circle cx="40" cy="112" r="4" class="rp-flow" />
-                  <circle cx="60" cy="126" r="3" class="rp-flow" style="animation-delay: 1.1s" />
-                  <circle cx="52" cy="104" r="2.5" class="rp-flow" style="animation-delay: 2.2s" />
+                  <circle
+                    cx="60"
+                    cy="126"
+                    r="3"
+                    class="rp-flow"
+                    style="animation-delay: 1.1s"
+                  />
+                  <circle
+                    cx="52"
+                    cy="104"
+                    r="2.5"
+                    class="rp-flow"
+                    style="animation-delay: 2.2s"
+                  />
                 </g>
                 <g fill="#4db74a" stroke="none">
-                  <circle cx="210" cy="112" r="3.5" class="rp-flow" style="animation-delay: 0.6s" />
-                  <circle cx="230" cy="126" r="2.5" class="rp-flow" style="animation-delay: 1.7s" />
-                  <circle cx="220" cy="102" r="2" class="rp-flow" style="animation-delay: 2.8s" />
+                  <circle
+                    cx="210"
+                    cy="112"
+                    r="3.5"
+                    class="rp-flow"
+                    style="animation-delay: 0.6s"
+                  />
+                  <circle
+                    cx="230"
+                    cy="126"
+                    r="2.5"
+                    class="rp-flow"
+                    style="animation-delay: 1.7s"
+                  />
+                  <circle
+                    cx="220"
+                    cy="102"
+                    r="2"
+                    class="rp-flow"
+                    style="animation-delay: 2.8s"
+                  />
                 </g>
 
-                <text x="250" y="196" fill="#4db74a" stroke="none" font-size="13" font-family="Outfit, sans-serif">
+                <text
+                  x="250"
+                  y="196"
+                  fill="#4db74a"
+                  stroke="none"
+                  font-size="13"
+                  font-family="Outfit, sans-serif"
+                >
                   permeate
                 </text>
-                <text x="310" y="92" fill="#0066b3" stroke="none" font-size="13" font-family="Outfit, sans-serif">
+                <text
+                  x="310"
+                  y="92"
+                  fill="#0066b3"
+                  stroke="none"
+                  font-size="13"
+                  font-family="Outfit, sans-serif"
+                >
                   feed
                 </text>
-                <text x="96" y="176" fill="#0066b3" stroke="none" font-size="13" font-family="Outfit, sans-serif">
+                <text
+                  x="96"
+                  y="176"
+                  fill="#0066b3"
+                  stroke="none"
+                  font-size="13"
+                  font-family="Outfit, sans-serif"
+                >
                   JVC unit
                 </text>
               </svg>
@@ -7137,8 +7982,8 @@
                     />
                   </svg>
                 </span>
-                Helps prevent the calcium carbonate scaling that restricts reverse
-                osmosis membranes.
+                Helps prevent the calcium carbonate scaling that restricts
+                reverse osmosis membranes.
               </li>
               <li>
                 <span class="check-icon" aria-hidden="true">
@@ -7156,8 +8001,8 @@
                     />
                   </svg>
                 </span>
-                Keeps pumps, high-pressure lines and fittings running without lime
-                build-up.
+                Keeps pumps, high-pressure lines and fittings running without
+                lime build-up.
               </li>
               <li>
                 <span class="check-icon" aria-hidden="true">
@@ -7193,8 +8038,8 @@
                     />
                   </svg>
                 </span>
-                Applies to CPVC, RPVC, UPVC, HDPE, copper, brass, SS 304 and SS 316
-                lines.
+                Applies to CPVC, RPVC, UPVC, HDPE, copper, brass, SS 304 and SS
+                316 lines.
               </li>
             </ul>
           </div>
@@ -7208,15 +8053,16 @@
                 <div
                   class="w-16 h-16 rounded-2xl flex items-center justify-center shrink-0"
                   style="
-                    background: linear-gradient(
-                      145deg,
-                      #00adee,
-                      #0066b3
-                    );
+                    background: linear-gradient(145deg, #00adee, #0066b3);
                     box-shadow: 0 14px 28px -14px rgba(0, 102, 179, 0.9);
                   "
                 >
-                  <svg width="32" height="32" viewBox="0 0 40 40" aria-hidden="true">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 40 40"
+                    aria-hidden="true"
+                  >
                     <path
                       d="M20 4 C20 4 8 18 8 26 C8 33 13 38 20 38 C27 38 32 33 32 26 C32 18 20 4 20 4Z"
                       fill="white"
@@ -7273,318 +8119,6 @@
       </div>
     </section>
 
-<!-- ===== SOLAR PRODUCTS ===== -->
-    <section
-      id="solar-products"
-      class="py-20 lg:py-28 scroll-mt-36 border-t border-jd-sky/10 relative overflow-hidden"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-14" data-animate="fade-up">
-          <span
-            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-green/10 text-jd-green text-sm font-heading font-semibold"
-          >
-            <i class="fas fa-seedling" aria-hidden="true"></i> Say no to chemical
-            farming. Go organic!
-          </span>
-          <h2
-            class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep leading-tight"
-          >
-            <span class="gradient-text-green">Solar Products</span>
-          </h2>
-          <p class="text-jd-gray mt-5 leading-relaxed">
-            The Jaldoot solar range runs alongside the water conditioners — the
-            <strong class="text-jd-deep">Solar Insect Killer</strong>, the
-            <strong class="text-jd-deep">Solar Insect Trap</strong> and the
-            <strong class="text-jd-deep">BuzzZap Solar Trap</strong>.
-          </p>
-        </div>
-
-        <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 items-start">
-          <div data-animate="fade-right">
-            <div class="sp-stage">
-              <svg
-                viewBox="0 0 420 240"
-                fill="none"
-                stroke="#0066b3"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <path d="M0 196h420" opacity=".35" />
-                <path d="M20 196c40-14 80 8 120-4s80-10 120 2 80 6 140-6" opacity=".3" />
-
-                <g class="sp-rays" stroke="#f59e0b">
-                  <circle cx="70" cy="118" r="20" fill="rgba(245, 158, 11, 0.22)" />
-                  <path d="M70 84v-10M70 162v10M36 118h-10M114 118h10M46 94l-7-7M101 149l7 7M94 94l7-7M39 149l-7 7" opacity=".7" />
-                </g>
-
-                <path d="M250 196V78" />
-                <rect x="226" y="62" width="48" height="16" rx="5" fill="rgba(0, 173, 238, 0.25)" />
-                <path d="M222 70l56 34M278 70l-56 34" opacity=".45" />
-                <rect x="232" y="42" width="36" height="20" rx="7" fill="rgba(255, 214, 102, 0.35)" />
-                <path
-                  class="sp-beam"
-                  d="M234 56l-96 132h180L270 56z"
-                  fill="rgba(255, 214, 102, 0.22)"
-                  stroke="none"
-                />
-                <path d="M250 196l-24 10M250 196l24 10" opacity=".5" />
-
-                <g class="sp-fly" stroke="#4db74a" fill="#4db74a">
-                  <circle cx="404" cy="150" r="3.5" stroke="none" />
-                  <path d="M400 146l-5-3M400 150l-6 1" />
-                </g>
-                <g class="sp-fly" stroke="#0ea5e9" fill="#0ea5e9" style="animation-delay: 1.6s">
-                  <circle cx="404" cy="182" r="3" stroke="none" />
-                  <path d="M400 178l-5-3M400 182l-6 1" />
-                </g>
-                <g class="sp-fly" stroke="#7c3aed" fill="#7c3aed" style="animation-delay: 3.2s">
-                  <circle cx="404" cy="128" r="2.6" stroke="none" />
-                  <path d="M401 124l-4-3M401 128l-5 1" />
-                </g>
-
-                <g class="sp-zap" stroke="#f97316">
-                  <path d="M262 186h60l-6 34h-48z" fill="rgba(249, 115, 22, 0.14)" />
-                  <path d="M270 196v16M284 196v16M298 196v16M312 196v16" opacity=".6" />
-                  <path d="M286 168l-8 12h7l-3 10 12-14h-7z" fill="#f97316" stroke="none" />
-                </g>
-
-              </svg>
-            </div>
-
-            <div class="dm-caption">
-              <span style="--dot: #f59e0b">
-                <i aria-hidden="true"></i> Day &mdash; the panel charges
-              </span>
-              <span style="--dot: #4db74a">
-                <i aria-hidden="true"></i> Night &mdash; the lamp draws insects in
-              </span>
-            </div>
-
-            <h3
-              class="text-xs font-heading font-bold uppercase tracking-wider text-jd-deep mt-10 mb-4"
-            >
-              Product highlights
-            </h3>
-            <div class="sp-chips">
-              <div class="sp-chip">
-                <span><i class="fas fa-leaf" aria-hidden="true"></i></span>100%
-                eco-friendly
-              </div>
-              <div class="sp-chip">
-                <span><i class="fas fa-sun" aria-hidden="true"></i></span>Solar powered
-              </div>
-              <div class="sp-chip">
-                <span><i class="fas fa-flask" aria-hidden="true"></i></span>No chemicals
-              </div>
-              <div class="sp-chip">
-                <span><i class="fas fa-ban" aria-hidden="true"></i></span>No pesticides
-              </div>
-              <div class="sp-chip">
-                <span><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i></span>Easy
-                installation
-              </div>
-              <div class="sp-chip">
-                <span><i class="fas fa-shield-halved" aria-hidden="true"></i></span>No
-                maintenance
-              </div>
-              <div class="sp-chip">
-                <span><i class="fas fa-arrow-trend-up" aria-hidden="true"></i></span>Excellent
-                returns
-              </div>
-            </div>
-
-          </div>
-
-          <div data-animate="fade-left">
-            <div class="grid sm:grid-cols-2 gap-6">
-              <article
-                class="sp-card"
-                style="--tint: #f59e0b; --badge-delay: 0s"
-                data-animate="fade-up"
-                data-delay="0"
-              >
-                <div class="sp-card-top">
-                  <div class="sp-icon">
-                    <i class="fas fa-sun" aria-hidden="true"></i>
-                  </div>
-                  <h3>Solar Insect Killer</h3>
-                </div>
-
-                <div class="sp-specs">
-                  <span>
-                    <i class="fas fa-expand" aria-hidden="true"></i> Up to 2.5 acres
-                  </span>
-                  <span>
-                    <i class="fas fa-moon" aria-hidden="true"></i> 4 hours after
-                    sunset
-                  </span>
-                </div>
-
-                <ul class="sp-list">
-                  <li style="--i: 0">
-                    <span class="check-icon" aria-hidden="true">
-                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="3"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </span>
-                    Fully automatic, no external power required.
-                  </li>
-                  <li style="--i: 1">
-                    <span class="check-icon" aria-hidden="true">
-                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="3"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </span>
-                    Captures and kills all positively phototropic flying insects.
-                  </li>
-                  <li style="--i: 2">
-                    <span class="check-icon" aria-hidden="true">
-                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="3"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </span>
-                    Works for 4 hours after sunset, killing a majority of enemy
-                    insects.
-                  </li>
-                  <li style="--i: 3">
-                    <span class="check-icon" aria-hidden="true">
-                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="3"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </span>
-                    Installed with positive results in almost all vegetables and
-                    fruits.
-                  </li>
-                </ul>
-              </article>
-
-              <article
-                class="sp-card"
-                style="--tint: #4db74a; --badge-delay: 1.4s"
-                data-animate="fade-up"
-                data-delay="100"
-              >
-                <div class="sp-card-top">
-                  <div class="sp-icon">
-                    <i class="fas fa-bug" aria-hidden="true"></i>
-                  </div>
-                  <h3>Solar Insect Trap</h3>
-                </div>
-
-                <div class="sp-specs">
-                  <span>
-                    <i class="fas fa-expand" aria-hidden="true"></i> Up to 0.5 acres
-                  </span>
-                  <span>
-                    <i class="fas fa-moon" aria-hidden="true"></i> 3 hours after
-                    sunset
-                  </span>
-                </div>
-
-                <ul class="sp-list">
-                  <li style="--i: 0">
-                    <span class="check-icon" aria-hidden="true">
-                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="3"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </span>
-                    Fully automatic, no external power required.
-                  </li>
-                  <li style="--i: 1">
-                    <span class="check-icon" aria-hidden="true">
-                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="3"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </span>
-                    Captures and kills all positively phototropic flying insects.
-                  </li>
-                  <li style="--i: 2">
-                    <span class="check-icon" aria-hidden="true">
-                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="3"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </span>
-                    Works for 3 hours after sunset, killing a majority of enemy
-                    insects.
-                  </li>
-                  <li style="--i: 3">
-                    <span class="check-icon" aria-hidden="true">
-                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="3"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                    </span>
-                    Best in the class product.
-                  </li>
-                </ul>
-              </article>
-            </div>
-
-            <div class="sp-savings mt-8">
-              <h3>Savings claimed in the brochure</h3>
-              <div class="sp-saves">
-                <div>
-                  <b data-count="50" data-suffix="%">0</b>
-                  <span>Savings in manpower</span>
-                </div>
-                <div>
-                  <b data-count="50" data-suffix="%">0</b>
-                  <span>Cost saving in pesticides &amp; insecticides</span>
-                </div>
-              </div>
-            </div>
-
-            <p class="sp-note">
-              Coverage and effectiveness figures are company claims reproduced from the
-              Jaldoot company brochure.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ---------- BUZZZAP SOLAR TRAP ---------- -->
     <section
       id="buzzzap"
@@ -7625,23 +8159,20 @@
             BuzzZap <span class="gradient-text-white">Solar Trap</span>
           </h2>
           <p class="text-white/80 leading-relaxed mt-6">
-            The most popular theories hold that positively phototactic insects are
-            drawn to lights because they act like a navigational guide. Many insects
-            find their way by keeping a natural light source, such as the sun or the
-            moon, at a constant angle. Using the same principle, a UV light with a
-            frequency that attracts more than 1800 different flying insects was
-            designed. The insects tend to cross the electric wire mesh around the UV
-            light and get electrocuted. With the use of a solar PV panel to charge the
-            battery, a high tech electronic high voltage circuit is used for the
-            functioning of the system.
+            The most popular theories hold that positively phototactic insects
+            are drawn to lights because they act like a navigational guide. Many
+            insects find their way by keeping a natural light source, such as
+            the sun or the moon, at a constant angle. Using the same principle,
+            a UV light with a frequency that attracts more than 1800 different
+            flying insects was designed. The insects tend to cross the electric
+            wire mesh around the UV light and get electrocuted. With the use of
+            a solar PV panel to charge the battery, a high tech electronic high
+            voltage circuit is used for the functioning of the system.
           </p>
         </div>
 
         <!-- Product composition -->
-        <h3
-          class="text-xl font-heading font-bold mt-14"
-          data-animate="fade-up"
-        >
+        <h3 class="text-xl font-heading font-bold mt-14" data-animate="fade-up">
           Product composition
         </h3>
         <div
@@ -7658,27 +8189,33 @@
             </thead>
             <tbody>
               <tr>
-                <th scope="row" class="font-semibold text-jd-deep text-left">1.</th>
+                <th scope="row" class="font-semibold text-jd-deep text-left">
+                  1.
+                </th>
                 <td>Operation method</td>
                 <td>DC generated by solar panel</td>
               </tr>
               <tr>
-                <th scope="row" class="font-semibold text-jd-deep text-left">2.</th>
+                <th scope="row" class="font-semibold text-jd-deep text-left">
+                  2.
+                </th>
                 <td>Trapping system</td>
-                <td>
-                  Light trap requirement attachment &middot; trapping net
-                </td>
+                <td>Light trap requirement attachment &middot; trapping net</td>
               </tr>
               <tr>
-                <th scope="row" class="font-semibold text-jd-deep text-left">3.</th>
+                <th scope="row" class="font-semibold text-jd-deep text-left">
+                  3.
+                </th>
                 <td>Capacity of solar panel</td>
                 <td>
-                  18 W high efficiency poly crystalline solar cells &middot; 350 mm
-                  &times; 395 mm &middot; cloudy: 40% charge
+                  18 W high efficiency poly crystalline solar cells &middot; 350
+                  mm &times; 395 mm &middot; cloudy: 40% charge
                 </td>
               </tr>
               <tr>
-                <th scope="row" class="font-semibold text-jd-deep text-left">4.</th>
+                <th scope="row" class="font-semibold text-jd-deep text-left">
+                  4.
+                </th>
                 <td>Lamp</td>
                 <td>
                   Fluorescent lamp (blue &amp; purple light colour) &middot; 6 W
@@ -7686,57 +8223,80 @@
                 </td>
               </tr>
               <tr>
-                <th scope="row" class="font-semibold text-jd-deep text-left">5.</th>
+                <th scope="row" class="font-semibold text-jd-deep text-left">
+                  5.
+                </th>
                 <td>Electric consumption / hour</td>
                 <td>Rated consumption 15 W &middot; standby consumption 7 W</td>
               </tr>
               <tr>
-                <th scope="row" class="font-semibold text-jd-deep text-left">6.</th>
+                <th scope="row" class="font-semibold text-jd-deep text-left">
+                  6.
+                </th>
                 <td>Controller &amp; battery protection</td>
                 <td>
                   Battery over charge protection &middot; battery deep discharge
-                  protection &middot; low battery protection &middot; rain protection
+                  protection &middot; low battery protection &middot; rain
+                  protection
                 </td>
               </tr>
               <tr>
-                <th scope="row" class="font-semibold text-jd-deep text-left">7.</th>
+                <th scope="row" class="font-semibold text-jd-deep text-left">
+                  7.
+                </th>
                 <td>Battery</td>
                 <td>7.2 Ah 12 V SMF &middot; battery 1 year warranty</td>
               </tr>
               <tr>
-                <th scope="row" class="font-semibold text-jd-deep text-left">8.</th>
+                <th scope="row" class="font-semibold text-jd-deep text-left">
+                  8.
+                </th>
                 <td>Weight &amp; package</td>
                 <td>
-                  Weight (net): 15 kg &middot; box packing for easy delivery &middot;
-                  easy assembly by user at the field
+                  Weight (net): 15 kg &middot; box packing for easy delivery
+                  &middot; easy assembly by user at the field
                 </td>
               </tr>
               <tr>
-                <th scope="row" class="font-semibold text-jd-deep text-left">9.</th>
+                <th scope="row" class="font-semibold text-jd-deep text-left">
+                  9.
+                </th>
                 <td>Assembly &amp; keeping</td>
                 <td>Easy moving, disassembly, keeping, etc.</td>
               </tr>
               <tr>
-                <th scope="row" class="font-semibold text-jd-deep text-left">10.</th>
+                <th scope="row" class="font-semibold text-jd-deep text-left">
+                  10.
+                </th>
                 <td>Working time</td>
                 <td>After sunset 3 to 4 hours, 365 days / per year</td>
               </tr>
               <tr>
-                <th scope="row" class="font-semibold text-jd-deep text-left">11.</th>
+                <th scope="row" class="font-semibold text-jd-deep text-left">
+                  11.
+                </th>
                 <td>Design</td>
                 <td>Specially designed for Indian climate conditions</td>
               </tr>
               <tr>
-                <th scope="row" class="font-semibold text-jd-deep text-left">12.</th>
+                <th scope="row" class="font-semibold text-jd-deep text-left">
+                  12.
+                </th>
                 <td>Life &amp; service</td>
-                <td>10 years with proper care &middot; easily available service</td>
+                <td>
+                  10 years with proper care &middot; easily available service
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <div class="grid lg:grid-cols-3 gap-6 mt-14">
-          <div class="glass-card-dark card-hover relative p-6" data-animate="fade-up" data-delay="0">
+          <div
+            class="glass-card-dark card-hover relative p-6"
+            data-animate="fade-up"
+            data-delay="0"
+          >
             <h3 class="font-heading font-bold text-lg mb-4">
               Multifunction software
             </h3>
@@ -7792,7 +8352,9 @@
                   />
                 </svg>
               </span>
-              <span class="text-white/80 text-sm">Battery over charging protection</span>
+              <span class="text-white/80 text-sm"
+                >Battery over charging protection</span
+              >
             </div>
             <div class="flex items-start gap-3 mt-2">
               <span class="check-icon mt-0.5">
@@ -7819,22 +8381,25 @@
             data-animate="fade-up"
             data-delay="100"
           >
-            <h3 class="font-heading font-bold text-lg mb-4">Easy installation</h3>
+            <h3 class="font-heading font-bold text-lg mb-4">
+              Easy installation
+            </h3>
             <ol class="space-y-2.5 text-sm text-white/80">
               <li>
-                <span class="font-semibold text-white">1.</span> Push the pipe in the
-                ground, 1 foot below.
+                <span class="font-semibold text-white">1.</span> Push the pipe
+                in the ground, 1 foot below.
               </li>
               <li>
-                <span class="font-semibold text-white">2.</span> Place the main box on
-                the pipe.
+                <span class="font-semibold text-white">2.</span> Place the main
+                box on the pipe.
               </li>
               <li>
-                <span class="font-semibold text-white">3.</span> Adjust the height.
+                <span class="font-semibold text-white">3.</span> Adjust the
+                height.
               </li>
               <li>
-                <span class="font-semibold text-white">4.</span> Push the start button
-                and forget it.
+                <span class="font-semibold text-white">4.</span> Push the start
+                button and forget it.
               </li>
             </ol>
           </div>
@@ -7846,18 +8411,16 @@
           >
             <h3 class="font-heading font-bold text-lg mb-4">Working</h3>
             <p class="text-sm text-white/80 leading-relaxed">
-              A UV light with a frequency that attracts more than 1800 different flying
-              insects. The insects tend to cross the electric wire mesh around the UV
-              light and get electrocuted. A high tech electronic high voltage circuit
-              powers the system, charged by a solar PV panel.
+              A UV light with a frequency that attracts more than 1800 different
+              flying insects. The insects tend to cross the electric wire mesh
+              around the UV light and get electrocuted. A high tech electronic
+              high voltage circuit powers the system, charged by a solar PV
+              panel.
             </p>
           </div>
         </div>
 
-        <div
-          class="mt-10 rounded-2xl bg-white/10 p-6"
-          data-animate="fade-up"
-        >
+        <div class="mt-10 rounded-2xl bg-white/10 p-6" data-animate="fade-up">
           <h3 class="font-heading font-bold text-lg mb-4">
             Company claims from the brochure
           </h3>
@@ -7920,9 +8483,9 @@
                 </svg>
               </span>
               <span class="text-white/80 text-sm"
-                >Successful installations in different parts of India in different
-                vegetable and fruit gardens, tea estates, poultry farms etc. with great
-                results.</span
+                >Successful installations in different parts of India in
+                different vegetable and fruit gardens, tea estates, poultry
+                farms etc. with great results.</span
               >
             </div>
             <div class="flex items-start gap-3">
@@ -7942,8 +8505,8 @@
                 </svg>
               </span>
               <span class="text-white/80 text-sm"
-                >The company exports BuzzZap to many countries like France, Philippines,
-                Maldives etc.</span
+                >The company exports BuzzZap to many countries like France,
+                Philippines, Maldives etc.</span
               >
             </div>
             <div class="flex items-start gap-3 sm:col-span-2">
@@ -7963,14 +8526,14 @@
                 </svg>
               </span>
               <span class="text-white/80 text-sm"
-                >The company is able to demonstrate a reduction in the use of chemical
-                spray to more than 50%.</span
+                >The company is able to demonstrate a reduction in the use of
+                chemical spray to more than 50%.</span
               >
             </div>
           </div>
           <p class="text-xs text-white/60 mt-5">
-            These are company statements reproduced verbatim from the Jaldoot brochure
-            and are not independently verified.
+            These are company statements reproduced verbatim from the Jaldoot
+            brochure and are not independently verified.
           </p>
         </div>
 
@@ -7996,7 +8559,7 @@
 
     <!-- ===== CTA ===== -->
     <section class="cta-band py-16 lg:py-20 relative overflow-hidden">
-<div class="absolute inset-0 cta-band-bg"></div>
+      <div class="absolute inset-0 cta-band-bg"></div>
       <div class="absolute inset-0 opacity-70">
         <div
           class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"
@@ -8008,7 +8571,11 @@
       <div
         class="absolute inset-0 opacity-[0.07]"
         style="
-          background-image: radial-gradient(circle, #134fa1 1px, transparent 1px);
+          background-image: radial-gradient(
+            circle,
+            #134fa1 1px,
+            transparent 1px
+          );
           background-size: 40px 40px;
         "
       ></div>
@@ -8016,44 +8583,48 @@
         class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center"
       >
         <div class="text-center lg:text-left" data-animate="fade-up">
-        <div
-          class="w-12 h-12 mx-auto lg:mx-0 bg-white/75 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-jd-sky/25 float-y"
-        >
-          <i class="fas fa-paper-plane text-2xl text-jd-blue"></i>
-        </div>
-        <span
-          class="inline-block px-4 py-1.5 rounded-full bg-white/70 border border-jd-blue/20 text-jd-deep text-sm font-heading font-semibold mb-5"
-          >Hardness to happiness</span
-        >
-        <h2
-          class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-jd-dark mb-4"
-        >
-          Crystal Clear
-          <span class="gradient-text-blue">Naturally Water</span>
-        </h2>
-        <p class="text-jd-deep/80 text-sm lg:text-base mb-7 max-w-xl mx-auto lg:mx-0">
-          Tell us about your line &mdash; pipe material, diameter and flow &mdash; and
-          we will suggest the right Jaldoot unit.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-          <a
-            href="contact.html"
-            class="group inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 bg-white text-jd-deep rounded-full font-heading font-bold text-base shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+          <div
+            class="w-12 h-12 mx-auto lg:mx-0 bg-white/75 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-jd-sky/25 float-y"
           >
-            <i class="fas fa-paper-plane"></i>
-            Request a quote
-            <i
-              class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"
-            ></i>
-          </a>
-          <a
-            href="tel:9822209656"
-            class="inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 bg-jd-green text-white rounded-full font-heading font-bold text-base shadow-lg shadow-jd-green/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            <i class="fas fa-paper-plane text-2xl text-jd-blue"></i>
+          </div>
+          <span
+            class="inline-block px-4 py-1.5 rounded-full bg-white/70 border border-jd-blue/20 text-jd-deep text-sm font-heading font-semibold mb-5"
+            >Hardness to happiness</span
           >
-            <i class="fas fa-phone-alt"></i>
-            Call: 98222 09656
-          </a>
-        </div>
+          <h2
+            class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-jd-dark mb-4"
+          >
+            Crystal Clear
+            <span class="gradient-text-blue">Naturally Water</span>
+          </h2>
+          <p
+            class="text-jd-deep/80 text-sm lg:text-base mb-7 max-w-xl mx-auto lg:mx-0"
+          >
+            Tell us about your line &mdash; pipe material, diameter and flow
+            &mdash; and we will suggest the right Jaldoot unit.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
+          >
+            <a
+              href="contact.html"
+              class="group inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 bg-white text-jd-deep rounded-full font-heading font-bold text-base shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <i class="fas fa-paper-plane"></i>
+              Request a quote
+              <i
+                class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"
+              ></i>
+            </a>
+            <a
+              href="tel:9822209656"
+              class="inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 bg-jd-green text-white rounded-full font-heading font-bold text-base shadow-lg shadow-jd-green/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            >
+              <i class="fas fa-phone-alt"></i>
+              Call: 98222 09656
+            </a>
+          </div>
         </div>
 
         <!-- transparent product cut-out -->
@@ -8098,8 +8669,8 @@
               />
             </div>
             <p class="text-gray-400 text-sm leading-relaxed mb-6">
-              A product of Krushi Nature Water Care Pvt. Ltd. &mdash; ISO 9001:2008
-              certified company.
+              A product of Krushi Nature Water Care Pvt. Ltd. &mdash; ISO
+              9001:2008 certified company.
             </p>
             <div
               class="inline-flex items-center gap-2 px-3 py-1.5 bg-jd-green/10 border border-jd-green/30 rounded-full text-jd-green text-xs font-heading font-semibold mb-6"
@@ -8134,18 +8705,18 @@
             <h4 class="text-lg font-heading font-semibold mb-6">Quick Links</h4>
             <ul class="space-y-3">
               <li>
-                <a
-                  href="index.html"
-                  class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
+                <a href="index.html" class="footer-link text-gray-400 text-sm"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"
+                  ></i
                   >Home</a
                 >
               </li>
               <li>
-                <a
-                  href="about.html"
-                  class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
+                <a href="about.html" class="footer-link text-gray-400 text-sm"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"
+                  ></i
                   >About Us</a
                 >
               </li>
@@ -8153,15 +8724,17 @@
                 <a
                   href="products.html"
                   class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"
+                  ></i
                   >Products</a
                 >
               </li>
               <li>
-                <a
-                  href="contact.html"
-                  class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
+                <a href="contact.html" class="footer-link text-gray-400 text-sm"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"
+                  ></i
                   >Contact</a
                 >
               </li>
@@ -8176,33 +8749,41 @@
             <ul class="space-y-3">
               <li>
                 <a href="#domestic" class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"
+                  ></i
                   >Domestic</a
                 >
               </li>
               <li>
                 <a href="#agriculture" class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"
+                  ></i
                   >Agriculture</a
                 >
               </li>
               <li>
                 <a href="#poultry" class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"
+                  ></i
                   >Poultry Farming</a
                 >
               </li>
               <li>
-                <a
-                  href="#commercial"
-                  class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
+                <a href="#commercial" class="footer-link text-gray-400 text-sm"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"
+                  ></i
                   >Commercial &amp; Industrial</a
                 >
               </li>
               <li>
                 <a href="#ro-plant" class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"
+                  ></i
                   >JVC for RO Plant</a
                 >
               </li>
@@ -8210,7 +8791,9 @@
                 <a
                   href="#solar-products"
                   class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"
+                  ></i
                   >Solar Products</a
                 >
               </li>
@@ -8224,8 +8807,8 @@
               <li class="flex items-start text-sm text-gray-400">
                 <i class="fas fa-map-marker-alt text-jd-sky mr-3 mt-1"></i
                 ><span
-                  >Plot No. 83, Near Maruthi Meter, Ramtekadi Industrial
-                  Estate, Hadapsar, Pune - 411028</span
+                  >Plot No. 83, Near Maruthi Meter, Ramtekadi Industrial Estate,
+                  Hadapsar, Pune - 411028</span
                 >
               </li>
               <li class="flex items-center text-sm text-gray-400">
@@ -8234,9 +8817,7 @@
               </li>
               <li class="flex items-center text-sm text-gray-400">
                 <i class="fas fa-envelope text-jd-sky mr-3"></i
-                ><span class="break-all"
-                  >watercare.krushinature@gmail.com</span
-                >
+                ><span class="break-all">watercare.krushinature@gmail.com</span>
               </li>
               <li class="flex items-center text-sm text-gray-400">
                 <i class="fas fa-globe text-jd-sky mr-3"></i
@@ -8255,8 +8836,8 @@
           class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p class="text-gray-500 text-sm">
-            &copy; <span id="currentYear">2024</span> Krushi Nature Water Care Pvt.
-            Ltd. All rights reserved.
+            &copy; <span id="currentYear">2024</span> Krushi Nature Water Care
+            Pvt. Ltd. All rights reserved.
           </p>
           <p class="text-gray-600 text-xs font-heading">
             Hardness To Happiness &mdash; Crystal Clear Naturally Water
@@ -8264,7 +8845,6 @@
         </div>
       </div>
     </footer>
-
 
     <!-- Floating Buttons -->
     <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
@@ -8422,7 +9002,10 @@
 
           // Leaving the mobile breakpoint must not strand the open panel.
           window.addEventListener("resize", function () {
-            if (window.innerWidth >= 1024 && mobileMenu.classList.contains("open")) {
+            if (
+              window.innerWidth >= 1024 &&
+              mobileMenu.classList.contains("open")
+            ) {
               setMenu(false);
             }
           });
@@ -8460,7 +9043,8 @@
             particle.style.animationDelay = Math.random() * 3 + "s";
             particleContainer.appendChild(particle);
             setTimeout(function () {
-              if (particle.parentNode) particle.parentNode.removeChild(particle);
+              if (particle.parentNode)
+                particle.parentNode.removeChild(particle);
             }, 20000);
           }
           for (let i = 0; i < 15; i++) setTimeout(createParticle, i * 400);

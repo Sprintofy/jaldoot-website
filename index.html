@@ -1647,34 +1647,28 @@
         }
       }
 
-      /* technology legend */
+      /* technology legend - now in copy column */
       .tl-tags {
-        position: absolute;
-        left: 50%;
-        bottom: clamp(0.7rem, 1.6vw, 1.1rem);
-        transform: translateX(-50%);
-        margin: 0;
-        padding: 0;
-        list-style: none;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.4rem clamp(0.4rem, 1.4vw, 0.9rem);
-        max-width: 100%;
+        gap: 0.5rem clamp(0.5rem, 1.5vw, 1rem);
+        margin-top: 1.5rem;
+        padding: 0;
+        list-style: none;
       }
       .tl-tag {
         display: inline-flex;
         align-items: center;
-        gap: 0.42rem;
-        padding: 0.34rem 0.72rem;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
         border-radius: 999px;
-        border: 1px solid rgba(46, 230, 197, 0.2);
-        background: linear-gradient(180deg, rgba(9, 32, 58, 0.85), rgba(4, 15, 30, 0.85));
-        color: rgba(233, 250, 255, 0.9);
+        border: 1px solid rgba(46, 230, 197, 0.25);
+        background: linear-gradient(180deg, rgba(9, 32, 58, 0.9), rgba(4, 15, 30, 0.9));
+        color: rgba(233, 250, 255, 0.95);
         font-family: "Outfit", "Poppins", sans-serif;
-        font-size: 0.66rem;
+        font-size: 0.75rem;
         font-weight: 600;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.05em;
         text-transform: uppercase;
         white-space: nowrap;
         animation: tlTagFloat 6.5s ease-in-out infinite;
@@ -1682,7 +1676,7 @@
       }
       .tl-tag i {
         color: #2ee6c5;
-        font-size: 0.64rem;
+        font-size: 0.7rem;
       }
       @keyframes tlTagFloat {
         0%,
@@ -1699,11 +1693,10 @@
       @media (max-width: 640px) {
         .tl-scene {
           min-height: 16rem;
-          padding-bottom: 7.4rem;
         }
         .tl-tag {
-          font-size: 0.6rem;
-          padding: 0.3rem 0.6rem;
+          font-size: 0.65rem;
+          padding: 0.4rem 0.75rem;
         }
       }
 
@@ -4154,6 +4147,239 @@
         }
       }
 
+      /* ===== BENEFITS: FLIP CARDS ===== */
+      #benefits .bn-lead {
+        margin-top: 1rem;
+        color: var(--gray);
+        font-size: 0.9375rem;
+      }
+      #benefits .bn-grid {
+        margin-top: 3.5rem;
+      }
+      #benefits .bn-card {
+        position: relative;
+        height: 100%;
+        min-height: 16rem;
+        perspective: 1400px;
+        cursor: pointer;
+        outline: none;
+      }
+      #benefits .bn-flip {
+        position: relative;
+        height: 100%;
+        min-height: 16rem;
+        transform-style: preserve-3d;
+        transition: transform 0.85s cubic-bezier(0.2, 0.75, 0.25, 1);
+      }
+      #benefits .bn-card:hover .bn-flip,
+      #benefits .bn-card:focus-visible .bn-flip,
+      #benefits .bn-card:focus-within .bn-flip {
+        transform: rotateY(180deg);
+      }
+      #benefits .bn-card:focus-visible .bn-face {
+        outline: 2px solid var(--tint);
+        outline-offset: 3px;
+      }
+
+      #benefits .bn-face {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 1.75rem;
+        border-radius: 1.25rem;
+        overflow: hidden;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+      #benefits .bn-front {
+        background: #fff;
+        border: 1px solid rgba(0, 102, 179, 0.1);
+        box-shadow: 0 18px 42px -32px rgba(10, 22, 40, 0.75);
+        transition:
+          border-color 0.5s ease,
+          box-shadow 0.5s ease;
+      }
+      #benefits .bn-front::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--tint), transparent);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.6s ease;
+      }
+      #benefits .bn-card:hover .bn-front {
+        border-color: color-mix(in srgb, var(--tint) 42%, transparent);
+        box-shadow: 0 30px 56px -30px color-mix(in srgb, var(--tint) 70%, transparent);
+      }
+      #benefits .bn-card:hover .bn-front::before {
+        transform: scaleX(1);
+      }
+
+      #benefits .bn-badge {
+        position: relative;
+        display: grid;
+        place-items: center;
+        width: 3.25rem;
+        height: 3.25rem;
+        margin-bottom: 1.125rem;
+        border-radius: 1rem;
+        font-size: 1.2rem;
+        color: var(--tint);
+        background: color-mix(in srgb, var(--tint) 12%, #fff);
+        border: 1px solid color-mix(in srgb, var(--tint) 26%, transparent);
+        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      #benefits .bn-badge::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        border: 1.5px solid var(--tint);
+        opacity: 0;
+        animation: bn-pulse 4.2s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+        animation-delay: var(--badge-delay, 0s);
+      }
+      #benefits .bn-title {
+        font-family: "Outfit", "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 1.0625rem;
+        line-height: 1.35;
+        color: var(--deep-blue);
+        margin-bottom: 0.5rem;
+      }
+      #benefits .bn-text {
+        font-size: 0.875rem;
+        line-height: 1.6;
+        color: var(--gray);
+      }
+      #benefits .bn-cue {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4375rem;
+        margin-top: auto;
+        padding-top: 1.25rem;
+        font-family: "Outfit", "Poppins", sans-serif;
+        font-size: 0.6875rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: color-mix(in srgb, var(--tint) 82%, #333);
+      }
+      #benefits .bn-cue i {
+        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      #benefits .bn-card:hover .bn-cue i {
+        transform: rotate(180deg);
+      }
+
+      #benefits .bn-back {
+        transform: rotateY(180deg);
+        align-items: center;
+        justify-content: center;
+        gap: 0.875rem;
+        text-align: center;
+        color: #eaf6ff;
+        background: linear-gradient(158deg, #0b2a55 0%, #12437f 52%, #06121f 100%);
+        border: 1px solid color-mix(in srgb, var(--tint) 48%, transparent);
+        box-shadow: 0 26px 54px -30px rgba(6, 18, 31, 0.95);
+      }
+      #benefits .bn-back::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 16rem;
+        height: 16rem;
+        margin: -8rem 0 0 -8rem;
+        border-radius: 50%;
+        background: radial-gradient(
+          closest-side,
+          color-mix(in srgb, var(--tint) 34%, transparent),
+          transparent 72%
+        );
+        pointer-events: none;
+      }
+      #benefits .bn-art {
+        position: relative;
+        animation: bn-float 5.5s ease-in-out infinite;
+      }
+      #benefits .bn-art svg {
+        display: block;
+        width: 9.5rem;
+        height: 5.5rem;
+        margin: 0 auto;
+        color: var(--tint);
+      }
+      #benefits .bn-back h4 {
+        position: relative;
+        font-family: "Outfit", "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        color: #fff;
+      }
+      #benefits .bn-back p {
+        position: relative;
+        font-size: 0.8125rem;
+        line-height: 1.55;
+        color: rgba(226, 240, 255, 0.76);
+        max-width: 15rem;
+      }
+      #benefits .bn-tag {
+        position: relative;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+        gap: 0.4375rem;
+        padding: 0.3125rem 0.6875rem;
+        border-radius: 999px;
+        font-family: "Outfit", "Poppins", sans-serif;
+        font-size: 0.6875rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        color: #fff;
+        background: color-mix(in srgb, var(--tint) 26%, rgba(6, 18, 31, 0.6));
+        border: 1px solid color-mix(in srgb, var(--tint) 45%, transparent);
+      }
+      #benefits .bn-dash {
+        stroke-dasharray: 7 9;
+        animation: sr-dash 1.2s linear infinite;
+      }
+      #benefits .bn-spin {
+        transform-origin: center;
+        animation: sr-spin 8s linear infinite;
+      }
+      #benefits .bn-rise {
+        animation: hiw-rise 3.6s ease-in infinite;
+      }
+      @keyframes bn-pulse {
+        0% {
+          transform: scale(1);
+          opacity: 0.75;
+        }
+        72%,
+        100% {
+          transform: scale(1.7);
+          opacity: 0;
+        }
+      }
+      @keyframes bn-float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-7px);
+        }
+      }
+
       /* respect reduced-motion: keep the logos, drop the sliding */
       @media (prefers-reduced-motion: reduce) {
         .pt-track,
@@ -4164,6 +4390,17 @@
         .pt-row {
           overflow-x: auto;
           -webkit-overflow-scrolling: touch;
+        }
+        #benefits .bn-flip,
+        #benefits .bn-badge,
+        #benefits .bn-badge::after,
+        #benefits .bn-art,
+        #benefits .bn-dash,
+        #benefits .bn-spin,
+        #benefits .bn-rise,
+        #benefits .bn-cue i {
+          animation: none !important;
+          transition-duration: 0.01ms !important;
         }
       }
     </style>
@@ -4555,6 +4792,20 @@
             <i class="fas fa-flask"></i>
             Explore the technology
           </a>
+          <ul class="tl-tags" role="list">
+            <li class="tl-tag" style="--d: 0s">
+              <i class="fa-solid fa-wave-square"></i><span>Ultrasonic</span>
+            </li>
+            <li class="tl-tag" style="--d: 0.35s">
+              <i class="fa-solid fa-magnet"></i><span>Magnetic static</span>
+            </li>
+            <li class="tl-tag" style="--d: 0.7s">
+              <i class="fa-solid fa-bolt"></i><span>Pulsing power</span>
+            </li>
+            <li class="tl-tag" style="--d: 1.05s">
+              <i class="fa-solid fa-flask"></i><span>Catalytic media</span>
+            </li>
+          </ul>
         </div>
 
         <!-- looping 3D scene -->
@@ -4618,39 +4869,6 @@
                 <span class="tl-reflection"><span class="tl-reflection-img"></span></span>
               </figure>
             </div>
-
-            <div class="tl-waterline">
-              <div class="tl-scale-row">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <span class="tl-flow"><i class="fa-solid fa-arrow-right-long"></i></span>
-              <div class="tl-drop-row">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-
-            <ul class="tl-tags" role="list">
-              <li class="tl-tag" style="--d: 0s">
-                <i class="fa-solid fa-wave-square"></i><span>Ultrasonic</span>
-              </li>
-              <li class="tl-tag" style="--d: 0.35s">
-                <i class="fa-solid fa-magnet"></i><span>Magnetic static</span>
-              </li>
-              <li class="tl-tag" style="--d: 0.7s">
-                <i class="fa-solid fa-bolt"></i><span>Pulsing power</span>
-              </li>
-              <li class="tl-tag" style="--d: 1.05s">
-                <i class="fa-solid fa-flask"></i><span>Catalytic media</span>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
@@ -4934,6 +5152,365 @@
           <a href="contact.html" class="ss-btn ss-btn-outline">
             Talk to an Expert
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BENEFITS ===== -->
+    <section
+      id="benefits"
+      class="py-20 lg:py-28 bg-white scroll-mt-36 relative overflow-hidden"
+    >
+      <div
+        class="absolute top-0 right-0 w-96 h-96 bg-jd-green/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-80 h-80 bg-jd-sky/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"
+      ></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16" data-animate="fade-up">
+          <span
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-green/10 text-jd-green text-sm font-heading font-semibold"
+          >
+            <i class="fas fa-star" aria-hidden="true"></i> Benefits
+          </span>
+          <h2
+            class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep leading-tight"
+          >
+            With the Jaldoot
+            <span class="gradient-text-green">Water Conditioner</span>
+          </h2>
+          <p class="bn-lead">
+            Hover, tap or tab any card to flip it and see what sits behind the claim.
+          </p>
+        </div>
+
+        <div class="bn-grid grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article
+            class="bn-card"
+            style="--tint: #4db74a; --badge-delay: 0s"
+            tabindex="0"
+            data-animate="fade-up"
+            data-delay="0"
+          >
+            <div class="bn-flip">
+              <div class="bn-face bn-front">
+                <div class="bn-badge">
+                  <i class="fas fa-shield-halved" aria-hidden="true"></i>
+                </div>
+                <h3 class="bn-title">Maintenance-free</h3>
+                <p class="bn-text">
+                  Eco-friendly solution against scale problems, with no backwashing and
+                  no moving parts.
+                </p>
+                <span class="bn-cue">
+                  <i class="fas fa-rotate" aria-hidden="true"></i> Flip card
+                </span>
+              </div>
+
+              <div class="bn-face bn-back">
+                <div class="bn-art">
+                  <svg
+                    viewBox="0 0 160 96"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <rect x="10" y="36" width="140" height="26" rx="7" opacity=".55" />
+                    <path d="M32 32v34M128 32v34" opacity=".55" />
+                    <circle cx="80" cy="49" r="15" />
+                    <path d="M80 27v6M80 65v6M58 49h6M96 49h6M64 33l4 4M92 61l4 4M96 33l-4 4M68 61l-4 4" opacity=".7" />
+                    <path d="M56 71l48-44" stroke-width="2.4" />
+                  </svg>
+                </div>
+                <h4>Nothing to service</h4>
+                <p>
+                  No impeller, no seal, no filter bed. Fit the unit and leave it
+                  running.
+                </p>
+                <span class="bn-tag">
+                  <i class="fas fa-ban" aria-hidden="true"></i> No moving parts
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="bn-card"
+            style="--tint: #0066b3; --badge-delay: 0.7s"
+            tabindex="0"
+            data-animate="fade-up"
+            data-delay="80"
+          >
+            <div class="bn-flip">
+              <div class="bn-face bn-front">
+                <div class="bn-badge">
+                  <i class="fas fa-leaf" aria-hidden="true"></i>
+                </div>
+                <h3 class="bn-title">No chemicals, no salts</h3>
+                <p class="bn-text">
+                  No chemicals, no salts & additives anywhere in the process.
+                </p>
+                <span class="bn-cue">
+                  <i class="fas fa-rotate" aria-hidden="true"></i> Flip card
+                </span>
+              </div>
+
+              <div class="bn-face bn-back">
+                <div class="bn-art">
+                  <svg
+                    viewBox="0 0 160 96"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M80 12c15 19 24 30 24 41a24 24 0 0 1-48 0c0-11 9-22 24-41z" />
+                    <path d="M68 62c4-6 12-8 18-4" opacity=".6" />
+                    <path d="M56 80l48-40" stroke-width="2.4" />
+                    <circle cx="34" cy="60" r="4" class="bn-rise" />
+                    <circle cx="126" cy="70" r="3" class="bn-rise" style="animation-delay: 1.2s" />
+                    <circle cx="48" cy="80" r="2.5" class="bn-rise" style="animation-delay: 2.4s" />
+                  </svg>
+                </div>
+                <h4>Physical conditioning only</h4>
+                <p>
+                  Nothing to top up, nothing to buy, no taste or chemistry change in
+                  the water.
+                </p>
+                <span class="bn-tag">
+                  <i class="fas fa-check" aria-hidden="true"></i> 100% physical
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="bn-card"
+            style="--tint: #00adee; --badge-delay: 1.4s"
+            tabindex="0"
+            data-animate="fade-up"
+            data-delay="160"
+          >
+            <div class="bn-flip">
+              <div class="bn-face bn-front">
+                <div class="bn-badge">
+                  <i class="fas fa-screwdriver" aria-hidden="true"></i>
+                </div>
+                <h3 class="bn-title">Easy installation</h3>
+                <p class="bn-text">
+                  No replacement required. Movable product &mdash; take it with you when
+                  you want.
+                </p>
+                <span class="bn-cue">
+                  <i class="fas fa-rotate" aria-hidden="true"></i> Flip card
+                </span>
+              </div>
+
+              <div class="bn-face bn-back">
+                <div class="bn-art">
+                  <svg
+                    viewBox="0 0 160 96"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <rect x="8" y="34" width="144" height="28" rx="6" opacity=".55" />
+                    <rect x="56" y="24" width="48" height="48" rx="10" />
+                    <path d="M66 24v48M94 24v48" opacity=".7" />
+                    <circle cx="66" cy="48" r="5" />
+                    <circle cx="94" cy="48" r="5" />
+                    <path d="M118 48h18m-7-7 7 7-7 7" class="bn-dash" />
+                    <path d="M120 20c6-6 12 0 18-6" opacity=".5" />
+                  </svg>
+                </div>
+                <h4>Clamps onto the line</h4>
+                <p>
+                  Fit it around the existing pipe in minutes — no cutting, no
+                  plumbing changes.
+                </p>
+                <span class="bn-tag">
+                  <i class="fas fa-wrench" aria-hidden="true"></i> Clamp-on
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="bn-card"
+            style="--tint: #134fa1; --badge-delay: 2.1s"
+            tabindex="0"
+            data-animate="fade-up"
+            data-delay="0"
+          >
+            <div class="bn-flip">
+              <div class="bn-face bn-front">
+                <div class="bn-badge">
+                  <i class="fas fa-ruler-combined" aria-hidden="true"></i>
+                </div>
+                <h3 class="bn-title">Works on every pipe</h3>
+                <p class="bn-text">
+                  Effective on CPVC, RPVC, UPVC, HDPE, copper, brass, SS 304 and SS
+                  316.
+                </p>
+                <span class="bn-cue">
+                  <i class="fas fa-rotate" aria-hidden="true"></i> Flip card
+                </span>
+              </div>
+
+              <div class="bn-face bn-back">
+                <div class="bn-art">
+                  <svg
+                    viewBox="0 0 160 96"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <circle cx="32" cy="48" r="15" stroke-width="7" opacity=".85" />
+                    <circle cx="70" cy="48" r="15" stroke-width="7" opacity=".7" />
+                    <circle cx="108" cy="48" r="15" stroke-width="7" opacity=".55" />
+                    <circle cx="146" cy="48" r="15" stroke-width="7" opacity=".4" />
+                    <circle cx="32" cy="48" r="4" />
+                    <circle cx="70" cy="48" r="4" />
+                    <circle cx="108" cy="48" r="4" />
+                    <circle cx="146" cy="48" r="4" />
+                    <path d="M8 22h144" stroke-dasharray="4 8" opacity=".45" />
+                  </svg>
+                </div>
+                <h4>Any material, same result</h4>
+                <p>
+                  Thermoplastics, copper, brass and stainless steel — the field does
+                  not care what it is clamped to.
+                </p>
+                <span class="bn-tag">
+                  <i class="fas fa-layer-group" aria-hidden="true"></i> 8 materials
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="bn-card"
+            style="--tint: #d97706; --badge-delay: 2.8s"
+            tabindex="0"
+            data-animate="fade-up"
+            data-delay="80"
+          >
+            <div class="bn-flip">
+              <div class="bn-face bn-front">
+                <div class="bn-badge">
+                  <i class="fas fa-ruler" aria-hidden="true"></i>
+                </div>
+                <h3 class="bn-title">Wide size range</h3>
+                <p class="bn-text">
+                  Suitable for pipe diameters from 1&Prime; up to 20&Prime; or 6&Prime;
+                  depending on the model.
+                </p>
+                <span class="bn-cue">
+                  <i class="fas fa-rotate" aria-hidden="true"></i> Flip card
+                </span>
+              </div>
+
+              <div class="bn-face bn-back">
+                <div class="bn-art">
+                  <svg
+                    viewBox="0 0 160 96"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <rect x="14" y="52" width="34" height="12" rx="4" opacity=".9" />
+                    <rect x="62" y="42" width="38" height="22" rx="5" opacity=".75" />
+                    <rect x="114" y="30" width="36" height="34" rx="6" opacity=".6" />
+                    <path d="M14 70v6M48 70v6M62 70v6M100 70v6M114 70v6M150 70v6" opacity=".6" />
+                    <path d="M14 82h36M62 82h38M114 82h36" opacity=".45" />
+                    <path d="M26 30l8-8 8 8M81 20l9-8 9 8M132 8l9-6 9 6" class="bn-dash" opacity=".7" />
+                  </svg>
+                </div>
+                <h4>1&Prime; to 20&Prime; on one family</h4>
+                <p>
+                  Pick the model that matches the line you already have instead of
+                  re-piping.
+                </p>
+                <span class="bn-tag">
+                  <i class="fas fa-arrows-left-right" aria-hidden="true"></i> 1&Prime; &ndash; 20&Prime;
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="bn-card"
+            style="--tint: #7c3aed; --badge-delay: 3.5s"
+            tabindex="0"
+            data-animate="fade-up"
+            data-delay="160"
+          >
+            <div class="bn-flip">
+              <div class="bn-face bn-front">
+                <div class="bn-badge">
+                  <i class="fas fa-cogs" aria-hidden="true"></i>
+                </div>
+                <h3 class="bn-title">Models for varied work</h3>
+                <p class="bn-text">
+                  Our product models represent on varied work across industries.
+                </p>
+                <span class="bn-cue">
+                  <i class="fas fa-rotate" aria-hidden="true"></i> Flip card
+                </span>
+              </div>
+
+              <div class="bn-face bn-back">
+                <div class="bn-art">
+                  <svg
+                    viewBox="0 0 160 96"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path d="M12 76V50l18-16 18 16v26z" />
+                    <path d="M24 76V58h12v18" opacity=".7" />
+                    <circle cx="80" cy="52" r="13" class="bn-spin" />
+                    <path d="M80 39v26M67 52h26" opacity=".6" />
+                    <path d="M100 76V44l14 7V44l14 7v25z" />
+                    <path d="M114 44V26h9v18" opacity=".7" />
+                    <path d="M12 84h136" opacity=".5" />
+                  </svg>
+                </div>
+                <h4>Home, farm or factory</h4>
+                <p>
+                  One product family, tuned models for domestic lines, agriculture and
+                  industrial duty.
+                </p>
+                <span class="bn-tag">
+                  <i class="fas fa-industry" aria-hidden="true"></i> Home &middot; Farm &middot; Industry
+                </span>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
