@@ -923,20 +923,18 @@
       </div>
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-14">
+        <div class="flex items-center justify-between h-14 min-w-0">
           <!-- Logo -->
           <a
             href="index.html"
-            class="nav-brand flex items-center shrink-0 group"
+            class="nav-brand flex items-center shrink-0 group min-w-0"
             aria-label="JALDOOT Water Conditioner - home"
           >
             <img
               src="assets/logo.png"
               alt="JALDOOT Water Conditioner"
-              class="h-9 sm:h-10 w-auto object-contain mix-blend-multiply"
-              width="761"
-              height="356"
-            />
+              class="h-9 sm:h-10 max-w-[160px] w-auto object-contain mix-blend-multiply"
+              height="40">
           </a>
 
           <!-- Desktop Nav -->
@@ -996,7 +994,7 @@
     <div id="mobileMenuBackdrop" class="mobile-menu-backdrop" aria-hidden="true"></div>
 
     <div
-      class="mobile-menu fixed inset-y-0 right-0 w-80 max-w-[85vw] shadow-2xl lg:hidden"
+      class="mobile-menu fixed inset-y-0 right-0 w-80 max-w-[85vw] shadow-2xl lg:hidden overflow-x-hidden"
       id="mobileMenu"
     >
         <button
@@ -1007,7 +1005,7 @@
         >
           <i class="fas fa-times"></i>
         </button>
-      <div class="p-6 pt-24 flex flex-col gap-2">
+      <div class="p-6 pt-24 flex flex-col gap-2 min-w-0">
         <a
           href="index.html"
           class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
