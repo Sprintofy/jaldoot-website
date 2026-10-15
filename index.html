@@ -17,6 +17,23 @@
       Naturally Water
     </title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link rel="apple-touch-icon" href="assets/logo.png" />
+
+    <!-- Preload critical fonts to prevent layout shift (FOUT/FOIT) -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+          href="https://fonts.gstatic.com/s/poppins/v21/pxiEyp8kv8JHgFVrJJfecg.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+          href="https://fonts.gstatic.com/s/inter/v19/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+          href="https://fonts.gstatic.com/s/outfit/v11/QGY_z_wNahGAdqG42Rh3fY5H.woff2" />
+
+    <!-- Preload hero video poster -->
+    <link rel="preload" as="image" href="assets/videos/jaldoot-poster.jpg" />
+    <!-- Preload logo -->
+    <link rel="preload" as="image" href="assets/logo.png" />
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -42,7 +59,7 @@
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=optional"
       rel="stylesheet"
     />
 
@@ -79,13 +96,15 @@
         );
         box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.08);
         transition:
-          height 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-          opacity 0.3s ease;
+          opacity 0.3s ease,
+          background 0.3s ease;
       }
-      /* collapses on scroll so the navbar gets the full header back */
+      /* On scroll: fade the bar but KEEP its space reserved so hero never jumps. */
       .navbar.is-hidden .topbar {
-        height: 0;
         opacity: 0;
+        pointer-events: none;
+        background: transparent;
+        box-shadow: none;
       }
       .topbar-inner {
         display: flex;
@@ -96,6 +115,10 @@
         height: 34px;
         margin: 0 auto;
         padding: 0 1rem;
+        transition: opacity 0.3s ease;
+      }
+      .navbar.is-hidden .topbar-inner {
+        opacity: 0;
       }
       .topbar-tag {
         display: inline-flex;
@@ -363,81 +386,6 @@
         .hero-scroll,
         .hero-rail {
           display: none;
-        }
-      }
-
-      /* Cinematic overlay: soft top shade under the navbar, deep bottom fade
-         into the next section, edge vignette and a slow cyan sheen sweep.
-         The bottom is brought up early on purpose - the clip carries burned-in
-         captions along its lower edge, and the hero chrome (trust rail, scroll
-         cue) needs a clean dark band to sit on rather than fighting them. */
-      .hero-overlay {
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-        pointer-events: none;
-        background:
-          linear-gradient(
-            180deg,
-            rgba(4, 12, 24, 0.72) 0%,
-            rgba(4, 12, 24, 0.22) 14%,
-            rgba(4, 12, 24, 0) 34%,
-            rgba(5, 15, 31, 0.12) 58%,
-            rgba(5, 15, 31, 0.62) 78%,
-            rgba(5, 15, 31, 0.88) 88%,
-            #050f1f 96%
-          ),
-          radial-gradient(
-            120% 90% at 50% 45%,
-            rgba(0, 0, 0, 0) 45%,
-            rgba(3, 10, 20, 0.45) 100%
-          );
-      }
-      .hero-overlay::before {
-        content: "";
-        position: absolute;
-        inset: -20% -40%;
-        background: linear-gradient(
-          100deg,
-          transparent 42%,
-          rgba(0, 173, 238, 0.14) 50%,
-          rgba(46, 230, 197, 0.1) 54%,
-          transparent 62%
-        );
-        transform: translateX(-30%);
-        animation: heroSheen 11s ease-in-out infinite;
-      }
-      .hero-overlay::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          90deg,
-          rgba(0, 173, 238, 0.12) 0%,
-          transparent 18%,
-          transparent 82%,
-          rgba(0, 173, 238, 0.12) 100%
-        );
-        opacity: 0.75;
-      }
-      @keyframes heroSheen {
-        0%,
-        100% {
-          transform: translateX(-35%);
-          opacity: 0;
-        }
-        40%,
-        60% {
-          opacity: 1;
-        }
-        50% {
-          transform: translateX(35%);
-        }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        .hero-overlay::before {
-          animation: none;
-          opacity: 0;
         }
       }
 
@@ -4513,8 +4461,8 @@
               src="assets/logo.png"
               alt="JALDOOT Water Conditioner"
               class="h-9 sm:h-10 w-auto object-contain mix-blend-multiply"
-              width="761"
-              height="356">
+              width="180"
+              height="40">
           </a>
 
           <!-- Desktop Nav -->
@@ -4645,14 +4593,14 @@
           preload="metadata"
           poster="assets/videos/jaldoot-poster.jpg"
           aria-label="Jaldoot water conditioner in action"
+          width="1920"
+          height="1080"
         >
           <source src="assets/videos/jaldoot.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         <div class="hero-shimmer" aria-hidden="true"></div>
-
-        <div class="hero-overlay" aria-hidden="true"></div>
 
         <div class="hero-rail" aria-hidden="true">
           <span><i class="fas fa-check"></i> No salt</span>
@@ -5088,6 +5036,8 @@
             playsinline
             loop
             aria-label="Jaldoot water conditioner in action"
+            width="1920"
+            height="1080"
           >
             <source src="assets/videos/jaldoot1.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -5511,137 +5461,6 @@
               </div>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== VIDEO TESTIMONIALS ===== -->
-    <section
-      class="tv-section py-20 lg:py-28"
-      aria-labelledby="tvTitle"
-      id="testimonials"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="tv-head" data-animate="fade-up">
-          <span class="tv-eyebrow">
-            <i class="fas fa-quote-left" aria-hidden="true"></i>
-            Customer stories
-          </span>
-          <h2 class="tv-title" id="tvTitle">
-            Real People. <span>Real Results.</span>
-          </h2>
-          <p class="tv-sub">
-            Hear directly from the homeowners, farmers and factory owners who
-            rely on Jaldoot every day.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-          <!-- Card 1 -->
-          <article class="tv-card" data-animate="fade-up" data-delay="0">
-            <div class="tv-thumb">
-              <video muted playsinline preload="metadata" aria-hidden="true">
-                <source src="assets/videos/testimonial1.mp4" type="video/mp4" />
-              </video>
-              <button
-                type="button"
-                class="tv-thumb-btn"
-                data-tv-video="assets/videos/testimonial1.mp4"
-                data-tv-name="Ramesh Patil"
-                aria-label="Play testimonial from Ramesh Patil"
-              >
-                <i class="fas fa-play" aria-hidden="true"></i>
-              </button>
-            </div>
-
-            <div class="tv-stars" aria-label="Rated 5 out of 5">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i>
-            </div>
-
-            <p class="tv-quote">
-              &ldquo;My taps used to run thick with scale and the bathroom
-              looked permanently stained. Six months with Jaldoot and the
-              fittings are clean again. No salt, no filter changes.&rdquo;
-            </p>
-
-            <h3 class="tv-name">Ramesh Patil</h3>
-            <p class="tv-role">Homeowner &middot; Pune</p>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="tv-card" data-animate="fade-up" data-delay="120">
-            <div class="tv-thumb">
-              <video muted playsinline preload="metadata" aria-hidden="true">
-                <source src="assets/videos/testimonial2.mp4" type="video/mp4" />
-              </video>
-              <button
-                type="button"
-                class="tv-thumb-btn"
-                data-tv-video="assets/videos/testimonial2.mp4"
-                data-tv-name="Suresh Deshmukh"
-                aria-label="Play testimonial from Suresh Deshmukh"
-              >
-                <i class="fas fa-play" aria-hidden="true"></i>
-              </button>
-            </div>
-
-            <div class="tv-stars" aria-label="Rated 5 out of 5">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i>
-            </div>
-
-            <p class="tv-quote">
-              &ldquo;Scale was choking our drip lines every season and cutting
-              yield. Jaldoot fixed the whole farm without a single chemical
-              drum. Our water bills dropped too.&rdquo;
-            </p>
-
-            <h3 class="tv-name">Suresh Deshmukh</h3>
-            <p class="tv-role">Grape farmer &middot; Nashik</p>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="tv-card" data-animate="fade-up" data-delay="240">
-            <div class="tv-thumb">
-              <video muted playsinline preload="metadata" aria-hidden="true">
-                <source src="assets/videos/testimonial3.mp4" type="video/mp4" />
-              </video>
-              <button
-                type="button"
-                class="tv-thumb-btn"
-                data-tv-video="assets/videos/testimonial3.mp4"
-                data-tv-name="Anil Kulkarni"
-                aria-label="Play testimonial from Anil Kulkarni"
-              >
-                <i class="fas fa-play" aria-hidden="true"></i>
-              </button>
-            </div>
-
-            <div class="tv-stars" aria-label="Rated 5 out of 5">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i>
-            </div>
-
-            <p class="tv-quote">
-              &ldquo;We run a textile unit and scale on the boilers was a
-              constant expense. Two Jaldoot units paid for themselves within the
-              first year of downtime saved.&rdquo;
-            </p>
-
-            <h3 class="tv-name">Anil Kulkarni</h3>
-            <p class="tv-role">Factory owner &middot; Industrial estate</p>
-          </article>
-        </div>
-
-        <div class="text-center mt-14" data-animate="fade-up" data-delay="120">
-          <a href="about.html#testimonials" class="tv-more">
-            See All Testimonials
-            <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </a>
         </div>
       </div>
     </section>
@@ -6278,6 +6097,137 @@
       </div>
     </section>
 
+    <!-- ===== VIDEO TESTIMONIALS ===== -->
+    <section
+      class="tv-section py-20 lg:py-28"
+      aria-labelledby="tvTitle"
+      id="testimonials"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="tv-head" data-animate="fade-up">
+          <span class="tv-eyebrow">
+            <i class="fas fa-quote-left" aria-hidden="true"></i>
+            Customer stories
+          </span>
+          <h2 class="tv-title" id="tvTitle">
+            Real People. <span>Real Results.</span>
+          </h2>
+          <p class="tv-sub">
+            Hear directly from the homeowners, farmers and factory owners who
+            rely on Jaldoot every day.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          <!-- Card 1 -->
+          <article class="tv-card" data-animate="fade-up" data-delay="0">
+            <div class="tv-thumb">
+              <video muted playsinline preload="metadata" aria-hidden="true">
+                <source src="assets/videos/testimonial1.mp4" type="video/mp4" />
+              </video>
+              <button
+                type="button"
+                class="tv-thumb-btn"
+                data-tv-video="assets/videos/testimonial1.mp4"
+                data-tv-name="Ramesh Patil"
+                aria-label="Play testimonial from Ramesh Patil"
+              >
+                <i class="fas fa-play" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div class="tv-stars" aria-label="Rated 5 out of 5">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+
+            <p class="tv-quote">
+              &ldquo;My taps used to run thick with scale and the bathroom
+              looked permanently stained. Six months with Jaldoot and the
+              fittings are clean again. No salt, no filter changes.&rdquo;
+            </p>
+
+            <h3 class="tv-name">Ramesh Patil</h3>
+            <p class="tv-role">Homeowner &middot; Pune</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="tv-card" data-animate="fade-up" data-delay="120">
+            <div class="tv-thumb">
+              <video muted playsinline preload="metadata" aria-hidden="true">
+                <source src="assets/videos/testimonial2.mp4" type="video/mp4" />
+              </video>
+              <button
+                type="button"
+                class="tv-thumb-btn"
+                data-tv-video="assets/videos/testimonial2.mp4"
+                data-tv-name="Suresh Deshmukh"
+                aria-label="Play testimonial from Suresh Deshmukh"
+              >
+                <i class="fas fa-play" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div class="tv-stars" aria-label="Rated 5 out of 5">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+
+            <p class="tv-quote">
+              &ldquo;Scale was choking our drip lines every season and cutting
+              yield. Jaldoot fixed the whole farm without a single chemical
+              drum. Our water bills dropped too.&rdquo;
+            </p>
+
+            <h3 class="tv-name">Suresh Deshmukh</h3>
+            <p class="tv-role">Grape farmer &middot; Nashik</p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="tv-card" data-animate="fade-up" data-delay="240">
+            <div class="tv-thumb">
+              <video muted playsinline preload="metadata" aria-hidden="true">
+                <source src="assets/videos/testimonial3.mp4" type="video/mp4" />
+              </video>
+              <button
+                type="button"
+                class="tv-thumb-btn"
+                data-tv-video="assets/videos/testimonial3.mp4"
+                data-tv-name="Anil Kulkarni"
+                aria-label="Play testimonial from Anil Kulkarni"
+              >
+                <i class="fas fa-play" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div class="tv-stars" aria-label="Rated 5 out of 5">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+
+            <p class="tv-quote">
+              &ldquo;We run a textile unit and scale on the boilers was a
+              constant expense. Two Jaldoot units paid for themselves within the
+              first year of downtime saved.&rdquo;
+            </p>
+
+            <h3 class="tv-name">Anil Kulkarni</h3>
+            <p class="tv-role">Factory owner &middot; Industrial estate</p>
+          </article>
+        </div>
+
+        <div class="text-center mt-14" data-animate="fade-up" data-delay="120">
+          <a href="about.html#testimonials" class="tv-more">
+            See All Testimonials
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== CTA SECTION ===== -->
     <section class="cta-band py-16 lg:py-20 relative overflow-hidden">
       <div class="absolute inset-0 cta-band-bg"></div>
@@ -6373,8 +6323,8 @@
                 src="assets/logo.png"
                 alt="JALDOOT Water Conditioner"
                 class="h-8 sm:h-10 w-auto object-contain"
-                width="761"
-                height="356">
+                width="180"
+                height="40">
             </div>
             <p class="text-gray-400 text-sm leading-relaxed mb-6 font-body">
               Manufactured by Krushi Nature Water Care Pvt. Ltd. — ISO 9001:2008
