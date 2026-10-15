@@ -183,10 +183,190 @@
         height: 100%;
         object-fit: cover; /* exact 16:9 match = full frame, no crop */
         object-position: center;
+        transform: scale(1);
+        will-change: transform;
+        animation: heroKenBurns 26s ease-in-out infinite alternate;
+      }
+      /* Slow drift so the footage never reads as a frozen still. Transform only,
+         so it stays on the compositor and never triggers layout. */
+      @keyframes heroKenBurns {
+        from {
+          transform: scale(1) translate3d(0, 0, 0);
+        }
+        to {
+          transform: scale(1.07) translate3d(-1.2%, -1%, 0);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .hero-video {
+          animation: none;
+        }
+      }
+
+      /* Water shimmer: two very soft colour fields drifting behind the copy,
+         so the flat footage picks up movement without hiding the product. */
+      .hero-shimmer {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        overflow: hidden;
+      }
+      .hero-shimmer::before,
+      .hero-shimmer::after {
+        content: "";
+        position: absolute;
+        width: 58vmax;
+        height: 58vmax;
+        border-radius: 50%;
+        filter: blur(70px);
+        opacity: 0.2;
+      }
+      .hero-shimmer::before {
+        top: -22vmax;
+        left: -14vmax;
+        background: radial-gradient(
+          circle,
+          rgba(0, 173, 238, 0.75) 0%,
+          rgba(0, 173, 238, 0) 68%
+        );
+        animation: heroDrift 21s ease-in-out infinite alternate;
+      }
+      .hero-shimmer::after {
+        right: -18vmax;
+        bottom: -24vmax;
+        background: radial-gradient(
+          circle,
+          rgba(77, 183, 74, 0.55) 0%,
+          rgba(77, 183, 74, 0) 68%
+        );
+        animation: heroDrift 27s ease-in-out infinite alternate-reverse;
+      }
+      @keyframes heroDrift {
+        from {
+          transform: translate3d(0, 0, 0) scale(1);
+        }
+        to {
+          transform: translate3d(6%, 5%, 0) scale(1.14);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .hero-shimmer::before,
+        .hero-shimmer::after {
+          animation: none;
+        }
+      }
+
+      /* Trust rail: quiet glass chips that give the hero a structure to read
+         without laying a headline over the footage. */
+      .hero-rail {
+        position: absolute;
+        left: clamp(1rem, 4vw, 3rem);
+        bottom: clamp(1rem, 3.5vw, 2.25rem);
+        z-index: 3;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        max-width: min(620px, calc(100% - 9rem));
+      }
+      .hero-rail span {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        padding: 0.42rem 0.85rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        background: rgba(8, 20, 38, 0.42);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        color: rgba(255, 255, 255, 0.92);
+        font-family: "Outfit", "Poppins", sans-serif;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        white-space: nowrap;
+        box-shadow: 0 10px 26px -16px rgba(0, 0, 0, 0.9);
+      }
+      .hero-rail i {
+        color: #4db74a;
+        font-size: 0.72rem;
+      }
+
+      /* Scroll cue, centred at the foot of the hero. */
+      .hero-scroll {
+        position: absolute;
+        left: 50%;
+        bottom: clamp(1rem, 3.5vw, 2.25rem);
+        z-index: 3;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.35rem;
+        color: rgba(255, 255, 255, 0.72);
+        font-family: "Outfit", "Poppins", sans-serif;
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .hero-scroll:hover {
+        color: #ffffff;
+      }
+      .hero-scroll-mouse {
+        width: 22px;
+        height: 34px;
+        border-radius: 999px;
+        border: 1.5px solid rgba(255, 255, 255, 0.4);
+        display: flex;
+        justify-content: center;
+        padding-top: 6px;
+      }
+      .hero-scroll-mouse::after {
+        content: "";
+        width: 3px;
+        height: 7px;
+        border-radius: 3px;
+        background: #00adee;
+        animation: heroWheel 1.9s ease-in-out infinite;
+      }
+      @keyframes heroWheel {
+        0% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        70% {
+          transform: translateY(11px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 0;
+        }
+      }
+      .hero-scroll:focus-visible {
+        outline: 2px solid #00adee;
+        outline-offset: 4px;
+        border-radius: 0.5rem;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .hero-scroll-mouse::after {
+          animation: none;
+        }
+      }
+      @media (max-width: 640px) {
+        .hero-scroll {
+          display: none;
+        }
       }
 
       /* Cinematic overlay: soft top shade under the navbar, deep bottom fade
-         into the next section, edge vignette and a slow cyan sheen sweep. */
+         into the next section, edge vignette and a slow cyan sheen sweep.
+         The bottom is brought up early on purpose - the clip carries burned-in
+         captions along its lower edge, and the hero chrome (trust rail, scroll
+         cue) needs a clean dark band to sit on rather than fighting them. */
       .hero-overlay {
         position: absolute;
         inset: 0;
@@ -198,9 +378,10 @@
             rgba(4, 12, 24, 0.72) 0%,
             rgba(4, 12, 24, 0.22) 14%,
             rgba(4, 12, 24, 0) 34%,
-            rgba(5, 15, 31, 0.1) 58%,
-            rgba(5, 15, 31, 0.62) 88%,
-            #050f1f 100%
+            rgba(5, 15, 31, 0.12) 58%,
+            rgba(5, 15, 31, 0.62) 78%,
+            rgba(5, 15, 31, 0.88) 88%,
+            #050f1f 96%
           ),
           radial-gradient(
             120% 90% at 50% 45%,
@@ -309,11 +490,84 @@
       .hero-assist {
         position: relative;
         overflow: hidden;
-        background: #050f1f;
-        border-top: 1px solid rgba(0, 173, 238, 0.18);
+        background:
+          radial-gradient(1100px 520px at 12% -10%, rgba(0, 173, 238, 0.16) 0%, rgba(0, 173, 238, 0) 60%),
+          radial-gradient(900px 480px at 95% 110%, rgba(77, 183, 74, 0.14) 0%, rgba(77, 183, 74, 0) 60%),
+          linear-gradient(180deg, #071326 0%, #050f1f 100%);
+        border-top: 1px solid rgba(0, 173, 238, 0.22);
+        --mx: 50%;
+        --my: 18%;
+      }
+      .hero-assist::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(560px 340px at var(--mx) var(--my), rgba(0, 173, 238, 0.16) 0%, rgba(0, 173, 238, 0) 70%);
+        transition: background 0.25s ease;
+      }
+      .hero-assist::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent 0%, #00adee 25%, #4db74a 50%, #00adee 75%, transparent 100%);
+        background-size: 200% 100%;
+        animation: assistLine 7s linear infinite;
+        opacity: 0.85;
+      }
+      @keyframes assistLine {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
+      }
+      .assist-orb {
+        position: absolute;
+        border-radius: 999px;
+        pointer-events: none;
+        filter: blur(72px);
+        opacity: 0.55;
+      }
+      .orb-a {
+        width: 420px;
+        height: 420px;
+        left: -130px;
+        top: -130px;
+        background: radial-gradient(circle, rgba(0, 173, 238, 0.5) 0%, rgba(0, 173, 238, 0) 70%);
+        animation: orbFloat 11s ease-in-out infinite;
+      }
+      .orb-b {
+        width: 360px;
+        height: 360px;
+        right: -110px;
+        top: 8%;
+        background: radial-gradient(circle, rgba(77, 183, 74, 0.42) 0%, rgba(77, 183, 74, 0) 70%);
+        animation: orbFloat 13s ease-in-out infinite reverse;
+      }
+      .orb-c {
+        width: 520px;
+        height: 260px;
+        left: 32%;
+        bottom: -140px;
+        background: radial-gradient(ellipse, rgba(0, 119, 200, 0.4) 0%, rgba(0, 119, 200, 0) 70%);
+        animation: orbFloat 16s ease-in-out infinite;
+        opacity: 0.4;
+      }
+      @keyframes orbFloat {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0) scale(1);
+        }
+        50% {
+          transform: translate3d(26px, -28px, 0) scale(1.08);
+        }
       }
 
-      /* subtle engineering diagonal hatch */
       .assist-grid {
         position: absolute;
         inset: 0;
@@ -321,15 +575,15 @@
         background-image:
           repeating-linear-gradient(
             45deg,
-            rgba(0, 173, 238, 0.07) 0px,
-            rgba(0, 173, 238, 0.07) 1px,
+            rgba(0, 173, 238, 0.08) 0px,
+            rgba(0, 173, 238, 0.08) 1px,
             transparent 1px,
             transparent 13px
           ),
           repeating-linear-gradient(
             -45deg,
-            rgba(77, 183, 74, 0.05) 0px,
-            rgba(77, 183, 74, 0.05) 1px,
+            rgba(77, 183, 74, 0.06) 0px,
+            rgba(77, 183, 74, 0.06) 1px,
             transparent 1px,
             transparent 22px
           );
@@ -345,27 +599,264 @@
           rgba(0, 0, 0, 0.35) 60%,
           transparent 100%
         );
+        animation: gridDrift 22s ease-in-out infinite alternate;
       }
-
+      @keyframes gridDrift {
+        0% {
+          transform: translate3d(0, 0, 0);
+          opacity: 0.9;
+        }
+        100% {
+          transform: translate3d(28px, -18px, 0);
+          opacity: 1;
+        }
+      }
       .assist-inner {
         position: relative;
         z-index: 1;
         max-width: 1280px;
         margin: 0 auto;
-        padding: 3.5rem 2rem;
+        padding: 4rem 2rem 4.4rem;
         display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        align-items: center;
+        grid-template-columns: 380px minmax(0, 1fr);
+        gap: 2.6rem;
+        align-items: start;
       }
-
-      /* the copy decides the panel height, the illustration only decorates the
-         right-hand side - so no empty black band under the pills */
       .assist-copy {
         position: relative;
         z-index: 2;
-        max-width: min(760px, 100%);
+        max-width: 100%;
+        padding-top: 0.4rem;
+      }
+      .assist-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.42rem 0.9rem 0.42rem 0.65rem;
+        border-radius: 999px;
+        border: 1px solid rgba(0, 173, 238, 0.32);
+        background: rgba(0, 173, 238, 0.1);
+        color: #bfeaff;
+        font-family: "Outfit", "Poppins", sans-serif;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .assist-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: #4db74a;
+        box-shadow: 0 0 0 0 rgba(77, 183, 74, 0.7);
+        animation: dotPing 1.8s ease-out infinite;
+      }
+      @keyframes dotPing {
+        0% {
+          box-shadow: 0 0 0 0 rgba(77, 183, 74, 0.65);
+        }
+        70% {
+          box-shadow: 0 0 0 9px rgba(77, 183, 74, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(77, 183, 74, 0);
+        }
+      }
+      .assist-points {
+        list-style: none;
+        margin: 1.4rem 0 1.6rem;
+        padding: 0;
+        display: grid;
+        gap: 0.6rem;
+      }
+      .assist-points li {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        font-family: "Inter", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.78);
+      }
+      .assist-points i {
+        width: 26px;
+        height: 26px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        font-size: 0.72rem;
+        color: #04121f;
+        background: linear-gradient(135deg, #2ee6c5, #00adee);
+        flex: 0 0 auto;
+      }
+      .assist-cta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.8rem;
+      }
+      .assist-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.8rem 1.35rem;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #00adee, #1f7fc4 55%, #4db74a 130%);
+        color: #fff;
+        font-family: "Outfit", "Poppins", sans-serif;
+        font-weight: 700;
+        font-size: 0.92rem;
+        text-decoration: none;
+        box-shadow: 0 14px 30px -12px rgba(0, 173, 238, 0.7);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+      }
+      .assist-btn:hover {
+        transform: translateY(-3px) scale(1.02);
+        filter: brightness(1.08);
+        box-shadow: 0 20px 40px -12px rgba(0, 173, 238, 0.8);
+      }
+      .assist-call {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        color: rgba(255, 255, 255, 0.82);
+        font-family: "Outfit", "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 0.92rem;
+        text-decoration: none;
+        padding: 0.7rem 0.4rem;
+      }
+      .assist-call strong {
+        color: #fff;
+      }
+      .assist-panel {
+        position: relative;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background:
+          radial-gradient(120% 120% at 0% 0%, rgba(0, 173, 238, 0.14) 0%, rgba(0, 173, 238, 0) 55%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.025) 100%);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        padding: 1.3rem;
+        box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.7);
+      }
+      .assist-panel-head {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        padding: 0.2rem 0.4rem 1rem;
+      }
+      .assist-dots {
+        display: flex;
+        gap: 0.35rem;
+      }
+      .assist-dots span {
+        width: 9px;
+        height: 9px;
+        border-radius: 999px;
+        display: block;
+      }
+      .assist-dots span:nth-child(1) {
+        background: #ff5f57;
+      }
+      .assist-dots span:nth-child(2) {
+        background: #febc2e;
+      }
+      .assist-dots span:nth-child(3) {
+        background: #28c840;
+      }
+      .assist-panel-title {
+        margin-left: auto;
+        font-family: "Outfit", "Poppins", sans-serif;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.58);
       }
 
+      @keyframes assistRise {
+        from {
+          opacity: 0;
+          transform: translateY(22px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes assistFade {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes pillSweep {
+        from {
+          left: -60%;
+        }
+        to {
+          left: 130%;
+        }
+      }
+      @keyframes pillPop {
+        0% {
+          transform: translateY(-5px) scale(1.02);
+        }
+        45% {
+          transform: translateY(-5px) scale(1.07);
+        }
+        100% {
+          transform: translateY(-5px) scale(1.02);
+        }
+      }
+      @keyframes iconFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-2px);
+        }
+      }
+      /* Everything below is hidden until .assist-is-ready lands, then each block
+         eases in on its own delay. Listed explicitly instead of
+         .assist-copy > *, so a decorative child is never caught in the hidden
+         state with no animation to release it. */
+      .assist-badge,
+      .assist-greeting,
+      .assist-heading,
+      .assist-sub,
+      .assist-points,
+      .assist-cta,
+      .assist-panel {
+        opacity: 0;
+      }
+      .assist-is-ready .assist-badge {
+        animation: assistFade 0.6s ease-out both;
+      }
+      .assist-is-ready .assist-greeting {
+        animation: assistFade 0.7s ease-out 0.05s both;
+      }
+      .assist-is-ready .assist-heading {
+        animation: assistRise 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+      }
+      .assist-is-ready .assist-sub {
+        animation: assistRise 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+      }
+      .assist-is-ready .assist-points {
+        animation: assistRise 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+      }
+      .assist-is-ready .assist-cta {
+        animation: assistRise 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.38s both;
+      }
+      .assist-is-ready .assist-panel {
+        animation: assistRise 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.28s both;
+      }
       .assist-greeting {
         font-family: "Outfit", "Poppins", sans-serif;
         font-size: 1.05rem;
@@ -376,10 +867,11 @@
       .assist-heading {
         font-family: "Outfit", "Poppins", sans-serif;
         font-weight: 800;
-        font-size: clamp(1.9rem, 4vw, 3.1rem);
-        line-height: 1.12;
+        font-size: clamp(2rem, 3.6vw, 2.9rem);
+        line-height: 1.1;
         color: #ffffff;
-        margin: 0.6rem 0 0.4rem;
+        margin: 0.7rem 0 0.5rem;
+        text-wrap: balance;
       }
       .assist-heading span {
         background: linear-gradient(90deg, #00adee, #4db74a);
@@ -389,75 +881,196 @@
       }
       .assist-sub {
         font-family: "Outfit", "Poppins", sans-serif;
-        font-size: 1.1rem;
+        font-size: 1.08rem;
         font-weight: 500;
-        color: rgba(255, 255, 255, 0.6);
-        margin: 0 0 1.75rem;
+        color: rgba(255, 255, 255, 0.62);
+        margin: 0;
       }
-
       .assist-pills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.7rem;
-        max-width: 760px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.8rem;
       }
       .assist-pill {
-        display: inline-flex;
+        position: relative;
+        overflow: hidden;
+        display: flex;
         align-items: center;
-        padding: 0.62rem 1.25rem;
-        border-radius: 999px;
-        border: 1.5px solid rgba(255, 255, 255, 0.16);
-        background: rgba(255, 255, 255, 0.04);
-        color: rgba(255, 255, 255, 0.86);
+        gap: 0.6rem;
+        padding: 0.75rem 0.7rem;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.075) 0%, rgba(255, 255, 255, 0.02) 100%);
+        color: rgba(255, 255, 255, 0.9);
         font-family: "Outfit", "Poppins", sans-serif;
-        font-weight: 600;
-        font-size: 0.92rem;
-        line-height: 1.3;
         text-decoration: none;
-        white-space: nowrap;
         cursor: pointer;
+        opacity: 0;
+        transform: translateY(18px) scale(0.97);
         transition:
-          transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-          border-color 0.35s ease,
-          background-color 0.35s ease,
-          box-shadow 0.35s ease,
-          color 0.35s ease;
+          opacity 0.6s ease,
+          transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+          border-color 0.3s ease,
+          background-color 0.3s ease,
+          box-shadow 0.35s ease;
       }
-      .assist-pill:hover {
-        transform: translateY(-4px) scale(1.04);
-        border-color: #00adee;
-        background: rgba(0, 173, 238, 0.14);
-        color: #ffffff;
+      .assist-pills.is-in .assist-pill {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        transition-delay: var(--d, 0s);
+      }
+      .assist-pill::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 14%;
+        right: 14%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.65), transparent);
+        opacity: 0;
+        transition: opacity 0.35s ease;
+      }
+      .assist-pill::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -60%;
+        width: 45%;
+        background: linear-gradient(
+          100deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.3) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: skewX(-18deg);
+        pointer-events: none;
+      }
+      .assist-pill:hover::after {
+        animation: pillSweep 0.75s ease-out;
+      }
+      .assist-pill:hover,
+      .assist-pill.is-tour {
+        transform: translateY(-5px) scale(1.015);
+        border-color: rgba(0, 173, 238, 0.65);
+        background: linear-gradient(180deg, rgba(0, 173, 238, 0.18) 0%, rgba(0, 173, 238, 0.06) 100%);
         box-shadow:
-          0 0 0 3px rgba(0, 173, 238, 0.14),
-          0 10px 26px rgba(0, 173, 238, 0.28);
+          0 0 0 1px rgba(0, 173, 238, 0.22) inset,
+          0 18px 38px -18px rgba(0, 173, 238, 0.6);
+      }
+      .assist-pill:hover::before,
+      .assist-pill.is-tour::before {
+        opacity: 1;
       }
       .assist-pill:focus-visible {
         outline: 2px solid #00adee;
         outline-offset: 3px;
       }
-      /* click feedback - .is-active is toggled in JS */
       .assist-pill:active {
-        transform: translateY(-1px) scale(0.97);
+        transform: translateY(-2px) scale(0.98);
       }
       .assist-pill.is-active {
         border-color: #00adee;
-        background: rgba(0, 173, 238, 0.22);
-        color: #ffffff;
+        background: linear-gradient(180deg, rgba(0, 173, 238, 0.26) 0%, rgba(0, 173, 238, 0.1) 100%);
         box-shadow:
           0 0 0 3px rgba(0, 173, 238, 0.2),
-          0 8px 22px rgba(0, 173, 238, 0.32);
+          0 12px 28px rgba(0, 173, 238, 0.35);
         animation: pillPop 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       }
-      @keyframes pillPop {
-        0% {
-          transform: translateY(-4px) scale(1.04);
+      .pill-ico {
+        width: 42px;
+        height: 42px;
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 14px;
+        font-size: 1rem;
+        color: #fff;
+        box-shadow: 0 8px 18px -8px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.18) inset;
+        transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        animation: iconFloat 4.5s ease-in-out infinite;
+      }
+      .assist-pill:hover .pill-ico,
+      .assist-pill.is-tour .pill-ico {
+        transform: rotate(-8deg) scale(1.1);
+      }
+      .is-cyan {
+        background: linear-gradient(135deg, #00adee, #0066b3);
+      }
+      .is-green {
+        background: linear-gradient(135deg, #5fd35b, #1e7a34);
+      }
+      .is-violet {
+        background: linear-gradient(135deg, #8b7bff, #3b2fd6);
+      }
+      .is-amber {
+        background: linear-gradient(135deg, #ffb020, #d35400);
+      }
+      .is-pink {
+        background: linear-gradient(135deg, #ff5a8a, #b81e5b);
+      }
+      .is-teal {
+        background: linear-gradient(135deg, #2ee6c5, #0a7a6e);
+      }
+      .pill-body {
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+        min-width: 0;
+        flex: 1 1 auto;
+        line-height: 1.25;
+      }
+      .pill-body strong {
+        font-size: 0.85rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        color: #fff;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .pill-body small {
+        font-family: "Inter", sans-serif;
+        font-size: 0.72rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.55);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .pill-go {
+        margin-left: auto;
+        width: 30px;
+        height: 30px;
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        font-size: 0.7rem;
+        color: rgba(255, 255, 255, 0.6);
+        transition: all 0.3s ease;
+      }
+      .assist-pill:hover .pill-go,
+      .assist-pill.is-tour .pill-go {
+        background: #00adee;
+        border-color: transparent;
+        color: #fff;
+        transform: translateX(3px);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .hero-assist::after,
+        .assist-orb,
+        .assist-grid,
+        .pill-ico,
+        .assist-dot {
+          animation: none;
         }
-        45% {
-          transform: translateY(-4px) scale(1.12);
-        }
-        100% {
-          transform: translateY(-4px) scale(1.04);
+        .assist-pill {
+          opacity: 1;
+          transform: none;
         }
       }
 
@@ -3129,12 +3742,10 @@
           font-size: 0.6rem;
         }
 
-        /* stack the "how can we help you?" panel and push the illustration
-           behind the copy instead of beside it */
         .assist-inner {
           grid-template-columns: minmax(0, 1fr);
-          gap: 2.5rem;
-          padding: 3.5rem 1.5rem;
+          gap: 1.8rem;
+          padding: 3.2rem 1.5rem;
         }
         .assist-copy {
           position: relative;
@@ -3143,9 +3754,10 @@
         }
         .assist-pills {
           max-width: 100%;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
-        .assist-inner {
-          position: relative;
+        .assist-panel {
+          padding: 1rem;
         }
       }
       @media (max-width: 640px) {
@@ -3169,23 +3781,53 @@
         }
 
         .assist-inner {
-          padding: 2.75rem 1rem;
+          padding: 2.6rem 1rem;
+          gap: 1.5rem;
+        }
+        .assist-heading {
+          font-size: clamp(1.7rem, 7vw, 2.1rem);
         }
         .assist-sub {
           font-size: 1rem;
-          margin-bottom: 1.4rem;
+        }
+        .assist-panel {
+          padding: 0.85rem;
+          border-radius: 20px;
         }
         .assist-pills {
-          gap: 0.55rem;
+          gap: 0.6rem;
+          grid-template-columns: minmax(0, 1fr);
         }
         .assist-pill {
-          padding: 0.5rem 0.95rem;
-          font-size: 0.82rem;
-          white-space: normal;
-          text-align: center;
+          padding: 0.65rem 0.6rem;
+          gap: 0.55rem;
+          border-radius: 15px;
         }
         .assist-pill:hover {
-          transform: translateY(-3px) scale(1.03);
+          transform: translateY(-3px) scale(1.015);
+        }
+        .pill-ico {
+          width: 36px;
+          height: 36px;
+          border-radius: 11px;
+          font-size: 0.85rem;
+        }
+        .pill-body strong {
+          font-size: 0.8rem;
+        }
+        .pill-body small {
+          font-size: 0.66rem;
+        }
+        .pill-go {
+          width: 26px;
+          height: 26px;
+        }
+        .assist-points li {
+          font-size: 0.84rem;
+        }
+        .assist-btn {
+          width: 100%;
+          justify-content: center;
         }
 
         /* partners marquee - one row only on phones */
@@ -3472,7 +4114,7 @@
           muted
           loop
           playsinline
-          preload="auto"
+          preload="metadata"
           poster="assets/videos/jaldoot-poster.jpg"
           aria-label="Jaldoot water conditioner in action"
         >
@@ -3480,7 +4122,21 @@
           Your browser does not support the video tag.
         </video>
 
+        <div class="hero-shimmer" aria-hidden="true"></div>
+
         <div class="hero-overlay" aria-hidden="true"></div>
+
+        <div class="hero-rail" aria-hidden="true">
+          <span><i class="fas fa-check"></i> No salt</span>
+          <span><i class="fas fa-check"></i> No chemicals</span>
+          <span><i class="fas fa-check"></i> No maintenance</span>
+          <span><i class="fas fa-bolt"></i> 4-in-1 technology</span>
+        </div>
+
+        <a class="hero-scroll" href="#help">
+          <span class="hero-scroll-mouse" aria-hidden="true"></span>
+          Scroll
+        </a>
 
         <button
           type="button"
@@ -3493,117 +4149,99 @@
         </button>
       </div>
 
-      <!-- ===== HOW CAN WE HELP YOU? ===== -->
-      <div class="hero-assist">
-        <!-- technical diagonal hatch -->
+      <div class="hero-assist" id="help">
         <div class="assist-grid" aria-hidden="true"></div>
-
+        <span class="assist-orb orb-a" aria-hidden="true"></span>
+        <span class="assist-orb orb-b" aria-hidden="true"></span>
+        <span class="assist-orb orb-c" aria-hidden="true"></span>
         <div class="assist-inner">
-          <!-- copy + pill tabs -->
           <div class="assist-copy">
+            <span class="assist-badge"><span class="assist-dot"></span>Water experts • 12 solutions</span>
             <p class="assist-greeting">Hi there,</p>
             <h2 class="assist-heading">
               How can we <span>help you?</span>
             </h2>
-            <p class="assist-sub">I'm interested in&hellip;</p>
-
+            <p class="assist-sub">I&rsquo;m interested in&hellip;</p>
+            <ul class="assist-points">
+              <li><i class="fa-solid fa-check"></i>No salt, no chemicals, no maintenance</li>
+              <li><i class="fa-solid fa-bolt"></i>4-in-1 conditioning in one device</li>
+              <li><i class="fa-solid fa-shield-halved"></i>Homes, farms, buildings &amp; industry</li>
+            </ul>
+            <div class="assist-cta">
+              <a class="assist-btn" href="contact.html">
+                <i class="fa-solid fa-paper-plane"></i>Talk to an expert
+              </a>
+              <a class="assist-call" href="tel:9822209656">
+                <i class="fa-solid fa-phone"></i>Call <strong>98222 09656</strong>
+              </a>
+            </div>
+          </div>
+          <div class="assist-panel">
+            <div class="assist-panel-head">
+              <div class="assist-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <span class="assist-panel-title">Pick a topic</span>
+            </div>
             <div class="assist-pills" role="list">
-              <a
-                class="assist-pill"
-                role="listitem"
-                href="products.html#scale-reduction"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Limescale</a
-              >
-              <a
-                class="assist-pill"
-                role="listitem"
-                href="products.html#hard-water"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Hard Water</a
-              >
-              <a
-                class="assist-pill"
-                role="listitem"
-                href="products.html#benefits"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Water Efficiency</a
-              >
-              <a
-                class="assist-pill"
-                role="listitem"
-                href="products.html#how-it-works"
-                target="_blank"
-                rel="noopener noreferrer"
-                >How It Works</a
-              >
-              <a
-                class="assist-pill"
-                role="listitem"
-                href="products.html#before-after"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Before &amp; After</a
-              >
-              <a
-                class="assist-pill"
-                role="listitem"
-                href="products.html#results"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Scientific Studies</a
-              >
-              <a
-                class="assist-pill"
-                role="listitem"
-                href="products.html#domestic"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Domestic Homes</a
-              >
-              <a
-                class="assist-pill"
-                role="listitem"
-                href="products.html#commercial"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Buildings</a
-              >
-              <a
-                class="assist-pill"
-                role="listitem"
-                href="products.html#industrial"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Industrial Plants</a
-              >
-              <a
-                class="assist-pill"
-                role="listitem"
-                href="products.html#agriculture"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Precision Irrigation</a
-              >
-              <a
-                class="assist-pill"
-                role="listitem"
-                href="products.html#golf"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Landscapes</a
-              >
-              <a
-                class="assist-pill"
-                role="listitem"
-                href="products.html#poultry"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Animal Health</a
-              >
+              <a class="assist-pill" style="--d:0.05s" role="listitem" href="products.html#scale-reduction" target="_blank" rel="noopener noreferrer">
+                <span class="pill-ico is-cyan"><i class="fa-solid fa-gem"></i></span>
+                <span class="pill-body"><strong>Limescale</strong><small>No more scale</small></span>
+                <span class="pill-go"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+              <a class="assist-pill" style="--d:0.1s" role="listitem" href="products.html#hard-water" target="_blank" rel="noopener noreferrer">
+                <span class="pill-ico is-teal"><i class="fa-solid fa-droplet"></i></span>
+                <span class="pill-body"><strong>Hard Water</strong><small>Soft &amp; clear</small></span>
+                <span class="pill-go"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+              <a class="assist-pill" style="--d:0.15s" role="listitem" href="products.html#benefits" target="_blank" rel="noopener noreferrer">
+                <span class="pill-ico is-green"><i class="fa-solid fa-hand-holding-droplet"></i></span>
+                <span class="pill-body"><strong>Water Efficiency</strong><small>Save every drop</small></span>
+                <span class="pill-go"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+              <a class="assist-pill" style="--d:0.2s" role="listitem" href="products.html#how-it-works" target="_blank" rel="noopener noreferrer">
+                <span class="pill-ico is-violet"><i class="fa-solid fa-gears"></i></span>
+                <span class="pill-body"><strong>How It Works</strong><small>4-in-1 science</small></span>
+                <span class="pill-go"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+              <a class="assist-pill" style="--d:0.25s" role="listitem" href="products.html#before-after" target="_blank" rel="noopener noreferrer">
+                <span class="pill-ico is-amber"><i class="fa-solid fa-images"></i></span>
+                <span class="pill-body"><strong>Before &amp; After</strong><small>See the change</small></span>
+                <span class="pill-go"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+              <a class="assist-pill" style="--d:0.3s" role="listitem" href="products.html#results" target="_blank" rel="noopener noreferrer">
+                <span class="pill-ico is-pink"><i class="fa-solid fa-flask-vial"></i></span>
+                <span class="pill-body"><strong>Scientific Studies</strong><small>Proven results</small></span>
+                <span class="pill-go"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+              <a class="assist-pill" style="--d:0.35s" role="listitem" href="products.html#domestic" target="_blank" rel="noopener noreferrer">
+                <span class="pill-ico is-cyan"><i class="fa-solid fa-house-chimney"></i></span>
+                <span class="pill-body"><strong>Domestic Homes</strong><small>Whole home</small></span>
+                <span class="pill-go"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+              <a class="assist-pill" style="--d:0.4s" role="listitem" href="products.html#commercial" target="_blank" rel="noopener noreferrer">
+                <span class="pill-ico is-violet"><i class="fa-solid fa-building"></i></span>
+                <span class="pill-body"><strong>Buildings</strong><small>Societies &amp; offices</small></span>
+                <span class="pill-go"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+              <a class="assist-pill" style="--d:0.45s" role="listitem" href="products.html#industrial" target="_blank" rel="noopener noreferrer">
+                <span class="pill-ico is-amber"><i class="fa-solid fa-industry"></i></span>
+                <span class="pill-body"><strong>Industrial Plants</strong><small>Zero downtime</small></span>
+                <span class="pill-go"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+              <a class="assist-pill" style="--d:0.5s" role="listitem" href="products.html#agriculture" target="_blank" rel="noopener noreferrer">
+                <span class="pill-ico is-green"><i class="fa-solid fa-wheat-awn"></i></span>
+                <span class="pill-body"><strong style="font-size:0.78rem">Precision Irrigation</strong><small>Healthier crops</small></span>
+                <span class="pill-go"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+              <a class="assist-pill" style="--d:0.55s" role="listitem" href="products.html#golf" target="_blank" rel="noopener noreferrer">
+                <span class="pill-ico is-teal"><i class="fa-solid fa-mountain-sun"></i></span>
+                <span class="pill-body"><strong>Landscapes</strong><small>Lush greens</small></span>
+                <span class="pill-go"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+              <a class="assist-pill" style="--d:0.6s" role="listitem" href="products.html#poultry" target="_blank" rel="noopener noreferrer">
+                <span class="pill-ico is-pink"><i class="fa-solid fa-paw"></i></span>
+                <span class="pill-body"><strong>Animal Health</strong><small>Dairy &amp; poultry</small></span>
+                <span class="pill-go"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
             </div>
           </div>
         </div>
@@ -5725,10 +6363,9 @@
           });
         })();
 
-        // ===== "HOW CAN WE HELP YOU?" PILLS =====
-        // Every pill is a real link with target="_blank"; this only adds the
-        // visual click feedback.
-        const assistPills = document.querySelectorAll(".assist-pill");
+        const assistPanel = document.querySelector(".hero-assist");
+        const assistPillsWrap = document.querySelector(".hero-assist .assist-pills");
+        const assistPills = document.querySelectorAll(".hero-assist .assist-pill");
         assistPills.forEach(function (pill) {
           let resetTimer;
           pill.addEventListener("click", function () {
@@ -5739,6 +6376,79 @@
             }, 1200);
           });
         });
+        function revealAssistPanel() {
+          if (!assistPanel) return;
+          assistPanel.classList.add("assist-is-ready");
+          if (assistPillsWrap) assistPillsWrap.classList.add("is-in");
+        }
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          revealAssistPanel();
+        } else {
+          requestAnimationFrame(function () {
+            requestAnimationFrame(revealAssistPanel);
+          });
+          if ("IntersectionObserver" in window && assistPillsWrap) {
+            const pillObserver = new IntersectionObserver(
+              function (entries) {
+                entries.forEach(function (entry) {
+                  if (entry.isIntersecting) {
+                    assistPillsWrap.classList.add("is-in");
+                    pillObserver.disconnect();
+                  }
+                });
+              },
+              { threshold: 0.15 }
+            );
+            pillObserver.observe(assistPillsWrap);
+          } else if (assistPillsWrap) {
+            assistPillsWrap.classList.add("is-in");
+          }
+          if (assistPanel) {
+            assistPanel.addEventListener("pointermove", function (e) {
+              const box = assistPanel.getBoundingClientRect();
+              const x = ((e.clientX - box.left) / box.width) * 100;
+              const y = ((e.clientY - box.top) / box.height) * 100;
+              assistPanel.style.setProperty("--mx", x.toFixed(1) + "%");
+              assistPanel.style.setProperty("--my", y.toFixed(1) + "%");
+            });
+          }
+          (function assistTour() {
+            if (!assistPills.length || !assistPanel) return;
+            let idx = 0;
+            let paused = false;
+            assistPanel.addEventListener("pointerenter", function () {
+              paused = true;
+            });
+            assistPanel.addEventListener("pointerleave", function () {
+              paused = false;
+            });
+            assistPanel.addEventListener("focusin", function () {
+              paused = true;
+            });
+            assistPanel.addEventListener("focusout", function () {
+              paused = false;
+            });
+            const tourObserver = new IntersectionObserver(
+              function (entries) {
+                paused = !entries[0].isIntersecting;
+              },
+              { threshold: 0.2 }
+            );
+            tourObserver.observe(assistPanel);
+            setInterval(function () {
+              if (paused || document.hidden) return;
+              assistPills.forEach(function (p) {
+                p.classList.remove("is-tour");
+              });
+              const current = assistPills[idx % assistPills.length];
+              if (current) current.classList.add("is-tour");
+              setTimeout(function () {
+                if (current) current.classList.remove("is-tour");
+              }, 1600);
+              idx += 1;
+            }, 2200);
+          })();
+        }
 
         // ===== SCROLL ANIMATIONS =====
         const animElements = document.querySelectorAll("[data-animate]");
