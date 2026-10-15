@@ -283,55 +283,6 @@
         }
       }
 
-      /* ===== ROTATE SLOW ===== */
-      .rotate-slow {
-        animation: rotateSlow 20s linear infinite;
-      }
-      @keyframes rotateSlow {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-
-      /* ===== PULSE GLOW ===== */
-      .pulse-glow {
-        animation: pulseGlow 2s ease-in-out infinite;
-      }
-      @keyframes pulseGlow {
-        0%,
-        100% {
-          box-shadow: 0 0 20px rgba(0, 173, 238, 0.3);
-        }
-        50% {
-          box-shadow:
-            0 0 60px rgba(0, 173, 238, 0.6),
-            0 0 100px rgba(0, 173, 238, 0.2);
-        }
-      }
-
-      /* ===== WATER DROP MORPH ===== */
-      .water-drop-morph {
-        animation: morphDrop 8s ease-in-out infinite;
-      }
-      @keyframes morphDrop {
-        0%,
-        100% {
-          border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        }
-        25% {
-          border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-        }
-        50% {
-          border-radius: 50% 60% 30% 60% / 30% 50% 70% 60%;
-        }
-        75% {
-          border-radius: 60% 30% 60% 40% / 70% 50% 40% 60%;
-        }
-      }
-
       /* ===== HERO PARTICLES ===== */
       .hero-particle {
         position: absolute;
@@ -445,38 +396,150 @@
         pointer-events: auto !important;
       }
 
+      /* the hero clears the fixed header stack: topbar 38px + navbar 80px */
+      .contact-hero {
+        margin-top: 90px;
+      }
+
+      /* Contact photo plate. cover on a 1432x411 band scales the 740x493
+         source about 1.9x, so the scrim below does the dimming rather than an
+         opacity value - one place to tune, and the crop stays centred on the
+         three contact icons. */
+      .contact-hero-photo {
+        position: absolute;
+        inset: 0;
+        background-image: url("assets/contact.jpg");
+        background-size: cover;
+        background-position: center 46%;
+        background-repeat: no-repeat;
+      }
+      @media (max-width: 639px) {
+        .contact-hero-photo {
+          background-position: center 50%;
+        }
+      }
+
+      /* Light brand veil, not a blackout: the photo is already a dark frame, so a
+         soft centre-weighted tint keeps the copy at 4.8:1 or better while the
+         picture, the icons and the phone glow all stay clearly readable. */
+      .contact-hero-scrim {
+        background:
+          radial-gradient(
+            105% 135% at 50% 46%,
+            rgba(4, 22, 58, 0.66) 0%,
+            rgba(4, 22, 58, 0.5) 52%,
+            rgba(3, 30, 74, 0.3) 100%
+          ),
+          linear-gradient(
+            118deg,
+            rgba(2, 24, 68, 0.34) 0%,
+            rgba(2, 44, 100, 0.14) 100%
+          );
+      }
+
+      /* Insurance for the copy if a brighter crop of the photo ever lands
+         under the headline. */
+      .contact-hero-copy h1,
+      .contact-hero-copy p {
+        text-shadow: 0 2px 14px rgba(2, 18, 48, 0.55);
+      }
+
+      /* The wave divider is 64px (base), 80px (sm) and 96px (lg) tall and its solid
+         grey-50 fill starts near the bottom of that band, so the copy needs the
+         full wave height of bottom clearance or the CTA pills end up painted
+         under the divider - the wave comes later in the DOM and shares z-10. */
+      .contact-hero-copy {
+        padding-top: 2.5rem;
+        padding-bottom: 4rem;
+      }
+      @media (min-width: 640px) {
+        .contact-hero-copy {
+          padding-bottom: 5rem;
+        }
+      }
+      @media (min-width: 1024px) {
+        .contact-hero-copy {
+          padding-top: 3rem;
+          padding-bottom: 6rem;
+        }
+      }
+
       /* ===== HERO RIPPLE / FLOATING CHIPS ===== */
       .contact-chip {
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
       }
 
-      /* ===== CONTACT CARD ===== */
+      /* ===== CONTACT CARD =====
+         Every card runs icon -> title -> value -> footer at the same
+         spacing, and the grid uses items-start so each card is exactly as tall
+         as its own copy. Stretching them to a common height is what left the
+         empty band inside the shorter cards. */
       .contact-card {
         background: white;
-        border-radius: 1rem;
-        padding: 2rem;
-        border: 1px solid rgba(0, 173, 238, 0.1);
-        text-align: center;
-        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        border-radius: 1.25rem;
+        padding: 1.75rem;
+        border: 1px solid rgba(0, 173, 238, 0.12);
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 1px 2px rgba(10, 22, 40, 0.04);
+        transition:
+          transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          border-color 0.4s ease,
+          box-shadow 0.4s ease;
       }
       .contact-card:hover {
-        transform: translateY(-12px);
-        border-color: rgba(0, 173, 238, 0.35);
-        box-shadow: 0 20px 40px -12px rgba(0, 102, 179, 0.12);
+        border-color: rgba(0, 173, 238, 0.38);
+        box-shadow: 0 22px 44px -18px rgba(0, 102, 179, 0.22);
       }
       .contact-icon {
-        width: 4rem;
-        height: 4rem;
-        border-radius: 1rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 0.875rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 0 1.25rem;
-        transition: all 0.4s ease;
+        margin: 0 0 1rem;
+        transition: transform 0.4s ease;
       }
       .contact-card:hover .contact-icon {
-        transform: scale(1.1) rotate(-6deg);
+        transform: scale(1.08) rotate(-6deg);
+      }
+      /* Footer meta line. flex-start keeps the icon hard against the first
+         line and lets a long label such as the opening hours wrap instead of
+         overflowing the card. The footer follows the copy directly - pinning
+         it to the bottom with margin-top:auto left a visible gap in the
+         middle of every card whose copy was short. */
+      .contact-card-foot {
+        padding-top: 0.875rem;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        font-size: 0.8125rem;
+        line-height: 1.45;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        color: #6d6e6f;
+        text-decoration: none;
+      }
+      .contact-card-foot i {
+        margin-top: 0.2rem;
+        color: #00adee;
+        flex-shrink: 0;
+      }
+      a.contact-card-foot {
+        font-weight: 600;
+        color: #0066b3;
+      }
+      a.contact-card-foot:hover,
+      a.contact-card-foot:focus-visible {
+        color: #00adee;
+      }
+      .contact-card a:focus-visible {
+        outline: 2px solid #00adee;
+        outline-offset: 3px;
+        border-radius: 0.25rem;
       }
 
       /* ===== FORM ===== */
@@ -989,11 +1052,21 @@
       </div>
     </div>
 
-    <!-- ===== PAGE HERO WITH ANIMATIONS ===== -->
+    <!-- ===== PAGE HERO ===== -->
     <section
       id="top"
-      class="relative min-h-[70vh] lg:min-h-[80vh] flex items-center overflow-hidden bg-gradient-to-br from-jd-dark via-jd-deep to-jd-blue"
+      class="contact-hero relative flex items-center overflow-hidden bg-gradient-to-br from-jd-dark via-jd-deep to-jd-blue"
     >
+      <!-- Contact photo: a dimmed plate behind the brand gradient so the centred
+           copy keeps its contrast. It is a background-image rather than an
+           <img>, so a missing file degrades to the plain gradient instead of
+           showing a broken-image icon. -->
+      <div class="contact-hero-photo" aria-hidden="true"></div>
+      <div
+        class="contact-hero-scrim absolute inset-0 z-[1]"
+        aria-hidden="true"
+      ></div>
+
       <!-- Particles -->
       <div
         id="heroParticles"
@@ -1013,153 +1086,59 @@
         ></div>
       </div>
 
-      <!-- Decorative Blobs -->
-      <div class="absolute inset-0 z-[1] opacity-10">
-        <div
-          class="absolute top-20 left-10 w-72 h-72 bg-jd-sky rounded-full blur-3xl"
-        ></div>
-        <div
-          class="absolute bottom-10 right-20 w-96 h-96 bg-white rounded-full blur-3xl"
-        ></div>
-        <div
-          class="absolute top-1/2 left-1/2 w-64 h-64 bg-jd-green rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"
-        ></div>
-      </div>
+      <!-- Decorative Blobs: skipped on this page. The photo already carries
+           the depth, and a blurred sky/green blob on top of a photograph just
+           reads as haze. -->
 
-      <!-- Ripples -->
+      <!-- Content: text-only hero, same rhythm as about.html and products.html.
+           No data-animate here on purpose: hero copy must never depend on a
+           scroll-reveal to become visible. -->
       <div
-        class="hero-ripple z-[1]"
-        style="bottom: 20%; left: 10%; animation-delay: 0s"
-      ></div>
-      <div
-        class="hero-ripple z-[1]"
-        style="top: 30%; right: 15%; animation-delay: 2s"
-      ></div>
-
-      <!-- Content -->
-      <div
-        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-28 lg:pt-36 lg:pb-36 w-full"
+        class="contact-hero-copy relative z-20 w-full max-w-3xl mx-auto px-4 sm:px-6 text-center"
       >
-        <div
-          class="grid lg:grid-cols-2 gap-12 items-center"
-          data-animate="fade-up"
-        >
-          <!-- Left Content -->
-          <div class="text-center lg:text-left">
-            <div
-              class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/90 text-sm font-heading font-medium mb-6"
-            >
-              <span
-                class="w-2 h-2 bg-jd-green rounded-full animate-pulse"
-              ></span>
-              We Reply Within 2&ndash;4 Hours
-            </div>
-
-            <h1
-              class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-heading font-extrabold leading-[1.1] mb-6"
-            >
-              <span class="text-white">Let Us</span><br />
-              <span class="gradient-text-white">Solve Your Water</span>
-            </h1>
-
-            <p
-              class="text-lg sm:text-xl text-white/70 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed font-body"
-            >
-              Tell us about your line &mdash; pipe material, diameter and flow
-              &mdash; and we will suggest the right Jaldoot unit for your water.
-            </p>
-
-            <div
-              class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start mb-8"
-            >
-              <a
-                href="#contact-form"
-                class="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-jd-deep rounded-full font-heading font-semibold shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                <i class="fas fa-paper-plane"></i>
-                Send a message
-                <i
-                  class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"
-                ></i>
-              </a>
-              <a
-                href="tel:9822209656"
-                class="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-2 border-white/40 text-white rounded-full font-heading font-semibold hover:bg-white hover:text-jd-deep transition-all duration-300"
-              >
-                <i class="fas fa-phone-alt"></i>
-                98222 09656
-              </a>
-            </div>
-          </div>
-
-          <!-- Right Visual -->
-          <div
-            class="hidden lg:flex items-center justify-center"
-            data-animate="fade-left"
-            data-delay="300"
-          >
-            <div class="relative">
-              <!-- Rotating Orbit -->
-              <div
-                class="absolute inset-[-30px] rotate-slow pointer-events-none"
-              >
-                <div
-                  class="absolute top-0 left-1/2 w-3 h-3 bg-jd-sky/50 rounded-full -translate-x-1/2"
-                ></div>
-                <div
-                  class="absolute bottom-0 left-1/2 w-2 h-2 bg-jd-green/50 rounded-full -translate-x-1/2"
-                ></div>
-                <div
-                  class="absolute left-0 top-1/2 w-2.5 h-2.5 bg-white/30 rounded-full -translate-y-1/2"
-                ></div>
-              </div>
-
-              <div
-                class="water-drop-morph w-64 h-64 xl:w-72 xl:h-72 bg-gradient-to-br from-jd-sky/20 via-jd-blue/15 to-white/10 flex items-center justify-center backdrop-blur-sm border border-white/10 pulse-glow"
-              >
-                <div
-                  class="w-44 h-44 xl:w-48 xl:h-48 rounded-full bg-gradient-to-br from-jd-sky/30 to-jd-blue/20 flex items-center justify-center border border-white/15"
-                >
-                  <div class="text-center">
-                    <i
-                      class="fas fa-headset text-5xl text-white/60 mb-3"
-                    ></i>
-                    <p class="text-white font-heading font-bold text-lg">
-                      Talk To Us
-                    </p>
-                    <p class="text-white/50 text-xs font-heading mt-1">
-                      Mon &ndash; Sat, 9:30 AM
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Floating Labels -->
-              <div
-                class="absolute -top-4 -right-4 contact-chip bg-white/10 rounded-2xl px-4 py-2 border border-white/20 text-white text-sm font-heading font-semibold shadow-xl float-y"
-              >
-                <i class="fab fa-whatsapp text-green-400 mr-2"></i>WhatsApp
-              </div>
-              <div
-                class="absolute -bottom-4 -left-4 contact-chip bg-white/10 rounded-2xl px-4 py-2 border border-white/20 text-white text-sm font-heading font-semibold shadow-xl float-y-delay"
-              >
-                <i class="fas fa-location-dot text-jd-sky mr-2"></i>Hadapsar, Pune
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Breadcrumb: dead-centre of the hero, black text. Shared styling
-           lives in css/styles.css so it matches the other inner pages. -->
-      <div class="hero-crumb">
-        <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+        <nav class="hero-breadcrumb mb-6 sm:mb-7" aria-label="Breadcrumb">
           <a href="index.html" class="font-heading">
             <i class="fas fa-home mr-1"></i> Home
           </a>
           <i class="fas fa-chevron-right hero-crumb-sep"></i>
           <span class="hero-crumb-current font-heading">Contact</span>
         </nav>
+
+        <h1
+          class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-4 leading-tight"
+        >
+          Let Us <span class="gradient-text-white">Solve Your Water</span>
+        </h1>
+
+        <p
+          class="text-white/85 text-base lg:text-lg max-w-3xl mx-auto leading-relaxed font-body mb-7"
+        >
+          Tell us about your line &mdash; pipe material, diameter and flow
+          &mdash; and we will suggest the right Jaldoot unit for your water.
+          <span class="text-white font-semibold font-heading"
+            >We reply within 2&ndash;4 hours.</span
+          >
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a
+            href="#contact-form"
+            class="group inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-jd-deep rounded-full font-heading font-semibold shadow-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+          >
+            <i class="fas fa-paper-plane"></i>
+            Send a message
+            <i
+              class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"
+            ></i>
+          </a>
+          <a
+            href="tel:9822209656"
+            class="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-white/40 text-white rounded-full font-heading font-semibold hover:bg-white hover:text-jd-deep transition-all duration-300"
+          >
+            <i class="fas fa-phone-alt"></i>
+            98222 09656
+          </a>
+        </div>
       </div>
 
       <!-- Wave Bottom -->
@@ -1217,31 +1196,39 @@
         </div>
 
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-start"
         >
           <div class="contact-card card-hover shine-effect relative text-left" data-animate="fade-up" data-delay="0">
             <div class="contact-icon icon-float bg-jd-sky/10">
               <i class="fas fa-map-marker-alt text-2xl text-jd-sky"></i>
             </div>
-            <h3 class="font-heading font-bold text-lg text-jd-deep mb-3">
+            <h3 class="font-heading font-bold text-lg text-jd-deep mb-2">
               Visit Us
             </h3>
-            <p class="text-jd-gray text-sm leading-relaxed">
+            <address class="not-italic text-jd-gray text-sm leading-relaxed">
               Plot No. 83, Near Maruthi Meter,<br />
               Ramtekadi Industrial Estate,<br />
-              Hadapsar, Pune - 411028,<br />
+              Hadapsar, Pune &ndash; 411028,<br />
               Maharashtra, India
-            </p>
+            </address>
+            <a
+              class="contact-card-foot"
+              href="https://www.google.com/maps/search/?api=1&amp;query=Plot+No+83+Near+Maruthi+Meter+Ramtekadi+Industrial+Estate+Hadapsar+Pune+411028"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fas fa-directions text-xs"></i> Get directions
+            </a>
           </div>
 
           <div class="contact-card card-hover shine-effect relative text-left" data-animate="fade-up" data-delay="100">
             <div class="contact-icon icon-float bg-jd-blue/10">
               <i class="fas fa-phone-alt text-2xl text-jd-blue"></i>
             </div>
-            <h3 class="font-heading font-bold text-lg text-jd-deep mb-3">
+            <h3 class="font-heading font-bold text-lg text-jd-deep mb-2">
               Call Us
             </h3>
-            <p class="text-jd-gray text-sm leading-relaxed">
+            <div class="text-jd-gray text-sm leading-relaxed">
               <a
                 href="tel:9822209656"
                 class="block font-semibold text-jd-deep hover:text-jd-sky transition-colors"
@@ -1252,9 +1239,10 @@
                 class="block font-semibold text-jd-deep hover:text-jd-sky transition-colors"
                 >94040 39656</a
               >
-              <span class="block mt-2 text-xs text-jd-gray/70"
-                >Mon &ndash; Sat, 9:30 AM to 6:30 PM</span
-              >
+            </div>
+            <p class="contact-card-foot">
+              <i class="far fa-clock"></i>
+              <span>Mon &ndash; Sat, 9:30 AM to 6:30 PM</span>
             </p>
           </div>
 
@@ -1262,44 +1250,41 @@
             <div class="contact-icon icon-float bg-jd-green/10">
               <i class="fas fa-envelope text-2xl text-jd-green"></i>
             </div>
-            <h3 class="font-heading font-bold text-lg text-jd-deep mb-3">
+            <h3 class="font-heading font-bold text-lg text-jd-deep mb-2">
               Email Us
             </h3>
-            <p class="text-jd-gray text-sm leading-relaxed">
-              <a
-                href="mailto:watercare.krushinature@gmail.com"
-                class="font-semibold text-jd-deep hover:text-jd-sky transition-colors break-all text-xs sm:text-sm"
-                >watercare.krushinature<wbr />@gmail.com</a
-              >
-            </p>
             <a
+              href="mailto:watercare.krushinature@gmail.com"
+              class="text-[0.8125rem] font-semibold text-jd-deep hover:text-jd-sky transition-colors break-words"
+              >watercare.krushinature@gmail.com</a
+            >
+            <a
+              class="contact-card-foot"
               href="http://www.jaldootcorporation.com"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-block mt-3 text-xs font-semibold text-jd-blue hover:text-jd-sky transition-colors"
-              >www.jaldootcorporation.com</a
             >
+              <i class="fas fa-globe text-xs"></i> www.jaldootcorporation.com
+            </a>
           </div>
 
           <div class="contact-card card-hover shine-effect relative text-left" data-animate="fade-up" data-delay="300">
             <div class="contact-icon icon-float bg-green-500/10">
-              <i class="fab fa-whatsapp text-3xl text-green-500"></i>
+              <i class="fab fa-whatsapp text-2xl text-green-500"></i>
             </div>
-            <h3 class="font-heading font-bold text-lg text-jd-deep mb-3">
+            <h3 class="font-heading font-bold text-lg text-jd-deep mb-2">
               WhatsApp
             </h3>
-            <p class="text-jd-gray text-sm leading-relaxed">
-              <a
-                href="https://wa.me/919822209656"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="font-semibold text-jd-deep hover:text-jd-sky transition-colors"
-                >Chat with our team</a
-              >
-              <span class="block mt-2 text-xs text-jd-gray/70"
-                >Fastest way to reach us</span
-              >
-            </p>
+            <a
+              href="https://wa.me/919822209656"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm font-semibold text-jd-deep hover:text-jd-sky transition-colors"
+              >Chat with our team</a
+            >
+            <span class="contact-card-foot">
+              <i class="fas fa-bolt text-xs"></i> Fastest way to reach us
+            </span>
           </div>
         </div>
       </div>
@@ -1426,7 +1411,7 @@
                 id="submit-btn"
                 class="btn-primary btn-ripple w-full sm:w-auto mt-6 sm:mt-8 justify-center"
               >
-                <span id="submit-text">Send Message</span>
+                <span id="submit-text">Send on WhatsApp</span>
                 <svg
                   id="submit-arrow"
                   class="w-5 h-5"
@@ -1464,15 +1449,14 @@
               </button>
 
               <p class="text-xs text-jd-gray/70 mt-4 sm:mt-6">
-                <i class="fas fa-circle-info mr-1 text-jd-sky"></i>
-                This form validates your details in the browser. For an
-                immediate response, call
+                <i class="fab fa-whatsapp mr-1 text-green-500"></i>
+                Sending opens WhatsApp with your details filled in for
                 <a
                   href="tel:9822209656"
                   class="font-semibold text-jd-blue hover:text-jd-sky"
                   >98222 09656</a
                 >
-                or message us on WhatsApp.
+                &mdash; press send there to deliver it.
               </p>
             </form>
           </div>
@@ -2419,6 +2403,9 @@
         });
 
         // ===== FORM VALIDATION & SUBMISSION =====
+        // Static site, no backend: the enquiry is delivered through WhatsApp
+        // to the sales number. Country code 91, subscriber 9822209656.
+        const WHATSAPP_NUMBER = "919822209656";
         const form = document.getElementById("contactForm");
 
         function showError(input, show) {
@@ -2490,21 +2477,54 @@
             const submitText = document.getElementById("submit-text");
             const submitArrow = document.getElementById("submit-arrow");
             const submitSpinner = document.getElementById("submit-spinner");
+            const interestSelect = document.getElementById("interest");
 
             submitBtn.disabled = true;
-            submitText.textContent = "Sending...";
+            submitText.textContent = "Opening WhatsApp...";
             submitArrow.classList.add("hidden");
             submitSpinner.classList.remove("hidden");
 
-            // Demo submit: no backend is wired up on this static site.
+            const interestLabel = interestSelect.options[
+              interestSelect.selectedIndex
+            ].text.trim();
+
+            const enquiry = [
+              "New enquiry from the Jaldoot website",
+              "",
+              "Name: " + document.getElementById("name").value.trim(),
+              "Phone: " + (document.getElementById("phone").value.trim() || "-"),
+              "Email: " + document.getElementById("email").value.trim(),
+              "Interested in: " + interestLabel,
+              "",
+              "Message:",
+              document.getElementById("message").value.trim(),
+            ].join("\n");
+
+            const waUrl =
+              "https://wa.me/" +
+              WHATSAPP_NUMBER +
+              "?text=" +
+              encodeURIComponent(enquiry);
+
+            // Opened straight from the submit handler, so it is a user gesture
+            // and is not popup-blocked in normal use. opener is nulled to close
+            // the reverse-tabnabbing hole; if the handle comes back null the
+            // popup was blocked and we fall back to a same-tab navigation.
+            const opened = window.open(waUrl, "_blank");
+            if (opened) {
+              opened.opener = null;
+            } else {
+              window.location.href = waUrl;
+            }
+
             setTimeout(function () {
               submitBtn.disabled = false;
-              submitText.textContent = "Send Message";
+              submitText.textContent = "Send on WhatsApp";
               submitArrow.classList.remove("hidden");
               submitSpinner.classList.add("hidden");
 
               showToast(
-                "Thank you! Your message has been received. We'll respond shortly.",
+                "WhatsApp opened with your message ready. Press send to deliver it to 98222 09656.",
               );
               form.reset();
               form.querySelectorAll(".form-input").forEach(function (input) {
@@ -2515,7 +2535,7 @@
                 .forEach(function (msg) {
                   msg.classList.remove("show");
                 });
-            }, 1500);
+            }, 1200);
           });
         }
 
