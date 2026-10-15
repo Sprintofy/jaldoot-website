@@ -63,10 +63,9 @@
           height 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
           opacity 0.3s ease;
       }
-      /* collapses on scroll so the navbar gets the full header back */
-      .navbar.is-hidden .topbar {
-        height: 0;
-        opacity: 0;
+      /* Keep topbar always visible - no collapse, no gap. */
+      .topbar {
+        transition: background 0.3s ease, box-shadow 0.3s ease;
       }
       .topbar-inner {
         display: flex;
@@ -2170,18 +2169,20 @@
          offset-aware smooth scroll below. -->
     <script>
       // ===== PRELOADER =====
+      // Hide on DOMContentLoaded (HTML ready) instead of waiting for all resources
       function hidePreloader() {
         const preloader = document.getElementById("preloader");
         if (!preloader) return;
         preloader.classList.add("hide");
         setTimeout(function () {
           preloader.style.display = "none";
-        }, 600);
+        }, 300);
       }
-      window.addEventListener("load", function () {
-        setTimeout(hidePreloader, 700);
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(hidePreloader, 100);
       });
-      setTimeout(hidePreloader, 4000);
+      // Fallback - reduced from 4000ms to 1500ms
+      setTimeout(hidePreloader, 1500);
 
       document.addEventListener("DOMContentLoaded", function () {
         // ===== FOOTER YEAR =====
@@ -2210,7 +2211,6 @@
         if (navbar) {
           const onScroll = function () {
             navbar.classList.toggle("scrolled", window.scrollY > 80);
-            navbar.classList.toggle("is-hidden", window.scrollY > 80);
           };
           window.addEventListener("scroll", onScroll, { passive: true });
           onScroll();

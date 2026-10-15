@@ -99,12 +99,9 @@
           opacity 0.3s ease,
           background 0.3s ease;
       }
-      /* On scroll: fade the bar but KEEP its space reserved so hero never jumps. */
-      .navbar.is-hidden .topbar {
-        opacity: 0;
-        pointer-events: none;
-        background: transparent;
-        box-shadow: none;
+      /* Keep topbar always visible - no collapse, no gap. */
+      .topbar {
+        transition: background 0.3s ease, box-shadow 0.3s ease;
       }
       .topbar-inner {
         display: flex;
@@ -115,10 +112,6 @@
         height: 34px;
         margin: 0 auto;
         padding: 0 1rem;
-        transition: opacity 0.3s ease;
-      }
-      .navbar.is-hidden .topbar-inner {
-        opacity: 0;
       }
       .topbar-tag {
         display: inline-flex;
@@ -6401,12 +6394,32 @@
               </li>
               <li>
                 <a
+                  href="products.html#poultry"
+                  class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
+                  ></i
+                  >Poultry Farming</a
+                >
+              </li>
+              <li>
+                <a
                   href="products.html#commercial"
                   class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
                   ><i
                     class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
                   ></i
                   >Commercial & Industrial</a
+                >
+              </li>
+              <li>
+                <a
+                  href="products.html#ro-plant"
+                  class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
+                  ></i
+                  >JVC for RO Plant</a
                 >
               </li>
               <li>
@@ -6530,27 +6543,28 @@
     <!-- ===== ALL JAVASCRIPT ===== -->
     <script>
       // ===== PRELOADER =====
-      window.addEventListener("load", function () {
+      // Hide on DOMContentLoaded (HTML ready) instead of waiting for all resources
+      document.addEventListener("DOMContentLoaded", function () {
         const preloader = document.getElementById("preloader");
         if (preloader) {
           setTimeout(function () {
             preloader.classList.add("hide");
             setTimeout(function () {
               preloader.style.display = "none";
-            }, 600);
-          }, 800);
+            }, 300);
+          }, 100);
         }
       });
-      // Fallback
+      // Fallback - reduced from 4000ms to 1500ms
       setTimeout(function () {
         const preloader = document.getElementById("preloader");
         if (preloader && preloader.style.display !== "none") {
           preloader.classList.add("hide");
           setTimeout(function () {
             preloader.style.display = "none";
-          }, 600);
+          }, 300);
         }
-      }, 4000);
+      }, 1500);
 
       document.addEventListener("DOMContentLoaded", function () {
         // ===== FOOTER YEAR =====
@@ -6566,10 +6580,8 @@
             function () {
               if (window.scrollY > 80) {
                 navbar.classList.add("scrolled");
-                navbar.classList.add("is-hidden");
               } else {
                 navbar.classList.remove("scrolled");
-                navbar.classList.remove("is-hidden");
               }
             },
             { passive: true },
