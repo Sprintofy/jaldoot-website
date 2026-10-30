@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="About Krushi Nature Water Care Pvt. Ltd. - ISO 9001:2008 certified manufacturer of Jaldoot Water Conditioner, De-Scalar and Catalytic Technology products."
+      content="About Jaldoot - ISO 9001:2008 certified manufacturer of Jaldoot Water Conditioner, De-Scalar and Catalytic Technology products."
     />
     <title>
-      About Us | JALDOOT Water Conditioner | Krushi Nature Water Care Pvt. Ltd.
+      About Us | JALDOOT Water Conditioner | Jaldoot
     </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -542,7 +542,8 @@
         overflow: hidden;
         background: linear-gradient(135deg, #134fa1 0%, #0066b3 45%, #00adee 100%);
       }
-      .yt-thumb-img {
+      .yt-thumb-img,
+      .yt-thumb-video {
         display: block;
         width: 100%;
         height: 100%;
@@ -552,7 +553,9 @@
         background: #071527;
       }
       .yt-card:hover .yt-thumb-img,
-      .yt-card:focus-within .yt-thumb-img {
+      .yt-card:focus-within .yt-thumb-img,
+      .yt-card:hover .yt-thumb-video,
+      .yt-card:focus-within .yt-thumb-video {
         transform: scale(1.08);
       }
 
@@ -751,12 +754,12 @@
           width: 100%;
         }
         .yt-carousel-track-container { overflow: visible; }
-        .yt-card, .yt-thumb-img, .yt-overlay, .yt-play-btn, .yt-overlay-text,
+        .yt-card, .yt-thumb-img, .yt-thumb-video, .yt-overlay, .yt-play-btn, .yt-overlay-text,
         .yt-modal, .yt-modal-box, .yt-modal-close {
           transition: none; animation: none;
         }
         .yt-card:hover, .yt-card:focus-within { transform: none; }
-        .yt-thumb-img { transform: none; }
+        .yt-thumb-img, .yt-thumb-video { transform: none; }
         .yt-overlay { opacity: 1; }
         .yt-play-btn { transform: scale(1); }
         .yt-overlay-text { opacity: 1; transform: none; }
@@ -2473,6 +2476,47 @@
         }
       }
 
+      /* ===== TAGLINE BANNER ===== */
+      .tagline-banner {
+        background: linear-gradient(180deg, #ffffff 0%, #f0f8ff 100%);
+      }
+      .tagline-badge {
+        background: linear-gradient(
+          135deg,
+          rgba(77, 183, 74, 0.12),
+          rgba(77, 183, 74, 0.06)
+        );
+        box-shadow: 0 4px 12px rgba(77, 183, 74, 0.15);
+      }
+      .tagline-title {
+        background: linear-gradient(135deg, var(--jd-deep), var(--jd-blue));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: -0.02em;
+      }
+      .tagline-sub {
+        color: var(--jd-gray);
+      }
+      .tagline-sub-lead {
+        color: var(--jd-deep);
+      }
+      .tagline-card {
+        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+      }
+      .tagline-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 24px 48px rgba(10, 22, 40, 0.12);
+      }
+      .tagline-underline {
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .tagline-underline.visible {
+        transform: scaleX(1);
+      }
+
     </style>
   </head>
 
@@ -2533,7 +2577,7 @@
         <div class="topbar-inner">
           <span class="topbar-tag">
             <i class="fas fa-tint" aria-hidden="true"></i>
-            Crystal Clear Naturally Water &mdash; Krushi Nature Water Care Pvt.
+            Crystal Clear Naturally Water &mdash; Jaldoot
             Ltd.
           </span>
 
@@ -2549,16 +2593,16 @@
             </a>
             <a
               class="soc-ig"
-              href="https://www.instagram.com/jaldootwatersystems"
+              href="https://www.instagram.com/p/ClfuYKYL-F5/?dlrf=Z20ydWVrdzI3ejQ48"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Jaldoot on Instagram"
+              aria-label="Jaldoot Instagram Reel"
             >
               <i class="fab fa-instagram" aria-hidden="true"></i>
             </a>
             <a
               class="soc-yt"
-              href="https://www.youtube.com/@jaldootwatersystemsindia"
+              href="https://www.youtube.com/@jaldootsystemsindia"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Jaldoot on YouTube"
@@ -2758,7 +2802,7 @@
         <h1
           class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-5 leading-tight"
         >
-          Krushi Nature Water Care
+          Jaldoot
           <span class="text-jd-green">Pvt. Ltd.</span>
         </h1>
 
@@ -2794,6 +2838,36 @@
       </div>
     </section>
 
+    <!-- ===== TAGLINE BANNER ===== -->
+    <section class="tagline-banner py-4 lg:py-6 relative overflow-hidden">
+      <div class="absolute inset-0 z-[1] opacity-10">
+        <div
+          class="absolute top-1/2 left-1/2 w-[250px] h-[250px] bg-jd-sky/10 rounded-full blur-[40px] -translate-x-1/2 -translate-y-1/2"
+        ></div>
+        <div
+          class="absolute top-1/4 right-1/4 w-[150px] h-[150px] bg-jd-green/10 rounded-full blur-[30px]"
+        ></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="tagline-card relative bg-white/70 backdrop-blur-md rounded-3xl border border-white/40 shadow-2xl p-4 lg:p-6 mx-auto max-w-3xl">
+          <div class="tagline-badge inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-jd-green border border-jd-green/30 text-white text-xs font-heading font-bold uppercase tracking-widest mb-3 shadow-lg shadow-jd-green/25" data-animate="fade-up">
+            <i class="fas fa-check-circle"></i>
+            Complete Water Solution
+          </div>
+          <h2 class="tagline-title text-2xl sm:text-3xl lg:text-4xl font-heading font-extrabold text-jd-deep leading-tight mb-3 tracking-tight" data-animate="fade-up" data-delay="80">
+            All type of <br />
+            <span class="gradient-text-blue">water solution</span>
+          </h2>
+          <div class="tagline-underline mx-auto w-24 h-0.5 bg-jd-green rounded-full shadow-lg shadow-jd-green/40 mb-4" data-animate="fade-up" data-delay="160"></div>
+          <p class="tagline-sub text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed opacity-90" data-animate="fade-up" data-delay="240">
+            <span class="tagline-sub-lead text-jd-deep font-heading font-semibold">One trusted partner</span> for
+            <span class="gradient-text-blue">homes, farms, factories</span> and every water system
+            in between.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== COMPANY INTRODUCTION ===== -->
     <section class="py-20 lg:py-28 bg-white relative overflow-hidden">
       <div
@@ -2814,12 +2888,12 @@
             <h2
               class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep mb-6 leading-tight"
             >
-              Krushi Nature Water Care
+              Jaldoot
               <span class="gradient-text-green">Pvt. Ltd.</span>
             </h2>
             <div class="space-y-5 text-jd-gray leading-relaxed font-body">
               <p>
-                Krushi Nature Water Care Pvt. Ltd. is an
+                Jaldoot is an
                 <strong class="text-jd-deep">ISO 9001:2008 certified</strong>
                 company engaged in the manufacturing and supply of advanced
                 water conditioning solutions. The company specializes in
@@ -2900,7 +2974,7 @@
             <!-- Company image -->
             <img
               src="assets/pro1.png"
-              alt="Krushi Nature Water Care Pvt. Ltd. - Company Facility"
+              alt="Jaldoot - Company Facility"
               class="block w-auto h-[560px] sm:h-[640px] lg:h-[800px] xl:h-[688px] mx-auto rounded-3xl border border-jd-sky/10 shadow-xl shadow-jd-sky/10 bg-jd-dark transition-transform duration-300 hover:scale-[1.01] object-cover"
             />
 
@@ -2919,6 +2993,111 @@
               </span>
               <span class="hidden sm:inline">Watch Our Story</span>
             </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PAN IMAGE SECTION ===== -->
+    <section class="py-24 lg:py-32 bg-white relative overflow-hidden border-t border-jd-sky/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Image: left side -->
+          <div class="pan-container relative rounded-3xl overflow-hidden border border-jd-sky/10 shadow-2xl shadow-jd-sky/10 bg-jd-dark" data-animate="fade-left">
+            <img
+              src="assets/pan.png"
+              alt="Jaldoot Pan Water Solution"
+              class="block w-full h-auto rounded-3xl object-cover transition-transform duration-500 hover:scale-102"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Text: right side -->
+          <div class="max-w-lg" data-animate="fade-right">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-jd-deep leading-tight mb-4">
+              Empowering Farmers with Better Water
+            </h2>
+            <p class="text-jd-gray text-lg sm:text-xl leading-relaxed mb-6">
+              Helping farmers improve irrigation water quality, reduce hard water
+              challenges and support better crop productivity with JalDoot water
+              conditioning solutions.
+            </p>
+            <div class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-jd-sky/10 border border-jd-sky/20 text-jd-sky font-heading font-semibold text-sm">
+              <span class="flex items-center gap-1">
+                <i class="fas fa-leaf"></i> Smarter Irrigation
+              </span>
+              <span class="w-px h-3 bg-jd-sky/30 mx-1"></span>
+              <span class="flex items-center gap-1">
+                <i class="fas fa-seedling"></i> Healthier Soil
+              </span>
+              <span class="w-px h-3 bg-jd-sky/30 mx-1"></span>
+              <span class="flex items-center gap-1">
+                <i class="fas fa-chart-line"></i> Better Growth
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INTERNATIONAL PRESENCE SOUTH AFRICA ===== -->
+    <section class="py-8 lg:py-12 bg-white relative overflow-hidden border-t border-jd-sky/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+          <!-- Text: left side -->
+          <div class="max-w-lg" data-animate="fade-left">
+            <span
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-jd-green/10 text-jd-green text-[0.65rem] font-heading font-bold uppercase tracking-wider mb-4"
+            >
+              International Presence
+            </span>
+            <h2
+              class="text-2xl sm:text-3xl lg:text-4xl font-heading font-extrabold text-jd-deep leading-tight mb-3"
+            >
+              International Presence – South Africa
+            </h2>
+            <p class="text-base sm:text-lg text-jd-deep font-heading font-semibold mb-3">
+              Taking JalDoot Water Solutions to the Global Stage
+            </p>
+            <p class="text-jd-gray leading-relaxed mb-5">
+              JalDoot proudly showcased its innovative water conditioning and
+              softening solutions at an international exhibition in South Africa.
+              This milestone represents our growing global presence,
+              international networking, and commitment to bringing advanced
+              water treatment technologies to markets worldwide.
+            </p>
+            <div
+              class="bg-jd-sky/5 rounded-2xl p-4 border border-jd-sky/10"
+            >
+              <p class="text-jd-deep font-heading font-semibold text-sm mb-0">
+                Our Vision: Building global connections through innovative,
+                reliable and sustainable water solutions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Images: right side -->
+          <div class="flex flex-row gap-6 items-center" data-animate="fade-right">
+            <div
+              class="relative rounded-2xl overflow-hidden border border-jd-sky/10 shadow-2xl shadow-jd-sky/10 max-w-lg"
+            >
+              <img
+                src="assets/sauthafrica.png"
+                alt="Jaldoot at South Africa International Exhibition"
+                class="block w-full max-h-80 object-cover transition-transform duration-500 hover:scale-102"
+                loading="lazy"
+              />
+            </div>
+            <div
+              class="relative rounded-2xl overflow-hidden border border-jd-sky/10 shadow-2xl shadow-jd-sky/10 max-w-lg"
+            >
+              <img
+                src="assets/sauthafrica1.png"
+                alt="Jaldoot Team at South Africa Trade Show"
+                class="block w-full max-h-80 object-cover transition-transform duration-500 hover:scale-102"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -3454,7 +3633,7 @@
             </span>
             <h3 class="qual-title">ISO 9001:2008</h3>
             <p class="qual-text">
-              Krushi Nature Water Care Pvt. Ltd. is ISO 9001:2008 certified,
+              Jaldoot is ISO 9001:2008 certified,
               ensuring quality management systems and consistent product
               standards across all operations.
             </p>
@@ -3513,7 +3692,7 @@
             <div class="cert-sheet">
               <img
                 src="assets/cert-iso.svg"
-                alt="ISO 9001:2008 quality management system certificate issued to Krushi Nature Water Care Pvt. Ltd."
+                alt="ISO 9001:2008 quality management system certificate issued to Jaldoot"
                 class="absolute inset-0 w-full h-full object-contain"
                 width="1200"
                 height="1000"
@@ -3534,7 +3713,7 @@
             <div class="cert-sheet">
               <img
                 src="assets/cert-quality.svg"
-                alt="Quality manufacturing certificate awarded to the Krushi Nature Water Care manufacturing unit in Nagpur"
+                alt="Quality manufacturing certificate awarded to the Jaldoot manufacturing unit in Nagpur"
                 class="absolute inset-0 w-full h-full object-contain"
                 width="1200"
                 height="1000"
@@ -3618,7 +3797,7 @@
             <div class="cert-sheet">
               <img
                 src="assets/cert-patent.svg"
-                alt="Indian patent certificate for the four-stage water conditioning apparatus invented by Krushi Nature Water Care"
+                alt="Indian patent certificate for the four-stage water conditioning apparatus invented by Jaldoot"
                 class="absolute inset-0 w-full h-full object-contain"
                 width="1200"
                 height="1000"
@@ -3825,7 +4004,7 @@
               />
             </div>
             <p class="text-gray-400 text-sm leading-relaxed mb-6 font-body">
-              Manufactured by Krushi Nature Water Care Pvt. Ltd. — ISO 9001:2008
+              Manufactured by Jaldoot — ISO 9001:2008
               certified company specializing in advanced water conditioning
               technology.
             </p>
@@ -3969,7 +4148,7 @@
               </li>
               <li class="flex items-center text-sm text-gray-400 font-body">
                 <i class="fas fa-envelope text-jd-sky mr-3"></i>
-                <span class="break-all">watercare.krushinature@gmail.com</span>
+                <span class="break-all">watercare.jaldoot@gmail.com</span>
               </li>
               <li class="flex items-center text-sm text-gray-400 font-body">
                 <i class="fas fa-globe text-jd-sky mr-3"></i>
@@ -3992,7 +4171,7 @@
                 <i class="fab fa-whatsapp"></i>
               </a>
               <a
-                href="mailto:watercare.krushinature@gmail.com"
+                href="mailto:watercare.jaldoot@gmail.com"
                 class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-jd-blue transition-colors"
                 aria-label="Email"
               >
@@ -4013,7 +4192,7 @@
           class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p class="text-gray-500 text-sm font-body">
-            &copy; <span id="footerYear">2024</span> Krushi Nature Water Care
+            &copy; <span id="footerYear">2024</span> Jaldoot
             Pvt. Ltd. All rights reserved.
           </p>
           <p class="text-gray-600 text-xs font-heading">
@@ -4519,6 +4698,12 @@
               poster: "assets/videos/aboutvid-poster.jpg",
               title: "Complete Product Introduction",
               duration: "5:20"
+            },
+            {
+              src: "assets/videos/vidssave.com Suluhisho la Maji ya Chumvi kwa Kilimo Kenya 🇰🇪 %23kenya %23india %23agriculture %23hardwater %23salinewater 360P.mp4",
+              poster: "assets/videos/aboutvid-poster.jpg",
+              title: "Suluhisho la Maji ya Chumvi kwa Kilimo Kenya",
+              duration: "2:30"
             }
           ];
 
@@ -4542,6 +4727,9 @@
                   loading="lazy"
                   onerror="this.onerror=null; this.src='assets/videos/jaldoot-poster.jpg'; this.style.display='block';"
                 />
+                <video class="yt-video-src" preload="none" style="display:none;">
+                  <source src="${video.src}" type="video/mp4" />
+                </video>
                 <div class="yt-overlay" aria-hidden="true">
                   <button type="button" class="yt-play-btn" aria-label="Play video: ${video.title}">
                     <i class="fas fa-play" aria-hidden="true"></i>
@@ -4558,12 +4746,6 @@
                 </div>
               </div>
             `;
-
-            // Ensure image loads properly
-            const img = card.querySelector(".yt-thumb-img");
-            if (img.complete && img.naturalWidth === 0) {
-              img.src = "assets/videos/jaldoot-poster.jpg";
-            }
 
             // Click handler to open modal
             const playBtn = card.querySelector(".yt-play-btn");
