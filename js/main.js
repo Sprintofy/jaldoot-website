@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
   initContactForm();
   // ===== ACTIVE NAV LINK =====
   setActiveNavLink();
+  // ===== LANGUAGE FILTER =====
+  initLanguage();
 });
 
 // ===== NAVBAR SCROLL EFFECT =====
@@ -353,3 +355,133 @@ document.addEventListener("click", function (e) {
     }
   }
 });
+
+// ===== LANGUAGE FILTER =====
+const LANG_KEY = "jaldoot_lang";
+const DEFAULT_LANG = "english";
+const PAGE_KEY = {
+  "index.html": "home",
+  "": "home",
+  "about.html": "about",
+  "products.html": "products",
+  "contact.html": "contact",
+};
+
+let currentLang = DEFAULT_LANG;
+let translations = {};
+
+function getPageLocale() {
+  const page = window.location.pathname.split("/").pop() || "index.html";
+  return PAGE_KEY[page] || "home";
+}
+
+function getNested(obj, path) {
+  return path.split(".").reduce(function (acc, key) {
+    return acc && acc[key] !== undefined ? acc[key] : undefined;
+  }, obj);
+}
+
+function loadLanguage(lang) {
+  const locale = getPageLocale();
+  const url = "locales/" + locale + "/" + lang + ".json";
+
+  fetch(url)
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error("Locale not found: " + url);
+      }
+      return response.json();
+    })
+    .then(function (data) {
+      translations = data;
+      currentLang = lang;
+      localStorage.setItem(LANG_KEY, lang);
+      applyLanguage(data);
+      updateActiveLangButton(lang);
+    })
+    .catch(function (err) {
+      console.error("Language load failed:", err);
+    });
+}
+
+function applyLanguage(data) {
+  document.querySelectorAll("[data-lang]").forEach(function (el) {
+    const key = el.getAttribute("data-lang");
+    const value = getNested(data, key);
+    if (value === undefined) return;
+
+    const hasElementChildren = el.children.length > 0;
+    const decoded = decodeHtml(value);
+
+    if (!hasElementChildren) {
+      el.innerHTML = decoded;
+    } else {
+      let replaced = false;
+      el.childNodes.forEach(function (node) {
+        if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+          node.textContent = decoded;
+          replaced = true;
+        }
+      });
+      if (!replaced) {
+        el.textContent = decoded;
+      }
+    }
+  });
+
+  document.querySelectorAll("[data-lang-aria]").forEach(function (el) {
+    const key = el.getAttribute("data-lang-aria");
+    const value = getNested(data, key);
+    if (value !== undefined) {
+      el.setAttribute("aria-label", value);
+    }
+  });
+
+  const yearEl = document.getElementById("footerYear");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+  document.documentElement.lang = currentLang === "hindi" ? "hi" : currentLang === "marathi" ? "mr" : "en";
+}
+
+function decodeHtml(html) {
+  const txt = document.createElement("textarea");
+  txt.innerHTML = html;
+  return txt.value;
+}
+
+function initLanguage() {
+  const saved = localStorage.getItem(LANG_KEY);
+  const lang = saved || DEFAULT_LANG;
+  loadLanguage(lang);
+
+  document.querySelectorAll("#langMenu a").forEach(function (btn) {
+    btn.removeEventListener("click", handleLangClick);
+    btn.addEventListener("click", handleLangClick);
+  });
+}
+
+function handleLangClick(e) {
+  e.preventDefault();
+  const langKey = e.currentTarget.getAttribute("data-lang");
+  if (langKey === "lang.hindi") {
+    loadLanguage("hindi");
+  } else if (langKey === "lang.marathi") {
+    loadLanguage("marathi");
+  } else {
+    loadLanguage("english");
+  }
+}
+
+function updateActiveLangButton(lang) {
+  document.querySelectorAll("#langMenu a").forEach(function (link) {
+    const text = link.textContent.trim();
+    const isActive =
+      (lang === "hindi" && text === "हिन्दी") ||
+      (lang === "marathi" && text === "मराठी") ||
+      (lang === "english" && text === "English");
+    link.classList.toggle("bg-jd-sky/5", isActive);
+    link.classList.toggle("text-jd-blue", isActive);
+  });
+}

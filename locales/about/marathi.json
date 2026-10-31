@@ -1,0 +1,18 @@
+{
+  "lang": {
+    "english": "English",
+    "hindi": "हिन्दी",
+    "marathi": "मराठी"
+  },
+  "nav": {
+    "home": "होम",
+    "about": "बद्दल",
+    "products": "उत्पादने",
+    "contact": "संपर्क",
+    "language": "भाषा"
+  },
+  "page": {
+    "title": "जालदूत बद्दल",
+    "heading": "आमच्याबद्दल"
+  }
+}

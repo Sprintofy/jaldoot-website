@@ -1,0 +1,18 @@
+{
+  "lang": {
+    "english": "English",
+    "hindi": "हिन्दी",
+    "marathi": "मराठी"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "page": {
+    "title": "About Jaldoot",
+    "heading": "About Us"
+  }
+}

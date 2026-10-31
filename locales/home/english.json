@@ -1,0 +1,334 @@
+{
+  "lang": {
+    "english": "English",
+    "hindi": "हिन्दी",
+    "marathi": "मराठी"
+  },
+  "preloader": {
+    "subtitle": "Water Conditioner"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "topbar": {
+    "tagline": "Crystal Clear Naturally Water — Jaldoot Ltd."
+  },
+  "tlab": {
+    "titlePart1": "Turn Hard Water into ",
+    "titlePart2": "Soft, Crystal-Clear Water",
+    "sub": "Ultrasonic, magnetic static, pulsing power and catalytic technology working together. No chemicals. No salt. No maintenance.",
+    "cta": "Explore the technology",
+    "tagUltrasonic": "Ultrasonic",
+    "tagMagnetic": "Magnetic static",
+    "tagPulsing": "Pulsing power",
+    "tagCatalytic": "Catalytic media"
+  },
+  "why": {
+    "eyebrow": "Global reach. Local expertise.",
+    "titlePrefix": "Why Choose ",
+    "titleBrand": "Jaldoot",
+    "titleSuffix": "?",
+    "text": "Jaldoot has spent more than a decade engineering water-conditioning hardware that installers trust on farms, factories and homes. Every unit runs on four technologies working together - ultrasonic, magnetic static, pulsing power and catalytic - so the result is measurable, chemical-free and consistent from one building to the next.",
+    "labelExperience": "Years of experience",
+    "labelInstallations": "Installations delivered",
+    "labelIndustries": "Industries served"
+  },
+  "split": {
+    "eyebrow": "See it in action",
+    "titlePart1": "Hard Water In.",
+    "titlePart2": "Crystal Clear Out.",
+    "text": "Watch Jaldoot turn hard, scale-laden water into soft, crystal-clear water — with ultrasonic, magnetic static, pulsing power and catalytic technology working together. No chemicals. No salt. No maintenance.",
+    "point1": "4-in-1 conditioning in a single unit",
+    "point2": "Works on homes, farms and factories",
+    "point3": "Zero recurring operating cost",
+    "btnProducts": "Explore Products",
+    "btnExpert": "Talk to an Expert"
+  },
+  "benefits": {
+    "badge": "Benefits",
+    "titlePart1": "With the Jaldoot ",
+    "titlePart2": "Water Conditioner",
+    "lead": "Hover, tap or tab any card to flip it and see what sits behind the claim.",
+    "card1": {
+      "title": "Maintenance-free",
+      "desc": "Eco-friendly solution against scale problems, with no backwashing and no moving parts.",
+      "cue": "Flip card",
+      "backTitle": "Nothing to service",
+      "backDesc": "No impeller, no seal, no filter bed. Fit the unit and leave it running.",
+      "backTag": "No moving parts"
+    },
+    "card2": {
+      "title": "No chemicals, no salts",
+      "desc": "No chemicals, no salts & additives anywhere in the process.",
+      "cue": "Flip card",
+      "backTitle": "Physical conditioning only",
+      "backDesc": "Nothing to top up, nothing to buy, no taste or chemistry change in the water.",
+      "backTag": "100% physical"
+    },
+    "card3": {
+      "title": "Easy installation",
+      "desc": "No replacement required. Movable product — take it with you when you want.",
+      "cue": "Flip card",
+      "backTitle": "Clamps onto the line",
+      "backDesc": "Fit it around the existing pipe in minutes — no cutting, no plumbing changes.",
+      "backTag": "Clamp-on"
+    },
+    "card4": {
+      "title": "Works on every pipe",
+      "desc": "Effective on CPVC, RPVC, UPVC, HDPE, copper, brass, SS 304 and SS 316.",
+      "cue": "Flip card",
+      "backTitle": "Any material, same result",
+      "backDesc": "Thermoplastics, copper, brass and stainless steel — the field does not care what it is clamped to.",
+      "backTag": "8 materials"
+    },
+    "card5": {
+      "title": "Wide size range",
+      "desc": "Suitable for pipe diameters from 1′ up to 20′ or 6′ depending on the model.",
+      "cue": "Flip card",
+      "backTitle": "1′ to 20′ on one family",
+      "backDesc": "Pick the model that matches the line you already have instead of re-piping.",
+      "backTag": "1′ – 20′"
+    },
+    "card6": {
+      "title": "Models for varied work",
+      "desc": "Our product models represent on varied work across industries.",
+      "cue": "Flip card",
+      "backTitle": "Home, farm or factory",
+      "backDesc": "One product family, tuned models for domestic lines, agriculture and industrial duty.",
+      "backTag": "Home · Farm · Industry"
+    }
+  },
+  "sustainability": {
+    "eyebrow": "Sustainability",
+    "titlePart1": "Cleaner Water. ",
+    "titlePart2": "Greener Footprint.",
+    "sub": "Jaldoot conditions hard water without chemicals, salt or power, so homes, farms and factories use less water, less energy and throw away less.",
+    "card1": {
+      "name": "No Chemical Dosing",
+      "kicker": "Zero chemical use",
+      "desc": "No chlorine, acid or salt — hard water is conditioned physically, not dosed with chemicals."
+    },
+    "card2": {
+      "name": "Zero Salt Waste",
+      "kicker": "Zero salt, zero brine",
+      "desc": "No brine, no regeneration cycle and no bag of salt to dispose of every month."
+    },
+    "card3": {
+      "name": "No Power Required",
+      "kicker": "Zero watts drawn",
+      "desc": "Runs on the pressure already in your line, so there are no pumps to power or service."
+    },
+    "card4": {
+      "name": "Longer Equipment Life",
+      "kicker": "Less scale, longer life",
+      "desc": "Fewer scale build-ups mean longer-lasting taps, boilers and pipelines."
+    }
+  },
+  "intro": {
+    "chipChemicals": "0 Chemicals",
+    "chipTech": "4-in-1 Tech",
+    "chipMaintenance": "0 Maintenance",
+    "chipIso": "ISO 9001:2008",
+    "eyebrow": "Welcome to Jaldoot",
+    "titlePart1": "What is ",
+    "titlePart2": "Jaldoot",
+    "titlePart3": "Water Conditioner?",
+    "lede": "Jaldoot Water Conditioner / Softener is an advanced water treatment system combining Ultrasonic + Magnetic Static + Pulsing Power + Catalytic Technology, controlled by a microprocessor — treating hard water without chemicals, salt, or maintenance.",
+    "tech1": "Ultrasonic",
+    "tech2": "Magnetic Static",
+    "tech3": "Pulsing Power",
+    "tech4": "Catalytic",
+    "benefit1": {
+      "title": "No Chemicals",
+      "desc": "Works without any chemicals, salt, or consumables — completely natural water treatment."
+    },
+    "benefit2": {
+      "title": "Zero Maintenance",
+      "desc": "Install once and forget — no filters to change, no salt to add, no recurring maintenance costs."
+    },
+    "benefit3": {
+      "title": "Scale Reduction",
+      "desc": "Converts hard scale-forming minerals into harmless 2–4 micron crystals that don't stick to surfaces."
+    },
+    "benefit4": {
+      "title": "Long-Lasting Effect",
+      "desc": "Treated water retains its conditioned properties for up to 7 days as stated by the company."
+    }
+  },
+  "howitworks": {
+    "eyebrow": "Technology",
+    "titlePart1": "How ",
+    "titlePart2": "Jaldoot",
+    "titlePart3": "Works",
+    "text": "Jaldoot uses a 3-stage water conditioning process combining advanced technologies",
+    "videoCaption1": "Watch the full walkthrough",
+    "videoCaption2": "See the 3-stage conditioning process in action",
+    "videoCaption3": "3:20"
+  },
+  "applications": {
+    "eyebrow": "Applications",
+    "titlePart": "is Used",
+    "text": "From homes to farms to factories — Jaldoot serves every water need",
+    "card1": {
+      "title": "Domestic",
+      "desc": "Complete home water treatment — kitchen, bathroom, geysers, washing machines, plumbing systems.",
+      "learnMore": "Learn More"
+    },
+    "card2": {
+      "title": "Agriculture",
+      "desc": "Agriculture, horticulture, floriculture & irrigation — improved crop yield and soil health.",
+      "learnMore": "Learn More"
+    },
+    "card3": {
+      "title": "Commercial",
+      "desc": "Hotels, restaurants, hospitals, laundries, cooling towers & commercial water systems.",
+      "learnMore": "Learn More"
+    },
+    "card4": {
+      "title": "Industrial",
+      "desc": "RO plants, boilers, cooling systems, heat exchangers & manufacturing processes.",
+      "learnMore": "Learn More"
+    },
+    "card5": {
+      "title": "Poultry Farming",
+      "desc": "Better water quality for improved bird health and production.",
+      "learnMore": "Learn More"
+    },
+    "card6": {
+      "title": "Dairy Farming",
+      "desc": "Clean conditioned water for dairy operations and equipment.",
+      "learnMore": "Learn More"
+    },
+    "card7": {
+      "title": "Swimming Pools",
+      "desc": "Reduced chemicals, less scale, cleaner and softer pool water.",
+      "learnMore": "Learn More"
+    },
+    "card8": {
+      "title": "Golf & Fish Ponds",
+      "desc": "Conditioned water for greens, fairways and fish ponds — cleaner water and controlled algae.",
+      "learnMore": "Learn More"
+    },
+    "card9": {
+      "title": "ETP Plant – Effluent Treatment Plant",
+      "desc": "Treat trade effluent at the source — stops scale in tanks, pumps and membranes, and lowers chemical dosing.",
+      "learnMore": "Learn More"
+    },
+    "card10": {
+      "title": "STP – Sewage Treatment Plant",
+      "desc": "Condition sewage inlet water, reduce scaling in aeration tanks and improve biological treatment efficiency.",
+      "learnMore": "Learn More"
+    },
+    "card11": {
+      "title": "Rain Water Harvesting",
+      "desc": "Keep harvested rainwater scale-free for storage, recharge pits and reuse across the property.",
+      "learnMore": "Learn More"
+    },
+    "card12": {
+      "title": "Solar Roof Top",
+      "desc": "Protect rooftop solar tanks and piping from hard water scale and efficiency loss.",
+      "learnMore": "Learn More"
+    },
+    "card13": {
+      "title": "Solar Water Heater",
+      "desc": "Prevent scale on heater elements and tanks — faster hot water, lower power bills, longer life.",
+      "learnMore": "Learn More"
+    },
+    "card14": {
+      "title": "Solar Insect Cleaner",
+      "desc": "Scale-free water for solar-powered insect control and agricultural spray systems.",
+      "learnMore": "Learn More"
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Customer stories",
+    "titlePart1": "Real People. ",
+    "titlePart2": "Real Results.",
+    "sub": "Hear directly from the homeowners, farmers and factory owners who rely on Jaldoot every day.",
+    "quote1": "“My taps used to run thick with scale and the bathroom looked permanently stained. Six months with Jaldoot and the fittings are clean again. No salt, no filter changes.”",
+    "quote2": "“Scale was choking our drip lines every season and cutting yield. Jaldoot fixed the whole farm without a single chemical drum. Our water bills dropped too.”",
+    "quote3": "“We run a textile unit and scale on the boilers was a constant expense. Two Jaldoot units paid for themselves within the first year of downtime saved.”",
+    "seeAll": "See All Testimonials on YouTube"
+  },
+  "cta": {
+    "titlePart1": "Ready for Crystal Clear ",
+    "titlePart2": "Naturally Water?",
+    "desc": "Contact Jaldoot today to learn how Jaldoot can transform your hard water problems into happiness.",
+    "btnConsultation": "Get Free Consultation",
+    "btnCall": "Call: 98222 09656"
+  },
+  "hero": {
+    "title": "Jaldoot - 4-in-1 Water Conditioning, Hardness To Happiness",
+    "assistBadge": "Water experts • 12 solutions",
+    "panelTitle": "Pick a topic",
+    "greeting": "Hi there,",
+    "heading": "How can we help you?",
+    "sub": "I&rsquo;m interested in&hellip;",
+    "point1": "No salt, no chemicals, no maintenance",
+    "point2": "4-in-1 conditioning in one device",
+    "point3": "Homes, farms, buildings &amp; industry",
+    "pill1Title": "Limescale",
+    "pill1Sub": "No more scale",
+    "pill2Title": "Hard Water",
+    "pill2Sub": "Soft & clear",
+    "pill3Title": "Water Efficiency",
+    "pill3Sub": "Save every drop",
+    "pill4Title": "How It Works",
+    "pill4Sub": "4-in-1 science",
+    "pill5Title": "Before & After",
+    "pill5Sub": "See the change",
+    "pill6Title": "Scientific Studies",
+    "pill6Sub": "Proven results",
+    "pill7Title": "Domestic Homes",
+    "pill7Sub": "Whole home",
+    "pill8Title": "Buildings",
+    "pill8Sub": "Societies & offices",
+    "pill9Title": "Industrial Plants",
+    "pill9Sub": "Zero downtime",
+    "pill10Title": "Precision Irrigation",
+    "pill10Sub": "Healthier crops",
+    "pill11Title": "Landscapes",
+    "pill11Sub": "Lush greens",
+    "pill12Title": "Animal Health",
+    "pill12Sub": "Dairy & poultry",
+    "ctaTalk": "Talk to an expert",
+    "ctaCall": "Call",
+    "rail1": "No salt",
+    "rail2": "No chemicals",
+    "rail3": "No maintenance",
+    "rail4": "4-in-1 technology",
+    "scroll": "Scroll",
+    "sound": "Unmute hero video"
+  },
+  "footer": {
+    "companyDesc": "Manufactured by Jaldoot — ISO 9001:2008 certified company specializing in advanced water conditioning technology.",
+    "isoCert": "ISO 9001:2008 Certified",
+    "quickLinks": "Quick Links",
+    "linkHome": "Home",
+    "linkAbout": "About Us",
+    "linkProducts": "Products",
+    "linkContact": "Contact Us",
+    "applications": "Applications",
+    "appDomestic": "Domestic Solutions",
+    "appAgriculture": "Agriculture & Irrigation",
+    "appPoultry": "Poultry Farming",
+    "appCommercial": "Commercial & Industrial",
+    "appRoPlant": "JVC for RO Plant",
+    "appSolar": "Solar Products",
+    "contactHeading": "Contact",
+    "address": "Plot No. 83, Near Maruthi Meter, Ramtekadi Industrial Estate, Hadapsar, Pune - 411028",
+    "phone": "9822209656 / 9404039656",
+    "email": "watercare.jaldoot@gmail.com",
+    "website": "www.jaldootcorporation.com",
+    "copyrightPrefix": "&copy;",
+    "copyrightSuffix": "Jaldoot Pvt. Ltd. All rights reserved.",
+    "tagline": "Hardness To Happiness — Crystal Clear Naturally Water"
+  },
+  "floating": {
+    "backToTop": "Back to top"
+  }
+}
