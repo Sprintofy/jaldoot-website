@@ -2633,21 +2633,25 @@
             <a
               href="index.html"
               class="nav-link font-heading transition-all duration-300"
+              data-lang="nav.home"
               >Home</a
             >
             <a
               href="about.html"
               class="nav-link active font-heading transition-all duration-300"
+              data-lang="nav.about"
               >About</a
             >
             <a
               href="products.html"
               class="nav-link font-heading transition-all duration-300"
+              data-lang="nav.products"
               >Products</a
             >
             <a
               href="contact.html"
               class="nav-link font-heading transition-all duration-300"
+              data-lang="nav.contact"
               >Contact</a
             >
             <div class="relative group ml-2">
@@ -2656,7 +2660,8 @@
                 aria-label="Select language"
                 id="langBtn"
               >
-                <i class="fas fa-globe text-xs"></i> Language
+                <i class="fas fa-globe text-xs"></i>
+                <span data-lang="nav.language">Language</span>
                 <i class="fas fa-chevron-down ml-1 text-[10px]"></i>
               </button>
               <div
@@ -2666,18 +2671,21 @@
                 <a
                   href="#"
                   class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+                  data-lang="lang.english"
                 >
                   English
                 </a>
                 <a
                   href="#"
                   class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+                  data-lang="lang.hindi"
                 >
                   हिन्दी
                 </a>
                 <a
                   href="#"
                   class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+                  data-lang="lang.marathi"
                 >
                   मराठी
                 </a>
@@ -2727,26 +2735,34 @@
         <a
           href="index.html"
           class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
+          data-lang="nav.home"
         >
-          <i class="fas fa-home w-5"></i> Home
+          <i class="fas fa-home w-5"></i>
+          <span data-lang="nav.home">Home</span>
         </a>
         <a
           href="about.html"
           class="mobile-nav-link active flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
+          data-lang="nav.about"
         >
-          <i class="fas fa-building w-5"></i> About
+          <i class="fas fa-building w-5"></i>
+          <span data-lang="nav.about">About</span>
         </a>
         <a
           href="products.html"
           class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
+          data-lang="nav.products"
         >
-          <i class="fas fa-box-open w-5"></i> Products
+          <i class="fas fa-box-open w-5"></i>
+          <span data-lang="nav.products">Products</span>
         </a>
         <a
           href="contact.html"
           class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
+          data-lang="nav.contact"
         >
-          <i class="fas fa-envelope w-5"></i> Contact
+          <i class="fas fa-envelope w-5"></i>
+          <span data-lang="nav.contact">Contact</span>
         </a>
         <div class="relative group">
           <button
@@ -2754,7 +2770,8 @@
             aria-label="Select language"
             id="langBtn"
           >
-            <i class="fas fa-globe w-5"></i> Language
+            <i class="fas fa-globe w-5"></i>
+            <span data-lang="nav.language">Language</span>
             <i class="fas fa-chevron-down ml-auto text-[10px]"></i>
           </button>
           <div
@@ -2764,18 +2781,21 @@
             <a
               href="#"
               class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+              data-lang="lang.english"
             >
               English
             </a>
             <a
               href="#"
               class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+              data-lang="lang.hindi"
             >
               हिन्दी
             </a>
             <a
               href="#"
               class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+              data-lang="lang.marathi"
             >
               मराठी
             </a>
@@ -2847,20 +2867,21 @@
       >
         <nav class="hero-breadcrumb mb-7" aria-label="Breadcrumb">
           <a href="index.html" class="font-heading">
-            <i class="fas fa-home mr-1"></i> Home
+            <i class="fas fa-home mr-1"></i>
+            <span data-lang="about.breadcrumbHome">Home</span>
           </a>
           <i class="fas fa-chevron-right hero-crumb-sep"></i>
-          <span class="hero-crumb-current font-heading">About</span>
+          <span class="hero-crumb-current font-heading" data-lang="about.breadcrumbAbout">About</span>
         </nav>
 
         <h1
           class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-5 leading-tight"
         >
-          Jaldoot
-          <span class="text-jd-green">Pvt. Ltd.</span>
+          <span data-lang="about.heroTitlePart1">Jaldoot </span>
+          <span class="text-jd-green" data-lang="about.heroTitlePart2">Pvt. Ltd.</span>
         </h1>
 
-        <p class="text-white/75 text-base lg:text-lg max-w-2xl mx-auto leading-relaxed font-body">
+        <p class="text-white/75 text-base lg:text-lg max-w-2xl mx-auto leading-relaxed font-body" data-lang="about.heroSub">
           An ISO 9001:2008 certified company manufacturing advanced water
           conditioning solutions &mdash; and the team behind Jaldoot.
         </p>
@@ -2906,17 +2927,15 @@
         <div class="tagline-card relative bg-white/70 backdrop-blur-md rounded-3xl border border-white/40 shadow-2xl p-4 lg:p-6 mx-auto max-w-3xl">
           <div class="tagline-badge inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-jd-green border border-jd-green/30 text-white text-xs font-heading font-bold uppercase tracking-widest mb-3 shadow-lg shadow-jd-green/25" data-animate="fade-up">
             <i class="fas fa-check-circle"></i>
-            Complete Water Solution
+            <span data-lang="about.taglineBadge">Complete Water Solution</span>
           </div>
           <h2 class="tagline-title text-2xl sm:text-3xl lg:text-4xl font-heading font-extrabold text-jd-deep leading-tight mb-3 tracking-tight" data-animate="fade-up" data-delay="80">
-            All type of <br />
-            <span class="gradient-text-blue">water solution</span>
+            <span data-lang="about.taglineTitlePart1">All type of </span><br />
+            <span class="gradient-text-blue" data-lang="about.taglineTitlePart2">water solution</span>
           </h2>
           <div class="tagline-underline mx-auto w-24 h-0.5 bg-jd-green rounded-full shadow-lg shadow-jd-green/40 mb-4" data-animate="fade-up" data-delay="160"></div>
           <p class="tagline-sub text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed opacity-90" data-animate="fade-up" data-delay="240">
-            <span class="tagline-sub-lead text-jd-deep font-heading font-semibold">One trusted partner</span> for
-            <span class="gradient-text-blue">homes, farms, factories</span> and every water system
-            in between.
+            <span class="tagline-sub-lead text-jd-deep font-heading font-semibold" data-lang="about.taglineSubLead">One trusted partner</span><span data-lang="about.taglineSubMid"> for </span><span class="gradient-text-blue" data-lang="about.taglineSubHighlight">homes, farms, factories</span><span data-lang="about.taglineSubEnd"> and every water system in between.</span>
           </p>
         </div>
       </div>
@@ -2937,43 +2956,39 @@
             <span
               class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold mb-6"
             >
-              <i class="fas fa-info-circle"></i> Company Introduction
+              <i class="fas fa-info-circle"></i>
+              <span data-lang="about.introBadge">Company Introduction</span>
             </span>
             <h2
               class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep mb-6 leading-tight"
             >
-              Jaldoot
-              <span class="gradient-text-green">Pvt. Ltd.</span>
+              <span data-lang="about.introTitlePart1">Jaldoot</span>
+              <span class="gradient-text-green" data-lang="about.introTitlePart2">Pvt. Ltd.</span>
             </h2>
             <div class="space-y-5 text-jd-gray leading-relaxed font-body">
               <p>
-                Jaldoot is an
-                <strong class="text-jd-deep">ISO 9001:2008 certified</strong>
-                company engaged in the manufacturing and supply of advanced
-                water conditioning solutions. The company specializes in
-                <strong class="text-jd-deep"
-                  >Magnetic, Electro Magnetic, Electronic, Pulse, Water
+                <span data-lang="about.introPara1Part1">Jaldoot is an </span>
+                <strong class="text-jd-deep" data-lang="about.introStrong1">ISO 9001:2008 certified</strong>
+                <span data-lang="about.introPara1Part2"> company engaged in the manufacturing and supply of advanced water conditioning solutions. The company specializes in </span>
+                <strong class="text-jd-deep" data-lang="about.introStrong2">
+                  Magnetic, Electro Magnetic, Electronic, Pulse, Water
                   Conditioner/Softener, De-Scalar and Catalytic
-                  Technology</strong
-                >
-                products.
+                  Technology
+                </strong>
+                <span data-lang="about.introPara1Part3"> products.</span>
               </p>
               <p>
-                The company's flagship product,
-                <strong class="text-jd-blue">Jaldoot Water Conditioner</strong>,
-                represents the culmination of advanced research in water
-                treatment technology. It combines
-                <strong class="text-jd-deep"
-                  >Ultrasonic, Magnetic Static, Pulsing Power and Catalytic
-                  Technology</strong
-                >
-                in a single microprocessor-controlled system.
+                <span data-lang="about.introPara2Part1">The company's flagship product, </span>
+                <strong class="text-jd-blue" data-lang="about.introStrong3">Jaldoot Water Conditioner</strong>,
+                <span data-lang="about.introPara2Part2"> represents the culmination of advanced research in water treatment technology. It combines </span>
+                <strong class="text-jd-deep" data-lang="about.introStrong4">
+                  Ultrasonic, Magnetic Static, Pulsing Power and Catalytic
+                  Technology
+                </strong>
+                <span data-lang="about.introPara2Part3"> in a single microprocessor-controlled system.</span>
               </p>
-              <p>
-                Jaldoot technology transforms hard water problems into lasting
-                solutions — converting hardness-causing minerals into harmless
-                2–4 micron crystals without using chemicals, salt, or requiring
-                ongoing maintenance.
+              <p data-lang="about.introPara3">
+                Jaldoot technology transforms hard water problems into lasting solutions — converting hardness-causing minerals into harmless 2–4 micron crystals without using chemicals, salt, or requiring ongoing maintenance.
               </p>
             </div>
 
@@ -2985,9 +3000,7 @@
                 >
                   <i class="fas fa-check text-jd-sky text-sm"></i>
                 </div>
-                <span class="text-sm font-heading font-semibold text-jd-deep"
-                  >No Chemicals</span
-                >
+                <span class="text-sm font-heading font-semibold text-jd-deep" data-lang="about.keyPoint1">No Chemicals</span>
               </div>
               <div class="flex items-center gap-3 p-3 bg-jd-green/5 rounded-xl">
                 <div
@@ -2995,9 +3008,7 @@
                 >
                   <i class="fas fa-check text-jd-green text-sm"></i>
                 </div>
-                <span class="text-sm font-heading font-semibold text-jd-deep"
-                  >Zero Maintenance</span
-                >
+                <span class="text-sm font-heading font-semibold text-jd-deep" data-lang="about.keyPoint2">Zero Maintenance</span>
               </div>
               <div class="flex items-center gap-3 p-3 bg-jd-blue/5 rounded-xl">
                 <div
@@ -3005,9 +3016,7 @@
                 >
                   <i class="fas fa-check text-jd-blue text-sm"></i>
                 </div>
-                <span class="text-sm font-heading font-semibold text-jd-deep"
-                  >ISO Certified</span
-                >
+                <span class="text-sm font-heading font-semibold text-jd-deep" data-lang="about.keyPoint3">ISO Certified</span>
               </div>
               <div
                 class="flex items-center gap-3 p-3 bg-purple-500/5 rounded-xl"
@@ -3017,9 +3026,7 @@
                 >
                   <i class="fas fa-check text-purple-500 text-sm"></i>
                 </div>
-                <span class="text-sm font-heading font-semibold text-jd-deep"
-                  >4-in-1 Technology</span
-                >
+                <span class="text-sm font-heading font-semibold text-jd-deep" data-lang="about.keyPoint4">4-in-1 Technology</span>
               </div>
             </div>
           </div>
@@ -3031,7 +3038,6 @@
               alt="Jaldoot - Company Facility"
               class="block w-auto h-[560px] sm:h-[640px] lg:h-[800px] xl:h-[688px] mx-auto rounded-3xl border border-jd-sky/10 shadow-xl shadow-jd-sky/10 bg-jd-dark transition-transform duration-300 hover:scale-[1.01] object-cover"
             />
-
             <!-- Company video trigger button -->
             <button
               type="button"
@@ -3045,7 +3051,7 @@
               >
                 <i class="fas fa-play" style="margin-left: 2px;"></i>
               </span>
-              <span class="hidden sm:inline">Watch Our Story</span>
+              <span class="hidden sm:inline" data-lang="about.watchOurStory">Watch Our Story</span>
             </button>
           </div>
         </div>
@@ -3068,25 +3074,23 @@
 
           <!-- Text: right side -->
           <div class="max-w-lg" data-animate="fade-right">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-jd-deep leading-tight mb-4">
-              Empowering Farmers with Better Water
-            </h2>
-            <p class="text-jd-gray text-lg sm:text-xl leading-relaxed mb-6">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-jd-deep leading-tight mb-4" data-lang="about.panTitle">Empowering Farmers with Better Water</h2>
+            <p class="text-jd-gray text-lg sm:text-xl leading-relaxed mb-6" data-lang="about.panDesc">
               Helping farmers improve irrigation water quality, reduce hard water
               challenges and support better crop productivity with JalDoot water
               conditioning solutions.
             </p>
             <div class="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-jd-sky/10 border border-jd-sky/20 text-jd-sky font-heading font-semibold text-sm">
               <span class="flex items-center gap-1">
-                <i class="fas fa-leaf"></i> Smarter Irrigation
+                <i class="fas fa-leaf"></i> <span data-lang="about.panChip1">Smarter Irrigation</span>
               </span>
               <span class="w-px h-3 bg-jd-sky/30 mx-1"></span>
               <span class="flex items-center gap-1">
-                <i class="fas fa-seedling"></i> Healthier Soil
+                <i class="fas fa-seedling"></i> <span data-lang="about.panChip2">Healthier Soil</span>
               </span>
               <span class="w-px h-3 bg-jd-sky/30 mx-1"></span>
               <span class="flex items-center gap-1">
-                <i class="fas fa-chart-line"></i> Better Growth
+                <i class="fas fa-chart-line"></i> <span data-lang="about.panChip3">Better Growth</span>
               </span>
             </div>
           </div>
@@ -3102,18 +3106,20 @@
           <div class="max-w-lg" data-animate="fade-left">
             <span
               class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-jd-green/10 text-jd-green text-[0.65rem] font-heading font-bold uppercase tracking-wider mb-4"
+              data-lang="about.intlEyebrow"
             >
               International Presence
             </span>
             <h2
               class="text-2xl sm:text-3xl lg:text-4xl font-heading font-extrabold text-jd-deep leading-tight mb-3"
+              data-lang="about.intlTitle"
             >
               International Presence – South Africa
             </h2>
-            <p class="text-base sm:text-lg text-jd-deep font-heading font-semibold mb-3">
+            <p class="text-base sm:text-lg text-jd-deep font-heading font-semibold mb-3" data-lang="about.intlSub">
               Taking JalDoot Water Solutions to the Global Stage
             </p>
-            <p class="text-jd-gray leading-relaxed mb-5">
+            <p class="text-jd-gray leading-relaxed mb-5" data-lang="about.intlText">
               JalDoot proudly showcased its innovative water conditioning and
               softening solutions at an international exhibition in South Africa.
               This milestone represents our growing global presence,
@@ -3123,7 +3129,7 @@
             <div
               class="bg-jd-sky/5 rounded-2xl p-4 border border-jd-sky/10"
             >
-              <p class="text-jd-deep font-heading font-semibold text-sm mb-0">
+              <p class="text-jd-deep font-heading font-semibold text-sm mb-0" data-lang="about.intlVision">
                 Our Vision: Building global connections through innovative,
                 reliable and sustainable water solutions.
               </p>
@@ -3172,12 +3178,14 @@
         <!-- one shared heading for the pair of cards below -->
         <div class="ss-heading-wrap" data-animate="fade-up">
           <span class="ss-badge ss-badge-soft">
-            <i class="fas fa-circle-info"></i> Skill-set &amp; specifications
+            <i class="fas fa-circle-info"></i>
+            <span data-lang="about.skillBadge">Skill-set & specifications</span>
           </span>
           <h2 class="ss-heading">
-            Know it <span class="gradient-text-blue">before you install</span>
+            <span data-lang="about.skillTitlePart1">Know it </span>
+            <span class="gradient-text-blue" data-lang="about.skillTitlePart2">before you install</span>
           </h2>
-          <p class="ss-heading-sub">
+          <p class="ss-heading-sub" data-lang="about.skillSub">
             Ten reasons it services itself &mdash; plus the full specs.
           </p>
           <div class="ss-heading-mark" aria-hidden="true">
@@ -3185,13 +3193,13 @@
           </div>
           <div class="ss-stats">
             <div class="ss-stat">
-              <b>10</b><span>Skill points</span>
+              <b>10</b><span data-lang="about.statSkillPoints">Skill points</span>
             </div>
             <div class="ss-stat">
-              <b>8</b><span>Spec parameters</span>
+              <b>8</b><span data-lang="about.statSpecParams">Spec parameters</span>
             </div>
             <div class="ss-stat">
-              <b>8</b><span>Pipe materials</span>
+              <b>8</b><span data-lang="about.statPipeMaterials">Pipe materials</span>
             </div>
           </div>
         </div>
@@ -3205,8 +3213,8 @@
             <div class="ss-card-head">
               <span class="ss-card-mark"><i class="fas fa-screwdriver-wrench"></i></span>
               <div class="ss-card-name">
-                <h3>Why it runs itself</h3>
-                <p>Everything it does without you</p>
+                <h3 data-lang="about.whyTitle">Why it runs itself</h3>
+                <p data-lang="about.whyDesc">Everything it does without you</p>
               </div>
               <span class="ss-count"><i class="fas fa-check-double"></i> 10</span>
             </div>
@@ -3227,7 +3235,7 @@
                     />
                   </svg>
                 </span>
-                <span>Easy to install &mdash; no special skills needed.</span>
+                <span data-lang="about.skillPoint1">Easy to install &mdash; no special skills needed.</span>
               </li>
               <li class="ss-item">
                 <span class="check-icon">
@@ -3244,7 +3252,7 @@
                     />
                   </svg>
                 </span>
-                <span>No maintenance &mdash; set it &amp; forget it.</span>
+                <span data-lang="about.skillPoint2">No maintenance &mdash; set it &amp; forget it.</span>
               </li>
               <li class="ss-item">
                 <span class="check-icon">
@@ -3261,7 +3269,7 @@
                     />
                   </svg>
                 </span>
-                <span>Longer life and low consumption.</span>
+                <span data-lang="about.skillPoint3">Longer life and low consumption.</span>
               </li>
               <li class="ss-item">
                 <span class="check-icon">
@@ -3278,7 +3286,7 @@
                     />
                   </svg>
                 </span>
-                <span>No moving parts.</span>
+                <span data-lang="about.skillPoint4">No moving parts.</span>
               </li>
               <li class="ss-item">
                 <span class="check-icon">
@@ -3295,7 +3303,7 @@
                     />
                   </svg>
                 </span>
-                <span>No backwashing.</span>
+                <span data-lang="about.skillPoint5">No backwashing.</span>
               </li>
               <li class="ss-item">
                 <span class="check-icon">
@@ -3312,7 +3320,7 @@
                     />
                   </svg>
                 </span>
-                <span>Easy installation, no replacement required.</span>
+                <span data-lang="about.skillPoint6">Easy installation, no replacement required.</span>
               </li>
               <li class="ss-item">
                 <span class="check-icon">
@@ -3329,7 +3337,7 @@
                     />
                   </svg>
                 </span>
-                <span>Movable product &mdash; take it with you when you want.</span>
+                <span data-lang="about.skillPoint7">Movable product &mdash; take it with you when you want.</span>
               </li>
               <li class="ss-item">
                 <span class="check-icon">
@@ -3346,7 +3354,7 @@
                     />
                   </svg>
                 </span>
-                <span>Maintenance-free, eco-friendly solution against scale
+                <span data-lang="about.skillPoint8">Maintenance-free, eco-friendly solution against scale
                   problems.</span>
               </li>
               <li class="ss-item">
@@ -3364,7 +3372,7 @@
                     />
                   </svg>
                 </span>
-                <span>No chemicals, no salts &amp; additives.</span>
+                <span data-lang="about.skillPoint9">No chemicals, no salts &amp; additives.</span>
               </li>
               <li class="ss-item">
                 <span class="check-icon">
@@ -3381,7 +3389,7 @@
                     />
                   </svg>
                 </span>
-                <span>Our product models represent on varied work.</span>
+                <span data-lang="about.skillPoint10">Our product models represent on varied work.</span>
               </li>
             </ul>
           </div>
@@ -3394,8 +3402,8 @@
             <div class="ss-card-head">
               <span class="ss-card-mark"><i class="fas fa-table-list"></i></span>
               <div class="ss-card-name">
-                <h3>The numbers behind it</h3>
-                <p>Measured at the unit itself</p>
+                <h3 data-lang="about.specTitle">The numbers behind it</h3>
+                <p data-lang="about.specSub">Measured at the unit itself</p>
               </div>
               <span class="ss-count"><i class="fas fa-list-check"></i> 8</span>
             </div>
@@ -3404,42 +3412,42 @@
               <table class="spec-table ss-table">
                 <thead>
                   <tr>
-                    <th scope="col">Parameter</th>
-                    <th scope="col">Specification</th>
+                    <th scope="col" data-lang="about.specParamHeader">Parameter</th>
+                    <th scope="col" data-lang="about.specSpecHeader">Specification</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">Supply voltage</th>
-                    <td>110&ndash;240 V, 50/60 Hz</td>
+                    <th scope="row" data-lang="about.specRow1Label">Supply voltage</th>
+                    <td data-lang="about.specRow1Value">110&ndash;240 V, 50/60 Hz</td>
                   </tr>
                   <tr>
-                    <th scope="row">Power consumption</th>
-                    <td>5 Watt to 25 Watt</td>
+                    <th scope="row" data-lang="about.specRow2Label">Power consumption</th>
+                    <td data-lang="about.specRow2Value">5 Watt to 25 Watt</td>
                   </tr>
                   <tr>
-                    <th scope="row">Application voltage</th>
-                    <td>12 V DC</td>
+                    <th scope="row" data-lang="about.specRow3Label">Application voltage</th>
+                    <td data-lang="about.specRow3Value">12 V DC</td>
                   </tr>
                   <tr>
-                    <th scope="row">Coil cable</th>
-                    <td>1 mm&sup2; / 20 AWG, blue maximum</td>
+                    <th scope="row" data-lang="about.specRow4Label">Coil cable</th>
+                    <td data-lang="about.specRow4Value">1 mm&sup2; / 20 AWG, blue maximum</td>
                   </tr>
                   <tr>
-                    <th scope="row">Coil temperature</th>
-                    <td>176 &deg;F (80 &deg;C)</td>
+                    <th scope="row" data-lang="about.specRow5Label">Coil temperature</th>
+                    <td data-lang="about.specRow5Value">176 &deg;F (80 &deg;C)</td>
                   </tr>
                   <tr>
-                    <th scope="row">Capable of driving</th>
-                    <td>2 coils, double layer</td>
+                    <th scope="row" data-lang="about.specRow6Label">Capable of driving</th>
+                    <td data-lang="about.specRow6Value">2 coils, double layer</td>
                   </tr>
                   <tr>
-                    <th scope="row">Maximum enclosure temperature</th>
-                    <td>149 &deg;F (60 &deg;C)</td>
+                    <th scope="row" data-lang="about.specRow7Label">Maximum enclosure temperature</th>
+                    <td data-lang="about.specRow7Value">149 &deg;F (60 &deg;C)</td>
                   </tr>
                   <tr>
-                    <th scope="row">Minimum enclosure temperature</th>
-                    <td>14 &deg;F (10 &deg;C)</td>
+                    <th scope="row" data-lang="about.specRow8Label">Minimum enclosure temperature</th>
+                    <td data-lang="about.specRow8Value">14 &deg;F (10 &deg;C)</td>
                   </tr>
                 </tbody>
               </table>
@@ -3452,30 +3460,30 @@
           <div class="ss-eff-head">
             <span class="ss-eff-icon"><i class="fas fa-wrench"></i></span>
             <div>
-              <h3 class="ss-eff-title">Effective on</h3>
-              <p class="ss-eff-sub">
+              <h3 class="ss-eff-title" data-lang="about.effTitle">Effective on</h3>
+              <p class="ss-eff-sub" data-lang="about.effSub">
                 Pipe materials Jaldoot can be fitted on
               </p>
             </div>
           </div>
 
-          <a href="contact.html" class="ss-eff-cta">
+          <a href="contact.html" class="ss-eff-cta" data-lang="about.effCta">
             Ask our team
             <i class="fas fa-arrow-right"></i>
           </a>
 
           <div class="ss-eff-chips">
-            <span class="ss-chip">CPVC</span>
-            <span class="ss-chip">RPVC</span>
-            <span class="ss-chip">UPVC</span>
-            <span class="ss-chip">HDPE</span>
-            <span class="ss-chip">Copper</span>
-            <span class="ss-chip">Brass</span>
-            <span class="ss-chip">SS 304</span>
-            <span class="ss-chip">SS 316</span>
+            <span class="ss-chip" data-lang="about.chip1">CPVC</span>
+            <span class="ss-chip" data-lang="about.chip2">RPVC</span>
+            <span class="ss-chip" data-lang="about.chip3">UPVC</span>
+            <span class="ss-chip" data-lang="about.chip4">HDPE</span>
+            <span class="ss-chip" data-lang="about.chip5">Copper</span>
+            <span class="ss-chip" data-lang="about.chip6">Brass</span>
+            <span class="ss-chip" data-lang="about.chip7">SS 304</span>
+            <span class="ss-chip" data-lang="about.chip8">SS 316</span>
           </div>
 
-          <p class="ss-eff-note">
+          <p class="ss-eff-note" data-lang="about.effNote">
             <i class="fas fa-circle-info"></i>
             <span>
               The brochure lists &ldquo;HOPE COPPER&rdquo; in this list; read as the
@@ -3497,14 +3505,15 @@
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-green/10 text-jd-green text-sm font-heading font-semibold mb-4"
           >
-            <i class="fas fa-cogs"></i> Our Technology
+            <i class="fas fa-cogs"></i>
+            <span data-lang="about.techBadge">Our Technology</span>
           </span>
           <h2
             class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep mb-6"
           >
-            Jaldoot <span class="gradient-text-blue">Technology</span>
+            Jaldoot <span class="gradient-text-blue" data-lang="about.techTitle">Technology</span>
           </h2>
-          <p class="text-lg text-jd-gray font-body">
+          <p class="text-lg text-jd-gray font-body" data-lang="about.techSub">
             Four powerful technologies combined in one microprocessor-controlled
             system for comprehensive water conditioning.
           </p>
@@ -3526,13 +3535,13 @@
                   <i class="fas fa-broadcast-tower"></i>
                 </span>
                 <div>
-                  <h3 class="tech-title">Ultrasonic</h3>
-                  <p class="tech-sub">High-frequency wave technology</p>
+                  <h3 class="tech-title" data-lang="about.tech1Title">Ultrasonic</h3>
+                  <p class="tech-sub" data-lang="about.tech1Sub">High-frequency wave technology</p>
                 </div>
               </div>
-              <p class="tech-text">Ultrasonic waves break down hard water mineral bonds at a molecular level. This first line of treatment initiates the conversion process, disrupting calcium and magnesium compound structures to begin transformation into harmless particles.</p>
+              <p class="tech-text" data-lang="about.tech1Text">Ultrasonic waves break down hard water mineral bonds at a molecular level. This first line of treatment initiates the conversion process, disrupting calcium and magnesium compound structures to begin transformation into harmless particles.</p>
               <div class="tech-stage">
-                <i class="fas fa-wave-square"></i> Stage 1 Treatment
+                <i class="fas fa-wave-square"></i> <span data-lang="about.tech1Stage">Stage 1 Treatment</span>
               </div>
             </div>
           </article>
@@ -3550,13 +3559,13 @@
                   <i class="fas fa-magnet"></i>
                 </span>
                 <div>
-                  <h3 class="tech-title">Magnetic Static</h3>
-                  <p class="tech-sub">Permanent magnetic field</p>
+                  <h3 class="tech-title" data-lang="about.tech2Title">Magnetic Static</h3>
+                  <p class="tech-sub" data-lang="about.tech2Sub">Permanent magnetic field</p>
                 </div>
               </div>
-              <p class="tech-text">A permanent magnetic field alters the crystalline structure of calcium carbonate from its hard, scale-forming calcite form into a softer aragonite form that does not adhere to pipe surfaces and equipment.</p>
+              <p class="tech-text" data-lang="about.tech2Text">A permanent magnetic field alters the crystalline structure of calcium carbonate from its hard, scale-forming calcite form into a softer aragonite form that does not adhere to pipe surfaces and equipment.</p>
               <div class="tech-stage">
-                <i class="fas fa-magnet"></i> Stage 2 Treatment
+                <i class="fas fa-magnet"></i> <span data-lang="about.tech2Stage">Stage 2 Treatment</span>
               </div>
             </div>
           </article>
@@ -3574,13 +3583,13 @@
                   <i class="fas fa-bolt"></i>
                 </span>
                 <div>
-                  <h3 class="tech-title">Pulsing Power</h3>
-                  <p class="tech-sub">Variable frequency signals</p>
+                  <h3 class="tech-title" data-lang="about.tech3Title">Pulsing Power</h3>
+                  <p class="tech-sub" data-lang="about.tech3Sub">Variable frequency signals</p>
                 </div>
               </div>
-              <p class="tech-text">The microprocessor generates variable-frequency electronic pulses through coil cables. These signals create an oscillating electromagnetic field preventing mineral crystallization and scale formation throughout the pipe system.</p>
+              <p class="tech-text" data-lang="about.tech3Text">The microprocessor generates variable-frequency electronic pulses through coil cables. These signals create an oscillating electromagnetic field preventing mineral crystallization and scale formation throughout the pipe system.</p>
               <div class="tech-stage">
-                <i class="fas fa-bolt"></i> Stage 3 Treatment
+                <i class="fas fa-bolt"></i> <span data-lang="about.tech3Stage">Stage 3 Treatment</span>
               </div>
             </div>
           </article>
@@ -3598,13 +3607,13 @@
                   <i class="fas fa-atom"></i>
                 </span>
                 <div>
-                  <h3 class="tech-title">Catalytic Technology</h3>
-                  <p class="tech-sub">Crystal conversion process</p>
+                  <h3 class="tech-title" data-lang="about.tech4Title">Catalytic Technology</h3>
+                  <p class="tech-sub" data-lang="about.tech4Sub">Crystal conversion process</p>
                 </div>
               </div>
-              <p class="tech-text">Catalytic conversion transforms remaining hardness minerals into stable, harmless micro-crystals of 2&ndash;4 micron size. These crystals remain suspended in water and flow freely. The conditioning effect lasts up to 7 days.</p>
+              <p class="tech-text" data-lang="about.tech4Text">Catalytic conversion transforms remaining hardness minerals into stable, harmless micro-crystals of 2&ndash;4 micron size. These crystals remain suspended in water and flow freely. The conditioning effect lasts up to 7 days.</p>
               <div class="tech-stage">
-                <i class="fas fa-atom"></i> Stage 4 Treatment
+                <i class="fas fa-atom"></i> <span data-lang="about.tech4Stage">Stage 4 Treatment</span>
               </div>
             </div>
           </article>
@@ -3632,10 +3641,8 @@
               <i class="fas fa-microchip text-4xl"></i>
             </div>
             <div class="text-center md:text-left">
-              <h3 class="text-2xl font-heading font-bold mb-3">
-                Microprocessor-Controlled System
-              </h3>
-              <p class="text-white/80 leading-relaxed font-body text-lg">
+              <h3 class="text-2xl font-heading font-bold mb-3" data-lang="about.microTitle">Microprocessor-Controlled System</h3>
+              <p class="text-white/80 leading-relaxed font-body text-lg" data-lang="about.microText">
                 The entire Jaldoot system is controlled by an advanced
                 microprocessor that automatically manages and optimizes all four
                 technologies — Ultrasonic, Magnetic Static, Pulsing Power and
@@ -3661,15 +3668,16 @@
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold mb-4"
           >
-            <i class="fas fa-shield-alt"></i> Quality Assurance
+            <i class="fas fa-shield-alt"></i>
+            <span data-lang="about.qualBadge">Quality Assurance</span>
           </span>
           <h2
             class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep mb-6"
           >
-            Certifications &
-            <span class="gradient-text-green">Standards</span>
+            <span data-lang="about.certTitlePart1">Certifications &amp; </span>
+            <span class="gradient-text-green" data-lang="about.certTitlePart2">Standards</span>
           </h2>
-          <p class="text-lg text-jd-gray font-body leading-relaxed">
+          <p class="text-lg text-jd-gray font-body leading-relaxed" data-lang="about.certSub">
             Six certificates, one promise &mdash; every Jaldoot that leaves our
             line is built under the same quality system.
           </p>
@@ -3685,8 +3693,8 @@
             <span class="qual-icon qual-icon--sky">
               <i class="fas fa-certificate"></i>
             </span>
-            <h3 class="qual-title">ISO 9001:2008</h3>
-            <p class="qual-text">
+            <h3 class="qual-title" data-lang="about.isoTitle">ISO 9001:2008</h3>
+            <p class="qual-text" data-lang="about.isoText">
               Jaldoot is ISO 9001:2008 certified,
               ensuring quality management systems and consistent product
               standards across all operations.
@@ -3702,8 +3710,8 @@
             <span class="qual-icon qual-icon--green">
               <i class="fas fa-shield-alt"></i>
             </span>
-            <h3 class="qual-title">Quality Manufacturing</h3>
-            <p class="qual-text">
+            <h3 class="qual-title" data-lang="about.qualMfgTitle">Quality Manufacturing</h3>
+            <p class="qual-text" data-lang="about.qualMfgText">
               All products are manufactured under strict quality control with
               rigorous testing and quality assurance protocols for reliability
               and durability.
@@ -3719,8 +3727,8 @@
             <span class="qual-icon qual-icon--deep">
               <i class="fas fa-check-double"></i>
             </span>
-            <h3 class="qual-title">Advanced Technology</h3>
-            <p class="qual-text">
+            <h3 class="qual-title" data-lang="about.qualTechTitle">Advanced Technology</h3>
+            <p class="qual-text" data-lang="about.qualTechText">
               Combining four proven technologies &mdash; Ultrasonic, Magnetic
               Static, Pulsing Power and Catalytic &mdash; for comprehensive water
               conditioning solutions.
@@ -3887,12 +3895,13 @@
         <div class="yt-head text-center" data-animate="fade-up">
           <span class="yt-eyebrow inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold mb-6">
             <i class="fab fa-youtube" aria-hidden="true"></i>
-            Jaldoot on YouTube
+            <span data-lang="about.ytBadge">Jaldoot on YouTube</span>
           </span>
           <h2 class="yt-title text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep mb-6 leading-tight" id="ytTitle">
-            Real People. <span class="gradient-text-blue">Real Results.</span>
+            <span data-lang="about.ytTitlePart1">Real People. </span>
+            <span class="gradient-text-blue" data-lang="about.ytTitlePart2">Real Results.</span>
           </h2>
-          <p class="yt-sub text-jd-gray text-base lg:text-lg max-w-2xl mx-auto leading-relaxed font-body">
+          <p class="yt-sub text-jd-gray text-base lg:text-lg max-w-2xl mx-auto leading-relaxed font-body" data-lang="about.ytSub">
             Watch genuine customer stories, installations, and demonstrations from the Jaldoot Systems India YouTube channel.
           </p>
         </div>
@@ -3984,11 +3993,14 @@
         <h2
           class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-jd-dark mb-4"
         >
-          Want to Know More <br class="hidden sm:inline" />About
-          <span class="gradient-text-blue">Jaldoot?</span>
+          <span data-lang="about.ctaTitlePart1">Want to Know More </span>
+          <br class="hidden sm:inline" />
+          <span data-lang="about.ctaTitlePart2">About</span>
+          <span class="gradient-text-blue" data-lang="about.ctaTitlePart3">Jaldoot?</span>
         </h2>
         <p
           class="text-jd-deep/80 text-sm lg:text-base mb-7 max-w-xl mx-auto lg:mx-0 leading-relaxed font-body"
+          data-lang="about.ctaDesc"
         >
           Get in touch with us and discover how our water conditioning
           technology can solve your hard water problems — transforming hardness
@@ -4000,7 +4012,7 @@
             class="group inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 bg-white text-jd-deep rounded-full font-heading font-bold text-base shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <i class="fas fa-paper-plane"></i>
-            Contact Us
+            <span data-lang="about.ctaBtnContact">Contact Us</span>
             <i
               class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"
             ></i>
@@ -4010,7 +4022,7 @@
             class="inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 bg-jd-green text-white rounded-full font-heading font-bold text-base shadow-lg shadow-jd-green/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
           >
             <i class="fas fa-phone-alt"></i>
-            Call: 98222 09656
+            <span data-lang="about.ctaBtnCall">Call: 98222 09656</span>
           </a>
         </div>
         </div>
@@ -4057,13 +4069,13 @@
                 height="356"
               />
             </div>
-            <p class="text-gray-400 text-sm leading-relaxed mb-6 font-body">
+            <p class="text-gray-400 text-sm leading-relaxed mb-6 font-body" data-lang="about.footerCompanyDesc">
               Manufactured by Jaldoot — ISO 9001:2008
               certified company specializing in advanced water conditioning
               technology.
             </p>
             <div
-              class="inline-flex items-center gap-2 px-3 py-1.5 bg-jd-green/10 border border-jd-green/30 rounded-full text-jd-green text-xs font-heading font-semibold"
+              class="inline-flex items-center gap-2 px-3 py-1.5 bg-jd-green/10 border border-jd-green/30 rounded-full text-jd-green text-xs font-heading font-semibold" data-lang="about.footerIsoCert"
             >
               <i class="fas fa-check-circle"></i> ISO 9001:2008 Certified
             </div>
@@ -4071,12 +4083,13 @@
 
           <!-- Quick Links -->
           <div>
-            <h4 class="text-lg font-heading font-semibold mb-6">Quick Links</h4>
+            <h4 class="text-lg font-heading font-semibold mb-6" data-lang="about.footerQuickLinks">Quick Links</h4>
             <ul class="space-y-3">
               <li>
                 <a
                   href="index.html"
                   class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  data-lang="about.footerLinkHome"
                   ><i
                     class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
                   ></i
@@ -4087,6 +4100,7 @@
                 <a
                   href="about.html"
                   class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  data-lang="about.footerLinkAbout"
                   ><i
                     class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
                   ></i
@@ -4097,6 +4111,7 @@
                 <a
                   href="products.html"
                   class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  data-lang="about.footerLinkProducts"
                   ><i
                     class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
                   ></i
@@ -4107,6 +4122,7 @@
                 <a
                   href="contact.html"
                   class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  data-lang="about.footerLinkContact"
                   ><i
                     class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
                   ></i
@@ -4118,7 +4134,7 @@
 
           <!-- Applications -->
           <div>
-            <h4 class="text-lg font-heading font-semibold mb-6">
+            <h4 class="text-lg font-heading font-semibold mb-6" data-lang="about.footerApplications">
               Applications
             </h4>
             <ul class="space-y-3">
@@ -4126,16 +4142,19 @@
                 <a
                   href="products.html#domestic"
                   class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  data-lang="about.footerAppDomestic"
                   ><i
                     class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
                   ></i
                   >Domestic Solutions</a
                 >
               </li>
+              </li>
               <li>
                 <a
                   href="products.html#agriculture"
                   class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  data-lang="about.footerAppAgriculture"
                   ><i
                     class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
                   ></i
@@ -4146,6 +4165,7 @@
                 <a
                   href="products.html#poultry"
                   class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  data-lang="about.footerAppPoultry"
                   ><i
                     class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
                   ></i
@@ -4156,6 +4176,7 @@
                 <a
                   href="products.html#commercial"
                   class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  data-lang="about.footerAppCommercial"
                   ><i
                     class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
                   ></i
@@ -4166,6 +4187,7 @@
                 <a
                   href="products.html#ro-plant"
                   class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  data-lang="about.footerAppRoPlant"
                   ><i
                     class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
                   ></i
@@ -4176,6 +4198,7 @@
                 <a
                   href="products.html#solar-products"
                   class="text-gray-400 hover:text-jd-sky transition-colors text-sm font-body"
+                  data-lang="about.footerAppSolar"
                   ><i
                     class="fas fa-chevron-right text-xs mr-2 text-jd-sky/40"
                   ></i
@@ -4187,22 +4210,23 @@
 
           <!-- Contact -->
           <div>
-            <h4 class="text-lg font-heading font-semibold mb-6">Contact</h4>
+            <h4 class="text-lg font-heading font-semibold mb-6" data-lang="about.footerContactHeading">
+              Contact
+            </h4>
             <ul class="space-y-4">
               <li class="flex items-start text-sm text-gray-400 font-body">
                 <i class="fas fa-map-marker-alt text-jd-sky mr-3 mt-1"></i>
-                <span
-                  >Plot No. 83, Near Maruthi Meter, Ramtekadi Industrial
-                  Estate, Hadapsar, Pune - 411028</span
+                <span data-lang="about.footerAddress">Plot No. 83, Near Maruthi Meter, Ramtekadi Industrial
+                  Estate, Hadapsar, Pune - 411028</span>
                 >
               </li>
               <li class="flex items-center text-sm text-gray-400 font-body">
                 <i class="fas fa-phone-alt text-jd-sky mr-3"></i>
-                <span>9822209656 / 9404039656</span>
+                <span data-lang="about.footerPhone">9822209656 / 9404039656</span>
               </li>
               <li class="flex items-center text-sm text-gray-400 font-body">
                 <i class="fas fa-envelope text-jd-sky mr-3"></i>
-                <span class="break-all">watercare.jaldoot@gmail.com</span>
+                <span class="break-all" data-lang="about.footerEmail">watercare.jaldoot@gmail.com</span>
               </li>
               <li class="flex items-center text-sm text-gray-400 font-body">
                 <i class="fas fa-globe text-jd-sky mr-3"></i>
@@ -4246,10 +4270,11 @@
           class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p class="text-gray-500 text-sm font-body">
-            &copy; <span id="footerYear">2024</span> Jaldoot
-            Pvt. Ltd. All rights reserved.
+            <span data-lang="about.footerCopyrightPrefix">&copy;</span>
+            <span id="footerYear">2024</span>
+            <span data-lang="about.footerCopyrightSuffix">Jaldoot Pvt. Ltd. All rights reserved.</span>
           </p>
-          <p class="text-gray-600 text-xs font-heading">
+          <p class="text-gray-600 text-xs font-heading" data-lang="about.footerTagline">
             Hardness To Happiness — Crystal Clear Naturally Water
           </p>
         </div>
@@ -4273,7 +4298,7 @@
         <i class="fas fa-phone-alt text-lg"></i>
         <span
           class="absolute right-full mr-3 px-3 py-1.5 bg-gray-800 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden sm:block"
-          >Call: 9822209656</span
+          >Call: 9822209656</span>
         >
       </a>
       <a
@@ -4285,7 +4310,7 @@
         <i class="fab fa-whatsapp text-2xl"></i>
         <span
           class="absolute right-full mr-3 px-3 py-1.5 bg-gray-800 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden sm:block"
-          >Chat on WhatsApp</span
+          >Chat on WhatsApp</span>
         >
       </a>
     </div>
@@ -4960,5 +4985,6 @@
         });
       });
     </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
