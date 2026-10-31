@@ -959,12 +959,39 @@
               class="nav-link active font-heading transition-all duration-300"
               >Contact</a
             >
-            <a
-              href="#contact-form"
-              class="nav-cta ml-4 px-5 py-2 bg-gradient-to-r from-jd-deep via-jd-blue to-jd-sky text-white font-heading transition-all duration-300"
-            >
-              <i class="fas fa-paper-plane mr-2 text-xs"></i>Get Quote
-            </a>
+            <div class="relative group ml-2">
+              <button
+                class="nav-link font-heading transition-all duration-300 flex items-center gap-1"
+                aria-label="Select language"
+                id="langBtn"
+              >
+                <i class="fas fa-globe text-xs"></i> Language
+                <i class="fas fa-chevron-down ml-1 text-[10px]"></i>
+              </button>
+              <div
+                id="langMenu"
+                class="absolute right-0 mt-1 w-32 bg-white border border-jd-sky/15 rounded-xl shadow-xl py-2 z-50 opacity-0 invisible pointer-events-none transition-opacity duration-300 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+                >
+                  English
+                </a>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+                >
+                  हिन्दी
+                </a>
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+                >
+                  मराठी
+                </a>
+              </div>
+            </div>
           </div>
 
           <!-- Mobile Hamburger -->
@@ -1030,13 +1057,40 @@
         >
           <i class="fas fa-envelope w-5"></i> Contact
         </a>
+        <div class="relative group">
+          <button
+            class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
+            aria-label="Select language"
+            id="langBtn"
+          >
+            <i class="fas fa-globe w-5"></i> Language
+            <i class="fas fa-chevron-down ml-auto text-[10px]"></i>
+          </button>
+          <div
+            id="langMenu"
+            class="mt-1 w-full bg-white border border-jd-sky/15 rounded-xl shadow-xl py-2 z-50 opacity-0 invisible pointer-events-none transition-opacity duration-300 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto"
+          >
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+            >
+              English
+            </a>
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+            >
+              हिन्दी
+            </a>
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+            >
+              मराठी
+            </a>
+          </div>
+        </div>
         <hr class="my-3 border-gray-200" />
-        <a
-          href="#contact-form"
-          class="nav-cta flex items-center justify-center gap-2 py-3 px-6 bg-gradient-to-r from-jd-deep via-jd-blue to-jd-sky text-white font-heading"
-        >
-          <i class="fas fa-paper-plane"></i> Get Quote
-        </a>
         <div class="mt-6 p-4 bg-gray-50 rounded-xl">
           <p class="font-heading font-semibold text-jd-deep text-sm mb-2">
             <i class="fas fa-phone-alt text-jd-sky mr-2"></i>Call Us
