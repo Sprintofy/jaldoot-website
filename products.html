@@ -37,7 +37,7 @@
       };
     </script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -3945,21 +3945,25 @@
             <a
               href="index.html"
               class="nav-link font-heading transition-all duration-300"
+              data-lang="nav.home"
               >Home</a
             >
             <a
               href="about.html"
               class="nav-link font-heading transition-all duration-300"
+              data-lang="nav.about"
               >About</a
             >
             <a
               href="products.html"
               class="nav-link active font-heading transition-all duration-300"
+              data-lang="nav.products"
               >Products</a
             >
             <a
               href="contact.html"
               class="nav-link font-heading transition-all duration-300"
+              data-lang="nav.contact"
               >Contact</a
             >
             <div class="relative group ml-2">
@@ -3968,7 +3972,7 @@
                 aria-label="Select language"
                 id="langBtn"
               >
-                <i class="fas fa-globe text-xs"></i> Language
+                <i class="fas fa-globe text-xs"></i> <span data-lang="nav.language">Language</span>
                 <i class="fas fa-chevron-down ml-1 text-[10px]"></i>
               </button>
               <div
@@ -3978,18 +3982,21 @@
                 <a
                   href="#"
                   class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+                  data-lang="lang.english"
                 >
                   English
                 </a>
                 <a
                   href="#"
                   class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+                  data-lang="lang.hindi"
                 >
                   हिन्दी
                 </a>
                 <a
                   href="#"
                   class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+                  data-lang="lang.marathi"
                 >
                   मराठी
                 </a>
@@ -4040,24 +4047,28 @@
         <a
           href="index.html"
           class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
+          data-lang="nav.home"
         >
           <i class="fas fa-home w-5"></i> Home
         </a>
         <a
           href="about.html"
           class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
+          data-lang="nav.about"
         >
           <i class="fas fa-building w-5"></i> About
         </a>
         <a
           href="products.html"
           class="mobile-nav-link active flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
+          data-lang="nav.products"
         >
           <i class="fas fa-box-open w-5"></i> Products
         </a>
         <a
           href="contact.html"
           class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
+          data-lang="nav.contact"
         >
           <i class="fas fa-envelope w-5"></i> Contact
         </a>
@@ -4077,18 +4088,21 @@
             <a
               href="#"
               class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+              data-lang="lang.english"
             >
               English
             </a>
             <a
               href="#"
               class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+              data-lang="lang.hindi"
             >
               हिन्दी
             </a>
             <a
               href="#"
               class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+              data-lang="lang.marathi"
             >
               मराठी
             </a>
@@ -4159,23 +4173,26 @@
         class="relative z-10 w-full max-w-3xl mx-auto px-4 sm:px-6 text-center py-14 lg:py-20"
       >
         <nav class="hero-breadcrumb mb-7" aria-label="Breadcrumb">
-          <a href="index.html" class="font-heading">
+          <a href="index.html" class="font-heading" data-lang="products.breadcrumbHome">
             <i class="fas fa-home mr-1"></i> Home
           </a>
           <i class="fas fa-chevron-right hero-crumb-sep"></i>
-          <span class="hero-crumb-current font-heading">Products</span>
+          <span class="hero-crumb-current font-heading" data-lang="products.breadcrumbCurrent">Products</span>
         </nav>
-
-        <h1
-          class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-5 leading-tight"
-        >
-          The Jaldoot
-          <span class="text-jd-sky">Water Conditioner</span>
-          Range
-        </h1>
+        <p class="mb-6 inline-flex items-center gap-2 justify-center text-jd-sky/90 text-sm font-heading font-semibold uppercase tracking-widest" data-lang="products.heroEyebrow">
+          <i class="fas fa-star text-xs"></i> Hardness to happiness &nbsp;·&nbsp; Crystal Clear Naturally Water
+        </p>
+          <h1
+            class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep leading-tight"
+          >
+            <span data-lang="products.titlePart1" class="text-white">The Jaldoot </span>
+            <span class="text-jd-sky" data-lang="products.titlePart2">Water Conditioner</span>
+            <span data-lang="products.titlePart3">Range</span>
+          </h1>
 
         <p
           class="text-white/75 text-base lg:text-lg max-w-2xl mx-auto leading-relaxed font-body"
+          data-lang="products.subtitle"
         >
           Chemical-free, salt-free units for homes, farms, hotels and factories
           &mdash; sized for the line you actually have.
@@ -4279,6 +4296,7 @@
           <div class="lg:col-span-6 xl:col-span-7" data-animate="fade-left">
             <span
               class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold"
+              data-lang="products.productTitle"
             >
               <i class="fas fa-cogs" aria-hidden="true"></i> The Product
             </span>
@@ -4286,11 +4304,20 @@
             <h2
               class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep leading-tight"
             >
-              A <span class="gradient-text-blue">Three Dimensional</span> Water
-              Conditioner
+              <span data-lang="products.productSubPart1">A </span>
+              <span
+                class="gradient-text-blue"
+                data-lang="products.productSubPart2"
+              >
+                Three Dimensional
+              </span>
+              <span data-lang="products.productSubPart3"> Water Conditioner</span>
             </h2>
 
-            <p class="mt-5 text-lg text-jd-gray leading-relaxed">
+            <p
+              class="mt-5 text-lg text-jd-gray leading-relaxed"
+              data-lang="products.productDesc"
+            >
               Four working principles in one compact unit, so hard water is
               conditioned instead of treated with chemicals.
             </p>
@@ -4301,10 +4328,13 @@
                   <i class="fas fa-wave-square" aria-hidden="true"></i>
                 </span>
                 <div>
-                  <h3 class="font-heading font-bold text-jd-deep">
+                  <h3
+                    class="font-heading font-bold text-jd-deep"
+                    data-lang="products.ultrasonic"
+                  >
                     Ultrasonic
                   </h3>
-                  <p>
+                  <p data-lang="products.ultrasonicDesc">
                     Sonic pulses break the mineral bonds that form scale, at the
                     molecular level.
                   </p>
@@ -4316,10 +4346,13 @@
                   <i class="fas fa-magnet" aria-hidden="true"></i>
                 </span>
                 <div>
-                  <h3 class="font-heading font-bold text-jd-deep">
+                  <h3
+                    class="font-heading font-bold text-jd-deep"
+                    data-lang="products.magneticStatic"
+                  >
                     Magnetic Static
                   </h3>
-                  <p>
+                  <p data-lang="products.magneticStaticDesc">
                     A permanent field holds minerals in solution, away from pipe
                     walls.
                   </p>
@@ -4331,10 +4364,13 @@
                   <i class="fas fa-bolt" aria-hidden="true"></i>
                 </span>
                 <div>
-                  <h3 class="font-heading font-bold text-jd-deep">
+                  <h3
+                    class="font-heading font-bold text-jd-deep"
+                    data-lang="products.pulsingPower"
+                  >
                     Pulsing Power
                   </h3>
-                  <p>
+                  <p data-lang="products.pulsingPowerDesc">
                     Dynamic high-frequency energy dissolves scale that is
                     already deposited.
                   </p>
@@ -4346,10 +4382,13 @@
                   <i class="fas fa-atom" aria-hidden="true"></i>
                 </span>
                 <div>
-                  <h3 class="font-heading font-bold text-jd-deep">
+                  <h3
+                    class="font-heading font-bold text-jd-deep"
+                    data-lang="products.catalyticTech"
+                  >
                     Catalytic Technology
                   </h3>
-                  <p>
+                  <p data-lang="products.catalyticTechDesc">
                     The patented coil induces ionisation at the cathode and
                     anode.
                   </p>
@@ -4361,50 +4400,46 @@
               class="unit-stats mt-9 grid grid-cols-2 sm:grid-cols-4 gap-px rounded-2xl overflow-hidden bg-jd-sky/15 border border-jd-sky/15"
             >
               <div class="unit-stat">
-                <dt>Micron crystals</dt>
+                <dt data-lang="products.micronCrystals">Micron crystals</dt>
                 <dd>2&ndash;4</dd>
               </div>
               <div class="unit-stat">
-                <dt>Days of effect</dt>
+                <dt data-lang="products.daysEffect">Days of effect</dt>
                 <dd data-count="7">0</dd>
               </div>
               <div class="unit-stat">
-                <dt>Chemicals</dt>
+                <dt data-lang="products.chemicals">Chemicals</dt>
                 <dd class="unit-stat--green">0</dd>
               </div>
               <div class="unit-stat">
-                <dt>Stages</dt>
+                <dt data-lang="products.stages">Stages</dt>
                 <dd data-count="3">0</dd>
               </div>
             </dl>
 
-            <div class="mt-9 flex flex-wrap items-center gap-3">
-              <a href="#applications" class="btn-primary">
-                <span>See where it is used</span>
-                <svg
-                  class="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </a>
-              <a href="contact.html" class="unit-text-link">
-                Request a quote
-                <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
-              </a>
+            <div class="mt-10 lg:mt-14 rounded-2xl bg-jd-sky/5 border border-jd-sky/15 p-6 sm:p-8 md:p-10">
+              <p class="text-lg sm:text-xl text-jd-deep font-heading font-semibold leading-relaxed" data-lang="products.sizeYourLine">
+                Tell us about your line — pipe material, diameter and flow — and we will suggest the right Jaldoot unit.
+              </p>
+              <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <a href="#applications" class="btn-primary w-full sm:w-auto">
+                  <span data-lang="products.seeWhereUsed">See where it is used</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+                <a href="contact.html?source=products" class="unit-text-link w-full sm:w-auto text-center sm:text-start">
+                  <span data-lang="products.requestQuote">Request a quote for this section</span>
+                  <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
+                </a>
+              </div>
             </div>
+
+            <div class="mt-9 flex flex-wrap items-center gap-3">
 
             <details class="unit-detail mt-9">
               <summary>
-                <span>Read the technical description</span>
+                <span data-lang="products.readTechDesc">Read the technical description</span>
                 <i class="fas fa-chevron-down" aria-hidden="true"></i>
               </summary>
               <div class="space-y-4 mt-4 text-jd-gray leading-relaxed">
@@ -4594,7 +4629,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           <div class="lg:col-span-7" data-animate="fade-right">
-            <span class="hw-eyebrow">
+            <span class="hw-eyebrow" data-lang="products.hardWaterProblems">
               <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
               Problems caused by hard water
             </span>
@@ -4602,14 +4637,21 @@
             <h2
               class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep leading-tight"
             >
-              Calcite &mdash; the
-              <span class="gradient-text-blue">main cause of scale</span>
+              <span data-lang="products.calciteTitlePart1">
+                Calcite &mdash; the
+              </span>
+              <span
+                class="gradient-text-blue"
+                data-lang="products.calciteTitlePart2"
+              >
+                main cause of scale
+              </span>
             </h2>
 
             <div class="hw-rule my-7"></div>
 
             <div class="hw-lead text-jd-gray leading-relaxed">
-              <p>
+              <p data-lang="products.calciteDescPart1">
                 Calcite, the main cause of scale, is the most common form of
                 calcium carbonate and occurs naturally as an ingredient of
                 chalk, limestone and marble. Water passing over and permeating
@@ -4617,7 +4659,7 @@
                 subsequently flows through a water system the calcite
                 precipitates out to form a very hard scale on surfaces.
               </p>
-              <p>
+              <p data-lang="products.calciteDescPart2">
                 When hard water is heated, or evaporation takes place, the
                 problems are exacerbated. Calcite forms ever growing layers of
                 rock-like deposits until eventually pipes, jets and equipment
@@ -4633,13 +4675,13 @@
                 <span aria-hidden="true"
                   ><i class="fas fa-circle-info"></i
                 ></span>
-                <h3>Why it matters</h3>
+                <h3 data-lang="products.whyMatters">Why it matters</h3>
               </div>
 
               <ul>
                 <li class="hw-reason">
                   <span aria-hidden="true"><i class="fas fa-xmark"></i></span>
-                  <p>
+                  <p data-lang="products.scaleBuilds">
                     Scale builds up inside pipes and fittings, shrinking the
                     bore over time.
                   </p>
@@ -4648,7 +4690,7 @@
                   <span aria-hidden="true"
                     ><i class="fas fa-arrow-trend-up"></i
                   ></span>
-                  <p>
+                  <p data-lang="products.scaleThicker">
                     The thicker the scale, the harder the system works and the
                     more fuel it burns.
                   </p>
@@ -4657,7 +4699,7 @@
                   <span aria-hidden="true"
                     ><i class="fas fa-temperature-high"></i
                   ></span>
-                  <p>
+                  <p data-lang="products.scaleHotter">
                     Hotter water accelerates scale growth, so heating is where
                     the damage starts.
                   </p>
@@ -4666,7 +4708,7 @@
                   <span aria-hidden="true"
                     ><i class="fas fa-shield-halved"></i
                   ></span>
-                  <p>
+                  <p data-lang="products.scaleReturns">
                     Once removed, scale keeps returning unless the water itself
                     is treated.
                   </p>
@@ -4684,10 +4726,14 @@
             <div>
               <h3
                 class="text-2xl sm:text-3xl font-heading font-bold text-jd-deep"
+                data-lang="products.whatItCosts"
               >
                 What it costs you
               </h3>
-              <p class="text-jd-gray mt-2 max-w-xl">
+              <p
+                class="text-jd-gray mt-2 max-w-xl"
+                data-lang="products.scaleCostDesc"
+              >
                 Scale is rarely one big failure. It is a steady drain on
                 efficiency, running costs and equipment life.
               </p>
@@ -4737,12 +4783,12 @@
                   <path d="M17.5 33.5H14M34.5 33.5H31" opacity=".4" />
                 </svg>
               </div>
-              <h3>Wasted energy &amp; money</h3>
-              <p>
+              <h3 data-lang="products.wastedEnergy">Wasted energy &amp; money</h3>
+              <p data-lang="products.wastedEnergyDesc">
                 Just one eighth of an inch of scale reduces heating efficiency
                 by 25%.
               </p>
-              <span class="hw-cost-signal">25% efficiency lost</span>
+              <span class="hw-cost-signal" data-lang="products.wastedEnergyValue">25% efficiency lost</span>
             </article>
 
             <article
@@ -4786,11 +4832,11 @@
                   />
                 </svg>
               </div>
-              <h3>Expensive de-scaling</h3>
-              <p>
+              <h3 data-lang="products.expensiveDescaling">Expensive de-scaling</h3>
+              <p data-lang="products.expensiveDescalingDesc">
                 It is very expensive to remove scale from pipes and boilers.
               </p>
-              <span class="hw-cost-signal">High removal cost</span>
+              <span class="hw-cost-signal" data-lang="products.expensiveDescalingValue">High removal cost</span>
             </article>
 
             <article
@@ -4842,12 +4888,12 @@
                   />
                 </svg>
               </div>
-              <h3>Costly down-time</h3>
-              <p>
+              <h3 data-lang="products.costlyDowntime">Costly down-time</h3>
+              <p data-lang="products.costlyDowntimeDesc">
                 Higher warranty costs, costly down-time and higher cleaning
                 agent costs.
               </p>
-              <span class="hw-cost-signal">Production stops</span>
+              <span class="hw-cost-signal" data-lang="products.costlyDowntimeValue">Production stops</span>
             </article>
 
             <article
@@ -4903,12 +4949,12 @@
                   <circle cx="28" cy="38.5" r="1.2" opacity=".6" />
                 </svg>
               </div>
-              <h3>Blocked showers &amp; plumbing</h3>
-              <p>
+              <h3 data-lang="products.blockedShowers">Blocked showers &amp; plumbing</h3>
+              <p data-lang="products.blockedShowersDesc">
                 Shower and plumbing blockages, reduced efficiency and higher
                 energy costs.
               </p>
-              <span class="hw-cost-signal">Higher energy bills</span>
+              <span class="hw-cost-signal" data-lang="products.blockedShowersValue">Higher energy bills</span>
             </article>
 
             <article
@@ -4975,12 +5021,12 @@
                   />
                 </svg>
               </div>
-              <h3>Premature failure</h3>
-              <p>
+              <h3 data-lang="products.prematureFailure">Premature failure</h3>
+              <p data-lang="products.prematureFailureDesc">
                 Premature &amp; unexpected failure, higher maintenance and more
                 time spent cleaning.
               </p>
-              <span class="hw-cost-signal">Shorter equipment life</span>
+              <span class="hw-cost-signal" data-lang="products.prematureFailureValue">Shorter equipment life</span>
             </article>
 
             <article
@@ -5024,12 +5070,12 @@
                   <circle cx="33.5" cy="31.5" r="1.6" />
                 </svg>
               </div>
-              <h3>More soap &amp; detergent</h3>
-              <p>
+              <h3 data-lang="products.moreSoap">More soap &amp; detergent</h3>
+              <p data-lang="products.moreSoapDesc">
                 Hard water wastes soap, detergent and shampoo, raising everyday
                 running costs.
               </p>
-              <span class="hw-cost-signal">Everyday running cost</span>
+              <span class="hw-cost-signal" data-lang="products.moreSoapValue">Everyday running cost</span>
             </article>
           </div>
         </div>
@@ -5048,17 +5094,19 @@
         <div class="text-center max-w-3xl mx-auto mb-16" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold mb-5"
+            data-lang="products.hiwTitle"
           >
             <i class="fas fa-diagram-project"></i> How it works?
           </span>
           <h2
             class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep leading-tight"
           >
-            Process of the Jaldoot
-            <span class="gradient-text-blue">Water Conditioner</span>
+            <span data-lang="products.hiwSubtitlePart1">Process of the Jaldoot </span>
+            <span class="gradient-text-blue" data-lang="products.hiwSubtitlePart2">Water Conditioner</span>
           </h2>
           <div
             class="mt-6 inline-flex items-center gap-2 px-5 py-2.5 hiw-banner rounded-full font-heading font-semibold"
+            data-lang="products.hiw3Stage"
           >
             <i class="fas fa-layer-group" aria-hidden="true"></i>
             3-Stage &mdash; Electrolysis, Electronic Frequency with Permanent
@@ -5082,8 +5130,8 @@
               <div class="hiw-icon">
                 <i class="fas fa-bolt" aria-hidden="true"></i>
               </div>
-              <h3 class="hiw-title">Electrolysis</h3>
-              <p class="hiw-copy">
+              <h3 class="hiw-title" data-lang="products.hiwStage1Title">Electrolysis</h3>
+              <p class="hiw-copy" data-lang="products.hiwStage1Desc">
                 The process of induced ionization is taken to its ultimate stage
                 of cathode and anode, breaking down hard water mineral bonds and
                 initiating the transformation of scale-causing minerals.
@@ -5146,7 +5194,7 @@
               </div>
 
               <div class="hiw-tag">
-                <i class="fas fa-circle-nodes" aria-hidden="true"></i> Stage 1
+                <i class="fas fa-circle-nodes" aria-hidden="true"></i> <span data-lang="products.hiwStage1Label">Stage 1</span>
               </div>
             </div>
           </article>
@@ -5162,10 +5210,10 @@
               <div class="hiw-icon">
                 <i class="fas fa-magnet" aria-hidden="true"></i>
               </div>
-              <h3 class="hiw-title">
+              <h3 class="hiw-title" data-lang="products.hiwStage2Title">
                 Electronic Frequency with Permanent Magnet
               </h3>
-              <p class="hiw-copy">
+              <p class="hiw-copy" data-lang="products.hiwStage2Desc">
                 A frequency modulated (FM) waveform within the audio frequency
                 (AF) bandwidth, combined with a permanent magnet. It alters the
                 crystalline structure of hard water minerals, converting them
@@ -5200,7 +5248,7 @@
               </div>
 
               <div class="hiw-tag">
-                <i class="fas fa-wave-square" aria-hidden="true"></i> Stage 2
+                <i class="fas fa-wave-square" aria-hidden="true"></i> <span data-lang="products.hiwStage2Label">Stage 2</span>
               </div>
             </div>
           </article>
@@ -5216,8 +5264,8 @@
               <div class="hiw-icon">
                 <i class="fas fa-atom" aria-hidden="true"></i>
               </div>
-              <h3 class="hiw-title">Electromagnetic</h3>
-              <p class="hiw-copy">
+              <h3 class="hiw-title" data-lang="products.hiwStage3Title">Electromagnetic</h3>
+              <p class="hiw-copy" data-lang="products.hiwStage3Desc">
                 The principles of magneto hydrodynamics (MHD) applied through a
                 patented signal passed through a coil wrapped around the pipe to
                 be treated, ensuring complete conditioning of the water.
@@ -5259,7 +5307,7 @@
               </div>
 
               <div class="hiw-tag">
-                <i class="fas fa-check-double" aria-hidden="true"></i> Stage 3
+                <i class="fas fa-check-double" aria-hidden="true"></i> <span data-lang="products.hiwStage3Label">Stage 3</span>
               </div>
             </div>
           </article>
@@ -5299,16 +5347,24 @@
         <div class="text-center max-w-3xl mx-auto mb-16" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 border border-white/20 text-white text-sm font-heading font-medium"
+            data-lang="products.srTitle"
             ><i class="fas fa-layer-group" aria-hidden="true"></i> Scale
             reduction</span
           >
           <h2
             class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-heading font-bold leading-tight"
           >
-            Changed size, modified charge, new
-            <span class="gradient-text-white">crystal shape</span>
+            <span data-lang="products.srHeadingPart1">
+              Changed size, modified charge, new
+            </span>
+            <span class="gradient-text-white" data-lang="products.srHeadingPart2">
+              crystal shape
+            </span>
           </h2>
-          <p class="mt-5 text-white/70 leading-relaxed">
+          <p
+            class="mt-5 text-white/70 leading-relaxed"
+            data-lang="products.srSubtitle"
+          >
             Rock-hard calcite is not removed by force &mdash; it is broken down
             at particle level, so it can never build up again.
           </p>
@@ -5445,37 +5501,41 @@
 
               <div class="sr-legend">
                 <span style="--dot: #f97316"
-                  ><i aria-hidden="true"></i> Untreated calcite</span
+                  ><i aria-hidden="true"></i> <span data-lang="products.srLegend1">Untreated calcite</span></span
                 >
                 <span style="--dot: #7dd3fc"
-                  ><i aria-hidden="true"></i> Signal field</span
+                  ><i aria-hidden="true"></i> <span data-lang="products.srLegend2">Signal field</span></span
                 >
                 <span style="--dot: #4db74a"
-                  ><i aria-hidden="true"></i> 2&ndash;4 micron crystals</span
+                  ><i aria-hidden="true"></i> <span data-lang="products.srLegend3">2&ndash;4 micron crystals</span></span
                 >
               </div>
             </div>
 
             <div class="sr-note">
               <p>
-                It is this changed size, modified charge and crystalline shape
-                that has the first two beneficial properties for the reduction
-                of scale. The
-                <strong
-                  >2&ndash;4 micron sized crystals become non-sticky</strong
-                >
-                and will not coagulate or precipitate and form scale in the same
-                way as untreated calcium carbonate nuclei would.
+                <span data-lang="products.srNotePart1">
+                  It is this changed size, modified charge and crystalline shape
+                  that has the first two beneficial properties for the reduction
+                  of scale. The
+                </span>
+                <strong data-lang="products.srNotePart2">
+                  2&ndash;4 micron sized crystals become non-sticky
+                </strong>
+                <span data-lang="products.srNotePart3">
+                  and will not coagulate or precipitate and form scale in the same
+                  way as untreated calcium carbonate nuclei would.
+                </span>
               </p>
               <p>
-                This process is so effective that the water has been found to
-                <strong>feel and behave like chemically softened water</strong>.
-                The presence of the large crystalline shapes disrupts the
-                equilibrium between the fluid and any existing scale. Smaller
-                particles in general dissolve more easily, so the larger
-                particles will have reduced the levels of calcite in solution.
+                <span data-lang="products.srNotePart4">
+                  This process is so effective that the water has been found to feel and behave like chemically softened water.
+                </span>
+                <span data-lang="products.srNotePart5">
+                  The presence of the large crystalline shapes disrupts the equilibrium between the fluid and any existing scale. Smaller particles in general dissolve more easily, so the larger particles will have reduced the levels of calcite in solution.
+                </span>
               </p>
-              <p>
+              <p data-lang="products.srNotePart6">
                 Hence, existing scale deposited by precipitation will
                 <strong>soften and gradually be absorbed into solution</strong>
                 and flow out of the system. In areas of still water, e.g. tanks
@@ -5527,26 +5587,32 @@
                 <div class="sr-ring-value">
                   <div>
                     <b>7</b>
-                    <small>Days</small>
+                    <small data-lang="products.srDaysLabel">Days</small>
                   </div>
                 </div>
               </div>
 
-              <h3>The longer lasting effect</h3>
+              <h3 data-lang="products.srLongerTitle">The longer lasting effect</h3>
               <p>
-                It has been established that the physiochemical process already
-                described is more efficient because the signal energy is
-                <strong>dynamically changing</strong>. By changing the signal
-                field at high audio frequencies, unique to Jaldoot, the energy
-                imparted to the nuclei is considerably accelerated.
+                <span data-lang="products.srLongerPart1a">
+                  It has been established that the physiochemical process already
+                  described is more efficient because the signal energy is
+                </span>
+                <strong data-lang="products.srLongerPart1b">
+                  dynamically changing
+                </strong>
+                <span data-lang="products.srLongerPart1c">
+                  . By changing the signal field at high audio frequencies, unique to Jaldoot, the energy imparted to the nuclei is considerably accelerated.
+                </span>
               </p>
               <p>
-                An important property of Jaldoot processed water is that the
-                charged crystalline shape growth will remain in that state for
-                <strong>up to 7 days</strong>. Thus in stored water systems the
-                effect is much longer lasting than other ionization methods,
-                retarding the reversion back to the smaller nuclei structures
-                that are readily precipitated.
+                <span data-lang="products.srLongerPart2a">
+                  An important property of Jaldoot processed water is that the charged crystalline shape growth will remain in that state for
+                </span>
+                <strong data-lang="products.srLongerPart2b">up to 7 days</strong>
+                <span data-lang="products.srLongerPart2c">
+                  . Thus in stored water systems the effect is much longer lasting than other ionization methods, retarding the reversion back to the smaller nuclei structures that are readily precipitated.
+                </span>
               </p>
             </div>
 
@@ -5565,8 +5631,8 @@
                   </svg>
                 </span>
                 <div>
-                  <h4>Shape you can see</h4>
-                  <p>
+                  <h4 data-lang="products.srShapeTitle">Shape you can see</h4>
+                  <p data-lang="products.srShapeDesc">
                     Angular calcite turns into rounded 2&ndash;4 micron crystals
                     that no longer stick together.
                   </p>
@@ -5588,8 +5654,8 @@
                   </svg>
                 </span>
                 <div>
-                  <h4>Existing scale softens</h4>
-                  <p>
+                  <h4 data-lang="products.srScaleSoftensTitle">Existing scale softens</h4>
+                  <p data-lang="products.srScaleSoftensDesc">
                     Deposits break equilibrium, dissolve and go back into
                     solution instead of growing.
                   </p>
@@ -5612,8 +5678,8 @@
                   </svg>
                 </span>
                 <div>
-                  <h4>Flushes out</h4>
-                  <p>
+                  <h4 data-lang="products.srFlushesTitle">Flushes out</h4>
+                  <p data-lang="products.srFlushesDesc">
                     In tanks and still water the soft scale settles and is
                     removed by a simple flush.
                   </p>
@@ -5624,15 +5690,15 @@
             <div class="grid grid-cols-2 gap-4 mt-6">
               <div class="sr-stat">
                 <b>2&ndash;4</b>
-                <span>Micron crystals</span>
+                <span data-lang="products.srStat1Label">Micron crystals</span>
               </div>
               <div class="sr-stat">
                 <b data-count="7">0</b>
-                <span>Days shape growth retained</span>
+                <span data-lang="products.srStat2Label">Days shape growth retained</span>
               </div>
             </div>
 
-            <p class="sr-foot">
+            <p class="sr-foot" data-lang="products.srFootnote">
               Technical description reproduced from the Jaldoot company
               brochure.
             </p>
@@ -6010,20 +6076,22 @@
           <div data-animate="fade-right">
             <span
               class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold mb-6"
+              data-lang="products.resultsTitle"
               ><i class="fas fa-chart-line"></i> The results</span
             >
             <h2
               class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep leading-tight"
             >
-              What <span class="gradient-text-blue">changes</span>
+              <span data-lang="products.resultsHeadingPart1">What </span>
+              <span class="gradient-text-blue" data-lang="products.resultsHeadingPart2">changes</span>
             </h2>
-            <p class="text-jd-gray mt-6 leading-relaxed">
+            <p class="text-jd-gray mt-6 leading-relaxed" data-lang="products.resultsDesc">
               Results described in the Jaldoot company brochure. Performance
               varies with water chemistry, dosage and installation.
             </p>
             <div class="flex flex-col sm:flex-row gap-3 mt-8">
               <a href="contact.html" class="btn-primary justify-center">
-                <span>Get a quote</span>
+                <span data-lang="products.resultsBtnQuote">Get a quote</span>
                 <svg
                   class="w-4 h-4"
                   fill="none"
@@ -6039,7 +6107,7 @@
                 </svg>
               </a>
               <a href="#before-after" class="btn-secondary justify-center">
-                <span>See before / after</span>
+                <span data-lang="products.resultsBtnBefore">See before / after</span>
               </a>
             </div>
           </div>
@@ -6063,9 +6131,8 @@
                       />
                     </svg>
                   </span>
-                  <span class="text-sm text-jd-gray"
-                    >Softer, better water.</span
-                  >
+                  <span class="text-sm text-jd-gray" data-lang="products.resultsFeature1">
+                    Softer, better water.</span>
                 </div>
                 <div class="feature-check">
                   <span class="check-icon">
@@ -6083,9 +6150,8 @@
                       />
                     </svg>
                   </span>
-                  <span class="text-sm text-jd-gray"
-                    >Reduced hard water problems.</span
-                  >
+                  <span class="text-sm text-jd-gray" data-lang="products.resultsFeature2">
+                    Reduced hard water problems.</span>
                 </div>
                 <div class="feature-check">
                   <span class="check-icon">
@@ -6103,9 +6169,8 @@
                       />
                     </svg>
                   </span>
-                  <span class="text-sm text-jd-gray"
-                    >Investment in capital equipment is protected.</span
-                  >
+                  <span class="text-sm text-jd-gray" data-lang="products.resultsFeature3">
+                    Investment in capital equipment is protected.</span>
                 </div>
                 <div class="feature-check">
                   <span class="check-icon">
@@ -6123,9 +6188,8 @@
                       />
                     </svg>
                   </span>
-                  <span class="text-sm text-jd-gray"
-                    >Reduced scaling and corrosion issues.</span
-                  >
+                  <span class="text-sm text-jd-gray" data-lang="products.resultsFeature4">
+                    Reduced scaling and corrosion issues.</span>
                 </div>
                 <div class="feature-check">
                   <span class="check-icon">
@@ -6143,10 +6207,8 @@
                       />
                     </svg>
                   </span>
-                  <span class="text-sm text-jd-gray"
-                    >Soaps, detergents and shampoos mix and lather better with
-                    softer water.</span
-                  >
+                  <span class="text-sm text-jd-gray" data-lang="products.resultsFeature5">
+                    Soaps, detergents and shampoos mix and lather better with softer water.</span>
                 </div>
                 <div class="feature-check">
                   <span class="check-icon">
@@ -6164,9 +6226,8 @@
                       />
                     </svg>
                   </span>
-                  <span class="text-sm text-jd-gray"
-                    >Laundry items feel softer.</span
-                  >
+                  <span class="text-sm text-jd-gray" data-lang="products.resultsFeature6">
+                    Laundry items feel softer.</span>
                 </div>
               </div>
               <div>
@@ -6186,10 +6247,8 @@
                       />
                     </svg>
                   </span>
-                  <span class="text-sm text-jd-gray"
-                    >Swimming pool water is clearer and softer, backwashing is
-                    reduced, and scum lines are more easily cleaned away.</span
-                  >
+                  <span class="text-sm text-jd-gray" data-lang="products.resultsFeature7">
+                    Swimming pool water is clearer and softer, backwashing is reduced, and scum lines are more easily cleaned away.</span>
                 </div>
                 <div class="feature-check">
                   <span class="check-icon">
@@ -6207,11 +6266,8 @@
                       />
                     </svg>
                   </span>
-                  <span class="text-sm text-jd-gray"
-                    >Salt water chlorinators work more effectively &mdash; there
-                    is no scale build up, black spot disappears and chemical
-                    usage is reduced.</span
-                  >
+                  <span class="text-sm text-jd-gray" data-lang="products.resultsFeature8">
+                    Salt water chlorinators work more effectively &mdash; there is no scale build up, black spot disappears and chemical usage is reduced.</span>
                 </div>
                 <div class="feature-check">
                   <span class="check-icon">
@@ -6229,11 +6285,8 @@
                       />
                     </svg>
                   </span>
-                  <span class="text-sm text-jd-gray"
-                    >Water with a lower surface tension is more easily absorbed
-                    into the ground, reducing surface crust and runoff and
-                    improving plant and crop health.</span
-                  >
+                  <span class="text-sm text-jd-gray" data-lang="products.resultsFeature9">
+                    Water with a lower surface tension is more easily absorbed into the ground, reducing surface crust and runoff and improving plant and crop health.</span>
                 </div>
                 <div class="feature-check">
                   <span class="check-icon">
@@ -6251,9 +6304,8 @@
                       />
                     </svg>
                   </span>
-                  <span class="text-sm text-jd-gray"
-                    >Able to irrigate with brackish water.</span
-                  >
+                  <span class="text-sm text-jd-gray" data-lang="products.resultsFeature10">
+                    Able to irrigate with brackish water.</span>
                 </div>
                 <div class="feature-check">
                   <span class="check-icon">
@@ -6271,9 +6323,8 @@
                       />
                     </svg>
                   </span>
-                  <span class="text-sm text-jd-gray"
-                    >Less spotting on your car when you wash it.</span
-                  >
+                  <span class="text-sm text-jd-gray" data-lang="products.resultsFeature11">
+                    Less spotting on your car when you wash it.</span>
                 </div>
               </div>
             </div>
@@ -6292,7 +6343,7 @@
               />
             </div>
 
-            <span class="ba-label">
+            <span class="ba-label" data-lang="products.baLabelBefore">
               <i class="fas fa-circle-exclamation" aria-hidden="true"></i>
               Before &mdash; hard water
             </span>
@@ -6301,10 +6352,10 @@
               <div class="ba-icon" aria-hidden="true">
                 <i class="fas fa-triangle-exclamation"></i>
               </div>
-              <h3 class="ba-title">Hard water problems</h3>
+              <h3 class="ba-title" data-lang="products.baTitleBefore">Hard water problems</h3>
             </div>
 
-            <p class="ba-sub">
+            <p class="ba-sub" data-lang="products.baSubBefore">
               Without treatment the water keeps building scale on everything it
               touches, and every machine on the line pays for it.
             </p>
@@ -6314,22 +6365,28 @@
                 <span class="ba-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                From fouling of cooling towers and clogging of water pipes to
-                scaling of coffee pots, dishwashers, drill heads, ice machines,
-                heater exchangers, washing machines and water heaters.
+                <span data-lang="products.baItem1">
+                  From fouling of cooling towers and clogging of water pipes to
+                  scaling of coffee pots, dishwashers, drill heads, ice machines,
+                  heater exchangers, washing machines and water heaters.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="ba-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Most companies just build the extra maintenance required to
-                clean the scale off into their schedules.
+                <span data-lang="products.baItem2">
+                  Most companies just build the extra maintenance required to
+                  clean the scale off into their schedules.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="ba-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Added expense of the shortened life span of the equipment.
+                <span data-lang="products.baItem3">
+                  Added expense of the shortened life span of the equipment.
+                </span>
               </li>
             </ul>
           </div>
@@ -6352,7 +6409,7 @@
               />
             </div>
 
-            <span class="ba-label">
+            <span class="ba-label" data-lang="products.baLabelAfter">
               <i class="fas fa-circle-check" aria-hidden="true"></i> After
               &mdash; with Jaldoot
             </span>
@@ -6361,10 +6418,10 @@
               <div class="ba-icon" aria-hidden="true">
                 <i class="fas fa-leaf"></i>
               </div>
-              <h3 class="ba-title">Soft water benefits with Jaldoot</h3>
+              <h3 class="ba-title" data-lang="products.baTitleAfter">Soft water benefits with Jaldoot</h3>
             </div>
 
-            <p class="ba-sub">
+            <p class="ba-sub" data-lang="products.baSubAfter">
               The same line, the same equipment &mdash; only the water is
               conditioned, and the whole plant feels the difference.
             </p>
@@ -6374,21 +6431,27 @@
                 <span class="ba-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Eco friendly hard water treatment, no chemicals &amp; no salts.
+                <span data-lang="products.baAfterItem1">
+                  Eco friendly hard water treatment, no chemicals &amp; no salts.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="ba-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Prevents calcium carbonate scaling; over time existing scaling
-                is dissolved.
+                <span data-lang="products.baAfterItem2">
+                  Prevents calcium carbonate scaling; over time existing scaling
+                  is dissolved.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="ba-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Stops the deposition of salt and in all cases brings it back to
-                solution.
+                <span data-lang="products.baAfterItem3">
+                  Stops the deposition of salt and in all cases brings it back to
+                  solution.
+                </span>
               </li>
             </ul>
           </div>
@@ -6408,20 +6471,22 @@
         <div class="text-center max-w-3xl mx-auto mb-14" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold"
+            data-lang="products.baSectionTitle"
           >
             <i class="fas fa-right-left" aria-hidden="true"></i> Before / After
           </span>
           <h2
             class="mt-5 text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep leading-tight"
           >
-            See the <span class="gradient-text-blue">difference</span> Jaldoot
-            makes
+            <span data-lang="products.baSectionTitlePart1">See the </span>
+            <span class="gradient-text-blue" data-lang="products.baSectionTitlePart2">difference</span>
+            <span data-lang="products.baSectionTitlePart3"> Jaldoot makes</span>
           </h2>
-          <p class="text-jd-gray mt-6">
+          <p class="text-jd-gray mt-6" data-lang="products.baSectionDesc">
             Hard scale that once blocked pipes and equipment is softened,
             dissolved and flushed away.
           </p>
-          <span class="dv-hint">
+          <span class="dv-hint" data-lang="products.baHint">
             <i class="fas fa-arrows-left-right" aria-hidden="true"></i> Drag the
             handle to compare
           </span>
@@ -6460,7 +6525,7 @@
 
         <div class="dv-cards max-w-5xl mx-auto">
           <div class="ba-panel ba-before" data-animate="fade-up" data-delay="0">
-            <span class="ba-label">
+            <span class="ba-label" data-lang="products.baBeforeLabel">
               <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
               Hard water
             </span>
@@ -6469,10 +6534,10 @@
               <div class="ba-icon" aria-hidden="true">
                 <i class="fas fa-times-circle"></i>
               </div>
-              <h3 class="ba-title">Before</h3>
+              <h3 class="ba-title" data-lang="products.baCardBeforeTitle">Before</h3>
             </div>
 
-            <p class="ba-sub">
+            <p class="ba-sub" data-lang="products.baCardBeforeDesc">
               Thick, rock-like limescale clinging to pipes, fittings and heating
               elements.
             </p>
@@ -6518,7 +6583,7 @@
             data-animate="fade-up"
             data-delay="150"
           >
-            <span class="ba-label">
+            <span class="ba-label" data-lang="products.baAfterLabel">
               <i class="fas fa-leaf" aria-hidden="true"></i> Jaldoot treated
             </span>
 
@@ -6526,10 +6591,10 @@
               <div class="ba-icon" aria-hidden="true">
                 <i class="fas fa-check-circle"></i>
               </div>
-              <h3 class="ba-title">After</h3>
+              <h3 class="ba-title" data-lang="products.baCardAfterTitle">After</h3>
             </div>
 
-            <p class="ba-sub">
+            <p class="ba-sub" data-lang="products.baCardAfterDesc">
               Scale softened into 2&ndash;4 micron crystals that stay suspended
               and wash away harmlessly.
             </p>
@@ -6600,7 +6665,7 @@
         <div class="dv-stats" data-animate="fade-up" data-delay="200">
           <div class="dv-stat dv-stat-blue">
             <b data-count="80" data-suffix="%">0</b>
-            <span>Less scale at 80&deg;C (brochure example)</span>
+            <span data-lang="products.baStat1">Less scale at 80&deg;C (brochure example)</span>
           </div>
 
           <i
@@ -6610,11 +6675,11 @@
 
           <div class="dv-stat dv-stat-green">
             <b data-count="7" data-suffix=" days">0</b>
-            <span>Lasting conditioned effect</span>
+            <span data-lang="products.baStat2">Lasting conditioned effect</span>
           </div>
         </div>
 
-        <p class="dv-foot">
+        <p class="dv-foot" data-lang="products.baFootnote">
           Comparison described in the Jaldoot company brochure. Results depend
           on water chemistry, dosage and installation.
         </p>
@@ -6727,15 +6792,22 @@
         <div class="text-center max-w-3xl mx-auto mb-16" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-green/10 text-jd-green text-sm font-heading font-semibold mb-5"
+            data-lang="products.appsTitle"
           >
             <i class="fas fa-layer-group"></i> Applications
           </span>
           <h2
             class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep leading-tight"
           >
-            Where Jaldoot is <span class="gradient-text-green">Used</span>
+            <span data-lang="products.appsHeadingPart1">Where Jaldoot is </span>
+            <span
+              class="gradient-text-green"
+              data-lang="products.appsHeadingPart2"
+            >
+              Used
+            </span>
           </h2>
-          <p class="text-jd-gray mt-6">
+          <p class="text-jd-gray mt-6" data-lang="products.appsDesc">
             Eight application groups described in the Jaldoot company brochure.
           </p>
         </div>
@@ -6760,10 +6832,10 @@
             >
               <i class="fas fa-home text-xl"></i>
             </div>
-            <h3 class="text-base font-heading font-bold text-jd-deep mb-1">
+            <h3 class="text-base font-heading font-bold text-jd-deep mb-1" data-lang="products.app1Title">
               1. Domestic
             </h3>
-            <p class="text-jd-gray text-xs">Homes, bungalows, societies</p>
+            <p class="text-jd-gray text-xs" data-lang="products.app1Desc">Homes, bungalows, societies</p>
           </a>
           <a
             href="#agriculture"
@@ -6784,10 +6856,10 @@
             >
               <i class="fas fa-seedling text-xl"></i>
             </div>
-            <h3 class="text-base font-heading font-bold text-jd-deep mb-1">
+            <h3 class="text-base font-heading font-bold text-jd-deep mb-1" data-lang="products.app2Title">
               2. Agriculture
             </h3>
-            <p class="text-jd-gray text-xs">
+            <p class="text-jd-gray text-xs" data-lang="products.app2Desc">
               Horticulture, floriculture &amp; irrigation
             </p>
           </a>
@@ -6810,10 +6882,10 @@
             >
               <i class="fas fa-egg text-xl"></i>
             </div>
-            <h3 class="text-base font-heading font-bold text-jd-deep mb-1">
+            <h3 class="text-base font-heading font-bold text-jd-deep mb-1" data-lang="products.app3Title">
               3. Poultry Farming
             </h3>
-            <p class="text-jd-gray text-xs">Hatcheries &amp; poultry houses</p>
+            <p class="text-jd-gray text-xs" data-lang="products.app3Desc">Hatcheries &amp; poultry houses</p>
           </a>
           <a
             href="#dairy"
@@ -6834,10 +6906,10 @@
             >
               <i class="fas fa-cow text-xl"></i>
             </div>
-            <h3 class="text-base font-heading font-bold text-jd-deep mb-1">
+            <h3 class="text-base font-heading font-bold text-jd-deep mb-1" data-lang="products.app4Title">
               4. Dairy Farming
             </h3>
-            <p class="text-jd-gray text-xs">Barns &amp; milking parlors</p>
+            <p class="text-jd-gray text-xs" data-lang="products.app4Desc">Barns &amp; milking parlors</p>
           </a>
           <a
             href="#pools"
@@ -6858,10 +6930,10 @@
             >
               <i class="fas fa-water text-xl"></i>
             </div>
-            <h3 class="text-base font-heading font-bold text-jd-deep mb-1">
+            <h3 class="text-base font-heading font-bold text-jd-deep mb-1" data-lang="products.app5Title">
               5. Swimming Pools
             </h3>
-            <p class="text-jd-gray text-xs">Clearer, softer pool water</p>
+            <p class="text-jd-gray text-xs" data-lang="products.app5Desc">Clearer, softer pool water</p>
           </a>
           <a
             href="#golf"
@@ -6882,10 +6954,10 @@
             >
               <i class="fas fa-fish text-xl"></i>
             </div>
-            <h3 class="text-base font-heading font-bold text-jd-deep mb-1">
+            <h3 class="text-base font-heading font-bold text-jd-deep mb-1" data-lang="products.app6Title">
               6. Golf Courses
             </h3>
-            <p class="text-jd-gray text-xs">&amp; Fish ponds</p>
+            <p class="text-jd-gray text-xs" data-lang="products.app6Desc">&amp; Fish ponds</p>
           </a>
           <a
             href="#commercial"
@@ -6906,10 +6978,10 @@
             >
               <i class="fas fa-industry text-xl"></i>
             </div>
-            <h3 class="text-base font-heading font-bold text-jd-deep mb-1">
+            <h3 class="text-base font-heading font-bold text-jd-deep mb-1" data-lang="products.app7Title">
               7. Commercial
             </h3>
-            <p class="text-jd-gray text-xs">&amp; Industrial applications</p>
+            <p class="text-jd-gray text-xs" data-lang="products.app7Desc">&amp; Industrial applications</p>
           </a>
           <a
             href="#ro-plant"
@@ -6930,10 +7002,10 @@
             >
               <i class="fas fa-filter text-xl"></i>
             </div>
-            <h3 class="text-base font-heading font-bold text-jd-deep mb-1">
+            <h3 class="text-base font-heading font-bold text-jd-deep mb-1" data-lang="products.app8Title">
               8. JVC for RO Plant
             </h3>
-            <p class="text-jd-gray text-xs">Membrane protection</p>
+            <p class="text-jd-gray text-xs" data-lang="products.app8Desc">Membrane protection</p>
           </a>
         </div>
       </div>
@@ -6955,14 +7027,16 @@
         <div class="text-center max-w-3xl mx-auto mb-12" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-heading font-semibold uppercase tracking-wider"
+            data-lang="products.domesticEyebrow"
             >Application 01</span
           >
           <h2
             class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+            data-lang="products.domesticTitle"
           >
             Domestic Applications
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">
+          <p class="text-jd-gray mt-4 leading-relaxed" data-lang="products.domesticDesc">
             The same kitchen, bathroom and geyser — before and after the water
             is conditioned with Jaldoot.
           </p>
@@ -6979,17 +7053,17 @@
         </figure>
 
         <div class="dm-caption" data-animate="fade-up">
-          <span style="--dot: #f97316">
-            <i aria-hidden="true"></i> Hard water problems around the house
-          </span>
-          <span style="--dot: #4db74a">
-            <i aria-hidden="true"></i> Soft water benefits with Jaldoot
-          </span>
+          <span style="--dot: #f97316"
+            ><i aria-hidden="true"></i> <span data-lang="products.domesticCaption1">Hard water problems around the house</span></span
+          >
+          <span style="--dot: #4db74a"
+            ><i aria-hidden="true"></i> <span data-lang="products.domesticCaption2">Soft water benefits with Jaldoot</span></span
+          >
         </div>
 
         <div class="dm-cols">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.domesticProblemTitle">
               <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
               Hard water problems
             </h3>
@@ -6998,37 +7072,47 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Itchy skin after every shower.
+                <span data-lang="products.domesticProblem1">
+                  Itchy skin after every shower.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Dry, hard-to-manage hair.
+                <span data-lang="products.domesticProblem2">
+                  Dry, hard-to-manage hair.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Spots on glassware and cloudy marks on the shower screen.
+                <span data-lang="products.domesticProblem3">
+                  Spots on glassware and cloudy marks on the shower screen.
+                </span>
               </li>
               <li style="--i: 3">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Scale on shower heads, taps and fittings.
+                <span data-lang="products.domesticProblem4">
+                  Scale on shower heads, taps and fittings.
+                </span>
               </li>
               <li style="--i: 4">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Scum inside the kettle and stains on utensils.
+                <span data-lang="products.domesticProblem5">
+                  Scum inside the kettle and stains on utensils.
+                </span>
               </li>
             </ul>
           </div>
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.domesticBenefitTitle">
               <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits
               with Jaldoot
             </h3>
@@ -7037,38 +7121,51 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Kitchen and bathroom surfaces stay cleaner and easier to clean.
+                <span data-lang="products.domesticBenefit1">
+                  Kitchen and bathroom surfaces stay cleaner and easier to clean.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Use less detergent in washing machines and dishwashers.
+                <span data-lang="products.domesticBenefit2">
+                  Use less detergent in washing machines and dishwashers.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Skin and hair feel softer after a shower.
+                <span data-lang="products.domesticBenefit3">
+                  Skin and hair feel softer after a shower.
+                </span>
               </li>
               <li style="--i: 3">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Heating elements, dishwashers and washing machines stay
-                protected against scale.
+                <span data-lang="products.domesticBenefit4">
+                  Heating elements, dishwashers and washing machines stay
+                  protected against scale.
+                </span>
               </li>
               <li style="--i: 4">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Scale in your water heater goes away, lowering your energy bill.
+                <span data-lang="products.domesticBenefit5">
+                  Scale in your water heater goes away, lowering your energy
+                  bill.
+                </span>
               </li>
               <li style="--i: 5">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Important minerals remain in the water — no chemicals, no salts.
+                <span data-lang="products.domesticBenefit6">
+                  Important minerals remain in the water — no chemicals, no salts.
+                </span>
               </li>
             </ul>
           </div>
@@ -7077,41 +7174,58 @@
         <div class="dm-areas" data-animate="fade-up" data-delay="200">
           <h3
             class="text-xs font-heading font-bold uppercase tracking-wider text-jd-deep mb-4"
+            data-lang="products.domesticAreas"
           >
             Application areas
           </h3>
           <div class="flex flex-wrap gap-2">
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Bungalows</span
+              data-lang="products.domesticArea1"
+            >
+              Bungalows</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Buildings</span
+              data-lang="products.domesticArea2"
+            >
+              Buildings</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Apartments</span
+              data-lang="products.domesticArea3"
+            >
+              Apartments</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Societies</span
+              data-lang="products.domesticArea4"
+            >
+              Societies</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Golf courses</span
+              data-lang="products.domesticArea5"
+            >
+              Golf courses</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Fitness clubs</span
+              data-lang="products.domesticArea6"
+            >
+              Fitness clubs</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Residences</span
+              data-lang="products.domesticArea7"
+            >
+              Residences</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Condominiums &amp; large buildings</span
+              data-lang="products.domesticArea8"
+            >
+              Condominiums &amp; large buildings</span
             >
           </div>
         </div>
@@ -7133,14 +7247,16 @@
         <div class="text-center max-w-3xl mx-auto mb-12" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-heading font-semibold uppercase tracking-wider"
+            data-lang="products.agricultureEyebrow"
             >Application 02</span
           >
           <h2
             class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+            data-lang="products.agricultureTitle"
           >
             Agriculture, Horticulture, Floriculture & Irrigation
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">
+          <p class="text-jd-gray mt-4 leading-relaxed" data-lang="products.agricultureDesc">
             Irrigating with hard water quietly costs yield — the water and the
             equipment both suffer.
           </p>
@@ -7157,17 +7273,17 @@
         </figure>
 
         <div class="dm-caption" data-animate="fade-up">
-          <span style="--dot: #f97316">
-            <i aria-hidden="true"></i> Hard water in the field
-          </span>
-          <span style="--dot: #4db74a">
-            <i aria-hidden="true"></i> Soft water with Jaldoot
-          </span>
+          <span style="--dot: #f97316"
+            ><i aria-hidden="true"></i> <span data-lang="products.agricultureCaption1">Hard water in the field</span></span
+          >
+          <span style="--dot: #4db74a"
+            ><i aria-hidden="true"></i> <span data-lang="products.agricultureCaption2">Soft water with Jaldoot</span></span
+          >
         </div>
 
         <div class="dm-cols">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.agricultureProblemTitle">
               <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
               Hard water problems
             </h3>
@@ -7176,33 +7292,41 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Salt in hard water soils stops crops growing as well as they
-                could.
+                <span data-lang="products.agricultureProblem1">
+                  Salt in hard water soils stops crops growing as well as they
+                  could.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                High surface tension stops water being taken up by plant roots.
+                <span data-lang="products.agricultureProblem2">
+                  High surface tension stops water being taken up by plant roots.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Plants that are not well watered wilt and lose their firm stems.
+                <span data-lang="products.agricultureProblem3">
+                  Plants that are not well watered wilt and lose their firm stems.
+                </span>
               </li>
               <li style="--i: 3">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Salt, iron and other minerals crust over and damage plants and
-                equipment.
+                <span data-lang="products.agricultureProblem4">
+                  Salt, iron and other minerals crust over and damage plants and
+                  equipment.
+                </span>
               </li>
             </ul>
           </div>
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.agricultureBenefitTitle">
               <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits
               with Jaldoot
             </h3>
@@ -7211,39 +7335,51 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Salt, iron and minerals stay in solution instead of crusting.
+                <span data-lang="products.agricultureBenefit1">
+                  Salt, iron and minerals stay in solution instead of crusting.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Softer, wetter water reaches the roots and is taken up faster.
+                <span data-lang="products.agricultureBenefit2">
+                  Softer, wetter water reaches the roots and is taken up faster.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Less water is lost to evaporation as it soaks into the ground.
+                <span data-lang="products.agricultureBenefit3">
+                  Less water is lost to evaporation as it soaks into the ground.
+                </span>
               </li>
               <li style="--i: 3">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Pipe and sprinkler nozzles stay protected from lime scale.
+                <span data-lang="products.agricultureBenefit4">
+                  Pipe and sprinkler nozzles stay protected from lime scale.
+                </span>
               </li>
               <li style="--i: 4">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Better water for mixing fertilizer, thanks to the built-in
-                static mixer.
+                <span data-lang="products.agricultureBenefit5">
+                  Better water for mixing fertilizer, thanks to the built-in
+                  static mixer.
+                </span>
               </li>
               <li style="--i: 5">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Cut flowers last longer and the irrigation system runs at full
-                capacity.
+                <span data-lang="products.agricultureBenefit6">
+                  Cut flowers last longer and the irrigation system runs at full
+                  capacity.
+                </span>
               </li>
             </ul>
           </div>
@@ -7252,29 +7388,40 @@
         <div class="dm-areas" data-animate="fade-up" data-delay="200">
           <h3
             class="text-xs font-heading font-bold uppercase tracking-wider text-jd-deep mb-4"
+            data-lang="products.agricultureAreas"
           >
             Application areas
           </h3>
           <div class="flex flex-wrap gap-2">
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Plants</span
+              data-lang="products.agricultureArea1"
+            >
+              Plants</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Livestock</span
+              data-lang="products.agricultureArea2"
+            >
+              Livestock</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Irrigation systems</span
+              data-lang="products.agricultureArea3"
+            >
+              Irrigation systems</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Machinery</span
+              data-lang="products.agricultureArea4"
+            >
+              Machinery</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >And many more</span
+              data-lang="products.agricultureArea5"
+            >
+              And many more</span
             >
           </div>
         </div>
@@ -7296,14 +7443,16 @@
         <div class="text-center max-w-3xl mx-auto mb-12" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-heading font-semibold uppercase tracking-wider"
+            data-lang="products.poultryEyebrow"
             >Application 03</span
           >
           <h2
             class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+            data-lang="products.poultryTitle"
           >
             Poultry Farming
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">
+          <p class="text-jd-gray mt-4 leading-relaxed" data-lang="products.poultryDesc">
             Every drinker, spray line and cooling pad in the shed depends on
             clean water.
           </p>
@@ -7320,17 +7469,17 @@
         </figure>
 
         <div class="dm-caption" data-animate="fade-up">
-          <span style="--dot: #f97316">
-            <i aria-hidden="true"></i> Hard water in the shed
-          </span>
-          <span style="--dot: #4db74a">
-            <i aria-hidden="true"></i> Soft water with Jaldoot
-          </span>
+          <span style="--dot: #f97316"
+            ><i aria-hidden="true"></i> <span data-lang="products.poultryCaption1">Hard water in the shed</span></span
+          >
+          <span style="--dot: #4db74a"
+            ><i aria-hidden="true"></i> <span data-lang="products.poultryCaption2">Soft water with Jaldoot</span></span
+          >
         </div>
 
         <div class="dm-cols">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.poultryProblemTitle">
               <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
               Hard water problems
             </h3>
@@ -7339,32 +7488,40 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Scale builds up on nipple drinkers, drinker cones and spray
-                lines.
+                <span data-lang="products.poultryProblem1">
+                  Scale builds up on nipple drinkers, drinker cones and spray
+                  lines.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Scale on cooling panels, water heaters and boilers in the shed.
+                <span data-lang="products.poultryProblem2">
+                  Scale on cooling panels, water heaters and boilers in the shed.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Infection and disease carried through the drinking water.
+                <span data-lang="products.poultryProblem3">
+                  Infection and disease carried through the drinking water.
+                </span>
               </li>
               <li style="--i: 3">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Thin eggshells and lower bird weight.
+                <span data-lang="products.poultryProblem4">
+                  Thin eggshells and lower bird weight.
+                </span>
               </li>
             </ul>
           </div>
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.poultryBenefitTitle">
               <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits
               with Jaldoot
             </h3>
@@ -7373,41 +7530,53 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Cleans nipples, drinkers, sprinklers and sprays by removing
-                scale.
+                <span data-lang="products.poultryBenefit1">
+                  Cleans nipples, drinkers, sprinklers and sprays by removing
+                  scale.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Stops scale being deposited on drinking cones and cooling
-                panels.
+                <span data-lang="products.poultryBenefit2">
+                  Stops scale being deposited on drinking cones and cooling
+                  panels.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Makes water-borne medicines more effective, so birds are better
-                nourished.
+                <span data-lang="products.poultryBenefit3">
+                  Makes water-borne medicines more effective, so birds are better
+                  nourished.
+                </span>
               </li>
               <li style="--i: 3">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Extends the life of water heaters, boilers and cooling pads.
+                <span data-lang="products.poultryBenefit4">
+                  Extends the life of water heaters, boilers and cooling pads.
+                </span>
               </li>
               <li style="--i: 4">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Calcium in the water helps bird weight and thicker eggshells.
+                <span data-lang="products.poultryBenefit5">
+                  Calcium in the water helps bird weight and thicker eggshells.
+                </span>
               </li>
               <li style="--i: 5">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Less chlorine effect, less infection — the cost is recovered
-                through output.
+                <span data-lang="products.poultryBenefit6">
+                  Less chlorine effect, less infection — the cost is recovered
+                  through output.
+                </span>
               </li>
             </ul>
           </div>
@@ -7416,29 +7585,40 @@
         <div class="dm-areas" data-animate="fade-up" data-delay="200">
           <h3
             class="text-xs font-heading font-bold uppercase tracking-wider text-jd-deep mb-4"
+            data-lang="products.poultryAreas"
           >
             Application areas
           </h3>
           <div class="flex flex-wrap gap-2">
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Drinker lines</span
+              data-lang="products.poultryArea1"
+            >
+              Drinker lines</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Spray systems</span
+              data-lang="products.poultryArea2"
+            >
+              Spray systems</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Cooling pads</span
+              data-lang="products.poultryArea3"
+            >
+              Cooling pads</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Water heaters</span
+              data-lang="products.poultryArea4"
+            >
+              Water heaters</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >And many more</span
+              data-lang="products.poultryArea5"
+            >
+              And many more</span
             >
           </div>
         </div>
@@ -7460,14 +7640,16 @@
         <div class="text-center max-w-3xl mx-auto mb-12" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-heading font-semibold uppercase tracking-wider"
+            data-lang="products.dairyEyebrow"
             >Application 04</span
           >
           <h2
             class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+            data-lang="products.dairyTitle"
           >
             Dairy Farming
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">
+          <p class="text-jd-gray mt-4 leading-relaxed" data-lang="products.dairyDesc">
             From the well to the parlour — conditioned water protects the herd
             and the equipment.
           </p>
@@ -7484,17 +7666,17 @@
         </figure>
 
         <div class="dm-caption" data-animate="fade-up">
-          <span style="--dot: #f97316">
-            <i aria-hidden="true"></i> Hard water in the barn
-          </span>
-          <span style="--dot: #4db74a">
-            <i aria-hidden="true"></i> Soft water with Jaldoot
-          </span>
+          <span style="--dot: #f97316"
+            ><i aria-hidden="true"></i> <span data-lang="products.dairyCaption1">Hard water in the barn</span></span
+          >
+          <span style="--dot: #4db74a"
+            ><i aria-hidden="true"></i> <span data-lang="products.dairyCaption2">Soft water with Jaldoot</span></span
+          >
         </div>
 
         <div class="dm-cols">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.dairyProblemTitle">
               <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
               Hard water problems
             </h3>
@@ -7503,31 +7685,39 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Scale on parlour floors, drinking troughs and wash-down lines.
+                <span data-lang="products.dairyProblem1">
+                  Scale on parlour floors, drinking troughs and wash-down lines.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Hydrogen sulfide or chlorine taste in the water.
+                <span data-lang="products.dairyProblem2">
+                  Hydrogen sulfide or chlorine taste in the water.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Mineral content that does not suit animal health.
+                <span data-lang="products.dairyProblem3">
+                  Mineral content that does not suit animal health.
+                </span>
               </li>
               <li style="--i: 3">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Repair and replacement costs cutting into the profit.
+                <span data-lang="products.dairyProblem4">
+                  Repair and replacement costs cutting into the profit.
+                </span>
               </li>
             </ul>
           </div>
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.dairyBenefitTitle">
               <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits
               with Jaldoot
             </h3>
@@ -7536,34 +7726,44 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Treats the water from the well through to the barn, parlour and
-                house.
+                <span data-lang="products.dairyBenefit1">
+                  Treats the water from the well through to the barn, parlour and
+                  house.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Improves the taste of water, especially with hydrogen sulfide or
-                chlorine.
+                <span data-lang="products.dairyBenefit2">
+                  Improves the taste of water, especially with hydrogen sulfide or
+                  chlorine.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Improves the mineral content and benefits animal health.
+                <span data-lang="products.dairyBenefit3">
+                  Improves the mineral content and benefits animal health.
+                </span>
               </li>
               <li style="--i: 3">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Saves equipment replacement and repair cost.
+                <span data-lang="products.dairyBenefit4">
+                  Saves equipment replacement and repair cost.
+                </span>
               </li>
               <li style="--i: 4">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Reduces overall dairy maintenance and improves profit and loss
-                performance.
+                <span data-lang="products.dairyBenefit5">
+                  Reduces overall dairy maintenance and improves profit and loss
+                  performance.
+                </span>
               </li>
             </ul>
           </div>
@@ -7572,29 +7772,40 @@
         <div class="dm-areas" data-animate="fade-up" data-delay="200">
           <h3
             class="text-xs font-heading font-bold uppercase tracking-wider text-jd-deep mb-4"
+            data-lang="products.dairyAreas"
           >
             Application areas
           </h3>
           <div class="flex flex-wrap gap-2">
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Barns</span
+              data-lang="products.dairyArea1"
+            >
+              Barns</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Milking parlors</span
+              data-lang="products.dairyArea2"
+            >
+              Milking parlors</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Wash-down systems</span
+              data-lang="products.dairyArea3"
+            >
+              Wash-down systems</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Drinking troughs</span
+              data-lang="products.dairyArea4"
+            >
+              Drinking troughs</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >And many more</span
+              data-lang="products.dairyArea5"
+            >
+              And many more</span
             >
           </div>
         </div>
@@ -7616,14 +7827,16 @@
         <div class="text-center max-w-3xl mx-auto mb-12" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-heading font-semibold uppercase tracking-wider"
+            data-lang="products.poolsEyebrow"
             >Application 05</span
           >
           <h2
             class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+            data-lang="products.poolsTitle"
           >
             Swimming Pools
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">
+          <p class="text-jd-gray mt-4 leading-relaxed" data-lang="products.poolsDesc">
             Conditioned water cuts the chemical bill and keeps the waterline
             free of scale marks.
           </p>
@@ -7640,17 +7853,17 @@
         </figure>
 
         <div class="dm-caption" data-animate="fade-up">
-          <span style="--dot: #f97316">
-            <i aria-hidden="true"></i> Hard water in the pool
-          </span>
-          <span style="--dot: #4db74a">
-            <i aria-hidden="true"></i> Soft water with Jaldoot
-          </span>
+          <span style="--dot: #f97316"
+            ><i aria-hidden="true"></i> <span data-lang="products.poolsCaption1">Hard water in the pool</span></span
+          >
+          <span style="--dot: #4db74a"
+            ><i aria-hidden="true"></i> <span data-lang="products.poolsCaption2">Soft water with Jaldoot</span></span
+          >
         </div>
 
         <div class="dm-cols">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.poolsProblemTitle">
               <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
               Hard water problems
             </h3>
@@ -7659,31 +7872,39 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Spending too much on chemicals.
+                <span data-lang="products.poolsProblem1">
+                  Spending too much on chemicals.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Trouble keeping your pool clean.
+                <span data-lang="products.poolsProblem2">
+                  Trouble keeping your pool clean.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Problems with stains and marks.
+                <span data-lang="products.poolsProblem3">
+                  Problems with stains and marks.
+                </span>
               </li>
               <li style="--i: 3">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Constantly replacing parts.
+                <span data-lang="products.poolsProblem4">
+                  Constantly replacing parts.
+                </span>
               </li>
             </ul>
           </div>
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.poolsBenefitTitle">
               <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits
               with Jaldoot
             </h3>
@@ -7692,38 +7913,50 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Swimmers swim in less chemicals and softer water.
+                <span data-lang="products.poolsBenefit1">
+                  Swimmers swim in less chemicals and softer water.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Less pool chemical for better results — saves time and money.
+                <span data-lang="products.poolsBenefit2">
+                  Less pool chemical for better results — saves time and money.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Pipes, pumps, heating elements, filter and salt chlorinator run
-                more efficiently.
+                <span data-lang="products.poolsBenefit3">
+                  Pipes, pumps, heating elements, filter and salt chlorinator run
+                  more efficiently.
+                </span>
               </li>
               <li style="--i: 3">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                No more unsightly scale marks on the waterline.
+                <span data-lang="products.poolsBenefit4">
+                  No more unsightly scale marks on the waterline.
+                </span>
               </li>
               <li style="--i: 4">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Paintwork and tiles need less cleaning and maintenance.
+                <span data-lang="products.poolsBenefit5">
+                  Paintwork and tiles need less cleaning and maintenance.
+                </span>
               </li>
               <li style="--i: 5">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                More time enjoying the pool instead of testing and cleaning it.
+                <span data-lang="products.poolsBenefit6">
+                  More time enjoying the pool instead of testing and cleaning it.
+                </span>
               </li>
             </ul>
           </div>
@@ -7732,29 +7965,40 @@
         <div class="dm-areas" data-animate="fade-up" data-delay="200">
           <h3
             class="text-xs font-heading font-bold uppercase tracking-wider text-jd-deep mb-4"
+            data-lang="products.poolsAreas"
           >
             Application areas
           </h3>
           <div class="flex flex-wrap gap-2">
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Residential pools</span
+              data-lang="products.poolsArea1"
+            >
+              Residential pools</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Club pools</span
+              data-lang="products.poolsArea2"
+            >
+              Club pools</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Water parks</span
+              data-lang="products.poolsArea3"
+            >
+              Water parks</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Spa pools</span
+              data-lang="products.poolsArea4"
+            >
+              Spa pools</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >And many more</span
+              data-lang="products.poolsArea5"
+            >
+              And many more</span
             >
           </div>
         </div>
@@ -7776,14 +8020,16 @@
         <div class="text-center max-w-3xl mx-auto mb-12" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-heading font-semibold uppercase tracking-wider"
+            data-lang="products.golfEyebrow"
             >Application 06</span
           >
           <h2
             class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+            data-lang="products.golfTitle"
           >
             Golf Courses & Fish Ponds
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">
+          <p class="text-jd-gray mt-4 leading-relaxed" data-lang="products.golfDesc">
             Stable, clean water for the ponds and the irrigation that feeds the
             course.
           </p>
@@ -7800,17 +8046,17 @@
         </figure>
 
         <div class="dm-caption" data-animate="fade-up">
-          <span style="--dot: #f97316">
-            <i aria-hidden="true"></i> Hard water in ponds
-          </span>
-          <span style="--dot: #4db74a">
-            <i aria-hidden="true"></i> Soft water with Jaldoot
-          </span>
+          <span style="--dot: #f97316"
+            ><i aria-hidden="true"></i> <span data-lang="products.golfCaption1">Hard water in ponds</span></span
+          >
+          <span style="--dot: #4db74a"
+            ><i aria-hidden="true"></i> <span data-lang="products.golfCaption2">Soft water with Jaldoot</span></span
+          >
         </div>
 
         <div class="dm-cols">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.golfProblemTitle">
               <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
               Hard water problems
             </h3>
@@ -7819,31 +8065,39 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Algae and harmful substances build up in pond water.
+                <span data-lang="products.golfProblem1">
+                  Algae and harmful substances build up in pond water.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Water condition changes with the season and the weather.
+                <span data-lang="products.golfProblem2">
+                  Water condition changes with the season and the weather.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Scale on pumps, pipes and pond equipment.
+                <span data-lang="products.golfProblem3">
+                  Scale on pumps, pipes and pond equipment.
+                </span>
               </li>
               <li style="--i: 3">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Water quality has to be corrected again and again.
+                <span data-lang="products.golfProblem4">
+                  Water quality has to be corrected again and again.
+                </span>
               </li>
             </ul>
           </div>
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.golfBenefitTitle">
               <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits
               with Jaldoot
             </h3>
@@ -7852,25 +8106,33 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Effectively reduces harmful substances in the water.
+                <span data-lang="products.golfBenefit1">
+                  Effectively reduces harmful substances in the water.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Controls and stabilises the water condition.
+                <span data-lang="products.golfBenefit2">
+                  Controls and stabilises the water condition.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Establishes a good water quality environment.
+                <span data-lang="products.golfBenefit3">
+                  Establishes a good water quality environment.
+                </span>
               </li>
               <li style="--i: 3">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Keeps that water quality stable for longer.
+                <span data-lang="products.golfBenefit4">
+                  Keeps that water quality stable for longer.
+                </span>
               </li>
             </ul>
           </div>
@@ -7879,29 +8141,40 @@
         <div class="dm-areas" data-animate="fade-up" data-delay="200">
           <h3
             class="text-xs font-heading font-bold uppercase tracking-wider text-jd-deep mb-4"
+            data-lang="products.golfAreas"
           >
             Application areas
           </h3>
           <div class="flex flex-wrap gap-2">
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Golf courses</span
+              data-lang="products.golfArea1"
+            >
+              Golf courses</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Fish ponds</span
+              data-lang="products.golfArea2"
+            >
+              Fish ponds</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Lakes</span
+              data-lang="products.golfArea3"
+            >
+              Lakes</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >Reservoirs</span
+              data-lang="products.golfArea4"
+            >
+              Reservoirs</span
             >
             <span
               class="px-3 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-semibold font-heading"
-              >And many more</span
+              data-lang="products.golfArea5"
+            >
+              And many more</span
             >
           </div>
         </div>
@@ -7923,14 +8196,16 @@
         <div class="text-center max-w-3xl mx-auto mb-12" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-heading font-semibold uppercase tracking-wider"
+            data-lang="products.commercialEyebrow"
             >Application 07</span
           >
           <h2
             class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+            data-lang="products.commercialTitle"
           >
             Commercial & Industrial Applications
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">
+          <p class="text-jd-gray mt-4 leading-relaxed" data-lang="products.commercialDesc">
             From a single hospital tap to a refinery line — every industry sees
             the same result.
           </p>
@@ -7947,17 +8222,17 @@
         </figure>
 
         <div class="dm-caption" data-animate="fade-up">
-          <span style="--dot: #f97316">
-            <i aria-hidden="true"></i> Hard water in industry
-          </span>
-          <span style="--dot: #4db74a">
-            <i aria-hidden="true"></i> Soft water with Jaldoot
-          </span>
+          <span style="--dot: #f97316"
+            ><i aria-hidden="true"></i> <span data-lang="products.commercialCaption1">Hard water in industry</span></span
+          >
+          <span style="--dot: #4db74a"
+            ><i aria-hidden="true"></i> <span data-lang="products.commercialCaption2">Soft water with Jaldoot</span></span
+          >
         </div>
 
         <div class="dm-cols">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.commercialProblemTitle">
               <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
               Hard water problems
             </h3>
@@ -7966,32 +8241,40 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Scale blocks pipes, cooling towers and heat exchangers.
+                <span data-lang="products.commercialProblem1">
+                  Scale blocks pipes, cooling towers and heat exchangers.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Shorter equipment life and more maintenance built into the
-                schedule.
+                <span data-lang="products.commercialProblem2">
+                  Shorter equipment life and more maintenance built into the
+                  schedule.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Higher operating costs and costly down-time.
+                <span data-lang="products.commercialProblem3">
+                  Higher operating costs and costly down-time.
+                </span>
               </li>
               <li style="--i: 3">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Production stops whenever a line has to be cleaned.
+                <span data-lang="products.commercialProblem4">
+                  Production stops whenever a line has to be cleaned.
+                </span>
               </li>
             </ul>
           </div>
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.commercialBenefitTitle">
               <i class="fas fa-leaf" aria-hidden="true"></i> Soft water benefits
               with Jaldoot
             </h3>
@@ -8000,26 +8283,34 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Prevents calcium carbonate scaling; existing scaling dissolves
-                over time.
+                <span data-lang="products.commercialBenefit1">
+                  Prevents calcium carbonate scaling; existing scaling dissolves
+                  over time.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Maximum working life for expensive production equipment.
+                <span data-lang="products.commercialBenefit2">
+                  Maximum working life for expensive production equipment.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Inexpensive installation without interrupting production.
+                <span data-lang="products.commercialBenefit3">
+                  Inexpensive installation without interrupting production.
+                </span>
               </li>
               <li style="--i: 3">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Productivity increase from the reduction of lime incrustations.
+                <span data-lang="products.commercialBenefit4">
+                  Productivity increase from the reduction of lime incrustations.
+                </span>
               </li>
             </ul>
           </div>
@@ -8042,14 +8333,16 @@
         <div class="text-center max-w-3xl mx-auto mb-14" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-blue/10 text-jd-blue text-xs font-heading font-semibold uppercase tracking-wider"
+            data-lang="products.etpEyebrow"
             >Application 10</span
           >
           <h2
             class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+            data-lang="products.etpTitle"
           >
             ETP Plant – Effluent Treatment Plant
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">
+          <p class="text-jd-gray mt-4 leading-relaxed" data-lang="products.etpDesc">
             Treat trade effluent at the source — Jaldoot conditions inlet and
             recycle water so tanks, pumps and membranes stay scale-free.
           </p>
@@ -8066,17 +8359,17 @@
         </figure>
 
         <div class="dm-caption" data-animate="fade-up">
-          <span style="--dot: #0066b3">
-            <i aria-hidden="true"></i> Hard water in ETP plant
-          </span>
-          <span style="--dot: #4db74a">
-            <i aria-hidden="true"></i> Soft water with Jaldoot
-          </span>
+          <span style="--dot: #0066b3"
+            ><i aria-hidden="true"></i> <span data-lang="products.etpCaption1">Hard water in ETP plant</span></span
+          >
+          <span style="--dot: #4db74a"
+            ><i aria-hidden="true"></i> <span data-lang="products.etpCaption2">Soft water with Jaldoot</span></span
+          >
         </div>
 
         <div class="dm-cols" data-animate="fade-up">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.etpProblemTitle">
               <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
               ETP hard water issues
             </h3>
@@ -8085,25 +8378,31 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Scale builds up in effluent tanks and treatment chambers.
+                <span data-lang="products.etpProblem1">
+                  Scale builds up in effluent tanks and treatment chambers.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Chemical dosing rises to fight scaling and fouling.
+                <span data-lang="products.etpProblem2">
+                  Chemical dosing rises to fight scaling and fouling.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Pumps and valves clog, cutting treatment throughput.
+                <span data-lang="products.etpProblem3">
+                  Pumps and valves clog, cutting treatment throughput.
+                </span>
               </li>
             </ul>
           </div>
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.etpBenefitTitle">
               <i class="fas fa-check" aria-hidden="true"></i> Jaldoot ETP benefits
             </h3>
             <ul class="dm-list">
@@ -8111,19 +8410,25 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Reduces scale in tanks, pipes and membranes.
+                <span data-lang="products.etpBenefit1">
+                  Reduces scale in tanks, pipes and membranes.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Lowers chemical dosing and treatment cost.
+                <span data-lang="products.etpBenefit2">
+                  Lowers chemical dosing and treatment cost.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Keeps pumps and valves flowing freely.
+                <span data-lang="products.etpBenefit3">
+                  Keeps pumps and valves flowing freely.
+                </span>
               </li>
             </ul>
           </div>
@@ -8146,14 +8451,16 @@
         <div class="text-center max-w-3xl mx-auto mb-14" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-green/10 text-jd-green text-xs font-heading font-semibold uppercase tracking-wider"
+            data-lang="products.stpEyebrow"
             >Application 11</span
           >
           <h2
             class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+            data-lang="products.stpTitle"
           >
             STP – Sewage Treatment Plant
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">
+          <p class="text-jd-gray mt-4 leading-relaxed" data-lang="products.stpDesc">
             Condition sewage inlet water with Jaldoot — less scaling in
             aeration tanks and better biological treatment efficiency.
           </p>
@@ -8170,17 +8477,17 @@
         </figure>
 
         <div class="dm-caption" data-animate="fade-up">
-          <span style="--dot: #059669">
-            <i aria-hidden="true"></i> Hard water in STP plant
-          </span>
-          <span style="--dot: #4db74a">
-            <i aria-hidden="true"></i> Soft water with Jaldoot
-          </span>
+          <span style="--dot: #059669"
+            ><i aria-hidden="true"></i> <span data-lang="products.stpCaption1">Hard water in STP plant</span></span
+          >
+          <span style="--dot: #4db74a"
+            ><i aria-hidden="true"></i> <span data-lang="products.stpCaption2">Soft water with Jaldoot</span></span
+          >
         </div>
 
         <div class="dm-cols" data-animate="fade-up">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.stpProblemTitle">
               <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
               STP scaling problems
             </h3>
@@ -8189,25 +8496,31 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Hard water scales aeration tanks and diffusers.
+                <span data-lang="products.stpProblem1">
+                  Hard water scales aeration tanks and diffusers.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Biological treatment slows down under scale load.
+                <span data-lang="products.stpProblem2">
+                  Biological treatment slows down under scale load.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                More cleaning cycles and higher O&M cost.
+                <span data-lang="products.stpProblem3">
+                  More cleaning cycles and higher O&M cost.
+                </span>
               </li>
             </ul>
           </div>
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.stpBenefitTitle">
               <i class="fas fa-check" aria-hidden="true"></i> Jaldoot STP benefits
             </h3>
             <ul class="dm-list">
@@ -8215,19 +8528,25 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Reduces scaling in aeration and settling tanks.
+                <span data-lang="products.stpBenefit1">
+                  Reduces scaling in aeration and settling tanks.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Supports healthier biological treatment.
+                <span data-lang="products.stpBenefit2">
+                  Supports healthier biological treatment.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Cuts cleaning frequency and operating cost.
+                <span data-lang="products.stpBenefit3">
+                  Cuts cleaning frequency and operating cost.
+                </span>
               </li>
             </ul>
           </div>
@@ -8250,14 +8569,16 @@
         <div class="text-center max-w-3xl mx-auto mb-14" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 text-cyan-500 text-xs font-heading font-semibold uppercase tracking-wider"
+            data-lang="products.rwhEyebrow"
             >Application 12</span
           >
           <h2
             class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+            data-lang="products.rwhTitle"
           >
             Rain Water Harvesting
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">
+          <p class="text-jd-gray mt-4 leading-relaxed" data-lang="products.rwhDesc">
             Keep harvested rainwater scale-free for storage tanks, recharge
             pits and reuse across the property.
           </p>
@@ -8274,17 +8595,17 @@
         </figure>
 
         <div class="dm-caption" data-animate="fade-up">
-          <span style="--dot: #0284c7">
-            <i aria-hidden="true"></i> Hard water in storage tanks
-          </span>
-          <span style="--dot: #4db74a">
-            <i aria-hidden="true"></i> Soft water with Jaldoot
-          </span>
+          <span style="--dot: #0284c7"
+            ><i aria-hidden="true"></i> <span data-lang="products.rwhCaption1">Hard water in storage tanks</span></span
+          >
+          <span style="--dot: #4db74a"
+            ><i aria-hidden="true"></i> <span data-lang="products.rwhCaption2">Soft water with Jaldoot</span></span
+          >
         </div>
 
         <div class="dm-cols" data-animate="fade-up">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.rwhProblemTitle">
               <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
               Stored rainwater issues
             </h3>
@@ -8293,25 +8614,31 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Mineral deposits form in storage and recharge tanks.
+                <span data-lang="products.rwhProblem1">
+                  Mineral deposits form in storage and recharge tanks.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Scale clogs distribution pipes and outlets.
+                <span data-lang="products.rwhProblem2">
+                  Scale clogs distribution pipes and outlets.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Stored water quality degrades over time.
+                <span data-lang="products.rwhProblem3">
+                  Stored water quality degrades over time.
+                </span>
               </li>
             </ul>
           </div>
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.rwhBenefitTitle">
               <i class="fas fa-check" aria-hidden="true"></i> Jaldoot RWH benefits
             </h3>
             <ul class="dm-list">
@@ -8319,19 +8646,25 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Keeps harvested rainwater scale-free in storage.
+                <span data-lang="products.rwhBenefit1">
+                  Keeps harvested rainwater scale-free in storage.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Protects recharge pits and distribution lines.
+                <span data-lang="products.rwhBenefit2">
+                  Protects recharge pits and distribution lines.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Cleaner, reusable water across the property.
+                <span data-lang="products.rwhBenefit3">
+                  Cleaner, reusable water across the property.
+                </span>
               </li>
             </ul>
           </div>
@@ -8354,14 +8687,16 @@
         <div class="text-center max-w-3xl mx-auto mb-14" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-500/10 text-yellow-500 text-xs font-heading font-semibold uppercase tracking-wider"
+            data-lang="products.solarRoofTopEyebrow"
             >Application 13</span
           >
           <h2
             class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+            data-lang="products.solarRoofTopTitle"
           >
             Solar Roof Top
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">
+          <p class="text-jd-gray mt-4 leading-relaxed" data-lang="products.solarRoofTopDesc">
             Protect rooftop solar tanks and piping from hard water scale and
             efficiency loss.
           </p>
@@ -8378,17 +8713,17 @@
         </figure>
 
         <div class="dm-caption" data-animate="fade-up">
-          <span style="--dot: #f59e0b">
-            <i aria-hidden="true"></i> Scale on solar tanks
-          </span>
-          <span style="--dot: #4db74a">
-            <i aria-hidden="true"></i> Soft water with Jaldoot
-          </span>
+          <span style="--dot: #f59e0b"
+            ><i aria-hidden="true"></i> <span data-lang="products.solarRoofTopCaption1">Scale on solar tanks</span></span
+          >
+          <span style="--dot: #4db74a"
+            ><i aria-hidden="true"></i> <span data-lang="products.solarRoofTopCaption2">Soft water with Jaldoot</span></span
+          >
         </div>
 
         <div class="dm-cols" data-animate="fade-up">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.solarRoofTopProblemTitle">
               <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
               Solar tank scaling
             </h3>
@@ -8397,25 +8732,31 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Scale coats solar water tanks and piping.
+                <span data-lang="products.solarRoofTopProblem1">
+                  Scale coats solar water tanks and piping.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Heat transfer drops, cutting solar efficiency.
+                <span data-lang="products.solarRoofTopProblem2">
+                  Heat transfer drops, cutting solar efficiency.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                More frequent descaling and maintenance.
+                <span data-lang="products.solarRoofTopProblem3">
+                  More frequent descaling and maintenance.
+                </span>
               </li>
             </ul>
           </div>
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.solarRoofTopBenefitTitle">
               <i class="fas fa-check" aria-hidden="true"></i> Jaldoot solar benefits
             </h3>
             <ul class="dm-list">
@@ -8423,19 +8764,25 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Stops scale on solar tanks and piping.
+                <span data-lang="products.solarRoofTopBenefit1">
+                  Stops scale on solar tanks and piping.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Maintains heat transfer and system efficiency.
+                <span data-lang="products.solarRoofTopBenefit2">
+                  Maintains heat transfer and system efficiency.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Less maintenance, longer solar system life.
+                <span data-lang="products.solarRoofTopBenefit3">
+                  Less maintenance, longer solar system life.
+                </span>
               </li>
             </ul>
           </div>
@@ -8458,14 +8805,16 @@
         <div class="text-center max-w-3xl mx-auto mb-14" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 text-orange-500 text-xs font-heading font-semibold uppercase tracking-wider"
+            data-lang="products.solarWaterHeaterEyebrow"
             >Application 14</span
           >
           <h2
             class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+            data-lang="products.solarWaterHeaterTitle"
           >
             Solar Water Heater
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">
+          <p class="text-jd-gray mt-4 leading-relaxed" data-lang="products.solarWaterHeaterDesc">
             Prevent scale on heater elements and tanks — faster hot water,
             lower power bills, longer heater life.
           </p>
@@ -8482,17 +8831,17 @@
         </figure>
 
         <div class="dm-caption" data-animate="fade-up">
-          <span style="--dot: #ea580c">
-            <i aria-hidden="true"></i> Scale on heater elements
-          </span>
-          <span style="--dot: #4db74a">
-            <i aria-hidden="true"></i> Soft water with Jaldoot
-          </span>
+          <span style="--dot: #ea580c"
+            ><i aria-hidden="true"></i> <span data-lang="products.solarWaterHeaterCaption1">Scale on heater elements</span></span
+          >
+          <span style="--dot: #4db74a"
+            ><i aria-hidden="true"></i> <span data-lang="products.solarWaterHeaterCaption2">Soft water with Jaldoot</span></span
+          >
         </div>
 
         <div class="dm-cols" data-animate="fade-up">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.solarWaterHeaterProblemTitle">
               <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
               Heater scale problems
             </h3>
@@ -8501,25 +8850,31 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Scale coats heating elements and tank walls.
+                <span data-lang="products.solarWaterHeaterProblem1">
+                  Scale coats heating elements and tank walls.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Elements work harder, using more power.
+                <span data-lang="products.solarWaterHeaterProblem2">
+                  Elements work harder, using more power.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Hot water takes longer and heater life shortens.
+                <span data-lang="products.solarWaterHeaterProblem3">
+                  Hot water takes longer and heater life shortens.
+                </span>
               </li>
             </ul>
           </div>
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.solarWaterHeaterBenefitTitle">
               <i class="fas fa-check" aria-hidden="true"></i> Jaldoot heater benefits
             </h3>
             <ul class="dm-list">
@@ -8527,19 +8882,25 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Prevents scale on elements and tanks.
+                <span data-lang="products.solarWaterHeaterBenefit1">
+                  Prevents scale on elements and tanks.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Faster hot water and lower power bills.
+                <span data-lang="products.solarWaterHeaterBenefit2">
+                  Faster hot water and lower power bills.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Longer water heater life, less descaling.
+                <span data-lang="products.solarWaterHeaterBenefit3">
+                  Longer water heater life, less descaling.
+                </span>
               </li>
             </ul>
           </div>
@@ -8562,14 +8923,16 @@
         <div class="text-center max-w-3xl mx-auto mb-14" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 text-emerald-500 text-xs font-heading font-semibold uppercase tracking-wider"
+            data-lang="products.solarInsectCleanerEyebrow"
             >Application 15</span
           >
           <h2
             class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+            data-lang="products.solarInsectCleanerTitle"
           >
             Solar Insect Cleaner
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">
+          <p class="text-jd-gray mt-4 leading-relaxed" data-lang="products.solarInsectCleanerDesc">
             Scale-free water for solar-powered insect control and agricultural
             spray systems.
           </p>
@@ -8586,17 +8949,17 @@
         </figure>
 
         <div class="dm-caption" data-animate="fade-up">
-          <span style="--dot: #10b981">
-            <i aria-hidden="true"></i> Clogged spray nozzles
-          </span>
-          <span style="--dot: #4db74a">
-            <i aria-hidden="true"></i> Soft water with Jaldoot
-          </span>
+          <span style="--dot: #10b981"
+            ><i aria-hidden="true"></i> <span data-lang="products.solarInsectCleanerCaption1">Clogged spray nozzles</span></span
+          >
+          <span style="--dot: #4db74a"
+            ><i aria-hidden="true"></i> <span data-lang="products.solarInsectCleanerCaption2">Soft water with Jaldoot</span></span
+          >
         </div>
 
         <div class="dm-cols" data-animate="fade-up">
           <div class="dm-card dm-before" data-animate="fade-up" data-delay="0">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.solarInsectCleanerProblemTitle">
               <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
               Spray system scaling
             </h3>
@@ -8605,25 +8968,31 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Scale blocks solar insect cleaner spray nozzles.
+                <span data-lang="products.solarInsectCleanerProblem1">
+                  Scale blocks solar insect cleaner spray nozzles.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Uneven spray cuts insect control effectiveness.
+                <span data-lang="products.solarInsectCleanerProblem2">
+                  Uneven spray cuts insect control effectiveness.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-xmark"></i>
                 </span>
-                Nozzles need frequent cleaning and replacement.
+                <span data-lang="products.solarInsectCleanerProblem3">
+                  Nozzles need frequent cleaning and replacement.
+                </span>
               </li>
             </ul>
           </div>
 
           <div class="dm-card dm-after" data-animate="fade-up" data-delay="120">
-            <h3 class="dm-title">
+            <h3 class="dm-title" data-lang="products.solarInsectCleanerBenefitTitle">
               <i class="fas fa-check" aria-hidden="true"></i> Jaldoot insect cleaner benefits
             </h3>
             <ul class="dm-list">
@@ -8631,19 +9000,25 @@
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Keeps spray nozzles scale-free.
+                <span data-lang="products.solarInsectCleanerBenefit1">
+                  Keeps spray nozzles scale-free.
+                </span>
               </li>
               <li style="--i: 1">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Even spray for better insect control.
+                <span data-lang="products.solarInsectCleanerBenefit2">
+                  Even spray for better insect control.
+                </span>
               </li>
               <li style="--i: 2">
                 <span class="dm-mark" aria-hidden="true">
                   <i class="fas fa-check"></i>
                 </span>
-                Less nozzle maintenance and longer system life.
+                <span data-lang="products.solarInsectCleanerBenefit3">
+                  Less nozzle maintenance and longer system life.
+                </span>
               </li>
             </ul>
           </div>
@@ -8678,14 +9053,16 @@
         <div class="text-center max-w-3xl mx-auto mb-14" data-animate="fade-up">
           <span
             class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-xs font-heading font-semibold uppercase tracking-wider"
+            data-lang="products.roPlantEyebrow"
             >Application 08</span
           >
           <h2
             class="mt-4 text-3xl sm:text-4xl font-heading font-bold text-jd-deep leading-tight"
+            data-lang="products.roPlantTitle"
           >
             JVC for RO Plant
           </h2>
-          <p class="text-jd-gray mt-4 leading-relaxed">
+          <p class="text-jd-gray mt-4 leading-relaxed" data-lang="products.roPlantDesc">
             The Jaldoot unit conditions the water feeding the plant, so scaling
             never reaches the membrane system or the rest of the line.
           </p>
@@ -8813,6 +9190,7 @@
                   stroke="none"
                   font-size="13"
                   font-family="Outfit, sans-serif"
+                  data-lang="products.roPlantCaption3"
                 >
                   permeate
                 </text>
@@ -8823,6 +9201,7 @@
                   stroke="none"
                   font-size="13"
                   font-family="Outfit, sans-serif"
+                  data-lang="products.roPlantCaption1"
                 >
                   feed
                 </text>
@@ -8833,6 +9212,7 @@
                   stroke="none"
                   font-size="13"
                   font-family="Outfit, sans-serif"
+                  data-lang="products.roPlantCaption2"
                 >
                   JVC unit
                 </text>
@@ -8856,8 +9236,10 @@
                     />
                   </svg>
                 </span>
-                Helps prevent the calcium carbonate scaling that restricts
-                reverse osmosis membranes.
+                <span data-lang="products.roPlantList1">
+                  Helps prevent the calcium carbonate scaling that restricts
+                  reverse osmosis membranes.
+                </span>
               </li>
               <li>
                 <span class="check-icon" aria-hidden="true">
@@ -8875,8 +9257,10 @@
                     />
                   </svg>
                 </span>
-                Keeps pumps, high-pressure lines and fittings running without
-                lime build-up.
+                <span data-lang="products.roPlantList2">
+                  Keeps pumps, high-pressure lines and fittings running without
+                  lime build-up.
+                </span>
               </li>
               <li>
                 <span class="check-icon" aria-hidden="true">
@@ -8894,7 +9278,9 @@
                     />
                   </svg>
                 </span>
-                No chemicals, no salts and no additives added to the process.
+                <span data-lang="products.roPlantList3">
+                  No chemicals, no salts and no additives added to the process.
+                </span>
               </li>
               <li>
                 <span class="check-icon" aria-hidden="true">
@@ -8912,8 +9298,10 @@
                     />
                   </svg>
                 </span>
-                Applies to CPVC, RPVC, UPVC, HDPE, copper, brass, SS 304 and SS
-                316 lines.
+                <span data-lang="products.roPlantList4">
+                  Applies to CPVC, RPVC, UPVC, HDPE, copper, brass, SS 304 and SS
+                  316 lines.
+                </span>
               </li>
             </ul>
           </div>
@@ -8945,10 +9333,10 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-xl font-heading font-bold text-jd-deep">
+                  <h3 class="text-xl font-heading font-bold text-jd-deep" data-lang="products.roPlantProblemTitle">
                     JVC Unit
                   </h3>
-                  <p class="text-sm text-jd-gray">
+                  <p class="text-sm text-jd-gray" data-lang="products.roPlantProblemDesc">
                     Jaldoot Water Conditioner for reverse osmosis plants
                   </p>
                 </div>
@@ -8956,20 +9344,20 @@
 
               <div class="rp-specs">
                 <div class="rp-spec" style="--tint: #0066b3">
-                  <b>12 V DC</b>
-                  <span>Application voltage</span>
+                  <b data-lang="products.roPlantSpec1Label">12 V DC</b>
+                  <span data-lang="products.roPlantSpec1Value">Application voltage</span>
                 </div>
                 <div class="rp-spec" style="--tint: #0066b3">
-                  <b>5&ndash;25 W</b>
-                  <span>Power consumption</span>
+                  <b data-lang="products.roPlantSpec2Label">5&ndash;25 W</b>
+                  <span data-lang="products.roPlantSpec2Value">Power consumption</span>
                 </div>
                 <div class="rp-spec" style="--tint: #00adee">
-                  <b>2</b>
-                  <span>Coils, double layer</span>
+                  <b data-lang="products.roPlantSpec3Label">2</b>
+                  <span data-lang="products.roPlantSpec3Value">Coils, double layer</span>
                 </div>
                 <div class="rp-spec" style="--tint: #00adee">
-                  <b>80 &deg;C</b>
-                  <span>Coil temperature</span>
+                  <b data-lang="products.roPlantSpec4Label">80 &deg;C</b>
+                  <span data-lang="products.roPlantSpec4Value">Coil temperature</span>
                 </div>
               </div>
 
@@ -8977,12 +9365,14 @@
                 <a
                   href="contact.html"
                   class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-jd-blue text-white rounded-full text-sm font-heading font-semibold hover:bg-jd-sky transition-colors duration-300"
+                  data-lang="products.roPlantBtn1"
                 >
                   Discuss your RO plant
                 </a>
                 <a
                   href="contact.html"
                   class="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-jd-sky/40 text-jd-blue rounded-full text-sm font-heading font-semibold hover:bg-jd-sky hover:text-white hover:border-jd-sky transition-colors duration-300"
+                  data-lang="products.roPlantBtn2"
                 >
                   Get a recommendation
                 </a>
@@ -9025,15 +9415,16 @@
         <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center" data-animate="fade-up">
           <div class="max-w-3xl mb-8 lg:mb-0">
             <span
-              class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 border border-white/20 text-white text-sm font-heading font-medium mb-6"
-              ><i class="fas fa-bolt text-yellow-300"></i> BuzzZap</span
+              class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 border border-white/20 text-white text-sm font-heading font-medium mb-6" data-lang="products.buzzzapEyebrow"
+              ><i class="fas fa-bolt text-yellow-300"></i>
+            > BuzzZap</span
             >
             <h2
               class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold leading-tight"
             >
-              BuzzZap <span class="gradient-text-white">Solar Trap</span>
+              BuzzZap <span class="gradient-text-white" data-lang="products.buzzzapTitle">Solar Trap</span>
             </h2>
-            <p class="text-white/80 leading-relaxed mt-6">
+            <p class="text-white/80 leading-relaxed mt-6" data-lang="products.buzzzapDesc">
               The most popular theories hold that positively phototactic insects
               are drawn to lights because they act like a navigational guide. Many
               insects find their way by keeping a natural light source, such as
@@ -9084,7 +9475,7 @@
         </div>
 
         <!-- Product composition -->
-        <h3 class="text-xl font-heading font-bold mt-14" data-animate="fade-up">
+        <h3 class="text-xl font-heading font-bold mt-14" data-animate="fade-up" data-lang="products.buzzzapCompositionTitle">
           Product composition
         </h3>
         <div
@@ -9094,9 +9485,9 @@
           <table class="spec-table">
             <thead>
               <tr>
-                <th scope="col" class="w-16">Sr. No.</th>
-                <th scope="col">Item</th>
-                <th scope="col">BuzzZap Solar Trap</th>
+                <th scope="col" class="w-16" data-lang="products.buzzzapComp0Header">Sr. No.</th>
+                <th scope="col" data-lang="products.buzzzapComp1Header">Item</th>
+                <th scope="col" data-lang="products.buzzzapComp2Header">BuzzZap Solar Trap</th>
               </tr>
             </thead>
             <tbody>
@@ -9104,22 +9495,22 @@
                 <th scope="row" class="font-semibold text-jd-deep text-left">
                   1.
                 </th>
-                <td>Operation method</td>
-                <td>DC generated by solar panel</td>
+                <td data-lang="products.buzzzapComp1Title">Operation method</td>
+                <td data-lang="products.buzzzapComp1Val">DC generated by solar panel</td>
               </tr>
               <tr>
                 <th scope="row" class="font-semibold text-jd-deep text-left">
                   2.
                 </th>
-                <td>Trapping system</td>
-                <td>Light trap requirement attachment &middot; trapping net</td>
+                <td data-lang="products.buzzzapComp2Title">Trapping system</td>
+                <td data-lang="products.buzzzapComp2Val">Light trap requirement attachment &middot; trapping net</td>
               </tr>
               <tr>
                 <th scope="row" class="font-semibold text-jd-deep text-left">
                   3.
                 </th>
-                <td>Capacity of solar panel</td>
-                <td>
+                <td data-lang="products.buzzzapComp3Title">Capacity of solar panel</td>
+                <td data-lang="products.buzzzapComp3Val">
                   18 W high efficiency poly crystalline solar cells &middot; 350
                   mm &times; 395 mm &middot; cloudy: 40% charge
                 </td>
@@ -9128,8 +9519,8 @@
                 <th scope="row" class="font-semibold text-jd-deep text-left">
                   4.
                 </th>
-                <td>Lamp</td>
-                <td>
+                <td data-lang="products.buzzzapComp4Title">Lamp</td>
+                <td data-lang="products.buzzzapComp4Val">
                   Fluorescent lamp (blue &amp; purple light colour) &middot; 6 W
                   &middot; special purpose
                 </td>
@@ -9138,15 +9529,15 @@
                 <th scope="row" class="font-semibold text-jd-deep text-left">
                   5.
                 </th>
-                <td>Electric consumption / hour</td>
-                <td>Rated consumption 15 W &middot; standby consumption 7 W</td>
+                <td data-lang="products.buzzzapComp5Title">Electric consumption / hour</td>
+                <td data-lang="products.buzzzapComp5Val">Rated consumption 15 W &middot; standby consumption 7 W</td>
               </tr>
               <tr>
                 <th scope="row" class="font-semibold text-jd-deep text-left">
                   6.
                 </th>
-                <td>Controller &amp; battery protection</td>
-                <td>
+                <td data-lang="products.buzzzapComp6Title">Controller &amp; battery protection</td>
+                <td data-lang="products.buzzzapComp6Val">
                   Battery over charge protection &middot; battery deep discharge
                   protection &middot; low battery protection &middot; rain
                   protection
@@ -9156,15 +9547,15 @@
                 <th scope="row" class="font-semibold text-jd-deep text-left">
                   7.
                 </th>
-                <td>Battery</td>
-                <td>7.2 Ah 12 V SMF &middot; battery 1 year warranty</td>
+                <td data-lang="products.buzzzapComp7Title">Battery</td>
+                <td data-lang="products.buzzzapComp7Val">7.2 Ah 12 V SMF &middot; battery 1 year warranty</td>
               </tr>
               <tr>
                 <th scope="row" class="font-semibold text-jd-deep text-left">
                   8.
                 </th>
-                <td>Weight &amp; package</td>
-                <td>
+                <td data-lang="products.buzzzapComp8Title">Weight &amp; package</td>
+                <td data-lang="products.buzzzapComp8Val">
                   Weight (net): 15 kg &middot; box packing for easy delivery
                   &middot; easy assembly by user at the field
                 </td>
@@ -9173,29 +9564,29 @@
                 <th scope="row" class="font-semibold text-jd-deep text-left">
                   9.
                 </th>
-                <td>Assembly &amp; keeping</td>
-                <td>Easy moving, disassembly, keeping, etc.</td>
+                <td data-lang="products.buzzzapComp9Title">Assembly &amp; keeping</td>
+                <td data-lang="products.buzzzapComp9Val">Easy moving, disassembly, keeping, etc.</td>
               </tr>
               <tr>
                 <th scope="row" class="font-semibold text-jd-deep text-left">
                   10.
                 </th>
-                <td>Working time</td>
-                <td>After sunset 3 to 4 hours, 365 days / per year</td>
+                <td data-lang="products.buzzzapComp10Title">Working time</td>
+                <td data-lang="products.buzzzapComp10Val">After sunset 3 to 4 hours, 365 days / per year</td>
               </tr>
               <tr>
                 <th scope="row" class="font-semibold text-jd-deep text-left">
                   11.
                 </th>
-                <td>Design</td>
-                <td>Specially designed for Indian climate conditions</td>
+                <td data-lang="products.buzzzapComp11Title">Design</td>
+                <td data-lang="products.buzzzapComp11Val">Specially designed for Indian climate conditions</td>
               </tr>
               <tr>
                 <th scope="row" class="font-semibold text-jd-deep text-left">
                   12.
                 </th>
-                <td>Life &amp; service</td>
-                <td>
+                <td data-lang="products.buzzzapComp12Title">Life &amp; service</td>
+                <td data-lang="products.buzzzapComp12Val">
                   10 years with proper care &middot; easily available service
                 </td>
               </tr>
@@ -9228,7 +9619,7 @@
                   />
                 </svg>
               </span>
-              <span class="text-white/80 text-sm">Auto ON/OFF</span>
+              <span class="text-white/80 text-sm" data-lang="products.buzzzapFeat1_1">Auto ON/OFF</span>
             </div>
             <div class="flex items-start gap-3 mt-2">
               <span class="check-icon mt-0.5">
@@ -9246,7 +9637,7 @@
                   />
                 </svg>
               </span>
-              <span class="text-white/80 text-sm">Rain protection</span>
+              <span class="text-white/80 text-sm" data-lang="products.buzzzapFeat1_2">Rain protection</span>
             </div>
             <div class="flex items-start gap-3 mt-2">
               <span class="check-icon mt-0.5">
@@ -9264,7 +9655,7 @@
                   />
                 </svg>
               </span>
-              <span class="text-white/80 text-sm"
+              <span class="text-white/80 text-sm" data-lang="products.buzzzapFeat1_3" data-lang="products.buzzzapFeat1_3"
                 >Battery over charging protection</span
               >
             </div>
@@ -9284,7 +9675,7 @@
                   />
                 </svg>
               </span>
-              <span class="text-white/80 text-sm">Low battery protection</span>
+              <span class="text-white/80 text-sm" data-lang="products.buzzzapFeat1_4">Low battery protection</span>
             </div>
           </div>
 
@@ -9293,23 +9684,23 @@
             data-animate="fade-up"
             data-delay="100"
           >
-            <h3 class="font-heading font-bold text-lg mb-4">
+            <h3 class="font-heading font-bold text-lg mb-4" data-lang="products.buzzzapFeat2Title">
               Easy installation
             </h3>
             <ol class="space-y-2.5 text-sm text-white/80">
-              <li>
+              <li data-lang="products.buzzzapFeat2_1">
                 <span class="font-semibold text-white">1.</span> Push the pipe
                 in the ground, 1 foot below.
               </li>
-              <li>
+              <li data-lang="products.buzzzapFeat2_2">
                 <span class="font-semibold text-white">2.</span> Place the main
                 box on the pipe.
               </li>
-              <li>
+              <li data-lang="products.buzzzapFeat2_3">
                 <span class="font-semibold text-white">3.</span> Adjust the
                 height.
               </li>
-              <li>
+              <li data-lang="products.buzzzapFeat2_4">
                 <span class="font-semibold text-white">4.</span> Push the start
                 button and forget it.
               </li>
@@ -9321,8 +9712,8 @@
             data-animate="fade-up"
             data-delay="200"
           >
-            <h3 class="font-heading font-bold text-lg mb-4">Working</h3>
-            <p class="text-sm text-white/80 leading-relaxed">
+            <h3 class="font-heading font-bold text-lg mb-4" data-lang="products.buzzzapFeat3Title">Working</h3>
+            <p class="text-sm text-white/80 leading-relaxed" data-lang="products.buzzzapFeat3Text">
               A UV light with a frequency that attracts more than 1800 different
               flying insects. The insects tend to cross the electric wire mesh
               around the UV light and get electrocuted. A high tech electronic
@@ -9333,7 +9724,7 @@
         </div>
 
         <div class="mt-10 rounded-2xl bg-white/10 p-6" data-animate="fade-up">
-          <h3 class="font-heading font-bold text-lg mb-4">
+          <h3 class="font-heading font-bold text-lg mb-4" data-lang="products.buzzzapClaimsTitle">
             Company claims from the brochure
           </h3>
           <div class="grid sm:grid-cols-2 gap-x-8">
@@ -9353,7 +9744,7 @@
                   />
                 </svg>
               </span>
-              <span class="text-white/80 text-sm"
+              <span class="text-white/80 text-sm" data-lang="products.buzzzapClaims1"
                 >BuzzZap is one of the most innovative products developed by the
                 company.</span
               >
@@ -9374,7 +9765,7 @@
                   />
                 </svg>
               </span>
-              <span class="text-white/80 text-sm"
+              <span class="text-white/80 text-sm" data-lang="products.buzzzapClaims2"
                 >Made in India with 100% in-house R&amp;D.</span
               >
             </div>
@@ -9394,7 +9785,7 @@
                   />
                 </svg>
               </span>
-              <span class="text-white/80 text-sm"
+              <span class="text-white/80 text-sm" data-lang="products.buzzzapClaims3"
                 >Successful installations in different parts of India in
                 different vegetable and fruit gardens, tea estates, poultry
                 farms etc. with great results.</span
@@ -9416,7 +9807,7 @@
                   />
                 </svg>
               </span>
-              <span class="text-white/80 text-sm"
+              <span class="text-white/80 text-sm" data-lang="products.buzzzapClaims4"
                 >The company exports BuzzZap to many countries like France,
                 Philippines, Maldives etc.</span
               >
@@ -9437,13 +9828,13 @@
                   />
                 </svg>
               </span>
-              <span class="text-white/80 text-sm"
+              <span class="text-white/80 text-sm" data-lang="products.buzzzapClaims5"
                 >The company is able to demonstrate a reduction in the use of
                 chemical spray to more than 50%.</span
               >
             </div>
           </div>
-          <p class="text-xs text-white/60 mt-5">
+          <p class="text-xs text-white/60 mt-5" data-lang="products.buzzzapClaimsFootnote">
             These are company statements reproduced verbatim from the Jaldoot
             brochure and are not independently verified.
           </p>
@@ -10076,6 +10467,124 @@
           });
         });
       });
-    </script>
+    // ===== LANGUAGE FILTER =====
+    const LANG_KEY = "jaldoot_lang";
+    const DEFAULT_LANG = "english";
+    const PAGE_KEY = {
+      "index.html": "home",
+      "": "home",
+      "about.html": "about",
+      "products.html": "products",
+      "contact.html": "contact",
+    };
+
+    let currentLang = DEFAULT_LANG;
+    let translations = {};
+
+    function getPageLocale() {
+      const page = window.location.pathname.split("/").pop() || "index.html";
+      return PAGE_KEY[page] || "home";
+    }
+
+    function getNested(obj, path) {
+      return path.split(".").reduce(function (acc, key) {
+        return acc && acc[key] !== undefined ? acc[key] : undefined;
+      }, obj);
+    }
+
+    function loadLanguage(lang) {
+      const locale = getPageLocale();
+      const url = "locales/" + locale + "/" + lang + ".json";
+
+      fetch(url)
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("Locale not found: " + url);
+          }
+          return response.json();
+        })
+        .then(function (data) {
+          translations = data;
+          currentLang = lang;
+          localStorage.setItem(LANG_KEY, lang);
+          applyLanguage(data);
+          updateActiveLangButton(lang);
+        })
+        .catch(function (err) {
+          console.error("Language load failed:", err);
+        });
+    }
+
+    function applyLanguage(data) {
+      document.querySelectorAll("[data-lang]").forEach(function (el) {
+        const key = el.getAttribute("data-lang");
+        const value = getNested(data, key);
+        if (value === undefined) return;
+
+        const decoded = decodeHtml(value);
+
+        el.childNodes.forEach(function (node) {
+          if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+            node.textContent = decoded;
+          }
+        });
+      });
+
+      document.querySelectorAll("[data-lang-aria]").forEach(function (el) {
+        const key = el.getAttribute("data-lang-aria");
+        const value = getNested(data, key);
+        if (value !== undefined) {
+          el.setAttribute("aria-label", value);
+        }
+      });
+
+      document.documentElement.lang =
+        currentLang === "hindi" ? "hi" : currentLang === "marathi" ? "mr" : "en";
+    }
+
+    function decodeHtml(html) {
+      const txt = document.createElement("textarea");
+      txt.innerHTML = html;
+      return txt.value;
+    }
+
+    function initLanguage() {
+      const saved = localStorage.getItem(LANG_KEY);
+      const lang = saved || DEFAULT_LANG;
+      loadLanguage(lang);
+
+      document.querySelectorAll("#langMenu a").forEach(function (btn) {
+        btn.removeEventListener("click", handleLangClick);
+        btn.addEventListener("click", handleLangClick);
+      });
+    }
+
+    function handleLangClick(e) {
+      e.preventDefault();
+      const langKey = e.currentTarget.getAttribute("data-lang");
+      if (langKey === "lang.hindi") {
+        loadLanguage("hindi");
+      } else if (langKey === "lang.marathi") {
+        loadLanguage("marathi");
+      } else {
+        loadLanguage("english");
+      }
+    }
+
+    function updateActiveLangButton(lang) {
+      document.querySelectorAll("#langMenu a").forEach(function (link) {
+        const text = link.textContent.trim();
+        const isActive =
+          (lang === "hindi" && text === "हिन्दी") ||
+          (lang === "marathi" && text === "मराठी") ||
+          (lang === "english" && text === "English");
+        link.classList.toggle("bg-jd-sky/5", isActive);
+        link.classList.toggle("text-jd-blue", isActive);
+      });
+    }
+
+    // Initialize language on page load
+    initLanguage();
+  </script>
   </body>
 </html>

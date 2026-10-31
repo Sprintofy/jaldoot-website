@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "products": "Products",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "contactEyebrow": "Send a message",
+  "contactFormLabel": "Full Name *",
+  "contactFormNamePlaceholder": "Your name",
+  "contactFormEmailPlaceholder": "you@example.com",
+  "contactFormPhonePlaceholder": "+91 00000 00000",
+  "contactFormInterestLabel": "I am interested in *",
+  "contactFormInterestPlaceholder": "Select an option",
+  "contactFormInterestDomestic": "Domestic water conditioner",
+  "contactFormInterestPoultry": "Poultry & dairy",
+  "contactFormInterestOther": "Something else",
+  "contactFormMessageLabel": "Your Message *",
+  "contactFormMessagePlaceholder": "Tell us about your line - pipe material, diameter, flow rate and the problem you face.",
+  "contactHeroDesc": "Tell us about your line — pipe material, diameter and flow — and we will suggest the right Jaldoot unit for your water.",
+  "contactHeroReply": "We reply within 2–4 hours."
+}

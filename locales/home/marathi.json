@@ -329,6 +329,35 @@
     "tagline": "हार्डनेस टू हैप्पीनेस — क्रिस्टल क्लियर नॅचरल वॉटर"
   },
   "floating": {
-    "backToTop": "वर जा"
+    "backToTop": "वर जा",
+    "contactEyebrow": "एक संदेश पाठवा",
+    "contactTitle": "एक शिफारस मागवा",
+    "contactDesc": "थोडे तपशिलीकरण द्या आणि आम्ही तुमच्या अर्जासाठी योग्य जालदूत मॉडल आणि आकाराची शिफारस करू",
+    "contactHeroDesc": "तुमची लाइन सांगा — पाइप साहित्य, व्यास आणि प्रवाह — आणि आम्ही तुमच्या पाण्यासाठी योग्य जालदून युनिटची शिफारस करू",
+    "contactHeroReply": "आम्ही 2–4 तासांनंतर उत्तर देऊ.",
+    "contactFormLabel": "पूर्ण नाव *",
+    "contactFormNamePlaceholder": "तुमचे नाव",
+    "contactFormNameError": "कृपया तुमचे पूर्ण नाव भरा",
+    "contactFormEmailLabel": "ईमेल पत्ता *",
+    "contactFormEmailPlaceholder": "तुम्ही@example.com",
+    "contactFormEmailError": "कृपया एक वैध ईमेल पत्ता भरा",
+    "contactFormPhoneLabel": "फोन क्रमांक",
+    "contactFormPhonePlaceholder": "+91 00000 00000",
+    "contactFormPhoneError": "कृपया एक वैध फोन क्रमांक भरा",
+    "contactFormInterestLabel": "मला रस आहे *",
+    "contactFormInterestPlaceholder": "एक पर्याय निवडा",
+    "contactFormInterestDomestic": "घरगुती वॉटर कंडिशनर",
+    "contactFormInterestAgriculture": "शेती आणि सिंचन",
+    "contactFormInterestPoultry": "मुर्गी आणि डेयरी",
+    "contactFormInterestPools": "स्विमिंग पूल आणि गोल्फ",
+    "contactFormInterestCommercial": "वाणिज्यिक आणि औद्योगिक",
+    "contactFormInterestRo": "आरओ प्लांटसाठी जेवीसी",
+    "contactFormInterestSolar": "सौर कीट उत्पाद / बज्जप",
+    "contactFormInterestOther": "काही दुसरे",
+    "contactFormInterestError": "कृपया एक पर्याय निवडा",
+    "contactFormMessageLabel": "तुमचा संदेश *",
+    "contactFormMessagePlaceholder": "तुमची लाइन सांगा - पाइप साहित्य, व्यास, प्रवाह दर आणि तुम्हाला सामोरा जाणारी समस्या।",
+    "contactFormMessageError": "कृपया तुमचा संदेश भरा (किमान 10 अक्षर)",
+    "contactFormSubmit": "अर्ज पाठवा"
   }
 }

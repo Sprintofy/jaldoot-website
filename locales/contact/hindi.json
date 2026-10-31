@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "home": "होम",
+    "about": "बारे में",
+    "products": "उत्पाद",
+    "contact": "संपर्क",
+    "language": "भाषा"
+  },
+  "contactEyebrow": "एक संदेश भेजें",
+  "contactFormLabel": "पूरा नाम *",
+  "contactFormNamePlaceholder": "आपका नाम",
+  "contactFormEmailPlaceholder": "आप@example.com",
+  "contactFormPhonePlaceholder": "+91 00000 00000",
+  "contactFormInterestLabel": "मैं रुचि रखता हूँ *",
+  "contactFormInterestPlaceholder": "एक विकल्प चुनें",
+  "contactFormInterestDomestic": "घरेलू वॉटर कंडिशनर",
+  "contactFormInterestPoultry": "मुर्गी और डेयरी",
+  "contactFormInterestOther": "कुछ और",
+  "contactFormMessageLabel": "आपका संदेश *",
+  "contactFormMessagePlaceholder": "अपनी लाइन के बारे में बताएं - पाइप सामग्री, व्यास, प्रवाह दर और आप जो समस्या सामना कर रहे हैं।",
+  "contactHeroDesc": "अपनी लाइन के बारे में बताएं — पाइप सामग्री, व्यास और प्रवाह — और हम आपके पानी के लिए सही जालदूत यूनिट का सुझाव देंगे।",
+  "contactHeroReply": "हम 2–4 घंटे के भीतर जवाब देंगे।"
+}

@@ -1504,3 +1504,12 @@ body {
     color: #000;
   }
 }
+
+/* Hindi font support - applied to all text, but Font Awesome icon
+   elements are excluded so their glyph font is not overridden. */
+html[lang="hi"] {
+  font-family: "Noto Sans Devanagari", sans-serif !important;
+}
+html[lang="hi"] *:not(.fa):not(.fas):not(.far):not(.fab):not(.fad):not(.fal):not([class^="fa-"]):not([class*=" fa-"]) {
+  font-family: "Noto Sans Devanagari", sans-serif !important;
+}

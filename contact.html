@@ -1164,7 +1164,7 @@
         <p
           class="text-white/85 text-base lg:text-lg max-w-3xl mx-auto leading-relaxed font-body mb-7"
         >
-          Tell us about your line &mdash; pipe material, diameter and flow
+          Tell us about your line Tell us about your line &mdash; pipe material, diameter and flowmdash; pipe material, diameter and flow
           &mdash; and we will suggest the right Jaldoot unit for your water.
           <span class="text-white font-semibold font-heading"
             >We reply within 2&ndash;4 hours.</span
@@ -1352,7 +1352,7 @@
           >
             <span
               class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold mb-5"
-              ><i class="fas fa-paper-plane"></i> Send a message</span
+              ><i class="fas fa-paper-plane"></i> <span data-lang="contactEyebrow">Send a message</span>
             >
             <h2
               class="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-jd-deep mb-3"
@@ -1367,13 +1367,13 @@
             <form id="contactForm" novalidate>
               <div class="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
-                  <label class="form-label" for="name">Full Name *</label>
+                  <label class="form-label" for="name" data-lang="contactFormLabel">Full Name *</label>
                   <input
                     class="form-input"
                     type="text"
                     id="name"
                     name="name"
-                    placeholder="Your name"
+                    placeholder="Your name" data-lang="contactFormNamePlaceholder"
                     required
                     autocomplete="name"
                   />
@@ -1388,7 +1388,7 @@
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="you@example.com"
+                    placeholder="you@example.com" data-lang="contactFormEmailPlaceholder"
                     required
                     autocomplete="email"
                   />
@@ -1403,7 +1403,7 @@
                     type="tel"
                     id="phone"
                     name="phone"
-                    placeholder="+91 00000 00000"
+                    placeholder="+91 00000 00000" data-lang="contactFormPhonePlaceholder"
                     autocomplete="tel"
                   />
                   <p class="form-error-msg" id="phone-error">
@@ -1411,7 +1411,7 @@
                   </p>
                 </div>
                 <div>
-                  <label class="form-label" for="interest"
+                  <label class="form-label" for="interest" data-lang="contactFormInterestLabel" data-lang="contactFormInterestLabel"
                     >I am interested in *</label
                   >
                   <select
@@ -1420,12 +1420,12 @@
                     name="interest"
                     required
                   >
-                    <option value="">Select an option</option>
-                    <option value="domestic">Domestic water conditioner</option>
+                    <option value="" data-lang="contactFormInterestPlaceholder">Select an option</option>
+                    <option value="domestic" data-lang="contactFormInterestDomestic">Domestic water conditioner</option>
                     <option value="agriculture">
                       Agriculture &amp; irrigation
                     </option>
-                    <option value="poultry">Poultry &amp; dairy</option>
+                    <option value="poultry" data-lang="contactFormInterestPoultry">Poultry <option value="poultry" data-lang="contactFormInterestPoultry">Poultry <option value="poultry">Poultry &amp; dairy</option>amp; dairy</option>amp; dairy</option>
                     <option value="pools">Swimming pools &amp; golf</option>
                     <option value="commercial">
                       Commercial &amp; industrial
@@ -1434,7 +1434,7 @@
                     <option value="solar">
                       Solar insect products / BuzzZap
                     </option>
-                    <option value="other">Something else</option>
+                    <option value="other" data-lang="contactFormInterestOther">Something else</option>
                   </select>
                   <p class="form-error-msg" id="interest-error">
                     Please select an option
@@ -1443,13 +1443,13 @@
               </div>
 
               <div class="mt-4 sm:mt-6">
-                <label class="form-label" for="message">Your Message *</label>
+                <label class="form-label" for="message" data-lang="contactFormMessageLabel">Your Message *</label>
                 <textarea
                   class="form-input"
                   id="message"
                   name="message"
                   rows="5"
-                  placeholder="Tell us about your line - pipe material, diameter, flow rate and the problem you face."
+                  placeholder="Tell us about your line - pipe material, diameter, flow rate and the problem you face." data-lang="contactFormMessagePlaceholder"
                   required
                 ></textarea>
                 <p class="form-error-msg" id="message-error">
@@ -2459,6 +2459,31 @@
         // to the sales number. Country code 91, subscriber 9822209656.
         const WHATSAPP_NUMBER = "919822209656";
         const form = document.getElementById("contactForm");
+
+        // When arriving from the products page ("Request a quote"), pre-fill
+        // the message field with the line-sizing prompt so the enquiry applies
+        // to the products section rather than a generic message.
+        (function prefillFromProducts() {
+          const params = new URLSearchParams(window.location.search);
+          if (params.get("source") === "products") {
+            const messageInput = document.getElementById("message");
+            const interestSelect = document.getElementById("interest");
+            const productsPrompt =
+              "Request a quote for the products section — please suggest the right Jaldoot unit.\n" +
+              "Pipe material: \nDiameter: \nFlow rate: \n";
+            if (messageInput && !messageInput.value.trim()) {
+              messageInput.value = productsPrompt;
+            }
+            if (interestSelect && interestSelect.selectedIndex === 0) {
+              for (let i = 0; i < interestSelect.options.length; i++) {
+                if (interestSelect.options[i].value === "domestic") {
+                  interestSelect.selectedIndex = i;
+                  break;
+                }
+              }
+            }
+          }
+        })();
 
         function showError(input, show) {
           const msg = document.getElementById(input.id + "-error");
