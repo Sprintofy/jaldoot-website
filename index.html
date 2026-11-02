@@ -4458,68 +4458,72 @@
           </a>
 
           <!-- Desktop Nav -->
-          <div class="nav-menu hidden lg:flex items-center gap-1">
-            <a
-              href="index.html"
-              class="nav-link active font-heading transition-all duration-300"
-              data-lang="nav.home"
-              >Home</a
-            >
-            <a
-              href="about.html"
-              class="nav-link font-heading transition-all duration-300"
-              data-lang="nav.about"
-              >About</a
-            >
-            <a
-              href="products.html"
-              class="nav-link font-heading transition-all duration-300"
-              data-lang="nav.products"
-              >Products</a
-            >
-            <a
-              href="contact.html"
-              class="nav-link font-heading transition-all duration-300"
-              data-lang="nav.contact"
-              >Contact</a
-            >
-            <div class="relative group ml-2">
-              <button
-                class="nav-link font-heading transition-all duration-300 flex items-center gap-1"
-                aria-label="Select language"
-                id="langBtn"
-              >
-                <i class="fas fa-globe text-xs"></i> Language
-                <i class="fas fa-chevron-down ml-1 text-[10px]"></i>
-              </button>
-              <div
-                id="langMenu"
-                class="absolute right-0 mt-1 w-32 bg-white border border-jd-sky/15 rounded-xl shadow-xl py-2 z-50 opacity-0 invisible pointer-events-none transition-opacity duration-300 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto"
-              >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
-                  data-lang="lang.english"
-                >
-                  English
-                </a>
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
-                  data-lang="lang.hindi"
-                >
-                  हिन्दी
-                </a>
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
-                  data-lang="lang.marathi"
-                >
-                  मराठी
-                </a>
-              </div>
-            </div>
-          </div>
+       <!-- Desktop Nav -->
+<div class="nav-menu hidden lg:flex items-center gap-1">
+  <a
+    href="index.html"
+    class="nav-link active font-heading transition-all duration-300"
+    data-lang="nav.home"
+    >Home</a
+  >
+  <a
+    href="about.html"
+    class="nav-link font-heading transition-all duration-300"
+    data-lang="nav.about"
+    >About</a
+  >
+  <a
+    href="products.html"
+    class="nav-link font-heading transition-all duration-300"
+    data-lang="nav.products"
+    >Products</a
+  >
+  <a
+    href="contact.html"
+    class="nav-link font-heading transition-all duration-300"
+    data-lang="nav.contact"
+    >Contact</a
+  >
+  <div class="relative group ml-2">
+    <button
+      class="nav-link font-heading transition-all duration-300 flex items-center gap-1"
+      aria-label="Select language"
+      id="langBtn"
+    >
+      <i class="fas fa-globe text-xs"></i> <span data-lang="nav.language">Language</span>
+      <i class="fas fa-chevron-down ml-1 text-[10px]"></i>
+    </button>
+    <div
+      id="langMenu"
+      class="absolute right-0 mt-1 w-32 bg-white border border-jd-sky/15 rounded-xl shadow-xl py-2 z-50 opacity-0 invisible pointer-events-none transition-opacity duration-300 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto"
+    >
+      <a
+        href="#"
+        class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+        data-lang="lang.english"
+        data-set-lang="english"
+      >
+        English
+      </a>
+      <a
+        href="#"
+        class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+        data-lang="lang.hindi"
+        data-set-lang="hindi"
+      >
+        हिन्दी
+      </a>
+      <a
+        href="#"
+        class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
+        data-lang="lang.marathi"
+        data-set-lang="marathi"
+      >
+        मराठी
+      </a>
+    </div>
+  </div>
+</div>
 
           <!-- Mobile Hamburger -->
           <button

@@ -63,7 +63,6 @@
           height 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
           opacity 0.3s ease;
       }
-      /* Keep topbar always visible - no collapse, no gap. */
       .topbar {
         transition: background 0.3s ease, box-shadow 0.3s ease;
       }
@@ -143,7 +142,6 @@
         }
       }
 
-
       /* ===== PRELOADER ===== */
       #preloader {
         transition:
@@ -160,24 +158,12 @@
         opacity: 0;
         transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       }
-      [data-animate="fade-up"] {
-        transform: translateY(50px);
-      }
-      [data-animate="fade-down"] {
-        transform: translateY(-50px);
-      }
-      [data-animate="fade-left"] {
-        transform: translateX(50px);
-      }
-      [data-animate="fade-right"] {
-        transform: translateX(-50px);
-      }
-      [data-animate="zoom-in"] {
-        transform: scale(0.85);
-      }
-      [data-animate="flip-up"] {
-        transform: perspective(2500px) rotateX(30deg);
-      }
+      [data-animate="fade-up"] { transform: translateY(50px); }
+      [data-animate="fade-down"] { transform: translateY(-50px); }
+      [data-animate="fade-left"] { transform: translateX(50px); }
+      [data-animate="fade-right"] { transform: translateX(-50px); }
+      [data-animate="zoom-in"] { transform: scale(0.85); }
+      [data-animate="flip-up"] { transform: perspective(2500px) rotateX(30deg); }
       [data-animate].visible {
         opacity: 1;
         transform: translate(0, 0) scale(1) perspective(2500px) rotateX(0deg);
@@ -204,9 +190,7 @@
       }
 
       /* ===== CARD HOVER ===== */
-      .card-hover {
-        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      }
+      .card-hover { transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
       .card-hover:hover {
         transform: translateY(-12px);
         box-shadow: 0 25px 60px rgba(0, 102, 179, 0.15);
@@ -214,72 +198,40 @@
       .card-hover::before {
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
+        top: 0; left: 0; right: 0;
         height: 4px;
         background: linear-gradient(90deg, #0066b3, #00adee, #4db74a);
         border-radius: 12px 12px 0 0;
         transform: scaleX(0);
         transition: transform 0.4s ease;
       }
-      .card-hover:hover::before {
-        transform: scaleX(1);
-      }
+      .card-hover:hover::before { transform: scaleX(1); }
 
       /* ===== ICON FLOAT ===== */
-      .icon-float {
-        transition: all 0.4s ease;
-      }
-      .card-hover:hover .icon-float {
-        transform: translateY(-5px) scale(1.1);
-      }
+      .icon-float { transition: all 0.4s ease; }
+      .card-hover:hover .icon-float { transform: translateY(-5px) scale(1.1); }
 
       /* ===== SHINE EFFECT ===== */
-      .shine-effect {
-        position: relative;
-        overflow: hidden;
-      }
+      .shine-effect { position: relative; overflow: hidden; }
       .shine-effect::after {
         content: "";
         position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: linear-gradient(
-          to right,
-          transparent 0%,
-          rgba(255, 255, 255, 0.05) 50%,
-          transparent 100%
-        );
+        top: -50%; left: -50%;
+        width: 200%; height: 200%;
+        background: linear-gradient(to right, transparent 0%, rgba(255,255,255,0.05) 50%, transparent 100%);
         transform: rotate(30deg);
         transition: all 0.6s ease;
         opacity: 0;
       }
-      .shine-effect:hover::after {
-        opacity: 1;
-        transform: rotate(30deg) translateX(100%);
-      }
+      .shine-effect:hover::after { opacity: 1; transform: rotate(30deg) translateX(100%); }
 
       /* ===== FLOAT ANIMATIONS ===== */
-      .float-y {
-        animation: floatY 3s ease-in-out infinite;
-      }
-      .float-y-delay {
-        animation: floatY 3s ease-in-out infinite 1s;
-      }
-      .float-y-delay-2 {
-        animation: floatY 3s ease-in-out infinite 2s;
-      }
+      .float-y { animation: floatY 3s ease-in-out infinite; }
+      .float-y-delay { animation: floatY 3s ease-in-out infinite 1s; }
+      .float-y-delay-2 { animation: floatY 3s ease-in-out infinite 2s; }
       @keyframes floatY {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-15px);
-        }
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
       }
 
       /* ===== HERO PARTICLES ===== */
@@ -290,20 +242,10 @@
         animation: particleFloat linear infinite;
       }
       @keyframes particleFloat {
-        0% {
-          transform: translateY(100%) rotate(0deg);
-          opacity: 0;
-        }
-        10% {
-          opacity: 1;
-        }
-        90% {
-          opacity: 0.6;
-        }
-        100% {
-          transform: translateY(-100vh) rotate(720deg);
-          opacity: 0;
-        }
+        0% { transform: translateY(100%) rotate(0deg); opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 0.6; }
+        100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
       }
 
       /* ===== RIPPLE ===== */
@@ -314,96 +256,57 @@
         animation: rippleExpand 4s ease-out infinite;
       }
       @keyframes rippleExpand {
-        0% {
-          width: 0;
-          height: 0;
-          opacity: 0.8;
-        }
-        100% {
-          width: 400px;
-          height: 400px;
-          opacity: 0;
-        }
+        0% { width: 0; height: 0; opacity: 0.8; }
+        100% { width: 400px; height: 400px; opacity: 0; }
       }
 
       /* ===== BOUNCE SLOW ===== */
-      .bounce-slow,
-      .animate-bounce-slow {
-        animation: bounceSlow 2s ease-in-out infinite;
-      }
+      .bounce-slow, .animate-bounce-slow { animation: bounceSlow 2s ease-in-out infinite; }
       @keyframes bounceSlow {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-6px);
-        }
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
       }
 
       /* ===== TIMELINE ===== */
       .timeline-line {
         position: absolute;
-        left: 50%;
-        top: 0;
-        bottom: 0;
+        left: 50%; top: 0; bottom: 0;
         width: 2px;
         background: linear-gradient(180deg, #00adee, #0066b3, #4db74a, #134fa1);
         transform: translateX(-50%);
       }
       @media (max-width: 768px) {
-        .timeline-line {
-          left: 20px;
-        }
+        .timeline-line { left: 20px; }
       }
 
       /* ===== COUNTER ANIMATION ===== */
-      .counter-box {
-        position: relative;
-        overflow: hidden;
-      }
+      .counter-box { position: relative; overflow: hidden; }
       .counter-box::after {
         content: "";
         position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        bottom: 0; left: 0; right: 0;
         height: 3px;
         background: linear-gradient(90deg, #00adee, #4db74a);
         transform: scaleX(0);
         transition: transform 0.6s ease;
       }
-      .counter-box:hover::after {
-        transform: scaleX(1);
-      }
+      .counter-box:hover::after { transform: scaleX(1); }
 
       /* ===== MOBILE MENU ===== */
-      #mobileMenu {
-        transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      }
+      #mobileMenu { transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
 
       /* ===== WAVE DIVIDER ===== */
-      .wave-divider svg {
-        display: block;
-      }
+      .wave-divider svg { display: block; }
 
       /* ===== BACK TO TOP ===== */
-      #back-to-top.visible,
-      #backToTop.visible {
+      #back-to-top.visible, #backToTop.visible {
         opacity: 1 !important;
         transform: translateY(0) !important;
         pointer-events: auto !important;
       }
 
-      /* the hero clears the fixed header stack: topbar 38px + navbar 80px */
-      .contact-hero {
-        margin-top: 90px;
-      }
+      .contact-hero { margin-top: 90px; }
 
-      /* Contact photo plate. cover on a 1432x411 band scales the 740x493
-         source about 1.9x, so the scrim below does the dimming rather than an
-         opacity value - one place to tune, and the crop stays centred on the
-         three contact icons. */
       .contact-hero-photo {
         position: absolute;
         inset: 0;
@@ -413,67 +316,36 @@
         background-repeat: no-repeat;
       }
       @media (max-width: 639px) {
-        .contact-hero-photo {
-          background-position: center 50%;
-        }
+        .contact-hero-photo { background-position: center 50%; }
       }
 
-      /* Light brand veil, not a blackout: the photo is already a dark frame, so a
-         soft centre-weighted tint keeps the copy at 4.8:1 or better while the
-         picture, the icons and the phone glow all stay clearly readable. */
       .contact-hero-scrim {
         background:
-          radial-gradient(
-            105% 135% at 50% 46%,
-            rgba(4, 22, 58, 0.66) 0%,
-            rgba(4, 22, 58, 0.5) 52%,
-            rgba(3, 30, 74, 0.3) 100%
-          ),
-          linear-gradient(
-            118deg,
-            rgba(2, 24, 68, 0.34) 0%,
-            rgba(2, 44, 100, 0.14) 100%
-          );
+          radial-gradient(105% 135% at 50% 46%, rgba(4, 22, 58, 0.66) 0%, rgba(4, 22, 58, 0.5) 52%, rgba(3, 30, 74, 0.3) 100%),
+          linear-gradient(118deg, rgba(2, 24, 68, 0.34) 0%, rgba(2, 44, 100, 0.14) 100%);
       }
 
-      /* Insurance for the copy if a brighter crop of the photo ever lands
-         under the headline. */
-      .contact-hero-copy h1,
-      .contact-hero-copy p {
+      .contact-hero-copy h1, .contact-hero-copy p {
         text-shadow: 0 2px 14px rgba(2, 18, 48, 0.55);
       }
 
-      /* The wave divider is 64px (base), 80px (sm) and 96px (lg) tall and its solid
-         grey-50 fill starts near the bottom of that band, so the copy needs the
-         full wave height of bottom clearance or the CTA pills end up painted
-         under the divider - the wave comes later in the DOM and shares z-10. */
       .contact-hero-copy {
         padding-top: 2.5rem;
         padding-bottom: 4rem;
       }
       @media (min-width: 640px) {
-        .contact-hero-copy {
-          padding-bottom: 5rem;
-        }
+        .contact-hero-copy { padding-bottom: 5rem; }
       }
       @media (min-width: 1024px) {
-        .contact-hero-copy {
-          padding-top: 3rem;
-          padding-bottom: 6rem;
-        }
+        .contact-hero-copy { padding-top: 3rem; padding-bottom: 6rem; }
       }
 
-      /* ===== HERO RIPPLE / FLOATING CHIPS ===== */
       .contact-chip {
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
       }
 
-      /* ===== CONTACT CARD =====
-         Every card runs icon -> title -> value -> footer at the same
-         spacing, and the grid uses items-start so each card is exactly as tall
-         as its own copy. Stretching them to a common height is what left the
-         empty band inside the shorter cards. */
+      /* ===== CONTACT CARD ===== */
       .contact-card {
         background: white;
         border-radius: 1.25rem;
@@ -505,11 +377,6 @@
       .contact-card:hover .contact-icon {
         transform: scale(1.08) rotate(-6deg);
       }
-      /* Footer meta line. flex-start keeps the icon hard against the first
-         line and lets a long label such as the opening hours wrap instead of
-         overflowing the card. The footer follows the copy directly - pinning
-         it to the bottom with margin-top:auto left a visible gap in the
-         middle of every card whose copy was short. */
       .contact-card-foot {
         padding-top: 0.875rem;
         display: flex;
@@ -527,14 +394,8 @@
         color: #00adee;
         flex-shrink: 0;
       }
-      a.contact-card-foot {
-        font-weight: 600;
-        color: #0066b3;
-      }
-      a.contact-card-foot:hover,
-      a.contact-card-foot:focus-visible {
-        color: #00adee;
-      }
+      a.contact-card-foot { font-weight: 600; color: #0066b3; }
+      a.contact-card-foot:hover, a.contact-card-foot:focus-visible { color: #00adee; }
       .contact-card a:focus-visible {
         outline: 2px solid #00adee;
         outline-offset: 3px;
@@ -581,9 +442,7 @@
         display: none;
         font-family: "Inter", sans-serif;
       }
-      .form-error-msg.show {
-        display: block;
-      }
+      .form-error-msg.show { display: block; }
       select.form-input {
         cursor: pointer;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236D6E6F'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
@@ -592,14 +451,10 @@
         background-size: 1.25rem;
         padding-right: 2.5rem;
       }
-      textarea.form-input {
-        resize: vertical;
-        min-height: 120px;
-      }
+      textarea.form-input { resize: vertical; min-height: 120px; }
 
       /* ===== BUTTONS ===== */
-      .btn-primary,
-      .btn-green {
+      .btn-primary, .btn-green {
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
@@ -616,48 +471,29 @@
         position: relative;
         overflow: hidden;
       }
-      .btn-primary {
-        background: linear-gradient(135deg, #0066b3, #134fa1);
-      }
+      .btn-primary { background: linear-gradient(135deg, #0066b3, #134fa1); }
       .btn-primary:hover {
         box-shadow: 0 10px 30px -5px rgba(0, 102, 179, 0.4);
         transform: translateY(-2px);
       }
-      .btn-green {
-        background: linear-gradient(135deg, #4db74a, #3a9e38);
-      }
+      .btn-green { background: linear-gradient(135deg, #4db74a, #3a9e38); }
       .btn-green:hover {
         box-shadow: 0 10px 30px -5px rgba(77, 183, 74, 0.4);
         transform: translateY(-2px);
       }
-      .btn-primary span,
-      .btn-primary svg,
-      .btn-green span,
-      .btn-green svg {
-        position: relative;
-        z-index: 1;
+      .btn-primary span, .btn-primary svg, .btn-green span, .btn-green svg {
+        position: relative; z-index: 1;
       }
 
-      /* ===== RIPPLE EFFECT ON SUBMIT ===== */
       @keyframes ripple {
-        0% {
-          transform: scale(0);
-          opacity: 0.5;
-        }
-        100% {
-          transform: scale(4);
-          opacity: 0;
-        }
+        0% { transform: scale(0); opacity: 0.5; }
+        100% { transform: scale(4); opacity: 0; }
       }
-      .btn-ripple {
-        position: relative;
-        overflow: hidden;
-      }
+      .btn-ripple { position: relative; overflow: hidden; }
       .btn-ripple.rippling::after {
         content: "";
         position: absolute;
-        width: 100px;
-        height: 100px;
+        width: 100px; height: 100px;
         background: rgba(255, 255, 255, 0.3);
         border-radius: 50%;
         transform: scale(0);
@@ -691,16 +527,9 @@
         transform: translateX(-50%) translateY(0);
       }
 
-      /* ===== PULSE RING ON WHATSAPP ===== */
       @keyframes pulse-ring {
-        0% {
-          transform: scale(1);
-          opacity: 1;
-        }
-        100% {
-          transform: scale(1.5);
-          opacity: 0;
-        }
+        0% { transform: scale(1); opacity: 1; }
+        100% { transform: scale(1.5); opacity: 0; }
       }
       .whatsapp-float::before {
         content: "";
@@ -712,64 +541,31 @@
       }
 
       /* ===== FAQ ===== */
-      .faq-toggle .chevron {
-        transition: transform 0.3s ease;
-      }
-      .faq-item.is-open .faq-toggle .chevron {
-        transform: rotate(180deg);
-      }
+      .faq-toggle .chevron { transition: transform 0.3s ease; }
+      .faq-item.is-open .faq-toggle .chevron { transform: rotate(180deg); }
       .faq-item.is-open {
         border-color: rgba(0, 173, 238, 0.35);
         box-shadow: 0 18px 40px -20px rgba(0, 102, 179, 0.25);
       }
 
-      /* ===== GRADIENT WATER BG ===== */
       .bg-gradient-water {
-        background: linear-gradient(
-          135deg,
-          #f0f9ff 0%,
-          #e0f2fe 30%,
-          #f0fdf4 70%,
-          #f0f9ff 100%
-        );
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 30%, #f0fdf4 70%, #f0f9ff 100%);
       }
 
-      /* ===== SCROLLBAR ===== */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #f1f5f9;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #00adee;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #0066b3;
-      }
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #f1f5f9; }
+      ::-webkit-scrollbar-thumb { background: #00adee; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #0066b3; }
 
-      /* ===== iOS INPUT ZOOM FIX ===== */
       @media screen and (max-width: 768px) {
-        .form-input,
-        select.form-input {
-          font-size: 16px;
-        }
+        .form-input, select.form-input { font-size: 16px; }
       }
 
-          /* ===== CTA BAND (LIGHT, TWO COLUMN) ===== */
+      /* ===== CTA BAND ===== */
       .cta-band-bg {
         background:
-          radial-gradient(
-            760px 460px at 14% 4%,
-            rgba(255, 255, 255, 0.9),
-            rgba(255, 255, 255, 0) 62%
-          ),
-          radial-gradient(
-            720px 480px at 92% 96%,
-            rgba(125, 211, 252, 0.85),
-            rgba(125, 211, 252, 0) 66%
-          ),
+          radial-gradient(760px 460px at 14% 4%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 62%),
+          radial-gradient(720px 480px at 92% 96%, rgba(125, 211, 252, 0.85), rgba(125, 211, 252, 0) 66%),
           linear-gradient(118deg, #f2fbff 0%, #d8f1ff 42%, #b3e4fc 100%);
       }
       .cta-kit {
@@ -781,18 +577,11 @@
       }
       .cta-kit-glow {
         position: absolute;
-        left: 50%;
-        bottom: -10%;
-        width: 100%;
-        height: 58%;
+        left: 50%; bottom: -10%;
+        width: 100%; height: 58%;
         transform: translateX(-50%);
         border-radius: 50%;
-        background: radial-gradient(
-          closest-side,
-          rgba(13, 76, 130, 0.26) 0%,
-          rgba(13, 76, 130, 0.1) 52%,
-          rgba(13, 76, 130, 0) 78%
-        );
+        background: radial-gradient(closest-side, rgba(13, 76, 130, 0.26) 0%, rgba(13, 76, 130, 0.1) 52%, rgba(13, 76, 130, 0) 78%);
         filter: blur(16px);
       }
       .cta-kit-img {
@@ -803,23 +592,12 @@
         filter: drop-shadow(0 24px 30px rgba(9, 62, 110, 0.3));
         transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       }
-      .cta-kit:hover .cta-kit-img {
-        transform: translateY(-8px) scale(1.02);
-      }
-      @media (max-width: 1023px) {
-        .cta-kit {
-          max-width: 420px;
-        }
-      }
+      .cta-kit:hover .cta-kit-img { transform: translateY(-8px) scale(1.02); }
+      @media (max-width: 1023px) { .cta-kit { max-width: 420px; } }
       @media (prefers-reduced-motion: reduce) {
-        .cta-kit-img {
-          transition: none;
-        }
-        .cta-kit:hover .cta-kit-img {
-          transform: none;
-        }
+        .cta-kit-img { transition: none; }
+        .cta-kit:hover .cta-kit-img { transform: none; }
       }
-
     </style>
   </head>
 
@@ -831,91 +609,44 @@
     >
       <div class="text-center">
         <div class="relative w-24 h-24 mx-auto mb-6">
-          <div
-            class="absolute inset-0 border-4 border-jd-sky/20 rounded-full"
-          ></div>
-          <div
-            class="absolute inset-0 border-4 border-transparent border-t-jd-sky rounded-full animate-spin"
-          ></div>
+          <div class="absolute inset-0 border-4 border-jd-sky/20 rounded-full"></div>
+          <div class="absolute inset-0 border-4 border-transparent border-t-jd-sky rounded-full animate-spin"></div>
           <div class="absolute inset-0 flex items-center justify-center">
-            <svg
-              width="36"
-              height="36"
-              viewBox="0 0 40 40"
-              class="animate-pulse"
-            >
-              <path
-                d="M20 4 C20 4 8 18 8 26 C8 33 13 38 20 38 C27 38 32 33 32 26 C32 18 20 4 20 4Z"
-                fill="#00ADEE"
-                opacity="0.8"
-              />
-              <path
-                d="M20 12 C20 12 14 22 14 27 C14 31 17 34 20 34 C23 34 26 31 26 27 C26 22 20 12 20 12Z"
-                fill="white"
-                opacity="0.3"
-              />
+            <svg width="36" height="36" viewBox="0 0 40 40" class="animate-pulse">
+              <path d="M20 4 C20 4 8 18 8 26 C8 33 13 38 20 38 C27 38 32 33 32 26 C32 18 20 4 20 4Z" fill="#00ADEE" opacity="0.8" />
+              <path d="M20 12 C20 12 14 22 14 27 C14 31 17 34 20 34 C23 34 26 31 26 27 C26 22 20 12 20 12Z" fill="white" opacity="0.3" />
             </svg>
           </div>
         </div>
-        <h2
-          class="text-2xl font-heading font-bold text-white tracking-widest mb-1"
-        >
-          JALDOOT
-        </h2>
-        <p
-          class="text-jd-sky/60 text-xs font-heading tracking-[0.3em] uppercase"
-        >
-          Water Conditioner
-        </p>
+        <h2 class="text-2xl font-heading font-bold text-white tracking-widest mb-1">JALDOOT</h2>
+        <p class="text-jd-sky/60 text-xs font-heading tracking-[0.3em] uppercase" data-lang="preloader.tagline">Water Conditioner</p>
       </div>
     </div>
 
     <!-- Toast Notification -->
     <div id="toast" class="toast">
       <i class="fas fa-check-circle mr-2"></i>
-      <span id="toast-message">Message sent successfully!</span>
+      <span id="toast-message" data-lang="toast.default">Message sent successfully!</span>
     </div>
 
     <!-- ===== NAVBAR ===== -->
-    <nav
-      id="navbar"
-      class="navbar fixed top-0 left-0 right-0 z-50 transition-all duration-500"
-    >
+    <nav id="navbar" class="navbar fixed top-0 left-0 right-0 z-50 transition-all duration-500">
       <!-- ===== SOCIAL BAR ===== -->
       <div class="topbar">
         <div class="topbar-inner">
           <span class="topbar-tag">
             <i class="fas fa-tint" aria-hidden="true"></i>
-            Crystal Clear Naturally Water &mdash; Jaldoot
-            Ltd.
+            <span data-lang="topbar.tag">Crystal Clear Naturally Water &mdash; Jaldoot Ltd.</span>
           </span>
 
           <div class="topbar-social">
-            <a
-              class="soc-fb"
-              href="https://www.facebook.com/jaldootwatersystems"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Jaldoot on Facebook"
-            >
+            <a class="soc-fb" href="https://www.facebook.com/jaldootwatersystems" target="_blank" rel="noopener noreferrer" aria-label="Jaldoot on Facebook">
               <i class="fab fa-facebook-f" aria-hidden="true"></i>
             </a>
-            <a
-              class="soc-ig"
-              href="https://www.instagram.com/jaldootwatersystems"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Jaldoot on Instagram"
-            >
+            <a class="soc-ig" href="https://www.instagram.com/jaldootwatersystems" target="_blank" rel="noopener noreferrer" aria-label="Jaldoot on Instagram">
               <i class="fab fa-instagram" aria-hidden="true"></i>
             </a>
-            <a
-              class="soc-yt"
-              href="https://www.youtube.com/@jaldootsystemsindia"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Jaldoot on YouTube"
-            >
+            <a class="soc-yt" href="https://www.youtube.com/@jaldootsystemsindia" target="_blank" rel="noopener noreferrer" aria-label="Jaldoot on YouTube">
               <i class="fab fa-youtube" aria-hidden="true"></i>
             </a>
           </div>
@@ -924,351 +655,164 @@
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-14 min-w-0">
-          <!-- Logo -->
-          <a
-            href="index.html"
-            class="nav-brand flex items-center shrink-0 group min-w-0"
-            aria-label="JALDOOT Water Conditioner - home"
-          >
-            <img
-              src="assets/logo.png"
-              alt="JALDOOT Water Conditioner"
-              class="h-9 sm:h-10 max-w-[160px] w-auto object-contain mix-blend-multiply"
-              height="40">
+          <a href="index.html" class="nav-brand flex items-center shrink-0 group min-w-0" aria-label="JALDOOT Water Conditioner - home">
+            <img src="assets/logo.png" alt="JALDOOT Water Conditioner" class="h-9 sm:h-10 max-w-[160px] w-auto object-contain mix-blend-multiply" height="40">
           </a>
 
           <!-- Desktop Nav -->
-          <div class="nav-menu hidden lg:flex items-center gap-1">
-            <a
-              href="index.html"
-              class="nav-link font-heading transition-all duration-300"
-              >Home</a
-            >
-            <a
-              href="about.html"
-              class="nav-link font-heading transition-all duration-300"
-              >About</a
-            >
-            <a
-              href="products.html"
-              class="nav-link font-heading transition-all duration-300"
-              >Products</a
-            >
-            <a
-              href="contact.html"
-              class="nav-link active font-heading transition-all duration-300"
-              >Contact</a
-            >
-            <div class="relative group ml-2">
-              <button
-                class="nav-link font-heading transition-all duration-300 flex items-center gap-1"
-                aria-label="Select language"
-                id="langBtn"
-              >
-                <i class="fas fa-globe text-xs"></i> Language
-                <i class="fas fa-chevron-down ml-1 text-[10px]"></i>
+                  <!-- Desktop Nav -->
+          <div class="hidden lg:flex items-center gap-1.5 bg-jd-sky/5 border border-jd-sky/10 rounded-full p-1.5">
+            <a href="index.html" class="nav-link px-5 py-2 rounded-full font-heading font-semibold text-sm transition-all duration-300" data-lang="nav.home">Home</a>
+            <a href="about.html" class="nav-link px-5 py-2 rounded-full font-heading font-semibold text-sm transition-all duration-300" data-lang="nav.about">About</a>
+            <a href="products.html" class="nav-link px-5 py-2 rounded-full font-heading font-semibold text-sm transition-all duration-300" data-lang="nav.products">Products</a>
+            <a href="contact.html" class="nav-link active px-5 py-2 rounded-full font-heading font-semibold text-sm transition-all duration-300" data-lang="nav.contact">Contact</a>
+            
+            <div class="relative group">
+              <button class="nav-link px-5 py-2 rounded-full font-heading font-semibold text-sm transition-all duration-300 flex items-center gap-1.5" aria-label="Select language" id="langBtn">
+                <i class="fas fa-globe text-sm"></i> <span data-lang="nav.language">Language</span>
+                <i class="fas fa-chevron-down text-[10px] ml-0.5 opacity-70"></i>
               </button>
-              <div
-                id="langMenu"
-                class="absolute right-0 mt-1 w-32 bg-white border border-jd-sky/15 rounded-xl shadow-xl py-2 z-50 opacity-0 invisible pointer-events-none transition-opacity duration-300 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto"
-              >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
-                >
-                  English
-                </a>
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
-                >
-                  हिन्दी
-                </a>
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
-                >
-                  मराठी
-                </a>
+              <div id="langMenu" class="absolute right-0 mt-2 w-36 bg-white border border-jd-sky/15 rounded-2xl shadow-xl py-2 z-50 opacity-0 invisible pointer-events-none transition-all duration-300 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto translate-y-2 group-hover:translate-y-0">
+                <a href="#" data-lang-val="english" class="block px-4 py-2 text-sm font-heading font-medium text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors" data-lang="lang.english">English</a>
+                <a href="#" data-lang-val="hindi" class="block px-4 py-2 text-sm font-heading font-medium text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors" data-lang="lang.hindi">हिन्दी</a>
+                <a href="#" data-lang-val="marathi" class="block px-4 py-2 text-sm font-heading font-medium text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors" data-lang="lang.marathi">मराठी</a>
               </div>
             </div>
           </div>
 
           <!-- Mobile Hamburger -->
-          <button
-            class="lg:hidden hamburger flex flex-col gap-1.5 p-2 relative z-[60]"
-            id="hamburger"
-            aria-label="Toggle menu"
-            aria-expanded="false"
-            aria-controls="mobileMenu"
-          >
-            <span
-              class="hamburger-line block w-6 h-0.5 bg-jd-deep rounded transition-all duration-300"
-            ></span>
-            <span
-              class="hamburger-line block w-6 h-0.5 bg-jd-deep rounded transition-all duration-300"
-            ></span>
-            <span
-              class="hamburger-line block w-4 h-0.5 bg-jd-deep rounded transition-all duration-300"
-            ></span>
+          <button class="lg:hidden hamburger flex flex-col gap-1.5 p-2 relative z-[60]" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
+            <span class="hamburger-line block w-6 h-0.5 bg-jd-deep rounded transition-all duration-300"></span>
+            <span class="hamburger-line block w-6 h-0.5 bg-jd-deep rounded transition-all duration-300"></span>
+            <span class="hamburger-line block w-4 h-0.5 bg-jd-deep rounded transition-all duration-300"></span>
           </button>
         </div>
       </div>
-
     </nav>
 
     <!-- Mobile Menu -->
     <div id="mobileMenuBackdrop" class="mobile-menu-backdrop" aria-hidden="true"></div>
 
-    <div
-      class="mobile-menu fixed inset-y-0 right-0 w-80 max-w-[85vw] shadow-2xl lg:hidden overflow-x-hidden"
-      id="mobileMenu"
-    >
-        <button
-          type="button"
-          class="mobile-menu-close absolute top-5 right-5"
-          id="mobileMenuClose"
-          aria-label="Close menu"
-        >
-          <i class="fas fa-times"></i>
-        </button>
+    <div class="mobile-menu fixed inset-y-0 right-0 w-80 max-w-[85vw] shadow-2xl lg:hidden overflow-x-hidden" id="mobileMenu">
+      <button type="button" class="mobile-menu-close absolute top-5 right-5" id="mobileMenuClose" aria-label="Close menu">
+        <i class="fas fa-times"></i>
+      </button>
       <div class="p-6 pt-24 flex flex-col gap-2 min-w-0">
-        <a
-          href="index.html"
-          class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
-        >
-          <i class="fas fa-home w-5"></i> Home
+        <a href="index.html" class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all">
+          <i class="fas fa-home w-5"></i> <span data-lang="nav.home">Home</span>
         </a>
-        <a
-          href="about.html"
-          class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
-        >
-          <i class="fas fa-building w-5"></i> About
+        <a href="about.html" class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all">
+          <i class="fas fa-building w-5"></i> <span data-lang="nav.about">About</span>
         </a>
-        <a
-          href="products.html"
-          class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
-        >
-          <i class="fas fa-box-open w-5"></i> Products
+        <a href="products.html" class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all">
+          <i class="fas fa-box-open w-5"></i> <span data-lang="nav.products">Products</span>
         </a>
-        <a
-          href="contact.html"
-          class="mobile-nav-link active flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
-        >
-          <i class="fas fa-envelope w-5"></i> Contact
+        <a href="contact.html" class="mobile-nav-link active flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all">
+          <i class="fas fa-envelope w-5"></i> <span data-lang="nav.contact">Contact</span>
         </a>
         <div class="relative group">
-          <button
-            class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all"
-            aria-label="Select language"
-            id="langBtn"
-          >
-            <i class="fas fa-globe w-5"></i> Language
+          <button class="mobile-nav-link flex items-center gap-3 font-heading font-semibold py-3 px-4 rounded-xl transition-all" aria-label="Select language">
+            <i class="fas fa-globe w-5"></i> <span data-lang="nav.language">Language</span>
             <i class="fas fa-chevron-down ml-auto text-[10px]"></i>
           </button>
-          <div
-            id="langMenu"
-            class="mt-1 w-full bg-white border border-jd-sky/15 rounded-xl shadow-xl py-2 z-50 opacity-0 invisible pointer-events-none transition-opacity duration-300 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto"
-          >
-            <a
-              href="#"
-              class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
-            >
-              English
-            </a>
-            <a
-              href="#"
-              class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
-            >
-              हिन्दी
-            </a>
-            <a
-              href="#"
-              class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors"
-            >
-              मराठी
-            </a>
+          <div class="mt-1 w-full bg-white border border-jd-sky/15 rounded-xl shadow-xl py-2 z-50 opacity-0 invisible pointer-events-none transition-opacity duration-300 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto">
+            <a href="#" data-lang-val="english" class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors" data-lang="lang.english">English</a>
+            <a href="#" data-lang-val="hindi" class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors" data-lang="lang.hindi">हिन्दी</a>
+            <a href="#" data-lang-val="marathi" class="block px-4 py-2 text-sm font-heading text-jd-gray hover:bg-jd-sky/5 hover:text-jd-blue transition-colors" data-lang="lang.marathi">मराठी</a>
           </div>
         </div>
         <hr class="my-3 border-gray-200" />
         <div class="mt-6 p-4 bg-gray-50 rounded-xl">
           <p class="font-heading font-semibold text-jd-deep text-sm mb-2">
-            <i class="fas fa-phone-alt text-jd-sky mr-2"></i>Call Us
+            <i class="fas fa-phone-alt text-jd-sky mr-2"></i><span data-lang="mobile.callUs">Call Us</span>
           </p>
-          <a href="tel:9822209656" class="text-jd-blue font-semibold"
-            >98222 09656</a
-          >
-          <p class="text-jd-gray text-xs mt-1">Mon&ndash;Sat, 9 AM &ndash; 7 PM</p>
+          <a href="tel:9822209656" class="text-jd-blue font-semibold">98222 09656</a>
+          <p class="text-jd-gray text-xs mt-1" data-lang="mobile.hours">Mon&ndash;Sat, 9 AM &ndash; 7 PM</p>
         </div>
       </div>
     </div>
 
     <!-- ===== PAGE HERO ===== -->
-    <section
-      id="top"
-      class="contact-hero relative flex items-center overflow-hidden bg-gradient-to-br from-jd-dark via-jd-deep to-jd-blue"
-    >
-      <!-- Contact photo: a dimmed plate behind the brand gradient so the centred
-           copy keeps its contrast. It is a background-image rather than an
-           <img>, so a missing file degrades to the plain gradient instead of
-           showing a broken-image icon. -->
+    <section id="top" class="contact-hero relative flex items-center overflow-hidden bg-gradient-to-br from-jd-dark via-jd-deep to-jd-blue">
       <div class="contact-hero-photo" aria-hidden="true"></div>
-      <div
-        class="contact-hero-scrim absolute inset-0 z-[1]"
-        aria-hidden="true"
-      ></div>
+      <div class="contact-hero-scrim absolute inset-0 z-[1]" aria-hidden="true"></div>
 
-      <!-- Particles -->
-      <div
-        id="heroParticles"
-        class="absolute inset-0 pointer-events-none overflow-hidden z-[1]"
-      ></div>
+      <div id="heroParticles" class="absolute inset-0 pointer-events-none overflow-hidden z-[1]"></div>
 
-      <!-- Background Pattern -->
       <div class="absolute inset-0 z-[1] opacity-[0.03]">
-        <div
-          class="absolute inset-0"
-          style="
-            background-image:
-              radial-gradient(circle at 25% 25%, white 1px, transparent 1px),
-              radial-gradient(circle at 75% 75%, white 1px, transparent 1px);
-            background-size: 50px 50px;
-          "
-        ></div>
+        <div class="absolute inset-0" style="background-image: radial-gradient(circle at 25% 25%, white 1px, transparent 1px), radial-gradient(circle at 75% 75%, white 1px, transparent 1px); background-size: 50px 50px;"></div>
       </div>
 
-      <!-- Decorative Blobs: skipped on this page. The photo already carries
-           the depth, and a blurred sky/green blob on top of a photograph just
-           reads as haze. -->
-
-      <!-- Content: text-only hero, same rhythm as about.html and products.html.
-           No data-animate here on purpose: hero copy must never depend on a
-           scroll-reveal to become visible. -->
-      <div
-        class="contact-hero-copy relative z-20 w-full max-w-3xl mx-auto px-4 sm:px-6 text-center"
-      >
+      <div class="contact-hero-copy relative z-20 w-full max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <nav class="hero-breadcrumb mb-6 sm:mb-7" aria-label="Breadcrumb">
           <a href="index.html" class="font-heading">
-            <i class="fas fa-home mr-1"></i> Home
+            <i class="fas fa-home mr-1"></i> <span data-lang="breadcrumb.home">Home</span>
           </a>
           <i class="fas fa-chevron-right hero-crumb-sep"></i>
-          <span class="hero-crumb-current font-heading">Contact</span>
+          <span class="hero-crumb-current font-heading" data-lang="breadcrumb.contact">Contact</span>
         </nav>
 
-        <h1
-          class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-4 leading-tight"
-        >
-          Let Us <span class="gradient-text-white">Solve Your Water</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-4 leading-tight">
+          <span data-lang="hero.titlePart1">Let Us </span><span class="gradient-text-white" data-lang="hero.titlePart2">Solve Your Water</span>
         </h1>
 
-        <p
-          class="text-white/85 text-base lg:text-lg max-w-3xl mx-auto leading-relaxed font-body mb-7"
-        >
-          Tell us about your line Tell us about your line &mdash; pipe material, diameter and flowmdash; pipe material, diameter and flow
-          &mdash; and we will suggest the right Jaldoot unit for your water.
-          <span class="text-white font-semibold font-heading"
-            >We reply within 2&ndash;4 hours.</span
-          >
+        <p class="text-white/85 text-base lg:text-lg max-w-3xl mx-auto leading-relaxed font-body mb-7">
+          <span data-lang="hero.sub">Tell us about your line &mdash; pipe material, diameter and flow &mdash; and we will suggest the right Jaldoot unit for your water.</span>
+          <span class="text-white font-semibold font-heading" data-lang="hero.replyTime">We reply within 2&ndash;4 hours.</span>
         </p>
 
         <div class="flex flex-col sm:flex-row gap-3 justify-center">
-          <a
-            href="#contact-form"
-            class="group inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-jd-deep rounded-full font-heading font-semibold shadow-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
-          >
+          <a href="#contact-form" class="group inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-jd-deep rounded-full font-heading font-semibold shadow-xl hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
             <i class="fas fa-paper-plane"></i>
-            Send a message
-            <i
-              class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"
-            ></i>
+            <span data-lang="hero.btnSend">Send a message</span>
+            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
           </a>
-          <a
-            href="tel:9822209656"
-            class="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-white/40 text-white rounded-full font-heading font-semibold hover:bg-white hover:text-jd-deep transition-all duration-300"
-          >
+          <a href="tel:9822209656" class="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-white/40 text-white rounded-full font-heading font-semibold hover:bg-white hover:text-jd-deep transition-all duration-300">
             <i class="fas fa-phone-alt"></i>
             98222 09656
           </a>
         </div>
       </div>
 
-      <!-- Wave Bottom -->
       <div class="absolute bottom-0 left-0 right-0 z-10 wave-divider">
-        <svg
-          viewBox="0 0 1440 100"
-          fill="none"
-          preserveAspectRatio="none"
-          class="w-full h-16 sm:h-20 lg:h-24"
-        >
-          <path
-            d="M0,50 C360,100 720,0 1080,50 C1260,75 1380,60 1440,50 L1440,100 L0,100 Z"
-            fill="white"
-            opacity="0.1"
-          />
-          <path
-            d="M0,60 C300,20 600,90 900,40 C1200,0 1350,70 1440,60 L1440,100 L0,100 Z"
-            fill="white"
-            opacity="0.15"
-          />
-          <path
-            d="M0,75 C360,100 720,60 1080,80 C1260,90 1380,70 1440,75 L1440,100 L0,100 Z"
-            fill="gray-50"
-          />
+        <svg viewBox="0 0 1440 100" fill="none" preserveAspectRatio="none" class="w-full h-16 sm:h-20 lg:h-24">
+          <path d="M0,50 C360,100 720,0 1080,50 C1260,75 1380,60 1440,50 L1440,100 L0,100 Z" fill="white" opacity="0.1" />
+          <path d="M0,60 C300,20 600,90 900,40 C1200,0 1350,70 1440,60 L1440,100 L0,100 Z" fill="white" opacity="0.15" />
+          <path d="M0,75 C360,100 720,60 1080,80 C1260,90 1380,70 1440,75 L1440,100 L0,100 Z" fill="gray-50" />
         </svg>
       </div>
     </section>
-
-    <!-- ===== CONTACT INFO CARDS ===== -->
+     <!-- ===== CONTACT INFO CARDS ===== -->
     <section id="contact-info" class="py-20 lg:py-28 bg-gray-50 relative overflow-hidden">
-      <div
-        class="absolute -top-24 -left-24 w-96 h-96 bg-jd-sky/10 rounded-full blur-3xl"
-      ></div>
-      <div
-        class="absolute -bottom-24 -right-24 w-80 h-80 bg-jd-green/10 rounded-full blur-3xl"
-      ></div>
+      <div class="absolute -top-24 -left-24 w-96 h-96 bg-jd-sky/10 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-24 -right-24 w-80 h-80 bg-jd-green/10 rounded-full blur-3xl"></div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div
-          class="text-center max-w-3xl mx-auto mb-10 sm:mb-16"
-          data-animate="fade-up"
-        >
-          <span
-            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold mb-5"
-            ><i class="fas fa-headset"></i> Get in touch</span
-          >
-          <h2
-            class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep leading-tight"
-          >
-            One <span class="gradient-text-blue">Simple Conversation</span> Away
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16" data-animate="fade-up">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold mb-5">
+            <i class="fas fa-headset"></i> <span data-lang="info.eyebrow">Get in touch</span>
+          </span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep leading-tight">
+            <span data-lang="info.titlePart1">One </span><span class="gradient-text-blue" data-lang="info.titlePart2">Simple Conversation</span> <span data-lang="info.titlePart3">Away</span>
           </h2>
-          <p class="text-jd-gray mt-3 sm:mt-4 text-sm sm:text-base px-2">
-            Visit our office in Hadapsar, Pune, call us, or drop a message &mdash;
-            whichever is easiest for you.
+          <p class="text-jd-gray mt-3 sm:mt-4 text-sm sm:text-base px-2" data-lang="info.subtitle">
+            Visit our office in Hadapsar, Pune, call us, or drop a message &mdash; whichever is easiest for you.
           </p>
         </div>
 
-        <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-start"
-        >
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-start">
           <div class="contact-card card-hover shine-effect relative text-left" data-animate="fade-up" data-delay="0">
             <div class="contact-icon icon-float bg-jd-sky/10">
               <i class="fas fa-map-marker-alt text-2xl text-jd-sky"></i>
             </div>
-            <h3 class="font-heading font-bold text-lg text-jd-deep mb-2">
-              Visit Us
-            </h3>
-            <address class="not-italic text-jd-gray text-sm leading-relaxed">
+            <h3 class="font-heading font-bold text-lg text-jd-deep mb-2" data-lang="info.cardVisit.title">Visit Us</h3>
+            <address class="not-italic text-jd-gray text-sm leading-relaxed" data-lang="info.cardVisit.address">
               Plot No. 83, Near Maruthi Meter,<br />
               Ramtekadi Industrial Estate,<br />
               Hadapsar, Pune &ndash; 411028,<br />
               Maharashtra, India
             </address>
-            <a
-              class="contact-card-foot"
-              href="https://www.google.com/maps/search/?api=1&amp;query=Plot+No+83+Near+Maruthi+Meter+Ramtekadi+Industrial+Estate+Hadapsar+Pune+411028"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fas fa-directions text-xs"></i> Get directions
+            <a class="contact-card-foot" href="https://www.google.com/maps/search/?api=1&amp;query=Plot+No+83+Near+Maruthi+Meter+Ramtekadi+Industrial+Estate+Hadapsar+Pune+411028" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-directions text-xs"></i> <span data-lang="info.cardVisit.directions">Get directions</span>
             </a>
           </div>
 
@@ -1276,24 +820,14 @@
             <div class="contact-icon icon-float bg-jd-blue/10">
               <i class="fas fa-phone-alt text-2xl text-jd-blue"></i>
             </div>
-            <h3 class="font-heading font-bold text-lg text-jd-deep mb-2">
-              Call Us
-            </h3>
+            <h3 class="font-heading font-bold text-lg text-jd-deep mb-2" data-lang="info.cardCall.title">Call Us</h3>
             <div class="text-jd-gray text-sm leading-relaxed">
-              <a
-                href="tel:9822209656"
-                class="block font-semibold text-jd-deep hover:text-jd-sky transition-colors"
-                >98222 09656</a
-              >
-              <a
-                href="tel:9404039656"
-                class="block font-semibold text-jd-deep hover:text-jd-sky transition-colors"
-                >94040 39656</a
-              >
+              <a href="tel:9822209656" class="block font-semibold text-jd-deep hover:text-jd-sky transition-colors">98222 09656</a>
+              <a href="tel:9404039656" class="block font-semibold text-jd-deep hover:text-jd-sky transition-colors">94040 39656</a>
             </div>
             <p class="contact-card-foot">
               <i class="far fa-clock"></i>
-              <span>Mon &ndash; Sat, 9:30 AM to 6:30 PM</span>
+              <span data-lang="info.cardCall.time">Mon &ndash; Sat, 9:30 AM to 6:30 PM</span>
             </p>
           </div>
 
@@ -1301,20 +835,9 @@
             <div class="contact-icon icon-float bg-jd-green/10">
               <i class="fas fa-envelope text-2xl text-jd-green"></i>
             </div>
-            <h3 class="font-heading font-bold text-lg text-jd-deep mb-2">
-              Email Us
-            </h3>
-            <a
-              href="mailto:watercare.jaldoot@gmail.com"
-              class="text-[0.8125rem] font-semibold text-jd-deep hover:text-jd-sky transition-colors break-words"
-              >watercare.jaldoot@gmail.com</a
-            >
-            <a
-              class="contact-card-foot"
-              href="http://www.jaldootcorporation.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <h3 class="font-heading font-bold text-lg text-jd-deep mb-2" data-lang="info.cardEmail.title">Email Us</h3>
+            <a href="mailto:watercare.jaldoot@gmail.com" class="text-[0.8125rem] font-semibold text-jd-deep hover:text-jd-sky transition-colors break-words">watercare.jaldoot@gmail.com</a>
+            <a class="contact-card-foot" href="http://www.jaldootcorporation.com" target="_blank" rel="noopener noreferrer">
               <i class="fas fa-globe text-xs"></i> www.jaldootcorporation.com
             </a>
           </div>
@@ -1323,18 +846,10 @@
             <div class="contact-icon icon-float bg-green-500/10">
               <i class="fab fa-whatsapp text-2xl text-green-500"></i>
             </div>
-            <h3 class="font-heading font-bold text-lg text-jd-deep mb-2">
-              WhatsApp
-            </h3>
-            <a
-              href="https://wa.me/919822209656"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-sm font-semibold text-jd-deep hover:text-jd-sky transition-colors"
-              >Chat with our team</a
-            >
+            <h3 class="font-heading font-bold text-lg text-jd-deep mb-2" data-lang="info.cardWa.title">WhatsApp</h3>
+            <a href="https://wa.me/919822209656" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-jd-deep hover:text-jd-sky transition-colors" data-lang="info.cardWa.text">Chat with our team</a>
             <span class="contact-card-foot">
-              <i class="fas fa-bolt text-xs"></i> Fastest way to reach us
+              <i class="fas fa-bolt text-xs"></i> <span data-lang="info.cardWa.sub">Fastest way to reach us</span>
             </span>
           </div>
         </div>
@@ -1346,212 +861,99 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-[1.35fr_1fr] gap-8 lg:gap-10 items-start">
           <!-- Form -->
-          <div
-            class="card-hover relative bg-white rounded-3xl p-5 sm:p-8 lg:p-10 border border-jd-sky/10 shadow-xl overflow-hidden order-2 lg:order-1"
-            data-animate="fade-right"
-          >
-            <span
-              class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold mb-5"
-              ><i class="fas fa-paper-plane"></i> <span data-lang="contactEyebrow">Send a message</span>
-            >
-            <h2
-              class="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-jd-deep mb-3"
-            >
+          <div class="card-hover relative bg-white rounded-3xl p-5 sm:p-8 lg:p-10 border border-jd-sky/10 shadow-xl overflow-hidden order-2 lg:order-1" data-animate="fade-right">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold mb-5">
+              <i class="fas fa-paper-plane"></i> <span data-lang="form.eyebrow">Send a message</span>
+            </span>
+            <h2 class="text-xl sm:text-2xl lg:text-3xl font-heading font-bold text-jd-deep mb-3" data-lang="form.title">
               Request a Recommendation
             </h2>
-            <p class="text-jd-gray mb-6 sm:mb-8 text-sm sm:text-base">
-              Share a few details and we will suggest the right Jaldoot model
-              and sizing for your application.
+            <p class="text-jd-gray mb-6 sm:mb-8 text-sm sm:text-base" data-lang="form.subtitle">
+              Share a few details and we will suggest the right Jaldoot model and sizing for your application.
             </p>
 
             <form id="contactForm" novalidate>
               <div class="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
-                  <label class="form-label" for="name" data-lang="contactFormLabel">Full Name *</label>
-                  <input
-                    class="form-input"
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Your name" data-lang="contactFormNamePlaceholder"
-                    required
-                    autocomplete="name"
-                  />
-                  <p class="form-error-msg" id="name-error">
-                    Please enter your full name
-                  </p>
+                  <label class="form-label" for="name" data-lang="form.labelName">Full Name *</label>
+                  <input class="form-input" type="text" id="name" name="name" placeholder="Your name" data-lang="form.phName" required autocomplete="name" />
+                  <p class="form-error-msg" id="name-error" data-lang="form.errName">Please enter your full name</p>
                 </div>
                 <div>
-                  <label class="form-label" for="email">Email Address *</label>
-                  <input
-                    class="form-input"
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="you@example.com" data-lang="contactFormEmailPlaceholder"
-                    required
-                    autocomplete="email"
-                  />
-                  <p class="form-error-msg" id="email-error">
-                    Please enter a valid email address
-                  </p>
+                  <label class="form-label" for="email" data-lang="form.labelEmail">Email Address *</label>
+                  <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" data-lang="form.phEmail" required autocomplete="email" />
+                  <p class="form-error-msg" id="email-error" data-lang="form.errEmail">Please enter a valid email address</p>
                 </div>
                 <div>
-                  <label class="form-label" for="phone">Phone Number</label>
-                  <input
-                    class="form-input"
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="+91 00000 00000" data-lang="contactFormPhonePlaceholder"
-                    autocomplete="tel"
-                  />
-                  <p class="form-error-msg" id="phone-error">
-                    Please enter a valid phone number
-                  </p>
+                  <label class="form-label" for="phone" data-lang="form.labelPhone">Phone Number</label>
+                  <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 00000 00000" data-lang="form.phPhone" autocomplete="tel" />
+                  <p class="form-error-msg" id="phone-error" data-lang="form.errPhone">Please enter a valid phone number</p>
                 </div>
                 <div>
-                  <label class="form-label" for="interest" data-lang="contactFormInterestLabel" data-lang="contactFormInterestLabel"
-                    >I am interested in *</label
-                  >
-                  <select
-                    class="form-input"
-                    id="interest"
-                    name="interest"
-                    required
-                  >
-                    <option value="" data-lang="contactFormInterestPlaceholder">Select an option</option>
-                    <option value="domestic" data-lang="contactFormInterestDomestic">Domestic water conditioner</option>
-                    <option value="agriculture">
-                      Agriculture &amp; irrigation
-                    </option>
-                    <option value="poultry" data-lang="contactFormInterestPoultry">Poultry <option value="poultry" data-lang="contactFormInterestPoultry">Poultry <option value="poultry">Poultry &amp; dairy</option>amp; dairy</option>amp; dairy</option>
-                    <option value="pools">Swimming pools &amp; golf</option>
-                    <option value="commercial">
-                      Commercial &amp; industrial
-                    </option>
-                    <option value="ro-plant">JVC for RO plants</option>
-                    <option value="solar">
-                      Solar insect products / BuzzZap
-                    </option>
-                    <option value="other" data-lang="contactFormInterestOther">Something else</option>
+                  <label class="form-label" for="interest" data-lang="form.labelInterest">I am interested in *</label>
+                  <select class="form-input" id="interest" name="interest" required>
+                    <option value="" data-lang="form.optSelect">Select an option</option>
+                    <option value="domestic" data-lang="form.optDomestic">Domestic water conditioner</option>
+                    <option value="agriculture" data-lang="form.optAgri">Agriculture &amp; irrigation</option>
+                    <option value="poultry" data-lang="form.optPoultry">Poultry &amp; dairy</option>
+                    <option value="pools" data-lang="form.optPools">Swimming pools &amp; golf</option>
+                    <option value="commercial" data-lang="form.optCom">Commercial &amp; industrial</option>
+                    <option value="ro-plant" data-lang="form.optRo">JVC for RO plants</option>
+                    <option value="solar" data-lang="form.optSolar">Solar insect products / BuzzZap</option>
+                    <option value="other" data-lang="form.optOther">Something else</option>
                   </select>
-                  <p class="form-error-msg" id="interest-error">
-                    Please select an option
-                  </p>
+                  <p class="form-error-msg" id="interest-error" data-lang="form.errInterest">Please select an option</p>
                 </div>
               </div>
 
               <div class="mt-4 sm:mt-6">
-                <label class="form-label" for="message" data-lang="contactFormMessageLabel">Your Message *</label>
-                <textarea
-                  class="form-input"
-                  id="message"
-                  name="message"
-                  rows="5"
-                  placeholder="Tell us about your line - pipe material, diameter, flow rate and the problem you face." data-lang="contactFormMessagePlaceholder"
-                  required
-                ></textarea>
-                <p class="form-error-msg" id="message-error">
-                  Please enter your message (at least 10 characters)
-                </p>
+                <label class="form-label" for="message" data-lang="form.labelMessage">Your Message *</label>
+                <textarea class="form-input" id="message" name="message" rows="5" placeholder="Tell us about your line - pipe material, diameter, flow rate and the problem you face." data-lang="form.phMessage" required></textarea>
+                <p class="form-error-msg" id="message-error" data-lang="form.errMessage">Please enter your message (at least 10 characters)</p>
               </div>
 
-              <button
-                type="submit"
-                id="submit-btn"
-                class="btn-primary btn-ripple w-full sm:w-auto mt-6 sm:mt-8 justify-center"
-              >
-                <span id="submit-text">Send on WhatsApp</span>
-                <svg
-                  id="submit-arrow"
-                  class="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
+              <button type="submit" id="submit-btn" class="btn-primary btn-ripple w-full sm:w-auto mt-6 sm:mt-8 justify-center">
+                <span id="submit-text" data-lang="form.btnSubmit">Send on WhatsApp</span>
+                <svg id="submit-arrow" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-                <svg
-                  id="submit-spinner"
-                  class="w-5 h-5 animate-spin hidden"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <circle
-                    class="opacity-25"
-                    cx="12"
-                    cy="12"
-                    r="10"
-                    stroke="currentColor"
-                    stroke-width="4"
-                  ></circle>
-                  <path
-                    class="opacity-75"
-                    fill="currentColor"
-                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                  ></path>
+                <svg id="submit-spinner" class="w-5 h-5 animate-spin hidden" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
               </button>
 
-              <p class="text-xs text-jd-gray/70 mt-4 sm:mt-6">
+              <p class="text-xs text-jd-gray/70 mt-4 sm:mt-6" data-lang="form.disclaimer">
                 <i class="fab fa-whatsapp mr-1 text-green-500"></i>
                 Sending opens WhatsApp with your details filled in for
-                <a
-                  href="tel:9822209656"
-                  class="font-semibold text-jd-blue hover:text-jd-sky"
-                  >98222 09656</a
-                >
+                <a href="tel:9822209656" class="font-semibold text-jd-blue hover:text-jd-sky">98222 09656</a>
                 &mdash; press send there to deliver it.
               </p>
             </form>
           </div>
 
           <!-- Sidebar -->
-          <div
-            class="space-y-5 sm:space-y-6 order-1 lg:order-2"
-            data-animate="fade-left"
-          >
+          <div class="space-y-5 sm:space-y-6 order-1 lg:order-2" data-animate="fade-left">
             <!-- Quick Action Card -->
-            <div
-              class="card-hover relative rounded-2xl p-6 sm:p-8 text-white bg-gradient-to-br from-jd-green to-jd-deep overflow-hidden"
-            >
-              <div
-                class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full"
-              ></div>
+            <div class="card-hover relative rounded-2xl p-6 sm:p-8 text-white bg-gradient-to-br from-jd-green to-jd-deep overflow-hidden">
+              <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full"></div>
               <div class="relative z-10">
-                <div
-                  class="icon-float w-12 h-12 sm:w-14 sm:h-14 bg-white/15 rounded-xl flex items-center justify-center mb-4 sm:mb-5"
-                >
-                <i class="fas fa-bolt text-xl sm:text-2xl"></i>
-              </div>
-              <h3 class="font-heading font-bold text-lg sm:text-xl mb-3">
-                Prefer instant answers?
-              </h3>
-              <p class="text-white/80 text-sm leading-relaxed mb-5 sm:mb-6">
-                Our team can help you pick the model, understand the
-                installation and answer questions about payback.
-              </p>
-              <div class="flex flex-col sm:flex-row gap-3">
-                <a
-                  href="https://wa.me/919822209656?text=Hello%2C%20I%20am%20interested%20in%20Jaldoot%20Water%20Conditioner."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-jd-deep rounded-full text-sm font-heading font-semibold hover:bg-jd-sky hover:text-white transition-all duration-300"
-                >
-                  <i class="fab fa-whatsapp"></i>WhatsApp
-                </a>
-                <a
-                  href="tel:9822209656"
-                  class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 border-2 border-white/50 text-white rounded-full text-sm font-heading font-semibold hover:bg-white hover:text-jd-deep transition-all duration-300"
-                >
-                  <i class="fas fa-phone-alt"></i>Call Now
-                </a>
+                <div class="icon-float w-12 h-12 sm:w-14 sm:h-14 bg-white/15 rounded-xl flex items-center justify-center mb-4 sm:mb-5">
+                  <i class="fas fa-bolt text-xl sm:text-2xl"></i>
+                </div>
+                <h3 class="font-heading font-bold text-lg sm:text-xl mb-3" data-lang="sidebar.instant.title">
+                  Prefer instant answers?
+                </h3>
+                <p class="text-white/80 text-sm leading-relaxed mb-5 sm:mb-6" data-lang="sidebar.instant.desc">
+                  Our team can help you pick the model, understand the installation and answer questions about payback.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <a href="https://wa.me/919822209656?text=Hello%2C%20I%20am%20interested%20in%20Jaldoot%20Water%20Conditioner." target="_blank" rel="noopener noreferrer" class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-jd-deep rounded-full text-sm font-heading font-semibold hover:bg-jd-sky hover:text-white transition-all duration-300">
+                    <i class="fab fa-whatsapp"></i><span data-lang="sidebar.instant.btnWa">WhatsApp</span>
+                  </a>
+                  <a href="tel:9822209656" class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 border-2 border-white/50 text-white rounded-full text-sm font-heading font-semibold hover:bg-white hover:text-jd-deep transition-all duration-300">
+                    <i class="fas fa-phone-alt"></i><span data-lang="sidebar.instant.btnCall">Call Now</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -1559,73 +961,41 @@
             <!-- Office Location Card -->
             <div id="visit" class="contact-card card-hover shine-effect relative !text-left scroll-mt-36">
               <h3 class="font-heading font-bold text-lg text-jd-deep mb-5">
-                <i class="fas fa-location-dot text-jd-sky mr-2"></i>Find our
-                office
+                <i class="fas fa-location-dot text-jd-sky mr-2"></i><span data-lang="sidebar.location.title">Find our office</span>
               </h3>
-              <div
-                class="img-placeholder flex-col !min-h-[200px] sm:!min-h-[240px] relative overflow-hidden"
-              >
-                <svg
-                  class="absolute inset-0 w-full h-full opacity-30"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="0.5"
-                  viewBox="0 0 400 240"
-                  preserveAspectRatio="none"
-                  aria-hidden="true"
-                >
+              <div class="img-placeholder flex-col !min-h-[200px] sm:!min-h-[240px] relative overflow-hidden">
+                <svg class="absolute inset-0 w-full h-full opacity-30" fill="none" stroke="currentColor" stroke-width="0.5" viewBox="0 0 400 240" preserveAspectRatio="none" aria-hidden="true">
                   <path d="M0 60 H400 M0 120 H400 M0 180 H400" />
                   <path d="M80 0 V240 M160 0 V240 M240 0 V240 M320 0 V240" />
                 </svg>
                 <div class="relative text-center px-6">
-                  <i
-                    class="fas fa-map-marker-alt text-3xl sm:text-4xl text-jd-blue mb-3 block"
-                  ></i>
-                  <p
-                    class="font-heading font-semibold text-jd-deep text-sm sm:text-base"
-                  >
+                  <i class="fas fa-map-marker-alt text-3xl sm:text-4xl text-jd-blue mb-3 block"></i>
+                  <p class="font-heading font-semibold text-jd-deep text-sm sm:text-base" data-lang="sidebar.location.subtitle">
                     Ramtekadi Industrial Estate
                   </p>
-                  <p class="text-xs sm:text-sm text-jd-gray mt-1">
+                  <p class="text-xs sm:text-sm text-jd-gray mt-1" data-lang="sidebar.location.city">
                     Hadapsar, Pune - 411028
                   </p>
-                  <a
-                    href="https://maps.google.com/?q=Plot+No+83+Ramtekadi+Industrial+Estate+Hadapsar+Pune+411028"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center gap-1.5 mt-3 text-xs font-semibold text-jd-blue hover:text-jd-sky transition-colors"
-                  >
-                    <i class="fas fa-directions"></i>Get Directions
+                  <a href="https://maps.google.com/?q=Plot+No+83+Ramtekadi+Industrial+Estate+Hadapsar+Pune+411028" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 mt-3 text-xs font-semibold text-jd-blue hover:text-jd-sky transition-colors">
+                    <i class="fas fa-directions"></i><span data-lang="sidebar.location.btn">Get Directions</span>
                   </a>
                 </div>
               </div>
               <ul class="mt-5 sm:mt-6 space-y-3 text-sm">
                 <li class="flex items-start gap-3">
                   <i class="fas fa-store text-jd-sky mt-0.5 flex-shrink-0"></i>
-                  <span class="text-jd-gray"
-                    >Showroom &amp; product demonstration available on
-                    request.</span
-                  >
+                  <span class="text-jd-gray" data-lang="sidebar.location.list1">Showroom &amp; product demonstration available on request.</span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <i
-                    class="fas fa-industry text-jd-sky mt-0.5 flex-shrink-0"
-                  ></i>
-                  <span class="text-jd-gray"
-                    >A product of Jaldoot &mdash; ISO
-                    9001:2008 certified.</span
-                  >
+                  <i class="fas fa-industry text-jd-sky mt-0.5 flex-shrink-0"></i>
+                  <span class="text-jd-gray" data-lang="sidebar.location.list2">A product of Jaldoot &mdash; ISO 9001:2008 certified.</span>
                 </li>
                 <li class="flex items-start gap-3">
                   <i class="fas fa-tools text-jd-sky mt-0.5 flex-shrink-0"></i>
-                  <span class="text-jd-gray"
-                    >Installation guidance and after-sales support across
-                    Maharashtra.</span
-                  >
+                  <span class="text-jd-gray" data-lang="sidebar.location.list3">Installation guidance and after-sales support across Maharashtra.</span>
                 </li>
               </ul>
             </div>
-
           </div>
         </div>
       </div>
@@ -1633,141 +1003,62 @@
 
     <!-- ===== FAQ SECTION ===== -->
     <section id="faq" class="py-20 lg:py-28 bg-gray-50 relative overflow-hidden scroll-mt-36">
-      <div
-        class="absolute top-0 right-0 w-96 h-96 bg-jd-sky/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"
-      ></div>
+      <div class="absolute top-0 right-0 w-96 h-96 bg-jd-sky/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center mb-10 sm:mb-14" data-animate="fade-up">
-          <span
-            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold mb-5"
-            ><i class="fas fa-circle-question"></i> Common questions</span
-          >
-          <h2
-            class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep leading-tight"
-          >
-            Frequently Asked <span class="gradient-text-blue">Questions</span>
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold mb-5">
+            <i class="fas fa-circle-question"></i> <span data-lang="faq.eyebrow">Common questions</span>
+          </span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep leading-tight">
+            <span data-lang="faq.titlePart1">Frequently Asked </span><span class="gradient-text-blue" data-lang="faq.titlePart2">Questions</span>
           </h2>
         </div>
 
-        <div
-          class="space-y-3 sm:space-y-4"
-          data-animate="fade-up"
-          data-delay="100"
-        >
-          <!-- FAQ 1 -->
-          <div
-            class="faq-item card-hover relative bg-white rounded-2xl border border-jd-sky/10 overflow-hidden transition-all duration-300 hover:shadow-md"
-          >
-            <button
-              class="faq-toggle w-full flex items-center justify-between p-4 sm:p-5 text-left"
-              aria-expanded="false"
-            >
-              <span
-                class="font-heading font-semibold text-jd-deep text-sm sm:text-base pr-4"
-                >How quickly can I get a response after contacting?</span
-              >
-              <i
-                class="fas fa-chevron-down chevron text-jd-sky transition-transform duration-300 flex-shrink-0"
-              ></i>
+        <div class="space-y-3 sm:space-y-4" data-animate="fade-up" data-delay="100">
+          <div class="faq-item card-hover relative bg-white rounded-2xl border border-jd-sky/10 overflow-hidden transition-all duration-300 hover:shadow-md">
+            <button class="faq-toggle w-full flex items-center justify-between p-4 sm:p-5 text-left" aria-expanded="false">
+              <span class="font-heading font-semibold text-jd-deep text-sm sm:text-base pr-4" data-lang="faq.q1">How quickly can I get a response after contacting?</span>
+              <i class="fas fa-chevron-down chevron text-jd-sky transition-transform duration-300 flex-shrink-0"></i>
             </button>
-            <div
-              class="faq-content max-h-0 overflow-hidden transition-all duration-400 ease-in-out"
-            >
-              <p
-                class="px-4 sm:px-5 pb-4 sm:pb-5 text-jd-gray text-sm leading-relaxed"
-              >
-                We typically respond within 2–4 hours during business hours. For
-                urgent queries, WhatsApp or calling gets you the fastest
-                response — usually within minutes.
+            <div class="faq-content max-h-0 overflow-hidden transition-all duration-400 ease-in-out">
+              <p class="px-4 sm:px-5 pb-4 sm:pb-5 text-jd-gray text-sm leading-relaxed" data-lang="faq.a1">
+                We typically respond within 2–4 hours during business hours. For urgent queries, WhatsApp or calling gets you the fastest response — usually within minutes.
               </p>
             </div>
           </div>
 
-          <!-- FAQ 2 -->
-          <div
-            class="faq-item card-hover relative bg-white rounded-2xl border border-jd-sky/10 overflow-hidden transition-all duration-300 hover:shadow-md"
-          >
-            <button
-              class="faq-toggle w-full flex items-center justify-between p-4 sm:p-5 text-left"
-              aria-expanded="false"
-            >
-              <span
-                class="font-heading font-semibold text-jd-deep text-sm sm:text-base pr-4"
-                >Do you provide installation support?</span
-              >
-              <i
-                class="fas fa-chevron-down chevron text-jd-sky transition-transform duration-300 flex-shrink-0"
-              ></i>
+          <div class="faq-item card-hover relative bg-white rounded-2xl border border-jd-sky/10 overflow-hidden transition-all duration-300 hover:shadow-md">
+            <button class="faq-toggle w-full flex items-center justify-between p-4 sm:p-5 text-left" aria-expanded="false">
+              <span class="font-heading font-semibold text-jd-deep text-sm sm:text-base pr-4" data-lang="faq.q2">Do you provide installation support?</span>
+              <i class="fas fa-chevron-down chevron text-jd-sky transition-transform duration-300 flex-shrink-0"></i>
             </button>
-            <div
-              class="faq-content max-h-0 overflow-hidden transition-all duration-400 ease-in-out"
-            >
-              <p
-                class="px-4 sm:px-5 pb-4 sm:pb-5 text-jd-gray text-sm leading-relaxed"
-              >
-                Yes! Installation is simple and can be done by any local
-                plumber. We provide a detailed installation guide and video
-                support. For Pune and nearby areas, we also offer on-site
-                installation assistance.
+            <div class="faq-content max-h-0 overflow-hidden transition-all duration-400 ease-in-out">
+              <p class="px-4 sm:px-5 pb-4 sm:pb-5 text-jd-gray text-sm leading-relaxed" data-lang="faq.a2">
+                Yes! Installation is simple and can be done by any local plumber. We provide a detailed installation guide and video support. For Pune and nearby areas, we also offer on-site installation assistance.
               </p>
             </div>
           </div>
 
-          <!-- FAQ 3 -->
-          <div
-            class="faq-item card-hover relative bg-white rounded-2xl border border-jd-sky/10 overflow-hidden transition-all duration-300 hover:shadow-md"
-          >
-            <button
-              class="faq-toggle w-full flex items-center justify-between p-4 sm:p-5 text-left"
-              aria-expanded="false"
-            >
-              <span
-                class="font-heading font-semibold text-jd-deep text-sm sm:text-base pr-4"
-                >Can I visit your showroom?</span
-              >
-              <i
-                class="fas fa-chevron-down chevron text-jd-sky transition-transform duration-300 flex-shrink-0"
-              ></i>
+          <div class="faq-item card-hover relative bg-white rounded-2xl border border-jd-sky/10 overflow-hidden transition-all duration-300 hover:shadow-md">
+            <button class="faq-toggle w-full flex items-center justify-between p-4 sm:p-5 text-left" aria-expanded="false">
+              <span class="font-heading font-semibold text-jd-deep text-sm sm:text-base pr-4" data-lang="faq.q3">Can I visit your showroom?</span>
+              <i class="fas fa-chevron-down chevron text-jd-sky transition-transform duration-300 flex-shrink-0"></i>
             </button>
-            <div
-              class="faq-content max-h-0 overflow-hidden transition-all duration-400 ease-in-out"
-            >
-              <p
-                class="px-4 sm:px-5 pb-4 sm:pb-5 text-jd-gray text-sm leading-relaxed"
-              >
-                Absolutely. Our office at Ramtekadi Industrial Estate, Hadapsar is open
-                Monday to Saturday. We recommend calling ahead so we can arrange
-                a live product demonstration for you.
+            <div class="faq-content max-h-0 overflow-hidden transition-all duration-400 ease-in-out">
+              <p class="px-4 sm:px-5 pb-4 sm:pb-5 text-jd-gray text-sm leading-relaxed" data-lang="faq.a3">
+                Absolutely. Our office at Ramtekadi Industrial Estate, Hadapsar is open Monday to Saturday. We recommend calling ahead so we can arrange a live product demonstration for you.
               </p>
             </div>
           </div>
 
-          <!-- FAQ 4 -->
-          <div
-            class="faq-item card-hover relative bg-white rounded-2xl border border-jd-sky/10 overflow-hidden transition-all duration-300 hover:shadow-md"
-          >
-            <button
-              class="faq-toggle w-full flex items-center justify-between p-4 sm:p-5 text-left"
-              aria-expanded="false"
-            >
-              <span
-                class="font-heading font-semibold text-jd-deep text-sm sm:text-base pr-4"
-                >How do I know which model is right for me?</span
-              >
-              <i
-                class="fas fa-chevron-down chevron text-jd-sky transition-transform duration-300 flex-shrink-0"
-              ></i>
+          <div class="faq-item card-hover relative bg-white rounded-2xl border border-jd-sky/10 overflow-hidden transition-all duration-300 hover:shadow-md">
+            <button class="faq-toggle w-full flex items-center justify-between p-4 sm:p-5 text-left" aria-expanded="false">
+              <span class="font-heading font-semibold text-jd-deep text-sm sm:text-base pr-4" data-lang="faq.q4">How do I know which model is right for me?</span>
+              <i class="fas fa-chevron-down chevron text-jd-sky transition-transform duration-300 flex-shrink-0"></i>
             </button>
-            <div
-              class="faq-content max-h-0 overflow-hidden transition-all duration-400 ease-in-out"
-            >
-              <p
-                class="px-4 sm:px-5 pb-4 sm:pb-5 text-jd-gray text-sm leading-relaxed"
-              >
-                Just tell us your pipe diameter, material, approximate flow
-                rate, and the type of application (domestic, agriculture,
-                commercial, etc.). Our team will recommend the perfect Jaldoot
-                unit for your setup.
+            <div class="faq-content max-h-0 overflow-hidden transition-all duration-400 ease-in-out">
+              <p class="px-4 sm:px-5 pb-4 sm:pb-5 text-jd-gray text-sm leading-relaxed" data-lang="faq.a4">
+                Just tell us your pipe diameter, material, approximate flow rate, and the type of application (domestic, agriculture, commercial, etc.). Our team will recommend the perfect Jaldoot unit for your setup.
               </p>
             </div>
           </div>
@@ -1778,124 +1069,49 @@
     <!-- ===== EXPLORE THE RANGE ===== -->
     <section id="explore" class="py-20 lg:py-28 bg-white relative overflow-hidden scroll-mt-36">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div
-          class="text-center max-w-3xl mx-auto mb-10 sm:mb-16"
-          data-animate="fade-up"
-        >
-          <span
-            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold mb-5"
-            ><i class="fas fa-box-open"></i> Before you write to us</span
-          >
-          <h2
-            class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep leading-tight"
-          >
-            Explore the <span class="gradient-text-blue">Range</span>
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16" data-animate="fade-up">
+          <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jd-sky/10 text-jd-blue text-sm font-heading font-semibold mb-5">
+            <i class="fas fa-box-open"></i> <span data-lang="explore.eyebrow">Before you write to us</span>
+          </span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-jd-deep leading-tight">
+            <span data-lang="explore.titlePart1">Explore the </span><span class="gradient-text-blue" data-lang="explore.titlePart2">Range</span>
           </h2>
-          <p class="text-jd-gray mt-3 sm:mt-4 text-sm sm:text-base px-2">
-            Every Jaldoot unit uses the same three dimensional, chemical free
-            technology. The difference is the size and the application.
+          <p class="text-jd-gray mt-3 sm:mt-4 text-sm sm:text-base px-2" data-lang="explore.subtitle">
+            Every Jaldoot unit uses the same three dimensional, chemical free technology. The difference is the size and the application.
           </p>
         </div>
 
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
-          <a
-            href="products.html#domestic"
-            class="app-card card-hover shine-effect group relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-7 border border-jd-sky/10 transition-all duration-300"
-            data-animate="fade-up"
-            data-delay="0"
-          >
-            <div
-              class="icon-badge icon-float w-10 h-10 sm:w-14 sm:h-14 bg-jd-sky/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-5 group-hover:bg-jd-sky transition-colors"
-            >
-              <i
-                class="fas fa-house text-base sm:text-xl text-jd-sky group-hover:text-white transition-colors"
-              ></i>
+          <a href="products.html#domestic" class="app-card card-hover shine-effect group relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-7 border border-jd-sky/10 transition-all duration-300" data-animate="fade-up" data-delay="0">
+            <div class="icon-badge icon-float w-10 h-10 sm:w-14 sm:h-14 bg-jd-sky/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-5 group-hover:bg-jd-sky transition-colors">
+              <i class="fas fa-house text-base sm:text-xl text-jd-sky group-hover:text-white transition-colors"></i>
             </div>
-            <h3
-              class="font-heading font-bold text-sm sm:text-lg text-jd-deep group-hover:text-jd-blue transition-colors"
-            >
-              Domestic
-            </h3>
-            <p
-              class="text-jd-gray text-xs sm:text-sm mt-1 sm:mt-2 hidden sm:block"
-            >
-              Apartments, bungalows and societies of every size.
-            </p>
+            <h3 class="font-heading font-bold text-sm sm:text-lg text-jd-deep group-hover:text-jd-blue transition-colors" data-lang="explore.dom.title">Domestic</h3>
+            <p class="text-jd-gray text-xs sm:text-sm mt-1 sm:mt-2 hidden sm:block" data-lang="explore.dom.desc">Apartments, bungalows and societies of every size.</p>
           </a>
 
-          <a
-            href="products.html#agriculture"
-            class="app-card card-hover shine-effect group relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-7 border border-jd-sky/10 transition-all duration-300"
-            data-animate="fade-up"
-            data-delay="100"
-          >
-            <div
-              class="icon-badge icon-float w-10 h-10 sm:w-14 sm:h-14 bg-jd-green/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-5 group-hover:bg-jd-green transition-colors"
-            >
-              <i
-                class="fas fa-seedling text-base sm:text-xl text-jd-green group-hover:text-white transition-colors"
-              ></i>
+          <a href="products.html#agriculture" class="app-card card-hover shine-effect group relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-7 border border-jd-sky/10 transition-all duration-300" data-animate="fade-up" data-delay="100">
+            <div class="icon-badge icon-float w-10 h-10 sm:w-14 sm:h-14 bg-jd-green/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-5 group-hover:bg-jd-green transition-colors">
+              <i class="fas fa-seedling text-base sm:text-xl text-jd-green group-hover:text-white transition-colors"></i>
             </div>
-            <h3
-              class="font-heading font-bold text-sm sm:text-lg text-jd-deep group-hover:text-jd-blue transition-colors"
-            >
-              Agriculture
-            </h3>
-            <p
-              class="text-jd-gray text-xs sm:text-sm mt-1 sm:mt-2 hidden sm:block"
-            >
-              Drip and sprinkler lines, greenhouses and nurseries.
-            </p>
+            <h3 class="font-heading font-bold text-sm sm:text-lg text-jd-deep group-hover:text-jd-blue transition-colors" data-lang="explore.agri.title">Agriculture</h3>
+            <p class="text-jd-gray text-xs sm:text-sm mt-1 sm:mt-2 hidden sm:block" data-lang="explore.agri.desc">Drip and sprinkler lines, greenhouses and nurseries.</p>
           </a>
 
-          <a
-            href="products.html#commercial"
-            class="app-card card-hover shine-effect group relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-7 border border-jd-sky/10 transition-all duration-300"
-            data-animate="fade-up"
-            data-delay="200"
-          >
-            <div
-              class="icon-badge icon-float w-10 h-10 sm:w-14 sm:h-14 bg-jd-blue/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-5 group-hover:bg-jd-blue transition-colors"
-            >
-              <i
-                class="fas fa-industry text-base sm:text-xl text-jd-blue group-hover:text-white transition-colors"
-              ></i>
+          <a href="products.html#commercial" class="app-card card-hover shine-effect group relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-7 border border-jd-sky/10 transition-all duration-300" data-animate="fade-up" data-delay="200">
+            <div class="icon-badge icon-float w-10 h-10 sm:w-14 sm:h-14 bg-jd-blue/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-5 group-hover:bg-jd-blue transition-colors">
+              <i class="fas fa-industry text-base sm:text-xl text-jd-blue group-hover:text-white transition-colors"></i>
             </div>
-            <h3
-              class="font-heading font-bold text-sm sm:text-lg text-jd-deep group-hover:text-jd-blue transition-colors"
-            >
-              Commercial
-            </h3>
-            <p
-              class="text-jd-gray text-xs sm:text-sm mt-1 sm:mt-2 hidden sm:block"
-            >
-              Hotels, hospitals, factories, laundries and RO plants.
-            </p>
+            <h3 class="font-heading font-bold text-sm sm:text-lg text-jd-deep group-hover:text-jd-blue transition-colors" data-lang="explore.com.title">Commercial</h3>
+            <p class="text-jd-gray text-xs sm:text-sm mt-1 sm:mt-2 hidden sm:block" data-lang="explore.com.desc">Hotels, hospitals, factories, laundries and RO plants.</p>
           </a>
 
-          <a
-            href="products.html#solar-products"
-            class="app-card card-hover shine-effect group relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-7 border border-jd-sky/10 transition-all duration-300"
-            data-animate="fade-up"
-            data-delay="300"
-          >
-            <div
-              class="icon-badge icon-float w-10 h-10 sm:w-14 sm:h-14 bg-amber-400/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-5 group-hover:bg-amber-400 transition-colors"
-            >
-              <i
-                class="fas fa-sun text-base sm:text-xl text-amber-500 group-hover:text-white transition-colors"
-              ></i>
+          <a href="products.html#solar-products" class="app-card card-hover shine-effect group relative bg-white rounded-xl sm:rounded-2xl p-4 sm:p-7 border border-jd-sky/10 transition-all duration-300" data-animate="fade-up" data-delay="300">
+            <div class="icon-badge icon-float w-10 h-10 sm:w-14 sm:h-14 bg-amber-400/10 rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-5 group-hover:bg-amber-400 transition-colors">
+              <i class="fas fa-sun text-base sm:text-xl text-amber-500 group-hover:text-white transition-colors"></i>
             </div>
-            <h3
-              class="font-heading font-bold text-sm sm:text-lg text-jd-deep group-hover:text-jd-blue transition-colors"
-            >
-              Solar Products
-            </h3>
-            <p
-              class="text-jd-gray text-xs sm:text-sm mt-1 sm:mt-2 hidden sm:block"
-            >
-              Solar insect killer, insect trap and the BuzzZap solar trap.
-            </p>
+            <h3 class="font-heading font-bold text-sm sm:text-lg text-jd-deep group-hover:text-jd-blue transition-colors" data-lang="explore.solar.title">Solar Products</h3>
+            <p class="text-jd-gray text-xs sm:text-sm mt-1 sm:mt-2 hidden sm:block" data-lang="explore.solar.desc">Solar insect killer, insect trap and the BuzzZap solar trap.</p>
           </a>
         </div>
       </div>
@@ -1903,78 +1119,41 @@
 
     <!-- ===== CTA ===== -->
     <section class="cta-band py-16 lg:py-20 relative overflow-hidden">
-<div class="absolute inset-0 cta-band-bg"></div>
+      <div class="absolute inset-0 cta-band-bg"></div>
       <div class="absolute inset-0 opacity-70">
-        <div
-          class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"
-        ></div>
-        <div
-          class="absolute bottom-10 right-10 w-80 h-80 bg-white rounded-full blur-3xl"
-        ></div>
+        <div class="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-white rounded-full blur-3xl"></div>
       </div>
-      <div
-        class="absolute inset-0 opacity-[0.07]"
-        style="
-          background-image: radial-gradient(circle, #134fa1 1px, transparent 1px);
-          background-size: 40px 40px;
-        "
-      ></div>
-      <div
-        class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center"
-      >
+      <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle, #134fa1 1px, transparent 1px); background-size: 40px 40px;"></div>
+      
+      <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
         <div class="text-center lg:text-left" data-animate="fade-up">
-        <div
-          class="w-12 h-12 mx-auto lg:mx-0 bg-white/75 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-jd-sky/25 float-y"
-        >
-          <i class="fas fa-headset text-2xl text-jd-blue"></i>
-        </div>
-        <span
-          class="inline-block px-4 py-1.5 rounded-full bg-white/70 border border-jd-blue/20 text-jd-deep text-sm font-heading font-semibold mb-5"
-          >Hardness to happiness</span
-        >
-        <h2
-          class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-jd-dark mb-4"
-        >
-          Let Us Solve Your
-          <span class="gradient-text-blue">Water Problem</span>
-        </h2>
-        <p class="text-jd-deep/80 text-sm lg:text-base mb-7 max-w-xl mx-auto lg:mx-0">
-          One call is usually enough to know whether a Jaldoot unit will help your
-          line &mdash; and which model to start with.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-          <a
-            href="tel:9822209656"
-            class="inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 bg-jd-green text-white rounded-full font-heading font-bold text-base shadow-lg shadow-jd-green/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-          >
-            <i class="fas fa-phone-alt"></i>
-            Call: 98222 09656
-          </a>
-          <a
-            href="#contact-form"
-            class="group inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 bg-white text-jd-deep rounded-full font-heading font-bold text-base shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-          >
-            <i class="fas fa-paper-plane"></i>
-            Send a message
-            <i
-              class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"
-            ></i>
-          </a>
-        </div>
+          <div class="w-12 h-12 mx-auto lg:mx-0 bg-white/75 rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-jd-sky/25 float-y">
+            <i class="fas fa-headset text-2xl text-jd-blue"></i>
+          </div>
+          <span class="inline-block px-4 py-1.5 rounded-full bg-white/70 border border-jd-blue/20 text-jd-deep text-sm font-heading font-semibold mb-5" data-lang="cta.eyebrow">Hardness to happiness</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-heading font-bold text-jd-dark mb-4">
+            <span data-lang="cta.titlePart1">Let Us Solve Your </span><span class="gradient-text-blue" data-lang="cta.titlePart2">Water Problem</span>
+          </h2>
+          <p class="text-jd-deep/80 text-sm lg:text-base mb-7 max-w-xl mx-auto lg:mx-0" data-lang="cta.desc">
+            One call is usually enough to know whether a Jaldoot unit will help your line &mdash; and which model to start with.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+            <a href="tel:9822209656" class="inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 bg-jd-green text-white rounded-full font-heading font-bold text-base shadow-lg shadow-jd-green/30 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <i class="fas fa-phone-alt"></i>
+              <span data-lang="cta.btnCall">Call: 98222 09656</span>
+            </a>
+            <a href="#contact-form" class="group inline-flex items-center justify-center gap-2 whitespace-nowrap px-7 py-3.5 bg-white text-jd-deep rounded-full font-heading font-bold text-base shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <i class="fas fa-paper-plane"></i>
+              <span data-lang="cta.btnSend">Send a message</span>
+              <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
         </div>
 
-        <!-- transparent product cut-out -->
         <div class="cta-kit" data-animate="fade-up" data-delay="120">
           <span class="cta-kit-glow" aria-hidden="true"></span>
-          <img
-            class="cta-kit-img"
-            src="assets/jaldoot-kit.png"
-            alt="Jaldoot water conditioner kit: control unit, power adapter, sensor cable and the blue magnetic conditioning chamber"
-            width="1450"
-            height="754"
-            loading="lazy"
-            decoding="async"
-          />
+          <img class="cta-kit-img" src="assets/jaldoot-kit.png" alt="Jaldoot water conditioner kit" width="1450" height="754" loading="lazy" decoding="async" />
         </div>
       </div>
     </section>
@@ -1983,245 +1162,195 @@
     <footer class="bg-gray-900 text-white relative">
       <div class="absolute -top-1 left-0 right-0">
         <svg viewBox="0 0 1440 50" fill="none" class="w-full">
-          <path
-            d="M0,25 C360,50 720,0 1080,25 C1260,37 1380,30 1440,25 L1440,50 L0,50Z"
-            fill="#111827"
-          />
+          <path d="M0,25 C360,50 720,0 1080,25 C1260,37 1380,30 1440,25 L1440,50 L0,50Z" fill="#111827" />
         </svg>
       </div>
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-8">
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <!-- Company Info -->
           <div>
-            <div
-              class="inline-flex items-center justify-center bg-white rounded-xl px-3 py-2 shadow-lg shadow-black/20 mb-4"
-            >
-              <img
-                src="assets/logo.png"
-                alt="JALDOOT Water Conditioner"
-                class="h-8 sm:h-10 w-auto object-contain"
-                width="761"
-                height="356"
-              />
+            <div class="inline-flex items-center justify-center bg-white rounded-xl px-3 py-2 shadow-lg shadow-black/20 mb-4">
+              <img src="assets/logo.png" alt="JALDOOT Water Conditioner" class="h-8 sm:h-10 w-auto object-contain" width="761" height="356" />
             </div>
-            <p class="text-gray-400 text-sm leading-relaxed mb-6">
-              A product of Jaldoot &mdash; ISO 9001:2008
-              certified company.
+            <p class="text-gray-400 text-sm leading-relaxed mb-6" data-lang="footer.companyDesc">
+              A product of Jaldoot &mdash; ISO 9001:2008 certified company.
             </p>
-            <div
-              class="inline-flex items-center gap-2 px-3 py-1.5 bg-jd-green/10 border border-jd-green/30 rounded-full text-jd-green text-xs font-heading font-semibold mb-6"
-            >
-              <i class="fas fa-check-circle"></i> ISO 9001:2008 Certified
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 bg-jd-green/10 border border-jd-green/30 rounded-full text-jd-green text-xs font-heading font-semibold mb-6">
+              <i class="fas fa-check-circle"></i> <span data-lang="footer.isoCert">ISO 9001:2008 Certified</span>
             </div>
             <div class="flex space-x-3">
-              <a
-                href="https://wa.me/919822209656"
-                target="_blank"
-                class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-jd-green transition-colors"
-                aria-label="WhatsApp"
-                ><i class="fab fa-whatsapp"></i
-              ></a>
-              <a
-                href="mailto:watercare.jaldoot@gmail.com"
-                class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-jd-blue transition-colors"
-                aria-label="Email"
-                ><i class="fas fa-envelope"></i
-              ></a>
-              <a
-                href="tel:9822209656"
-                class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-jd-sky transition-colors"
-                aria-label="Call"
-                ><i class="fas fa-phone-alt"></i
-              ></a>
+              <a href="https://wa.me/919822209656" target="_blank" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-jd-green transition-colors" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="mailto:watercare.jaldoot@gmail.com" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-jd-blue transition-colors" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              <a href="tel:9822209656" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-jd-sky transition-colors" aria-label="Call"><i class="fas fa-phone-alt"></i></a>
             </div>
           </div>
 
           <!-- Quick Links -->
           <div>
-            <h4 class="text-lg font-heading font-semibold mb-6">Quick Links</h4>
+            <h4 class="text-lg font-heading font-semibold mb-6" data-lang="footer.quickLinks">Quick Links</h4>
             <ul class="space-y-3">
               <li>
-                <a
-                  href="index.html"
-                  class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
-                  >Home</a
-                >
+                <a href="index.html" class="footer-link text-gray-400 text-sm">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i><span data-lang="footer.linkHome">Home</span>
+                </a>
               </li>
               <li>
-                <a
-                  href="about.html"
-                  class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
-                  >About Us</a
-                >
+                <a href="about.html" class="footer-link text-gray-400 text-sm">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i><span data-lang="footer.linkAbout">About Us</span>
+                </a>
               </li>
               <li>
-                <a
-                  href="products.html"
-                  class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
-                  >Products</a
-                >
+                <a href="products.html" class="footer-link text-gray-400 text-sm">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i><span data-lang="footer.linkProducts">Products</span>
+                </a>
               </li>
               <li>
-                <a
-                  href="contact.html"
-                  class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
-                  >Contact</a
-                >
+                <a href="contact.html" class="footer-link text-gray-400 text-sm">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i><span data-lang="footer.linkContact">Contact</span>
+                </a>
               </li>
             </ul>
           </div>
 
           <!-- Applications -->
           <div>
-            <h4 class="text-lg font-heading font-semibold mb-6">
-              Applications
-            </h4>
+            <h4 class="text-lg font-heading font-semibold mb-6" data-lang="footer.applications">Applications</h4>
             <ul class="space-y-3">
               <li>
-                <a href="products.html#domestic" class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
-                  >Domestic</a
-                >
+                <a href="products.html#domestic" class="footer-link text-gray-400 text-sm">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i><span data-lang="footer.appDomestic">Domestic</span>
+                </a>
               </li>
               <li>
-                <a href="products.html#agriculture" class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
-                  >Agriculture</a
-                >
+                <a href="products.html#agriculture" class="footer-link text-gray-400 text-sm">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i><span data-lang="footer.appAgriculture">Agriculture</span>
+                </a>
               </li>
               <li>
-                <a href="products.html#poultry" class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
-                  >Poultry Farming</a
-                >
+                <a href="products.html#poultry" class="footer-link text-gray-400 text-sm">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i><span data-lang="footer.appPoultry">Poultry Farming</span>
+                </a>
               </li>
               <li>
-                <a
-                  href="products.html#commercial"
-                  class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
-                  >Commercial &amp; Industrial</a
-                >
+                <a href="products.html#commercial" class="footer-link text-gray-400 text-sm">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i><span data-lang="footer.appCommercial">Commercial &amp; Industrial</span>
+                </a>
               </li>
               <li>
-                <a href="products.html#ro-plant" class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
-                  >JVC for RO Plant</a
-                >
+                <a href="products.html#ro-plant" class="footer-link text-gray-400 text-sm">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i><span data-lang="footer.appRoPlant">JVC for RO Plant</span>
+                </a>
               </li>
               <li>
-                <a
-                  href="products.html#solar-products"
-                  class="footer-link text-gray-400 text-sm"
-                  ><i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i
-                  >Solar Products</a
-                >
+                <a href="products.html#solar-products" class="footer-link text-gray-400 text-sm">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-jd-sky/50"></i><span data-lang="footer.appSolar">Solar Products</span>
+                </a>
               </li>
             </ul>
           </div>
 
           <!-- Contact -->
           <div>
-            <h4 class="text-lg font-heading font-semibold mb-6">Contact</h4>
+            <h4 class="text-lg font-heading font-semibold mb-6" data-lang="footer.contactHeading">Contact</h4>
             <ul class="space-y-4">
               <li class="flex items-start text-sm text-gray-400">
-                <i class="fas fa-map-marker-alt text-jd-sky mr-3 mt-1"></i
-                ><span
-                  >Plot No. 83, Near Maruthi Meter, Ramtekadi Industrial
-                  Estate, Hadapsar, Pune - 411028</span
-                >
+                <i class="fas fa-map-marker-alt text-jd-sky mr-3 mt-1"></i>
+                <span data-lang="footer.address">Plot No. 83, Near Maruthi Meter, Ramtekadi Industrial Estate, Hadapsar, Pune - 411028</span>
               </li>
               <li class="flex items-center text-sm text-gray-400">
-                <i class="fas fa-phone-alt text-jd-sky mr-3"></i
-                ><span>9822209656 / 9404039656</span>
+                <i class="fas fa-phone-alt text-jd-sky mr-3"></i>
+                <span>9822209656 / 9404039656</span>
               </li>
               <li class="flex items-center text-sm text-gray-400">
-                <i class="fas fa-envelope text-jd-sky mr-3"></i
-                ><span class="break-all"
-                  >watercare.jaldoot@gmail.com</span
-                >
+                <i class="fas fa-envelope text-jd-sky mr-3"></i>
+                <span class="break-all">watercare.jaldoot@gmail.com</span>
               </li>
               <li class="flex items-center text-sm text-gray-400">
-                <i class="fas fa-globe text-jd-sky mr-3"></i
-                ><a
-                  href="http://www.jaldootcorporation.com"
-                  target="_blank"
-                  class="hover:text-jd-sky transition-colors"
-                  >www.jaldootcorporation.com</a
-                >
+                <i class="fas fa-globe text-jd-sky mr-3"></i>
+                <a href="http://www.jaldootcorporation.com" target="_blank" class="hover:text-jd-sky transition-colors">www.jaldootcorporation.com</a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div
-          class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4"
-        >
+        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p class="text-gray-500 text-sm">
-            &copy; <span id="currentYear">2024</span> Jaldoot
-            Ltd. All rights reserved.
+            &copy; <span id="currentYear">2024</span> <span data-lang="footer.copyrightSuffix">Jaldoot Ltd. All rights reserved.</span>
           </p>
-          <p class="text-gray-600 text-xs font-heading">
+          <p class="text-gray-600 text-xs font-heading" data-lang="footer.tagline">
             Hardness To Happiness &mdash; Crystal Clear Naturally Water
           </p>
         </div>
       </div>
     </footer>
 
-
     <!-- Floating Buttons -->
-    <!-- Floating Buttons -->
-    <div
-      class="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50 flex flex-col gap-2.5 sm:gap-3"
-    >
-      <button
-        id="back-to-top"
-        class="w-10 h-10 sm:w-12 sm:h-12 bg-jd-deep text-white rounded-full shadow-lg hover:shadow-xl hover:bg-jd-blue transition-all duration-300 flex items-center justify-center opacity-0 translate-y-4 pointer-events-none"
-        aria-label="Back to top"
-        title="Back to Top"
-      >
+    <div class="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50 flex flex-col gap-2.5 sm:gap-3">
+      <button id="back-to-top" class="w-10 h-10 sm:w-12 sm:h-12 bg-jd-deep text-white rounded-full shadow-lg hover:shadow-xl hover:bg-jd-blue transition-all duration-300 flex items-center justify-center opacity-0 translate-y-4 pointer-events-none" aria-label="Back to top" title="Back to Top">
         <i class="fas fa-arrow-up text-sm sm:text-base"></i>
       </button>
-      <a
-        href="tel:9822209656"
-        class="w-10 h-10 sm:w-12 sm:h-12 bg-jd-blue text-white rounded-full shadow-lg hover:shadow-xl hover:bg-jd-deep transition-all duration-300 flex items-center justify-center group relative"
-        aria-label="Call"
-        title="Call: 9822209656"
-      >
+      <a href="tel:9822209656" class="w-10 h-10 sm:w-12 sm:h-12 bg-jd-blue text-white rounded-full shadow-lg hover:shadow-xl hover:bg-jd-deep transition-all duration-300 flex items-center justify-center group relative" aria-label="Call" title="Call: 9822209656">
         <i class="fas fa-phone-alt text-base sm:text-lg"></i>
-        <span
-          class="absolute right-full mr-3 px-3 py-1.5 bg-gray-800 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden sm:block"
-          >Call: 9822209656</span
-        >
+        <span class="absolute right-full mr-3 px-3 py-1.5 bg-gray-800 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden sm:block" data-lang="floating.call">Call: 9822209656</span>
       </a>
-      <a
-        href="https://wa.me/919822209656?text=Hello%2C%20I%20am%20interested%20in%20Jaldoot%20Water%20Conditioner."
-        target="_blank"
-        rel="noopener noreferrer"
-        class="w-12 h-12 sm:w-14 sm:h-14 bg-green-500 text-white rounded-full shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-300 flex items-center justify-center group relative animate-bounce-slow whatsapp-float"
-        aria-label="WhatsApp"
-        title="WhatsApp"
-      >
+      <a href="https://wa.me/919822209656?text=Hello%2C%20I%20am%20interested%20in%20Jaldoot%20Water%20Conditioner." target="_blank" rel="noopener noreferrer" class="w-12 h-12 sm:w-14 sm:h-14 bg-green-500 text-white rounded-full shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-300 flex items-center justify-center group relative animate-bounce-slow whatsapp-float" aria-label="WhatsApp" title="WhatsApp">
         <i class="fab fa-whatsapp text-xl sm:text-2xl"></i>
-        <span
-          class="absolute right-full mr-3 px-3 py-1.5 bg-gray-800 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden sm:block"
-          >Chat on WhatsApp</span
-        >
+        <span class="absolute right-full mr-3 px-3 py-1.5 bg-gray-800 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden sm:block" data-lang="floating.whatsapp">Chat on WhatsApp</span>
       </a>
     </div>
 
-    <!-- ===== INLINE PAGE SCRIPT ===== -->
-    <!-- This page is fully self-contained: js/main.js is intentionally not loaded
-         here because it would bind a second hamburger toggle and a second global
-         anchor-scroll handler, which double-toggles the mobile menu and fights the
-         offset-aware smooth scroll below. -->
+    <!-- ===== INLINE PAGE SCRIPT (WITH LANGUAGE SWITCHER & ORIGINAL LOGIC) ===== -->
     <script>
-      // ===== PRELOADER =====
-      // Hide on DOMContentLoaded (HTML ready) instead of waiting for all resources
+      // ===== LANGUAGE SWITCHER (CUSTOM IMPLEMENTATION) =====
+      // Runs before the rest of the logic to update placeholders safely
+      document.addEventListener("DOMContentLoaded", () => {
+        const langMenuLinks = document.querySelectorAll("[data-lang-val]");
+        let currentLang = localStorage.getItem("selectedLang") || "english";
+
+        function updateLanguage(lang) {
+          currentLang = lang;
+          localStorage.setItem("selectedLang", lang);
+
+          fetch(`locales/contact/${lang}.json`)
+            .then(res => res.json())
+            .then(translations => {
+              document.querySelectorAll("[data-lang]").forEach(el => {
+                const key = el.getAttribute("data-lang");
+                const text = key.split('.').reduce((o, i) => o ? o[i] : null, translations);
+                
+                if (text) {
+                  // If it's an input or textarea, we translate the placeholder, NOT the innerHTML.
+                  if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+                    el.setAttribute("placeholder", text);
+                  } 
+                  // If it's a dropdown option, we update textContent so standard JS still finds the values
+                  else if (el.tagName === "OPTION") {
+                    el.textContent = text;
+                  } 
+                  // Otherwise, normal text replacement
+                  else {
+                    el.innerHTML = text; 
+                  }
+                }
+              });
+            })
+            .catch(err => console.error("Error loading contact translations:", err));
+        }
+
+        langMenuLinks.forEach(link => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const selected = link.getAttribute("data-lang-val");
+            updateLanguage(selected);
+          });
+        });
+
+        // Init language
+        updateLanguage(currentLang);
+      });
+
+
+      // ===== ORIGINAL PRELOADER & FUNCTIONALITY =====
       function hidePreloader() {
         const preloader = document.getElementById("preloader");
         if (!preloader) return;
@@ -2233,7 +1362,6 @@
       document.addEventListener("DOMContentLoaded", function () {
         setTimeout(hidePreloader, 100);
       });
-      // Fallback - reduced from 4000ms to 1500ms
       setTimeout(hidePreloader, 1500);
 
       document.addEventListener("DOMContentLoaded", function () {
@@ -2242,14 +1370,9 @@
         if (yearEl) yearEl.textContent = new Date().getFullYear();
 
         // ===== ACTIVE NAV LINK =====
-        // Marks the nav item matching the current page (and its in-page
-        // section, when the link points at an anchor on this page).
-        const currentPage =
-          window.location.pathname.split("/").pop() || "index.html";
+        const currentPage = window.location.pathname.split("/").pop() || "index.html";
         const currentHash = window.location.hash || "";
-        document
-          .querySelectorAll(".nav-link, .mobile-nav-link")
-          .forEach(function (link) {
+        document.querySelectorAll(".nav-link, .mobile-nav-link").forEach(function (link) {
             const href = link.getAttribute("href") || "";
             const isActive =
               href === currentPage ||
@@ -2269,10 +1392,6 @@
         }
 
         // ===== MOBILE MENU =====
-        // Bound exactly once: main.js also defines initMobileMenu() and is
-        // loaded on index/about. Without the data flag below, both listeners
-        // fire on one tap and the two `classList.toggle("open")` calls cancel
-        // each other out, so the menu never opens.
         const hamburger = document.getElementById("hamburger");
         const mobileMenu = document.getElementById("mobileMenu");
         const menuBackdrop = document.getElementById("mobileMenuBackdrop");
@@ -2297,7 +1416,6 @@
             setMenu(!mobileMenu.classList.contains("open"));
           });
 
-          // Explicit X inside the panel.
           if (menuClose) {
             menuClose.addEventListener("click", function () {
               setMenu(false);
@@ -2305,14 +1423,12 @@
             });
           }
 
-          // Tapping any link closes the panel before the page navigates.
           mobileMenu.querySelectorAll("a").forEach(function (link) {
             link.addEventListener("click", function () {
               setMenu(false);
             });
           });
 
-          // Backdrop tap / any click outside the panel and the button.
           if (menuBackdrop) {
             menuBackdrop.addEventListener("click", function () {
               setMenu(false);
@@ -2335,7 +1451,6 @@
             }
           });
 
-          // Leaving the mobile breakpoint must not strand the open panel.
           window.addEventListener("resize", function () {
             if (window.innerWidth >= 1024 && mobileMenu.classList.contains("open")) {
               setMenu(false);
@@ -2413,7 +1528,7 @@
           }
         }
 
-        // ===== SMOOTH SCROLL (offset for the sticky navbar) =====
+        // ===== SMOOTH SCROLL =====
         document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
           anchor.addEventListener("click", function (e) {
             const href = this.getAttribute("href");
@@ -2455,14 +1570,9 @@
         });
 
         // ===== FORM VALIDATION & SUBMISSION =====
-        // Static site, no backend: the enquiry is delivered through WhatsApp
-        // to the sales number. Country code 91, subscriber 9822209656.
         const WHATSAPP_NUMBER = "919822209656";
         const form = document.getElementById("contactForm");
 
-        // When arriving from the products page ("Request a quote"), pre-fill
-        // the message field with the line-sizing prompt so the enquiry applies
-        // to the products section rather than a generic message.
         (function prefillFromProducts() {
           const params = new URLSearchParams(window.location.search);
           if (params.get("source") === "products") {
@@ -2583,10 +1693,6 @@
               "?text=" +
               encodeURIComponent(enquiry);
 
-            // Opened straight from the submit handler, so it is a user gesture
-            // and is not popup-blocked in normal use. opener is nulled to close
-            // the reverse-tabnabbing hole; if the handle comes back null the
-            // popup was blocked and we fall back to a same-tab navigation.
             const opened = window.open(waUrl, "_blank");
             if (opened) {
               opened.opener = null;
@@ -2596,6 +1702,8 @@
 
             setTimeout(function () {
               submitBtn.disabled = false;
+              // Resetting button text. You could fetch the localized text here if desired, 
+              // but reloading the page or normal reset handles it fine.
               submitText.textContent = "Send on WhatsApp";
               submitArrow.classList.remove("hidden");
               submitSpinner.classList.add("hidden");

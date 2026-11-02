@@ -497,7 +497,14 @@
     "buzzzapClaims4": "The company exports BuzzZap to many countries like France, Philippines, Maldives etc.",
     "buzzzapClaims5": "The company is able to demonstrate a reduction in the use of chemical spray to more than 50%.",
     "buzzzapClaimsFootnote": "These are company statements reproduced verbatim from the Jaldoot brochure and are not independently verified.",
-    "buzzzapBtn1": "Enquire about BuzzZap",
-    "buzzzapBtn2": "About the manufacturer"
+       "buzzzapBtn1": "Enquire about BuzzZap",
+    "buzzzapBtn2": "About the manufacturer",
+
+    "ctaTagline": "Hardness to happiness",
+    "ctaHeading": "Crystal Clear",
+    "ctaHeadingHighlight": "Naturally Water",
+    "ctaDescription": "Tell us about your line — pipe material, diameter and flow — and we will suggest the right Jaldoot unit.",
+    "ctaQuoteBtn": "Request a quote",
+    "ctaCallBtn": "Call: 98222 09656"
   }
 }

@@ -1,4 +1,18 @@
 {
+  "lang": {
+    "english": "English",
+    "hindi": "हिन्दी",
+    "marathi": "मराठी"
+  },
+  "preloader": {
+    "tagline": "Water Conditioner"
+  },
+  "toast": {
+    "default": "Message sent successfully!"
+  },
+  "topbar": {
+    "tag": "Crystal Clear Naturally Water &mdash; Jaldoot Ltd."
+  },
   "nav": {
     "home": "Home",
     "about": "About",
@@ -6,18 +20,157 @@
     "contact": "Contact",
     "language": "Language"
   },
-  "contactEyebrow": "Send a message",
-  "contactFormLabel": "Full Name *",
-  "contactFormNamePlaceholder": "Your name",
-  "contactFormEmailPlaceholder": "you@example.com",
-  "contactFormPhonePlaceholder": "+91 00000 00000",
-  "contactFormInterestLabel": "I am interested in *",
-  "contactFormInterestPlaceholder": "Select an option",
-  "contactFormInterestDomestic": "Domestic water conditioner",
-  "contactFormInterestPoultry": "Poultry & dairy",
-  "contactFormInterestOther": "Something else",
-  "contactFormMessageLabel": "Your Message *",
-  "contactFormMessagePlaceholder": "Tell us about your line - pipe material, diameter, flow rate and the problem you face.",
-  "contactHeroDesc": "Tell us about your line — pipe material, diameter and flow — and we will suggest the right Jaldoot unit for your water.",
-  "contactHeroReply": "We reply within 2–4 hours."
+  "mobile": {
+    "callUs": "Call Us",
+    "hours": "Mon&ndash;Sat, 9 AM &ndash; 7 PM"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "contact": "Contact"
+  },
+  "hero": {
+    "titlePart1": "Let Us ",
+    "titlePart2": "Solve Your Water",
+    "sub": "Tell us about your line &mdash; pipe material, diameter and flow &mdash; and we will suggest the right Jaldoot unit for your water.",
+    "replyTime": "We reply within 2&ndash;4 hours.",
+    "btnSend": "Send a message"
+  },
+  "info": {
+    "eyebrow": "Get in touch",
+    "titlePart1": "One ",
+    "titlePart2": "Simple Conversation",
+    "titlePart3": "Away",
+    "subtitle": "Visit our office in Hadapsar, Pune, call us, or drop a message &mdash; whichever is easiest for you.",
+    "cardVisit": {
+      "title": "Visit Us",
+      "address": "Plot No. 83, Near Maruthi Meter,<br />Ramtekadi Industrial Estate,<br />Hadapsar, Pune &ndash; 411028,<br />Maharashtra, India",
+      "directions": "Get directions"
+    },
+    "cardCall": {
+      "title": "Call Us",
+      "time": "Mon &ndash; Sat, 9:30 AM to 6:30 PM"
+    },
+    "cardEmail": {
+      "title": "Email Us"
+    },
+    "cardWa": {
+      "title": "WhatsApp",
+      "text": "Chat with our team",
+      "sub": "Fastest way to reach us"
+    }
+  },
+  "form": {
+    "eyebrow": "Send a message",
+    "title": "Request a Recommendation",
+    "subtitle": "Share a few details and we will suggest the right Jaldoot model and sizing for your application.",
+    "labelName": "Full Name *",
+    "phName": "Your name",
+    "errName": "Please enter your full name",
+    "labelEmail": "Email Address *",
+    "phEmail": "you@example.com",
+    "errEmail": "Please enter a valid email address",
+    "labelPhone": "Phone Number",
+    "phPhone": "+91 00000 00000",
+    "errPhone": "Please enter a valid phone number",
+    "labelInterest": "I am interested in *",
+    "optSelect": "Select an option",
+    "optDomestic": "Domestic water conditioner",
+    "optAgri": "Agriculture &amp; irrigation",
+    "optPoultry": "Poultry &amp; dairy",
+    "optPools": "Swimming pools &amp; golf",
+    "optCom": "Commercial &amp; industrial",
+    "optRo": "JVC for RO plants",
+    "optSolar": "Solar insect products / BuzzZap",
+    "optOther": "Something else",
+    "errInterest": "Please select an option",
+    "labelMessage": "Your Message *",
+    "phMessage": "Tell us about your line - pipe material, diameter, flow rate and the problem you face.",
+    "errMessage": "Please enter your message (at least 10 characters)",
+    "btnSubmit": "Send on WhatsApp",
+    "disclaimer": "<i class=\"fab fa-whatsapp mr-1 text-green-500\"></i> Sending opens WhatsApp with your details filled in for <a href=\"tel:9822209656\" class=\"font-semibold text-jd-blue hover:text-jd-sky\">98222 09656</a> &mdash; press send there to deliver it."
+  },
+  "sidebar": {
+    "instant": {
+      "title": "Prefer instant answers?",
+      "desc": "Our team can help you pick the model, understand the installation and answer questions about payback.",
+      "btnWa": "WhatsApp",
+      "btnCall": "Call Now"
+    },
+    "location": {
+      "title": "Find our office",
+      "subtitle": "Ramtekadi Industrial Estate",
+      "city": "Hadapsar, Pune - 411028",
+      "btn": "Get Directions",
+      "list1": "Showroom &amp; product demonstration available on request.",
+      "list2": "A product of Jaldoot &mdash; ISO 9001:2008 certified.",
+      "list3": "Installation guidance and after-sales support across Maharashtra."
+    }
+  },
+  "faq": {
+    "eyebrow": "Common questions",
+    "titlePart1": "Frequently Asked ",
+    "titlePart2": "Questions",
+    "q1": "How quickly can I get a response after contacting?",
+    "a1": "We typically respond within 2–4 hours during business hours. For urgent queries, WhatsApp or calling gets you the fastest response — usually within minutes.",
+    "q2": "Do you provide installation support?",
+    "a2": "Yes! Installation is simple and can be done by any local plumber. We provide a detailed installation guide and video support. For Pune and nearby areas, we also offer on-site installation assistance.",
+    "q3": "Can I visit your showroom?",
+    "a3": "Absolutely. Our office at Ramtekadi Industrial Estate, Hadapsar is open Monday to Saturday. We recommend calling ahead so we can arrange a live product demonstration for you.",
+    "q4": "How do I know which model is right for me?",
+    "a4": "Just tell us your pipe diameter, material, approximate flow rate, and the type of application (domestic, agriculture, commercial, etc.). Our team will recommend the perfect Jaldoot unit for your setup."
+  },
+  "explore": {
+    "eyebrow": "Before you write to us",
+    "titlePart1": "Explore the ",
+    "titlePart2": "Range",
+    "subtitle": "Every Jaldoot unit uses the same three dimensional, chemical free technology. The difference is the size and the application.",
+    "dom": {
+      "title": "Domestic",
+      "desc": "Apartments, bungalows and societies of every size."
+    },
+    "agri": {
+      "title": "Agriculture",
+      "desc": "Drip and sprinkler lines, greenhouses and nurseries."
+    },
+    "com": {
+      "title": "Commercial",
+      "desc": "Hotels, hospitals, factories, laundries and RO plants."
+    },
+    "solar": {
+      "title": "Solar Products",
+      "desc": "Solar insect killer, insect trap and the BuzzZap solar trap."
+    }
+  },
+  "cta": {
+    "eyebrow": "Hardness to happiness",
+    "titlePart1": "Let Us Solve Your ",
+    "titlePart2": "Water Problem",
+    "desc": "One call is usually enough to know whether a Jaldoot unit will help your line &mdash; and which model to start with.",
+    "btnCall": "Call: 98222 09656",
+    "btnSend": "Send a message"
+  },
+  "footer": {
+    "companyDesc": "A product of Jaldoot &mdash; ISO 9001:2008 certified company.",
+    "isoCert": "ISO 9001:2008 Certified",
+    "quickLinks": "Quick Links",
+    "linkHome": "Home",
+    "linkAbout": "About Us",
+    "linkProducts": "Products",
+    "linkContact": "Contact",
+    "applications": "Applications",
+    "appDomestic": "Domestic",
+    "appAgriculture": "Agriculture",
+    "appPoultry": "Poultry Farming",
+    "appCommercial": "Commercial &amp; Industrial",
+    "appRoPlant": "JVC for RO Plant",
+    "appSolar": "Solar Products",
+    "contactHeading": "Contact",
+    "address": "Plot No. 83, Near Maruthi Meter, Ramtekadi Industrial Estate, Hadapsar, Pune - 411028",
+    "copyrightSuffix": "Jaldoot Ltd. All rights reserved.",
+    "tagline": "Hardness To Happiness &mdash; Crystal Clear Naturally Water"
+  },
+  "floating": {
+    "call": "Call: 9822209656",
+    "whatsapp": "Chat on WhatsApp"
+  }
 }
