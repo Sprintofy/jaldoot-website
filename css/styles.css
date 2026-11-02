@@ -1513,3 +1513,6 @@ html[lang="hi"] {
 html[lang="hi"] *:not(.fa):not(.fas):not(.far):not(.fab):not(.fad):not(.fal):not([class^="fa-"]):not([class*=" fa-"]) {
   font-family: "Noto Sans Devanagari", sans-serif !important;
 }
+.cta-kit-img {
+  mix-blend-mode: multiply;
+}
