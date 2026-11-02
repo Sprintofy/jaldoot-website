@@ -369,10 +369,18 @@ const PAGE_KEY = {
 
 let currentLang = DEFAULT_LANG;
 let translations = {};
-
 function getPageLocale() {
-  const page = window.location.pathname.split("/").pop() || "index.html";
-  return PAGE_KEY[page] || "home";
+  const page = window.location.pathname
+    .split("/")
+    .filter(Boolean)
+    .pop()
+    ?.toLowerCase() || "index.html";
+
+  const pageFile = page.endsWith(".html")
+    ? page
+    : page + ".html";
+
+  return PAGE_KEY[pageFile] || "home";
 }
 
 function getNested(obj, path) {
