@@ -1305,11 +1305,14 @@
       // Runs before the rest of the logic to update placeholders safely
       document.addEventListener("DOMContentLoaded", () => {
         const langMenuLinks = document.querySelectorAll("[data-lang-val]");
-        let currentLang = localStorage.getItem("selectedLang") || "english";
+        let currentLang =
+          localStorage.getItem("jaldoot_lang") ||
+          localStorage.getItem("selectedLang") ||
+          "english";
 
         function updateLanguage(lang) {
           currentLang = lang;
-          localStorage.setItem("selectedLang", lang);
+          localStorage.setItem("jaldoot_lang", lang);
 
           fetch(`locales/contact/${lang}.json`)
             .then(res => res.json())

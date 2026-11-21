@@ -171,6 +171,8 @@
   },
   "applications": {
     "eyebrow": "Applications",
+    "titleWhere": "Where ",
+    "titleBrand": "Jaldoot",
     "titlePart": "is Used",
     "text": "From homes to farms to factories — Jaldoot serves every water need",
     "card1": {
@@ -305,7 +307,6 @@
     "sound": "Unmute hero video"
   },
   "brochure": {
-    "eyebrow": "Resources",
     "title": "Product Brochures",
     "subtitle": "Download the Jaldoot company brochure in the language of your choice — English, Hindi or Marathi.",
     "download": "Download PDF",

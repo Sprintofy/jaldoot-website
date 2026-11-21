@@ -1516,3 +1516,13 @@ html[lang="hi"] *:not(.fa):not(.fas):not(.far):not(.fab):not(.fad):not(.fal):not
 .cta-kit-img {
   mix-blend-mode: multiply;
 }
+
+div#langMenu.absolute::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 24px;
+  right: 0;
+  height: 12px;
+  pointer-events: auto;
+}
