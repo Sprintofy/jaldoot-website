@@ -304,6 +304,18 @@
     "scroll": "Scroll",
     "sound": "Unmute hero video"
   },
+  "brochure": {
+    "eyebrow": "Resources",
+    "title": "Product Brochures",
+    "subtitle": "Download the Jaldoot company brochure in the language of your choice — English, Hindi or Marathi.",
+    "download": "Download PDF",
+    "enName": "English",
+    "hiName": "हिन्दी",
+    "mrName": "मराठी",
+    "enDesc": "Company brochure with product range, technology and applications in English.",
+    "hiDesc": "Company brochure with product range, technology and applications in Hindi.",
+    "mrDesc": "Company brochure with product range, technology and applications in Marathi."
+  },
   "footer": {
     "companyDesc": "Manufactured by Jaldoot — ISO 9001:2008 certified company specializing in advanced water conditioning technology.",
     "isoCert": "ISO 9001:2008 Certified",
@@ -312,6 +324,7 @@
     "linkAbout": "About Us",
     "linkProducts": "Products",
     "linkContact": "Contact Us",
+    "linkBrochures": "Brochures",
     "applications": "Applications",
     "appDomestic": "Domestic Solutions",
     "appAgriculture": "Agriculture & Irrigation",
